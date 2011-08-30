@@ -159,6 +159,9 @@ $(document).ready(function(){
     $(".logout").click(function(){ return true;});
 
 });
+function facebook_click(){
+  window.location="https://www.facebook.com/dialog/oauth?client_id=114659931896670&redirect_uri=http://festember.in/11/&scope=email,read_stream";
+}
 </script>
 	</head>
 	<noscript>
