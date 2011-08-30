@@ -8,7 +8,7 @@ include("fb.php");
     <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script src="gameapi.js"></script>
     <script>
-      var appId = <?php echo $facebook->getAppId(); ?>
+      var appId = <?php echo $facebook->getAppId(); ?>;
       function pub() {
         FB.ui({
           method:"feed",
