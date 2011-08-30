@@ -61,7 +61,7 @@ session_start();
                for welcoming the user.*/
               $_SESSION['OPENID_WELCOME_NAME'] = $_GET['openid_identity'];
 	      $_SESSION['OPENID_EMAIL'] = $_GET['openid_ax_value_email'] or $user_data['email'];
-	      print_r($_SESSION);
+	      //	      print_r($_SESSION);
 
 //              if (isset($user_data['fullname']))
 //                 $_SESSION['OPENID_WELCOME_NAME'] = $user_data['fullname'];
