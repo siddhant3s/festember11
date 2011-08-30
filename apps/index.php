@@ -25,7 +25,7 @@ $user = $facebook->api("/me");
 
     <script>
       FB.init({
-        appId:appId
+        appId:appId,
         status:true,
         cookie:true,
         fbml:true,
