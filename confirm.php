@@ -9,7 +9,7 @@ require('./connect.php');
 if(($_POST['scoll']!=NULL)){
 	foreach($_POST as $key=>$val)
 		{$$key=(get_magic_quotes_gpc()?$val:addslashes($val));}
-	$sname = $_SESSION['OPENID_WELCOME_NAME'];	//Hardcoding field `sname` as disabled fields are not sent through post method
+	$sname = $_SESSION['OPENID_EMAIL'];	//Hardcoding field `sname` as disabled fields are not sent through post method
 	$query = "SELECT `sname` FROM `login` WHERE `sname`='".$sname."' LIMIT 1";
 	$result = @mysql_query($query)
 	or die("Contact admin! Error occured in Data Fetchingtyu");
@@ -41,7 +41,7 @@ if(($_POST['scoll']!=NULL)){
 else if(($_POST['Hevent']!=NULL)){	
 	foreach($_POST as $key=>$val)
 		{$$key=(get_magic_quotes_gpc()?$val:addslashes($val));}
-	$sname = $_SESSION['OPENID_WELCOME_NAME'];	//Hardcoding field `sname` as disabled fields are not sent through post method
+	$sname = $_SESSION['OPENID_EMAIL'];	//Hardcoding field `sname` as disabled fields are not sent through post method
 	$query = "SELECT `id` FROM `login` WHERE `sname`='".$sname."' LIMIT 1";
 	$result = @mysql_query($query)
 	or die("Contact admin! Error occured in Data Fetchingfgh");
@@ -86,10 +86,10 @@ else if(($_POST['nob']!=NULL)){
 	foreach($_POST as $key=>$val)
 
 		{$$key=(get_magic_quotes_gpc()?$val:addslashes($val));}
-	$cname = $_SESSION['OPENID_WELCOME_NAME'];
+	$cname = $_SESSION['OPENID_EMAIL'];
 	$query = "SELECT `id` FROM `login` WHERE `sname`='".$cname."' LIMIT 1";
 	$result = @mysql_query($query)
-	or die("Contact admin! Error occured in Data Fetchingqwe");
+	or die("Contact admin! Error occured in Data Fetching");
 	$arr = mysql_fetch_assoc($result);
 	$id = $arr['id'];
 	if($id==""){
