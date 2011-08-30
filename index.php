@@ -4,7 +4,7 @@ $SUB_DIR = (dirname($_SERVER['SCRIPT_NAME'])=='/')?'/':dirname($_SERVER['SCRIPT_
 $FULLPATH = 'http://' . $DOMAIN_NAME . $SUB_DIR;
 header('X-XRDS-Location:' . $FULLPATH . 'yadis.xrdf');
 session_start();
-
+require_once("apps/facebook/src/facebook.php");
 /** <Login Related Shit **/
   try {
       function openid_auth($openid_url)
