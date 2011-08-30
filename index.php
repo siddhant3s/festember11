@@ -231,7 +231,7 @@ function facebook_click(){
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
                 <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
-                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Event and Accomodation registrations are up. Workshops Updated." /></a>
+                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
                 <a href="./tender_tshirt.pdf" target="_blank"><img src="images/pic4.png" alt="" title="T-Shirt tenders Welcome. The last date of tender submission is 30th August 3:00 pm." /></a>
 		
                 <img
