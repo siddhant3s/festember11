@@ -13,12 +13,12 @@ var providers_large = {
 	yahoo : {
 		name : 'Yahoo',
 		url : 'http://me.yahoo.com/'
-	}
-/*
+	},
+
         facebook : {
 		name : 'facebook',
 		url : 'javascript:facebook_click();'
-	}*/
+	}
 };
 
 var providers_small = {
