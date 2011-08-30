@@ -2,7 +2,7 @@
 if($logged_in=="true"){
 //if(1==1){
 ?>
-<div class="content-head">Welcome <?php echo $_SESSION['OPENID_WELCOME_NAME']; ?></div>
+<div class="content-head">Welcome <?php echo $_SESSION['OPENID_EMAIL']; ?></div>
 <form id="r_form">
 <div id="registerfont">Festember 11</div><div id="ie"></div>
 <div id="logincontainer">

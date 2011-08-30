@@ -5,7 +5,7 @@ if($logged_in=="true"){
 <form id="r_form" method="post" action="confirm.php">
 <div id="registerfont">Basic Information</div><div id="ie"></div>
 <table id="r_table">
-<tr><td>Login Name / Mail id</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input disabled="true" id="sname" autocomplete=off name="sname" type="text" size="20" value="<?php echo $_SESSION['OPENID_WELCOME_NAME'];?>"></td></tr>
+<tr><td>Login Name / Mail id</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input disabled="true" id="sname" autocomplete=off name="sname" type="text" size="20" value="<?php echo $_SESSION['OPENID_EMAIL'];?>"></td></tr>
 <tr><td>College</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="scoll" name="scoll" autocomplete=off type="text" size="20" ></td></tr>
 <tr><td>Phone Number</td><td>+91<input type="text" size="12" autocomplete=off name="phno" id="phno" ></td></tr>
 <tr><td>&nbsp;</td></tr>
