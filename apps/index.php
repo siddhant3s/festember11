@@ -3,7 +3,7 @@
   <head>
     <title>Festember Games</title>
     <style>
-      body {width:760px;}
+      body {width:760px;margin: auto; }
     </style>
   </head>
   <body>
