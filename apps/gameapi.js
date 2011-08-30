@@ -1,3 +1,5 @@
+
+window.onload = function() {
       FB.init({
         appId:appId,
         status:true,
@@ -15,3 +17,4 @@
           description:"Play the game now to get goodies and stuff",
        });
       }
+};
