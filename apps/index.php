@@ -36,8 +36,7 @@ $user = $facebook->api("/me");
           method:"feed",
           name:"<?php echo $user["name"]; ?> has won the game of roulette in Festember Casino!",
           link:"http://www.festember.in/11/games/",
-          picture:"http://www.destination360.com/north-america/us/ne
-          vada/images/s/nevada-silver-legacy-resort-casino.jpg",
+          picture:"http://www.destination360.com/north-america/us/nevada/images/s/nevada-silver-legacy-resort-casino.jpg",
           caption:"Casino games at Festember 11",
           description:"Play the game now to get goodies and stuff",
        });
