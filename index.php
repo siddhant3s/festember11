@@ -100,7 +100,10 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	      echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	      $fbuser = null;
 	    }
-	  print htmlspecialchars(print_r($user_profile, true)) ;
+	  echo $user_profile['email'];
+	  echo $user_profile['name'];
+	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
+	  $_SESSION['OPENID_WELCOME_NAME']=$user_profile['name'];
 	}
       }
   }
