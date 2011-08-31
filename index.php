@@ -10,7 +10,6 @@ include_once "facebook_details.php";//should contain app_id and app_secrete
 $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
-
 $fbloginurl=$facebook->getLoginUrl($fbperm);
 
 /** <Login Related Shit **/
