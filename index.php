@@ -100,8 +100,7 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	      echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	      $fbuser = null;
 	    }
-	  echo $user_profile['email'];
-	  echo $user_profile['name'];
+
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
 	  $_SESSION['OPENID_WELCOME_NAME']=$user_profile['name'];
 	}
@@ -124,7 +123,10 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
       $logged_in = true;
       //      echo "User logged in";
   }
-$logged_in|=$fbuser;
+if($fbuser)
+  $logged_in="true";
+
+
 if (!isset($_GET['openid_mode']) && isset($_GET['openid_identifier'])) {
   $openid_url = $_GET['openid_identifier'];
   require 'class.dopeopenid.php';
