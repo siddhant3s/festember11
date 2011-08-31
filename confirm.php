@@ -5,8 +5,8 @@
 <?php
 session_start();
 require('./connect.php');
-//if(($_POST['scoll']!=NULL)&&($logged_in=="true")){
-if(($_POST['scoll']!=NULL)){
+if(($_POST['scoll']!=NULL)&&($logged_in=="true")){
+//if(($_POST['scoll']!=NULL)){
 	foreach($_POST as $key=>$val)
 		{$$key=(get_magic_quotes_gpc()?$val:addslashes($val));}
 	$sname = $_SESSION['OPENID_EMAIL'];	//Hardcoding field `sname` as disabled fields are not sent through post method
@@ -37,14 +37,14 @@ if(($_POST['scoll']!=NULL)){
 <?php
 }
 
-//else if( ($_POST['Hevent']!=NULL)&&($logged_in=="true")){
-else if(($_POST['Hevent']!=NULL)){	
+else if( ($_POST['Hevent']!=NULL)&&($logged_in=="true")){
+//else if(($_POST['Hevent']!=NULL)){	
 	foreach($_POST as $key=>$val)
 		{$$key=(get_magic_quotes_gpc()?$val:addslashes($val));}
 	$sname = $_SESSION['OPENID_EMAIL'];	//Hardcoding field `sname` as disabled fields are not sent through post method
 	$query = "SELECT `id` FROM `login` WHERE `sname`='".$sname."' LIMIT 1";
 	$result = @mysql_query($query)
-	or die("Contact admin! Error occured in Data Fetchingfgh");
+	or die("Contact admin! Error occured in Data Fetching");
 	$arr = mysql_fetch_assoc($result);
 	$id = $arr['id'];
 	if($id==""){
@@ -76,8 +76,8 @@ else if(($_POST['Hevent']!=NULL)){
 
 }
 
-//else if(($_POST['nob']!=NULL)&&($logged_in=="true")){
-else if(($_POST['nob']!=NULL)){
+else if(($_POST['nob']!=NULL)&&($logged_in=="true")){
+//else if(($_POST['nob']!=NULL)){
 
 
 
