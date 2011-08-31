@@ -1,5 +1,5 @@
 <?php 
-$DOMAIN_NAME=$_SERVER['SERVER_NAME']; //like linkpit.co.cc. leave untouched if not sure.
+$DOMAIN_NAME=$_SERVER['SERVER_NAME'];
 $SUB_DIR = (dirname($_SERVER['SCRIPT_NAME'])=='/')?'/':dirname($_SERVER['SCRIPT_NAME']).'/'; //could be dir1/dir2/dir3/linkpit. Leave blank if in root. Must end with a slash.
 $FULLPATH = 'http://' . $DOMAIN_NAME . $SUB_DIR;
 header('X-XRDS-Location:' . $FULLPATH . 'yadis.xrdf');
@@ -60,7 +60,8 @@ session_start();
                address is provided, they are used as the $_SESSION['OPENID_WELCOME_NAME']
                for welcoming the user.*/
               $_SESSION['OPENID_WELCOME_NAME'] = $_GET['openid_identity'];
-              
+	      $_SESSION['OPENID_EMAIL'] = $user_data['email'] || $_GET['openid_ax_value_email'];
+
 //              if (isset($user_data['fullname']))
 //                 $_SESSION['OPENID_WELCOME_NAME'] = $user_data['fullname'];
 //              elseif (isset($user_data['nickname']))
