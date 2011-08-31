@@ -8,7 +8,10 @@ session_start();
 require_once "apps/facebook/src/facebook.php";
 include_once "facebook_details.php";//should contain app_id and app_secrete
 $fbuser=$facebook->getUser();
-$fbloginurl=$facebook->getLoginUrl();
+$fbperm=array();
+$fbperm['scope'] = "email,publish_stream";
+
+$fbloginurl=$facebook->getLoginUrl($fbperm);
 
 /** <Login Related Shit **/
   try {
