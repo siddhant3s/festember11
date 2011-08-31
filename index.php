@@ -45,12 +45,13 @@ $fbloginurl=$facebook->getLoginUrl();
               }
           }
       }
+      
       //OpenID authentication finalising when returning from the Provider's website
       if (isset($_GET['openid_mode'])) {
           //<-----This happens when the provider calls our page
           if ($_GET['openid_mode'] == 'cancel') {//<------either telling that user cancell the authentication.....
               /*TODO Have to log this error message instead of displaying it*/
-              echo 'User has canceled authentication!';
+              echo 'User has cancelled authentication!';
               exit();
           } else {//<--------....or giving us all the required info that user passed authentication
               require_once 'class.dopeopenid.php';
@@ -82,6 +83,22 @@ $fbloginurl=$facebook->getLoginUrl();
               //echo($user_data['namePerson/first']);
 	      //              header('Location: ' . $FULLPATH);
           }
+      }
+      else{
+	//The FB part
+	if ($fbuser) {
+	  try 
+	    {
+	      // Proceed knowing you have a logged in user who's authenticated.
+	      $user_profile = $facebook->api('/me');
+	    } 
+	  catch (FacebookApiException $e) 
+	    {
+	      echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+	      $fbuser = null;
+	    }
+	  print htmlspecialchars(print_r($user_profile, true)) ;
+	}
       }
   }
   catch (ErrorException $e) {
