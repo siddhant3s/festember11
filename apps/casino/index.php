@@ -7,9 +7,9 @@
 	
 	$_SESSION['user']=$user["name"];
 	error_log("###### " . "SELECT * FROM `user` WHERE `userid` = '" . $user["id"] . "'");
-	$res = mysql_fetch_assoc(mysql_query("SELECT COUNT(*) AS `count` FROM `user` = '" . $user["id"] . "'"));
+	$res = mysql_query("SELECT COUNT(*) AS `count` FROM `user` WHERE `userid` = '" . $user["id"] . "'");
 	error_log("###### num rows - " . $res['count']);
-	if(!$res) {
+	if(mysql_num_rows($res) == 0) {
 	mysql_query("INSERT INTO `user` (`userid`,`money`) VALUES ('" . $user["id"] . "','1000')");
 	error_log("###### new user added to the table.");
 	}
