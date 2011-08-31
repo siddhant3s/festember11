@@ -7,6 +7,7 @@ session_start();
 
 require_once "apps/facebook/src/facebook.php";
 include_once "facebook_details.php";//should contain app_id and app_secrete
+$facebook = new Facebook($fbAuthArr);
 $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
