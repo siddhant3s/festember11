@@ -1,4 +1,5 @@
 <?php
-	session_start();
-	echo $_SESSION['user'];
+	$rpath = "../";
+	include("../fb.php");
+	$usid=$user["id"];
 ?>

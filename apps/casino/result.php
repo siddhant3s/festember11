@@ -1,6 +1,7 @@
 <?php include("header.php");?>
+<?php include("getuser.php");?>
 <?php	
-	$sql="SELECT * FROM gamedata WHERE userid={$_GET['user']}";
+	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result2=mysql_query($sql,$con);
 	$row=mysql_fetch_array($result2);
 	$u1=$row['u1'];
@@ -516,16 +517,16 @@ else if($win==0){
 else if($win!=0&&$multiply==1){
 	$won=0;
 }
-$sql="SELECT * FROM windata WHERE userid={$_GET['user']}";
+$sql="SELECT * FROM windata WHERE userid={$usid}";
 $result3=mysql_query($sql,$con);
 if(!mysql_num_rows($result3)){
-	$sql="INSERT INTO windata VALUES({$_GET['user']},{$won})";
+	$sql="INSERT INTO windata VALUES({$usid},{$won})";
 	$result3=mysql_query($sql,$con);
 }
 else{	
 		$row=mysql_fetch_array($result3);
 		$won+=$row['win'];
-		$sql="UPDATE windata SET win='{$won}' WHERE userid={$_GET['user']}";
+		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
 		$result3=mysql_query($sql,$con);
 }
 

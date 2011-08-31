@@ -1,4 +1,5 @@
 <?php include("header.php");?>
+<?php include("getuser.php");?>
 <?php
 	$cards = range(0, 51);
 	shuffle($cards);
@@ -11,21 +12,20 @@
 	$c3=$cards[6];
 	$c4=$cards[7];
 	$c5=$cards[8];
-	$user=$_POST['user'];
-	$sql="SELECT * FROM gamedata WHERE userid={$user}";
+	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);
 	
 	if(!$result){
-		$sql="INSERT INTO gamedata VALUES({$user},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5})";
+		$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5})";
 		$result=mysql_query($sql,$con);
 	}
 	else{
-		$sql="DELETE FROM gamedata WHERE userid={$user}";
+		$sql="DELETE FROM gamedata WHERE userid={$usid}";
 		$result=mysql_query($sql,$con);
-		$sql="INSERT INTO gamedata VALUES({$user},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5},0)";
+		$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5},0)";
 		$result=mysql_query($sql,$con);
 	}
-	$sql="SELECT money FROM user WHERE userid={$user}";
+	$sql="SELECT money FROM user WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);
 	$row=mysql_fetch_array($result);
 	echo $row['money'];

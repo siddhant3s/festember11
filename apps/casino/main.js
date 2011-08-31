@@ -1,11 +1,9 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
 		$(document).ready(function(){
-					$.ajax({type: "POST",url: "getuser.php",success: function(html){userid=html;}});
-				setTimeout(function(){
-					var dat="user="+userid;
-					$.ajax({type: "POST",data:dat,url: "putdata.php",success: function(html){money=html;}});
-				},600);
+					
+					$.ajax({url: "putdata.php",success: function(html){money=html;}});
+				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",
 				});
@@ -33,9 +31,6 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			
 			status=1;
 		});
-		function game(){
-			
-		}
 		function add(i){
 		if(status==1||status==2){
 			i=parseInt(i);
@@ -78,8 +73,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			document.getElementById("money").value=curMoney;
 			document.getElementById("bmoney").value=betMoney;
 			
-			var dat="user="+userid;
-			$.ajax({type: "POST",url: "getdata.php",data:dat,success: function(html){
+			$.ajax({type: "POST",url: "getdata.php",success: function(html){
 					var string=html.split('-');
 					money=parseInt(string[0]);
 					u1=parseInt(string[1]);
@@ -120,7 +114,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					setTimeout(function(){animate6(temp4);},200);
 					setTimeout(function(){animate7(temp2);},400);
 			}});
-			setTimeout(function(){dat="money="+betMoney+"&user="+userid;
+			setTimeout(function(){dat="money="+betMoney;
 						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},600);
 			function animate1(url){
 			
@@ -285,8 +279,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
-						var dat="user="+userid;
-						$.ajax({type: "POST",url: "getdata1.php",data:dat,success: function(html){
+						$.ajax({url: "getdata1.php",success: function(html){
 								var string=html.split('-');
 								money=parseInt(string[0]);
 								c4=parseInt(string[1]);
@@ -319,9 +312,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								setTimeout(function(){animate11(temp3);},600);
 						}});
 						setTimeout(function(){
-							$.ajax({type: "POST",url: "getuser.php",success: function(html){userid=html;}});
-						setTimeout(function(){dat="money="+betMoney+"&user="+userid;
-						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},200);},600);
+							dat="money="+betMoney
+						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},200);
 			function animate8(url){
 						
 						card8.animate({
@@ -395,11 +387,9 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								
 				var value;		
 			setTimeout(function(){
-			$.ajax({type: "POST",url: "getuser.php",success: function(html){userid=html;}});
-			setTimeout(function(){var dat="user="+userid;
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
-			}});},200);},1200);
+			}});},200);
 			
 				setTimeout(function(){
 					$("#inputs").hide();
