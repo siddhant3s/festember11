@@ -599,11 +599,11 @@ display: block;
 
 }
 #msgcontainer{
-background-color:#b3b5fd;
+background-color:#0C0C0C;
 font: 70%/160% "verdana",sans-serif;
-color:#3a3a84;
+color:#7D7D7D;
 margin:0px;
-border:#6767e5 3px solid;
+border:2px solid #7D7D7D
 padding:20px;
 border-radius:	5px;
 -moz-border-radius:	5px;
@@ -629,7 +629,7 @@ background-color:#1a110e;
 #logincontainer{
 width:535px;
 padding:20px;
-height:210px;
+height:200px;
 border:1px #1d1d1d solid;
 border-radius:	5px;
 -moz-border-radius:	5px;
