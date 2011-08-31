@@ -389,38 +389,39 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			setTimeout(function(){
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
-			}});},200);
-			
-				setTimeout(function(){
-					$("#inputs").hide();
-	$("#coins").hide();
-	$("#binfo").hide();
-					canvas.clear();
-					var text = canvas.display.text({
-	x: -177,
-	y: 270,
-	align: "center",
-	font: "bold 30px sans-serif",
+							
+								setTimeout(function(){
+									$("#inputs").hide();
+					$("#coins").hide();
+					$("#binfo").hide();
+									canvas.clear();
+									var text = canvas.display.text({
+					x: -177,
+					y: 270,
+					align: "center",
+					font: "bold 30px sans-serif",
 	
-	fill: "#0aa"
-});
-text.text="you have won "+value;
-canvas.addChild(text);
-text.animate({
-		x:400,
-	}, "long", "ease-in-out", function () {
+					fill: "#0aa"
+				});
+				text.text="you have won "+value;
+				canvas.addChild(text);
+				text.animate({
+						x:400,
+					}, "long", "ease-in-out", function () {
 		
-		canvas.redraw();
-	});
-setTimeout(function(){	
-text.animate({
-		x:1000,
-	}, "long", "ease-in-out", function () {
+						canvas.redraw();
+					});
+				setTimeout(function(){	
+				text.animate({
+						x:1000,
+					}, "long", "ease-in-out", function () {
 		
-		canvas.redraw();
-	});},3000);
-	setTimeout(function(){window.location.reload();},5000);
-				},8000);
+						canvas.redraw();
+					});},3000);
+					setTimeout(function(){window.location.reload();},5000);
+								},8000);
+			}});},200);
+
 			}
 		}
 		else{
