@@ -1,9 +1,9 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
-		$(document).ready(function(){x
+		$(document).ready(function(){
 					
 					$.ajax({url: "putdata.php",success: function(html){money=html;}});
-				},600);
+				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",
 				});
@@ -31,9 +31,6 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			
 			status=1;
 		});
-		function game(){
-			
-		}
 		function add(i){
 		if(status==1||status==2){
 			i=parseInt(i);
