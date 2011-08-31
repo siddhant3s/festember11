@@ -9,7 +9,7 @@
 	error_log("###### " . "SELECT * FROM `user` WHERE `userid` = '" . $user["id"] . "'");
 	$res = mysql_query("SELECT * FROM `user` = '" . $user["id"] . "'");
 	error_log("###### num rows - " . mysql_num_rows($res));
-	if(mysql_num_rows($res) == 0) {
+	if(!$res) {
 	mysql_query("INSERT INTO `user` (`userid`,`money`) VALUES ('" . $user["id"] . "','1000')");
 	error_log("###### new user added to the table.");
 	}
