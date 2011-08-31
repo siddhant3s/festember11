@@ -3,8 +3,7 @@
 	$rpath = "../";
 	include("../fb.php");
 	
-	session_start();
-	
+		
 	$_SESSION['user']=$user["name"];
 	error_log("###### " . "SELECT * FROM `user` WHERE `userid` = '" . $user["id"] . "'");
 	$res = mysql_query("SELECT COUNT(*) AS `count` FROM `user` WHERE `userid` = '" . $user["id"] . "'");

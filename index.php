@@ -99,7 +99,7 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	    } 
 	  catch (FacebookApiException $e) 
 	    {
-	      echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+	      //echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	      $fbuser = null;
 	    }
 
