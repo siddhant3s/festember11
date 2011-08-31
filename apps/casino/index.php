@@ -5,7 +5,7 @@
 	
 	session_start();
 	
-	$_SESSION['user']=$_GET['user'];
+	$_SESSION['user']=$user["name"];
 ?>
 <!DOCTYPE HTML>
 <html>
