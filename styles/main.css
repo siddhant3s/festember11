@@ -549,6 +549,10 @@ background:url('../images/fbg.jpg') repeat-y;
 .eHead{
 /*padding-left:50px;*/
 }
+#workshopradio{
+text-align:left;
+padding-left:50px;
+}
 #eventradio{
 text-align:left;
 padding-left:150px
@@ -625,7 +629,7 @@ background-color:#1a110e;
 #logincontainer{
 width:535px;
 padding:20px;
-height:155px;
+height:210px;
 border:1px #1d1d1d solid;
 border-radius:	5px;
 -moz-border-radius:	5px;
