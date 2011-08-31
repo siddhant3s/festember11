@@ -83,7 +83,8 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 		$_SESSION['OPENID_EMAIL']=$user_data['email'];
 		$_SESSION['OPENID_WELCOME_NAME'] = $user_data['email'];
 	      }
-	      $_SESSION['OPENID_WELCOME_NAME']=$_SESSION['OPENID_EMAIL'];
+	      if(!isset($_SESSION['OPENID_WELCOME_NAME']))
+		$_SESSION['OPENID_WELCOME_NAME']=$_SESSION['OPENID_EMAIL'];
               //echo($user_data['namePerson/first']);
 	      //              header('Location: ' . $FULLPATH);
           }
