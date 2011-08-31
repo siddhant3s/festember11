@@ -1,5 +1,6 @@
 <?php
 	include("header.php");
+	$rpath = "../";
 	include("../fb.php");
 	
 	session_start();

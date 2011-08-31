@@ -1,4 +1,5 @@
 <?php
+$rpath = "";
 include("fb.php");
 ?>
 <!doctype html>
