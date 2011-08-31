@@ -1,5 +1,5 @@
 <?php
 	$rpath = "../";
 	include("../fb.php");
-	echo $user["id"];
+	$usid=$user["id"];
 ?>
