@@ -1,0 +1,212 @@
+#wrapper{
+	margin:0 auto;
+	width:800px;
+	height:600px;
+	position:relative;
+	overflow:hidden;
+	background-image:url('images/board.png');
+}
+#ani{
+	position:fixed;
+	top:200px;
+	left:200px;
+	
+}
+#five{
+	position:absolute;
+	top:410px;
+	left:500px;
+	
+}
+#five:hover{
+	background-image:url('images/5g.png');cursor:pointer;
+}
+#fifty:hover{
+	background-image:url('images/50g.png');cursor:pointer;
+}
+#ten{
+	position:absolute;
+	top:395px;
+	left:560px;
+}
+#ten:hover{
+	background-image:url('images/10g.png');cursor:pointer;
+}
+#twenty{
+	position:absolute;
+	top:375px;
+	left:620px;
+}
+#twenty:hover{
+	background-image:url('images/25g.png');cursor:pointer;
+}
+#fifty{
+	position:absolute;
+	top:350px;
+	left:675px;
+}
+#alert{
+	position:absolute;
+	width:200px;
+	height:50px;
+	background-image:url('images/alert.png');
+	top:0px;
+	right:0px;
+	display:none;
+	color:white;
+	text-align:center;
+}
+#alertp{
+	position:absolute;
+	top:-10px;
+	left:50px;
+	font-size:12px;
+	
+}	
+#info{
+	position:absolute;
+	top:70px;
+	left:0px;
+	width:160px;
+	height:160px;
+	background-image:url('images/info.png');
+	display:none;
+}
+#binfo:hover{
+	left:0px;
+}
+#binfo{
+	position:absolute;
+	top:110px;
+	left:-1px;
+	width:20px;
+	height:80px;
+	background-image:url('images/binfo.png');
+
+}
+#binfo:hover{
+	cursor:pointer;
+}
+#close:hover{
+	cursor:pointer;
+}
+#close{
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+#close:hover{
+	background-color:#eee;
+}
+#inputs{
+	position:absolute;
+	bottom:0px;
+}
+#bet{
+	color:#999;
+	width:100px;
+	height:30px;
+	background:url(images/b.png);
+	border:none;
+}
+#bet:hover{
+	cursor:pointer;
+	background:url(images/b1.png);
+}
+#fold:hover{
+	cursor:pointer;
+	background:url(images/b1.png);
+}
+#bet:active{
+	cursor:pointer;
+	background:url(images/b.png);
+}
+#fold:hover{
+	cursor:pointer;
+	background:url(images/b1.png);
+}
+#fold{
+	color:#999;
+	width:100px;
+	height:30px;
+	background:url(images/b.png);
+	border:none;
+}
+#sub:active{
+	cursor:pointer;
+	background:url(images/b.png);
+}
+#sub:hover{
+	cursor:pointer;
+	background:url(images/b1.png);
+}
+#sub{
+	color:#999;
+	width:100px;
+	height:30px;
+	background:url(images/b.png);
+	border:none;
+}
+#money{
+	color:#fff;
+	width:100px;
+	height:30px;
+	text-align:center;
+	background:url(images/input.png);
+	border:none;
+}
+#inputs{
+	width:100%;
+}
+#bmoney{
+	position:absolute;
+	color:#fff;
+	width:100px;
+	height:30px;
+	text-align:center;
+	background:url(images/input.png);
+	border:none;
+	right:5px;
+}
+b{	
+	color:#fff;
+	position:absolute;
+	right:40px;
+	bottom:5px;
+}
+#rules{
+
+position:absolute;
+top:300px;
+left:240px;
+font-size:50px;
+width:300px;
+height:100px;
+}
+#start{
+position:absolute;
+top:190px;
+left:240px;
+font-size:50px;
+
+width:300px;
+height:100px;
+}
+#gcanvas,#coins,#binfo,#back,#next{
+display:none;
+}
+
+#back{
+position:absolute;
+bottom:25px;
+left:350px;
+width:100px;
+height:50px;
+}
+#next{
+position:absolute;
+bottom:140px;
+left:350px;
+width:100px;
+height:50px;
+}
