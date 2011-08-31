@@ -7,6 +7,8 @@ session_start();
 
 require_once "apps/facebook/src/facebook.php";
 include_once "facebook_details.php";//should contain app_id and app_secrete
+$fbuser=$facebook->getUser();
+$fbloginurl=$facebook->getLoginUrl();
 
 /** <Login Related Shit **/
   try {
@@ -99,7 +101,7 @@ include_once "facebook_details.php";//should contain app_id and app_secrete
       $logged_in = true;
       //      echo "User logged in";
   }
-
+$logged_in|=$fbuser;
 if (!isset($_GET['openid_mode']) && isset($_GET['openid_identifier'])) {
   $openid_url = $_GET['openid_identifier'];
   require 'class.dopeopenid.php';
@@ -163,7 +165,7 @@ $(document).ready(function(){
 
 });
 function facebook_click(){
-  window.location="https://www.facebook.com/dialog/oauth?client_id=114659931896670&redirect_uri=http://festember.in/11/&scope=email,read_stream";
+  window.location="<?php echo $fbloginurl;?>";
 }
 </script>
 	</head>
