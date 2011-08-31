@@ -5,5 +5,5 @@ if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
-$db_select = mysql_select_db("poker",$con);
+$db_select = mysql_select_db("festember11",$con);
  ?>
