@@ -68,7 +68,7 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
                first by the ClaimID itself. If the information like the first name or email
                address is provided, they are used as the $_SESSION['OPENID_WELCOME_NAME']
                for welcoming the user.*/
-              $_SESSION['OPENID_WELCOME_NAME'] = $_GET['openid_identity'];
+
 	      if(isset($_GET['openid_ax_value_email']))
 		$_SESSION['OPENID_EMAIL'] = $_GET['openid_ax_value_email'];
 	      else 
@@ -83,6 +83,7 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 		$_SESSION['OPENID_EMAIL']=$user_data['email'];
 		$_SESSION['OPENID_WELCOME_NAME'] = $user_data['email'];
 	      }
+	      $_SESSION['OPENID_WELCOME_NAME']=$_SESSION['OPENID_EMAIL'];
               //echo($user_data['namePerson/first']);
 	      //              header('Location: ' . $FULLPATH);
           }
