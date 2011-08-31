@@ -1,12 +1,40 @@
+<?php
+include("fb.php");
+?>
 <!doctype html>
 <html>
   <head>
     <title>Festember Games</title>
+<<<<<<< HEAD
     <style>
       body {width:760px;margin: auto; }
     </style>
+=======
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script src="gameapi.js"></script>
+    <script>
+      var appId = <?php echo $facebook->getAppId(); ?>
+      function pub() {
+        FB.ui({
+          method:"feed",
+          name:"<?php echo $user["name"]; ?> has won the game of roulette in Festember Casino!",
+          link:"http://www.festember.in/11/games/",
+          picture:"http://www.destination360.com/north-america/us/nevada/images/s/nevada-silver-legacy-resort-casino.jpg",
+          caption:"Casino games at Festember 11",
+          description:"Play the game now to get goodies and stuff",
+       });
+      }
+
+    </script>
+>>>>>>> dd279ecf17936fdc4b74d7a1ba36fa33a5c66ddd
   </head>
   <body>
-    Festember11 Games coming up soon!
+    <h3>Festember11 Games coming up soon!</h3>
+    Hi <?php echo $user["name"]; ?>!<br>
+    <div id="fb-root"></div>
+
+
+    You have won the game of roulette. <input type="button" value="Share it with your friends" onclick="pub();">
+
   </body>
 </html>

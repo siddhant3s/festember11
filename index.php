@@ -5,6 +5,14 @@ $FULLPATH = 'http://' . $DOMAIN_NAME . $SUB_DIR;
 header('X-XRDS-Location:' . $FULLPATH . 'yadis.xrdf');
 session_start();
 
+require_once "apps/facebook/src/facebook.php";
+include_once "facebook_details.php";//should contain app_id and app_secrete
+$fbuser=$facebook->getUser();
+$fbperm=array();
+$fbperm['scope'] = "email,publish_stream";
+
+$fbloginurl=$facebook->getLoginUrl($fbperm);
+
 /** <Login Related Shit **/
   try {
       function openid_auth($openid_url)
@@ -40,12 +48,13 @@ session_start();
               }
           }
       }
+      
       //OpenID authentication finalising when returning from the Provider's website
       if (isset($_GET['openid_mode'])) {
           //<-----This happens when the provider calls our page
           if ($_GET['openid_mode'] == 'cancel') {//<------either telling that user cancell the authentication.....
               /*TODO Have to log this error message instead of displaying it*/
-              echo 'User has canceled authentication!';
+              echo 'User has cancelled authentication!';
               exit();
           } else {//<--------....or giving us all the required info that user passed authentication
               require_once 'class.dopeopenid.php';
@@ -59,7 +68,7 @@ session_start();
                first by the ClaimID itself. If the information like the first name or email
                address is provided, they are used as the $_SESSION['OPENID_WELCOME_NAME']
                for welcoming the user.*/
-              $_SESSION['OPENID_WELCOME_NAME'] = $_GET['openid_identity'];
+
 	      if(isset($_GET['openid_ax_value_email']))
 		$_SESSION['OPENID_EMAIL'] = $_GET['openid_ax_value_email'];
 	      else 
@@ -74,9 +83,29 @@ session_start();
 		$_SESSION['OPENID_EMAIL']=$user_data['email'];
 		$_SESSION['OPENID_WELCOME_NAME'] = $user_data['email'];
 	      }
+	      if(!isset($_SESSION['OPENID_WELCOME_NAME']))
+		$_SESSION['OPENID_WELCOME_NAME']=$_SESSION['OPENID_EMAIL'];
               //echo($user_data['namePerson/first']);
 	      //              header('Location: ' . $FULLPATH);
           }
+      }
+      else{
+	//The FB part
+	if ($fbuser) {
+	  try 
+	    {
+	      // Proceed knowing you have a logged in user who's authenticated.
+	      $user_profile = $facebook->api('/me');
+	    } 
+	  catch (FacebookApiException $e) 
+	    {
+	      echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+	      $fbuser = null;
+	    }
+
+	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
+	  $_SESSION['OPENID_WELCOME_NAME']=$user_profile['name'];
+	}
       }
   }
   catch (ErrorException $e) {
@@ -96,6 +125,9 @@ session_start();
       $logged_in = true;
       //      echo "User logged in";
   }
+if($fbuser)
+  $logged_in="true";
+
 
 if (!isset($_GET['openid_mode']) && isset($_GET['openid_identifier'])) {
   $openid_url = $_GET['openid_identifier'];
@@ -160,7 +192,7 @@ $(document).ready(function(){
 
 });
 function facebook_click(){
-  window.location="https://www.facebook.com/dialog/oauth?client_id=114659931896670&redirect_uri=http://festember.in/11/&scope=email,read_stream";
+  window.location="<?php echo $fbloginurl;?>";
 }
 </script>
 	</head>
@@ -199,7 +231,7 @@ function facebook_click(){
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
                 <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
-                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Event and Accomodation registrations are up. Workshops Updated." /></a>
+                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
                 <a href="./tender_tshirt.pdf" target="_blank"><img src="images/pic4.png" alt="" title="T-Shirt tenders Welcome. The last date of tender submission is 30th August 3:00 pm." /></a>
 		
                 <img

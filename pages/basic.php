@@ -17,6 +17,6 @@ if($logged_in=="true"){
 <?php
 }
 else{
-	echo "<div class='plregister'>Please Login with your Google/Yahoo account to register for Festember 11</div>";}
+	echo "<div class='plregister'>Please Login with your Google/Yahoo/Facebook account to register for Festember 11</div>";}
 ?>
 
