@@ -599,6 +599,7 @@ display: block;
 
 }
 #msgcontainer{
+top:100px;
 background-color:#0C0C0C;
 font: 70%/160% "verdana",sans-serif;
 color:#7D7D7D;
