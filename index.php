@@ -329,7 +329,6 @@ margin: 10px 0;
 <h3 style="color: #FF115F;font-size:13px;font-weight:bold;">Downloads</h3>
 <p><a href="./rulebook.pdf" target="_blank">Rule Book</a></p>
 <p><a href="./pamphlets.pdf" target="_blank">Pamphlets</a></p>
-<p><a href="./tender_tshirt.pdf" target="_blank">T-Shirt Tender</a></p>
 </div>
 <br/><br/><br/>
 <div class="external">
