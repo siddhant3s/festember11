@@ -308,6 +308,7 @@ function facebook_click(){
                                                 <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" /></a>
                                                 <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" /></a>
                                                 <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" /></a>
+						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s11.jpg" width="120px" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
