@@ -229,6 +229,48 @@ margin: 30px 0;
 	font-weight: bold;
 	color: #fff;
 }
+
+
+/*Newly ADDED */
+
+
+#content ul {
+list-style: disc;
+margin-left: 15px;
+}
+#content h2 {
+font-size: 15px;
+font-weight: bold;
+font-family: serif;
+color: #aa0029;
+}
+#content li
+{
+margin:4px 0;
+line-height: 25px;
+}
+.content-body-col1 , .content-body-col2 , .content-body-col3
+{
+color:#a09d99;
+text-decoration:none;
+font-family: Verdana, Aria;l;
+font-size: 12px;
+width:170px;
+padding:10px 20px 20px 10px;
+float:left;
+line-height: 15px;
+} 
+.content-body-col1 a, .content-body-col2 a, .content-body-col3 a
+{
+color:#a09d99;
+text-decoration:none;
+}
+
+.content-body-col1 a:hover, .content-body-col2 a:hover, .content-body-col3 a:hover
+{
+color:#fff
+}
+
 .scroller {
 	height: 200px;
 }
@@ -236,11 +278,11 @@ margin: 30px 0;
 .footer {
 	text-align: center;
 	/*
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	background: #111;
-	padding: 10px;*/
+ * 	border-radius: 5px;
+ * 		-moz-border-radius: 5px;
+ * 			-webkit-border-radius: 5px;
+ * 				background: #111;
+ * 					padding: 10px;*/
 }
 .footer img {
 	vertical-align: middle;
@@ -330,8 +372,8 @@ background:url('../images/s1.jpg') no-repeat;
 .headeranimcontainer {
 width: 960px;
 /*position: absolute;
-margin: auto;
-margin-left: 255px;*/
+ * margin: auto;
+ * margin-left: 255px;*/
 
 }
 .headeranimator {
@@ -549,10 +591,6 @@ background:url('../images/fbg.jpg') repeat-y;
 .eHead{
 /*padding-left:50px;*/
 }
-#workshopradio{
-text-align:left;
-padding-left:50px;
-}
 #eventradio{
 text-align:left;
 padding-left:150px
@@ -599,12 +637,11 @@ display: block;
 
 }
 #msgcontainer{
-top:100px;
-background-color:#0C0C0C;
+background-color:#b3b5fd;
 font: 70%/160% "verdana",sans-serif;
-color:#7D7D7D;
+color:#3a3a84;
 margin:0px;
-border:2px solid #7D7D7D;
+border:#6767e5 3px solid;
 padding:20px;
 border-radius:	5px;
 -moz-border-radius:	5px;
@@ -620,17 +657,17 @@ border:#6767e5 1px solid;
 -webkit-border-radius:	5px;
 border-radius:5px;
 }
-#DANCE,#MUSIC,#CINEMATICS,#ARTS,#ENGLISH_LITS,#TAMIL_LITS,#DRAMATICS{
+#DANCE,#MUSIC,#CINEMATICS,#ARTS,#ENGLISH_LITS,#TAMIL_LITS,#HINDI_LITS,#DRAMATICS{
 display:none;
 }
-#sTAMIL_LITS,#sDANCE,#sMUSIC,#sCINEMATICS,#sARTS,#sENGLISH_LITS,#sDRAMATICS{
+#sTAMIL_LITS,#sHINDI_LITS,#sDANCE,#sMUSIC,#sCINEMATICS,#sARTS,#sENGLISH_LITS,#sDRAMATICS{
 background-color:#1a110e;
 }
 
 #logincontainer{
 width:535px;
 padding:20px;
-height:200px;
+height:155px;
 border:1px #1d1d1d solid;
 border-radius:	5px;
 -moz-border-radius:	5px;
@@ -650,10 +687,10 @@ top:10px;
 left:37px;
 }
 /*
-#openid_btns a{
-display:none;
-}
-#openid_btns a:first-child{
-display:block;
-}*/
+ * #openid_btns a{
+ * display:none;
+ * }
+ * #openid_btns a:first-child{
+ * display:block;
+ * }*/
 /* Register css ends */
