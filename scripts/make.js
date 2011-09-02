@@ -9,6 +9,7 @@ $("#floatingMenu .item").hover(function() {
 	$(this).stop().animate({opacity: 0.5});
 });
 
+var i=1;
 (function(){
 var c1,c2,c3,c4,c5,c6;
 window.onload=function(){
@@ -206,33 +207,39 @@ ctx6.shadowOffsetX = 0;
 ctx6.shadowOffsetY = 0;
 ctx6.stroke();
 ctx6.translate(-47,-87);
-animate();
-}
-var i=1;
+//animate();
+    setInterval(function() {
+		    if(i<6) //can be used to pause the animation, just put i>6 the animation will pause
+			i++;
+		    if(i==6)
+			i=0;
+		    animate(i);
+		},200);
+
+};
+
 var cttx=new Array("#can1","#can2","#can3","#can4","#can5","#can6");
-function animate(){
-	if(i<=6){
-	for(j=0;j<6;j++){ 
-		if(j == 5)
-			$(cttx[j]).fadeOut();	
-		else
-			$(cttx[j]).css("display","none");
-	}
-	if(i==6)
-		i=0;
-	if(i!=5)
-		$(cttx[i]).css("display","block");
-	if(i==5){
-		$(cttx[i]).fadeIn(100);
-	}
-	setTimeout(function() {
-		i++;
-		animate();
-	},200);
-}}
+var cttx_elems = new Array();
+
+     function animate(I){
+	 for(j=0;j<6;j++){ 
+	     if(j == 5)
+		 $(cttx[j]).fadeOut();	
+	     else
+		 $(cttx[j]).css("display","none");
+	 }
+	 
+	 if(I!=5)
+	     $(cttx[I]).css("display","block");
+	 if(I==5){
+	     $(cttx[I]).fadeIn(100);
+	 }
+	 
+     }
+
 function cancel(){
-	if(i>6){
-		i=0;
+	if(i>6){//if animation is stoped already, resume it by putting i=0
+		
 		setTimeout(function(){
 			for(j=0;j<6;j++)$(cttx[j]).css("display","block");
 				setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},100);
@@ -249,15 +256,15 @@ function cancel(){
 				setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("opacity","1.0");},1000);
 				setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },1050);
 				setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},1100);
-				setTimeout(animate,1400);
+			       setTimeout(function() {i=0;},1400); //resume animation
 			},100);	
 	}
 	else{
-		i=10;
+		i=10;//pause the animation
 		var j;
 		for(j=0;j<6;j++)
 		{ 
-				$(cttx[j]).css("display","none");
+				$(cttx[j]).css("display","none");//hide all glow
 		}
 	}
 }
