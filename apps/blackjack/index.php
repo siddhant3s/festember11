@@ -59,6 +59,9 @@ margin: 0 auto;
 <script src="illuminate.js" type="text/javascript"></script>
 <script src="start.js" type="text/javascript"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+var appId = <?php echo $facebook->getAppId(); ?>;
+</script>
 <script src="../gameapi.js"></script>
 <script src="script.js" type="text/javascript"></script>
 
