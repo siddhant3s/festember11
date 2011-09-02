@@ -1,0 +1,86 @@
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+ 
+<link href="d.css" rel="stylesheet" type="text/css"> 
+<head>
+<style type="text/css">
+body{
+color:white;
+background-color:black;
+}
+input.button {
+  margin-top: .25em;
+  width: 8em;
+margin:5px;
+padding:5px;
+
+ cursor:pointer;
+ background:white;
+
+ 
+
+ --webkit-border-radius: 20px; 
+-moz-border-radius: 20px; 
+border-radius: 20px; 
+
+}
+ 
+ input.button:hover{
+ background:brown;
+color:white;
+border-color:#7F5217;
+-webkit-box-shadow:15px 15px 15px #ffffff;
+-moz-box-shadow:15px 15px 15px #ffffff;
+box-shadow:15px 15px 15px #ffffff;
+
+ }
+ #powered{
+ size:200px;
+ }
+#si{
+width:400px;
+margin:0 auto;
+}
+#shine{
+width:600px;
+margin: 0 auto;
+}
+
+</style>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="illuminate.js" type="text/javascript"></script>
+<script src="start.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
+
+
+
+</head>
+<body> 
+<script type="text/javascript">
+
+function doit()
+{
+
+
+window.open("blackjack.html",'fullscreen=yes,scrollbars=auto');
+self.location="http://www.festember.in/11";
+
+}
+
+</script>
+<div align="center" id="shine">
+<br><br>
+<img src="blackjack.jpg" width="600px" id="lk"/>
+<br><input type="button" class="button" value="play blackjack" onclick="doit()"></button>
+</div>
+<div align="right" id="si" class="si">
+<h2 id="illu" class="si"><font face="monotype corsiva" id="powered">Powered by festember</font></h2>
+</div>
+
+
+</body>
+</html>
