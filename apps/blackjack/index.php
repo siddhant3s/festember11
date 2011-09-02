@@ -66,8 +66,8 @@ function doit()
 {
 
 
-window.open("blackjack.html",'fullscreen=yes,scrollbars=auto');
-self.location="http://www.festember.in/11";
+
+self.location="blackjack.php";
 
 }
 

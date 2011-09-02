@@ -122,7 +122,7 @@ $("#deal").effect("pulsate",{times:3},"slow");
 	$("#rules").click(function(){
        
 	 
-	 location.href="rules.html";
+	 location.href="rules.php";
 	 
 	
 	});
