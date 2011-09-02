@@ -12,6 +12,7 @@ Remember, what happens in Vegas, stays in Vegas!
 </p>
 </div> 
 <div class="content-head">Day 3</div>
+<br/><br/>
 <div class="content-head">An Evening Inside your mind</div>
 <div class="content-body">
 <p>
