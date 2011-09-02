@@ -12,12 +12,15 @@ Remember, what happens in Vegas, stays in Vegas!
 </p>
 </div> 
 <div class="content-head">Day 3</div>
+<br/><br/>
+<div class="content-head">An Evening Inside your mind</div>
 <div class="content-body">
-<p>Have you ever wondered what happens in the backrooms of Vegas? Are you intrigued by cards, cheating and demonstrations of skill? Get ready to enroll in this exclusive, one-session only workshop. Arvind’s sleight of hand has taken him around the world and now he is headed to NIT, Trichy to share what he has learned, with you!. He will go over moves straight from the card table, demonstrate secret techniques and subterfuge gamblers have used for years to their advantage and also fine sleight of hand card work. During this workshop, you will learn basic to intermediate card handling methods and develop a foundation for future study in magic and sleight of hand. It will be highly interactive with explanations, videos, notes and also important points covering theory and the art of performance.</p>
-
-<p>Life, school and college are filled with enough things that we are forced to accept on hearsay! Lets put an end to that, at least for 4 days! Festember dishes out a delectable array of mouth-smacking Workshops designed for one and all! Festember X boasted stellar workshops ranging from
- Digital Writing to dance to creative writing. Festember 11 promises to do one better! :D </p>
- 
+<p>
+After years of study and hundreds of performances, Arvind is ready to take you on a magical journey that you have to experience to believe. His fun and original presentations will provide you with entertainment that you will remember for a lifetime. He has appeared on Dutch national television on 'De Nieuwe Uri Geller' show, featured in national newspapers, amazed people at events ranging from galas, corporate shows and international festivals to private and charity events. With his unique style and persona, he can blow your mind up close while performing just a few inches away or shatter your reality when you are part of a thousand people watching his stage show.
+</p>
+<p>
+Arvind will be coming over to NIT, all the from the Netherlands to present his unique show titled "An Evening Inside Your Mind" - a whole new breed of magic. During the show, he will bring the audience to the edges of their seats with astonishing effects and, with a theatrical flair, push them over. Experience the art of mind reading, a demonstration of hypnosis, an exploration of mind control, a prediction of the future and illusions that make you question reality. Be there to witness it on September 25th, 2011.
+</p>
 Witness it on September 25th, 2011 only @ <br>FestemberXI</b>.
 
 For more information on Arvind and his magic, check out his website and fan page:
