@@ -298,17 +298,17 @@ function facebook_click(){
 				<h3 style="color: #FF115F;font-size:13px;font-weight:bold;margin:10px 0">Sponsors/Partners</h3>
 				<div class="sponser">
 					<div class="slidee">
-						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" /></a>
-						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" /></a>
-						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" /></a>
-						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" /></a>
-						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" /></a>
-						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" /></a>
-						<a href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
-                                                <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" /></a>
-                                                <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" /></a>
-                                                <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" /></a>
-						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s11.jpg" width="120px" /></a>
+						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" width="120px" height="120" /></a>
+						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" width="120px" height="120" /></a>
+						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" width="120px" height="120" /></a>
+						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" width="120px" height="120" /></a>
+						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" width="120px" height="120" /></a>
+						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" width="120px" height="120" /></a>
+						<a href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
+						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
