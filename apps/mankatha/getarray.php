@@ -7,7 +7,8 @@ for($i=1;$i<52;$i++)
   {
   if(($numbers[$i]%13)!=($numbers[0])){
     $number[$i]=$numbers[$i];
-    else break;
+    else 
+      break;
   }
   }
 echo json_encode($number);
