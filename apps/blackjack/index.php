@@ -1,4 +1,10 @@
+<?php
 
+$rpath = "../";
+include("../fb.php");
+
+
+?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 
@@ -50,8 +56,6 @@ margin: 0 auto;
 
 </style>
 <script src="jquery.js" type="text/javascript"></script>
-<script src="jquery-1.6.2.js" type="text/javascript"></script>
-<script src="jquery.js" type="text/javascript"></script>
 <script src="illuminate.js" type="text/javascript"></script>
 <script src="start.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>
@@ -72,6 +76,8 @@ self.location="blackjack.php";
 }
 
 </script>
+Hi <?php echo $user["name"]; ?>!!!
+
 <div align="center" id="shine">
 <br><br>
 <img src="blackjack.jpg" width="600px" id="lk"/>
