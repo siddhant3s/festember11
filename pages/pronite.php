@@ -12,6 +12,7 @@ Remember, what happens in Vegas, stays in Vegas!
 </p>
 </div> 
 <div class="content-head">Day 3</div>
+<div class="content-head">An Evening Inside your mind</div>
 <div class="content-body">
 <p>
 After years of study and hundreds of performances, Arvind is ready to take you on a magical journey that you have to experience to believe. His fun and original presentations will provide you with entertainment that you will remember for a lifetime. He has appeared on Dutch national television on 'De Nieuwe Uri Geller' show, featured in national newspapers, amazed people at events ranging from galas, corporate shows and international festivals to private and charity events. With his unique style and persona, he can blow your mind up close while performing just a few inches away or shatter your reality when you are part of a thousand people watching his stage show.
