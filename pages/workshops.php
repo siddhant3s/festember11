@@ -25,7 +25,9 @@ Dance - Solo
 <div class="content-body">
 <p>
 “Stomp the yard” is the new solo dance workshop that Festember has to offer this year. By the end of this two day workshop participants will be grooving, krumping, locking and popping in synch to any Michael Jackson’s beat. 
+</p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
+<p>
 It is being organized by Raam’s Hips N toez, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop.
 </p>
 <p>
@@ -43,8 +45,9 @@ Fencing
 <p>
 Fencing is an up-and-coming sport that is gaining popularity among youngsters who are seeking new and exciting things to do. Fencing involves quick movements in offense and defense. Not only does it enhance mobility, balance and flexibility, it trains the mind in agility and tactility. It keeps the brain active and prevents cognitive decline or memory loss.
 Little wonder, it is also known as a physical chess game!
-</p><p>
+</p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
+</p>
 G. Nagasubramanian, Fencing coach, Sports Development Authority of Tamil Nadu and secretary and coach at Fencing Association Madurai District, offers a wholistic programme through a staggered play practice approach to fencing. Deliberate play activities, loosely structured activities with same contextual characteristics of fencing, are introduced at early stages of learning. Join fencing now!
 </p>
 </div>
@@ -60,7 +63,7 @@ As a whole decade filled with the fascinations and fantasies of Harry Potter pas
 <a href="http://arvindjshankar.com/default.aspx">http://arvindjshankar.com/default.aspx</a><br />
 <p>
 Have you ever wondered what happens in the backrooms of Vegas? Are you intrigued by cards, cheating and demonstrations of skill? Get ready to enroll in this exclusive, one-session only workshop. Arvind’s sleight of hand has taken him around the world and now he is headed to NIT, Trichy to share what he has learned, with you!. He will go over moves straight from the card table, demonstrate secret techniques and subterfuge gamblers have used for years to their advantage and also fine sleight of hand card work. During this workshop, you will learn basic to intermediate card handling methods and develop a foundation for future study in magic and sleight of hand. It will be highly interactive with explanations, videos, notes and also important points covering theory and the art of performance.
-</p>
+</p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
 <p>
 The workshop deals with an introduction to mentalist/mind reading

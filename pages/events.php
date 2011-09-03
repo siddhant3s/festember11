@@ -129,8 +129,14 @@ The judges' decisions will be final and binding, and are not open to review
 <li>The members of the band without exception shall be college students. </li>
 <li>No pre recorded sound is allowed.</li>
 <li>Instruments provided: 1 bass guitar, drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
+<li>Registration for the event closes by September 10.</li>
 </ul>
 The judges' decisions will be final and binding, and are not open to review
+<br>
+Demo videos for Tarangini and Gig-A-Hertz can be mailed to the following address:
+Sarvesh Kirthi
++91 99628 08927
+culsec@festember.in
 
 
 <?php break; case "gigahertz" :  ?>
@@ -144,17 +150,18 @@ The judges' decisions will be final and binding, and are not open to review
 <li>Band members do not necessarily have to be from college.</li>
 <li>No obscenity on stage.</li>
 <li>Instruments provided: 1 bass guitar, 1 keyboard (KORG N364), drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
+<li>Registration for the event closes by September 10.</li>
 </ul>
 
 The judges decisions will be final and binding, and are not open to review
 
-
+<br>
 Demo videos for Tarangini and Gig-A-Hertz can be mailed to the following address:
 Sarvesh Kirthi
 +91 99628 08927
 culsec@festember.in
 
-Rules are subject to change and will be updated on the official website\
+Rules are subject to change and will be updated on the official website
 
 <?php break; case "theatrix" :  ?>
 <div class="content-head">THEATRIX</div>
@@ -329,6 +336,14 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "lonewolfquiz" :  ?>
 <div class="content-head">LONE WOLF QUIZ</div>
+<br />
+<p>A full moon night,
+The alpha male breaks away from the pack,
+A blood curling howl shatters the peace of the night,
+Lone Wolf...
+A solo general quiz where all you Gyaan Gurus can compete against others of your creed in an intense
+battle of the brains. Bring it fo’ shizzle.</p>
+<img href="images/english1.png">
 <ul>
 <li>Single man quiz event</li>
 <li>Event would consist of a written prelims followed by two semi-finals and a final</li>
@@ -340,6 +355,11 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "indiaquiz" :  ?>
 <div class="content-head">INDIA QUIZ</div>
+<br />
+<p>Indira Gandhi : “How does India look from up there?”
+Rakesh Sharma:“Saare Jahan Se Achcha”
+
+A quiz about our glorious country. Come and rediscover India at Festember India quiz.</p>
 <ul>
 <li>Teams of three members.</li>
 <li>Event would consist of a written prelims followed by finals</li>
@@ -351,6 +371,12 @@ Rules are subject to change and will be updated on the official website
  
 <?php break; case "buzzerquiz" :  ?>
 <div class="content-head">BUZZER QUIZ</div>
+<br />
+<p>
+There is a need for speed at the Festember Buzzer quiz!
+A general quiz where it’s fastest finger first. But beware! Quick thinking is more important than quick fingering.
+</p>
+<img href="images/english2.png">
 <ul>
 <li>Teams of two members.</li>
 <li>The Buzzer quiz would consist of a printed preliminary round, where participants have to answer questions within the stipulated period of time. </li>
@@ -361,6 +387,11 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "specialquiz" :  ?>
 <div class="content-head">SPECIAL QUIZ</div>
+<br />
+<p>
+Mystery event; so mysterious that even we don’t know what it is. Open up the Pandora’s Box and expect
+the unexpected. Remove the quizzical looks off your face, it’ll definitely be mass!
+</p>
 <ul>
 <li>The quiz would consist of only a single round of two hours. </li>
 <li>Teams of three. </li>
@@ -370,6 +401,13 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "spentquiz" :  ?>
 <div class="content-head">SPENT QUIZ</div>
+<br />
+<p>
+Sports and Entertainment quiz. Questions are based on a wide range of topics in sports and
+entertainment, so make sure you come prepared. If you’re the kind of person who eats entertainment,
+sleeps sports and drinks only…(never mind), well this is just the event for you. Bear in mind, we want full
+fundae!
+</p>
 <ul>
 <li>Teams of three</li>
 <li>The quiz would consist of a written prelims followed by a final. </li>
@@ -390,6 +428,11 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "whatsthegoodword" :  ?>
 <div class="content-head">WHAT'S THE GOOD WORD?</div>
+<br />
+<p>
+An event filled with fun word games and mind boggling brainteasers. Bring out the wordsmith in you this
+Festember at “What’s the good word?”!
+</p>
 <ul>
 <li>The preliminary round of WTGW is a set of printed word puzzles like anagrams and rebuses. </li>
 <li>Teams of two. </li>
@@ -399,6 +442,13 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "crossword" :  ?>
 <div class="content-head">CROSSWORD</div>
+<br />
+<p>
+Across the world with no Aluminium articles. (9)
+If you understand this get down with crossword, one of the best events of its kind across the country
+(probably hopefully)
+A cryptic crossword event where logic and vocabulary cross swords.
+</p>
 <ul>
 <li>The preliminary round of WTGW is a set of printed word puzzles like anagrams and rebuses. </li>
 <li>Teams of two. </li>
@@ -408,6 +458,15 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "debate" :  ?>
 <div class="content-head">DEBATE</div>
+<br />
+<p>
+A game of thoughts,
+A clash of minds,
+A storm of words,
+A feast for spectators.
+Festember Debate!
+A formal, parliamentary style debate, however no furniture banging permitted.
+</p>
 <ul>
 <li>Teams of three</li>
 <li>The event format is Parliamentary style debate.</li>
@@ -418,6 +477,12 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case  "puzzlechamp":  ?>
 <div class="content-head">PUZZLE CHAMP</div>
+<br />
+<p>
+A world of puzzles that will tax your brain and leave you bemused, dumbfounded and flummoxed at
+every turn. Crack the puzzles, crush the competition and be crowned champions. This is no Dan Brown
+novel, this is Festember ’11.
+</p>
 <ul>
 <li>Prelims: 1 hour written round with puzzles like Sudoku, Hitori, Rebuses, and Clue-Do statements.</li>
 <li>6 teams through to the finals will have to solve more application oriented problems. </li>
@@ -427,7 +492,13 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "justaminute" :  ?>
 <div class="content-head">JUST A MINUTE</div>
-
+<br />
+<p>
+Pictures of Chuck Norris are considered currency in most countries.
+*BUZZ* Even Chuck Norris needs to be pre-qualified in Jam.
+Here is an event where the quick witted and the fast talkers shine. Remember it is Just A Minute and
+Mod is God. You could be gone in sixty seconds with the prizes!
+</p>
 <ul>
 <li>Participants will be divided into groups of 8. </li>
 <li>The participants are challenged to speak cumulatively for one minute on a given subject without repetition, hesitation, deviation, or grammatical errors. </li>
@@ -439,7 +510,11 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "dumbcharades" :  ?>
 <div class="content-head">DUMB CHARADES</div>
-
+<br />
+<p>
+Mass event with loads of fun guaranteed. A place where actions speak louder than words. There is no
+favorite or underdog here. Multiple rounds that put your miming skills to the test. Festember Dumb-C!
+</p>
 <ul>
 <li>Prelims: 3 members per team. </li>
 <li>The mime is given a list of three things (eg. a book, a movie, an event).</li>
@@ -451,7 +526,12 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "potpourri" :  ?>
 <div class="content-head">POT POURRI</div>
-
+<br />
+<p>
+A Jack of all trades can become the master of this event. Pot Pourri is an eclectic mix of various literary
+events. Versatility is the name of the game and the points do matter. Make sure your team is ready for a
+variety of tasks…
+</p>
 <ul>
 <li>Consists of prelims and a final. </li>
 <li>Teams of four.  </li>
