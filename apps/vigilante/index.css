@@ -1,0 +1,19 @@
+body{
+	margin: 10px auto;
+	padding: 10px;
+	width: 700px;
+	outline: 2px solid #000;
+	background: rgba(200,200,200,0.4) url(images/bg.jpg) no-repeat fixed left top;
+}
+canvas {
+	position: absolute;
+	background-color: transparent;
+}
+#stockDiv{
+	visibility: hidden;
+}
+#welcome{
+	border: 2px solid #777;
+	border-radius: 10px;
+	padding: 20px;
+}
