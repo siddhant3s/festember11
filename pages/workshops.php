@@ -10,8 +10,9 @@ Dance - Couple
 </div>
 <div class="content-body">
 <p>
-For those couples looking to jazz up the dance floor, look no further...  So folks hop on, shake some hips and break some sweat this Festember. Don't  Miss this chance to add some new moves to your dance arsenal...<br />
+For those couples looking to jazz up the dance floor, look no further...  So folks hop on, shake some hips and break some sweat this Festember. Don't  Miss this chance to add some new moves to your dance arsenal...</p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
+<p>
 Festember'11 brings you jive workshop with partnership with 5th Element Dance Co. Jive is a dynamic and high beat Latin dance style originated in United States incorporating mood of party and rhythm in dancers. 5th Element Dance Co a famous Chennai based dance school brings you this  workshop to jazz up Festember.
 
 <a href="http://www.youtube.com/watch?v=Lh0GXVatWPU">http://www.youtube.com/watch?v=Lh0GXVatWPU</a>
