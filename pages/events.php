@@ -468,6 +468,9 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "sursangam" :  ?>
 <div class="content-head">SUR SANGAM (Antakshari)</div>
+<p>Sur sangam is the Hindi antakshri. To win this one should have good knowledge of Bollywood movies,
+Hindi songs, artists, music directors etc. Sur sangam is two staged event- written prelims and on stage
+finals.</p>
 <ul>
 <li>Hindi antakshari</li>
 <li>Two staged event.</li>
