@@ -230,6 +230,9 @@ vrdeepakprakash@gmail.com
 
 <?php break; case "dominoes" :  ?>
 <div class="content-head">DOMINOES</div>
+<br>
+<p>Display of a colorful contraption with matchboxes that gradually unravels a mystery.</p>
+<br>
 <ul>
 <li>Participants need to make an artistic pattern using matchboxes (units) covered with colored papers or painted.</li>
 <li>Teams, each comprising five members, can participate.</li>
@@ -247,6 +250,12 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "photography" :  ?>
 <div class="content-head">PHOTOGRAPHY</div>
+<br>
+<p>Campus views- Faces, Places and Fancies
+
+What does your College Look like through your eyes? This contest seeks to illuminate your perspective; what you love; your colours; or anything that reflects your campus and experience. Let your photos do the talking!</p>
+<br>
+
 <ul>
 <li>Participants need to capture elements of their college (only) in photos taken by any camera of their choice.</li>
 <li>The photos can be colour or b/w.</li>
@@ -259,6 +268,9 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "graffiti" :  ?>
 <div class="content-head">GRAFFITI</div>
+<br>
+<p>Paint the walls wild with the zeniths of your imagination. Suffuse the walls with the colors of your thoughts and project it unto the world.</p>
+<br>
 <ul>
 <li>Participants need to paint a section of a wall provided to them with given painting material.</li>
 <li>Teams, each of three members, can participate.</li>
@@ -272,6 +284,9 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "facepainting" :  ?>
 <div class="content-head">FACE PAINTING</div>
+<br>
+<p>Express all you feel on the face of your partner.</p>
+<br>
 <ul>
 <li>Teams, each of two members, can participate.</li>
 <li>One of the participants must paint the face of other using the water/oil colours and brushes provided.</li>
@@ -421,6 +436,7 @@ Rules are subject to change and will be updated on the official website
 <ul/>
 
 
+
 <?php break; case "dumbcharades" :  ?>
 <div class="content-head">DUMB CHARADES</div>
 
@@ -468,9 +484,6 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "sursangam" :  ?>
 <div class="content-head">SUR SANGAM (Antakshari)</div>
-<p>Sur sangam is the Hindi antakshri. To win this one should have good knowledge of Bollywood movies,
-Hindi songs, artists, music directors etc. Sur sangam is two staged event- written prelims and on stage
-finals.</p>
 <ul>
 <li>Hindi antakshari</li>
 <li>Two staged event.</li>
@@ -567,6 +580,18 @@ finals.</p>
 <li>Top 6 teams from prelims qualify for the finals.</li>
 <ul/>
 The judges' decisions will be final and binding, and are not open to review
+
+<?php break; case "dominoes" :  ?>
+<div class="content-head">DOMINOES</div>
+<ul>
+<li>Group Event</li>
+<li>Written prelims</li>
+<li>Unlimited entries in prelims</li>
+<li>Three persons per team</li>
+<li>At max, 3 teams from any college can reach the final.</li>
+<li>Top 6 teams from prelims qualify for the finals.</li>
+<ul/>
+
 
 <?php break; default : ?>
 
