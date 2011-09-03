@@ -229,7 +229,7 @@ function facebook_click(){
 	<div class="scroller">
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
+                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
                 <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
 		
                 <img

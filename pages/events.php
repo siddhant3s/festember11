@@ -203,8 +203,15 @@ Rules:
 <li>Participants can provide a 100-word write-up that explains the relation of the short movie with the chosen theme. This can be sent along with the entries to the organizer's address.</li>
 <li>Entries must reach the organizers by 11:59 PM on the 20th of September, 2011. Late entries will be subject to direct disqualifications.</li>
 </ul>
-The judges' decisions will be final and binding, and are not open to review
-
+The judges' decisions will be final and binding, and are not open to review.
+<br />
+For further details and the submissions must be sent to:
+Deepak Valagam
+Roomno 49
+Garnet-C, NIT Trichy
+Trichy 15
++91 96774 77694
+vrdeepakprakash@gmail.com
 
 <?php break; case "flash" :  ?>
 <div class="content-head">FLASH (Ad Making)</div>
@@ -233,7 +240,8 @@ Rules:
 <li>Use of abusive language and obscene scenes will lead to direct disqualification.</li>
 <li>NO REGISTRATIONS are necessary for the event, however the entries must reach the organizers on or before 11:59 PM on 20th of September 2011. </li>
 </ul>
-The judges' decisions will be final and binding, and are not open to review
+The judges' decisions will be final and binding, and are not open to review.
+<br />
 For further details and the submissions must be sent to:
 Deepak Valagam
 Roomno 49
