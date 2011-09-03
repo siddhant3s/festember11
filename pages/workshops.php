@@ -10,7 +10,10 @@ Dance - Couple
 </div>
 <div class="content-body">
 <p>
-For those couples looking to jazz up the dance floor, look no further... Festember'11 brings you jive workshop with partnership with 5th Element Dance Co. Jive is a dynamic and high beat Latin dance style originated in United States incorporating mood of party and rhythm in dancers. 5th Element Dance Co a famous Chennai based dance school brings you this  workshop to jazz up Festember. So folks hop on, shake some hips and break some sweat this Festember. Don't  Miss this chance to add some new moves to your dance arsenal...<br />
+For those couples looking to jazz up the dance floor, look no further...  So folks hop on, shake some hips and break some sweat this Festember. Don't  Miss this chance to add some new moves to your dance arsenal...<br />
+<h3 style="font-size:18px">Details on the workshop</h3><br/>
+Festember'11 brings you jive workshop with partnership with 5th Element Dance Co. Jive is a dynamic and high beat Latin dance style originated in United States incorporating mood of party and rhythm in dancers. 5th Element Dance Co a famous Chennai based dance school brings you this  workshop to jazz up Festember.
+
 <a href="http://www.youtube.com/watch?v=Lh0GXVatWPU">http://www.youtube.com/watch?v=Lh0GXVatWPU</a>
 </p>
 </div>
@@ -20,7 +23,9 @@ Dance - Solo
 </div>
 <div class="content-body">
 <p>
-“Stomp the yard” is the new solo dance workshop that Festember has to offer this year. It is being organized by Raam’s Hips N toez, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop. By the end of this two day workshop participants will be grooving, krumping, locking and popping in synch to any Michael Jackson’s beat. 
+“Stomp the yard” is the new solo dance workshop that Festember has to offer this year. By the end of this two day workshop participants will be grooving, krumping, locking and popping in synch to any Michael Jackson’s beat. 
+<h3 style="font-size:18px">Details on the workshop</h3><br/>
+It is being organized by Raam’s Hips N toez, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop.
 </p>
 <p>
 ”Man must speak, then sing, then dance. The speaking is the brain, the thinking man. The singing is the emotion. The dancing is the Dionysian ecstasy which carries away all.”</p>
@@ -35,11 +40,10 @@ Fencing
 <img style="width:200px;position:relative;left:200px;border:1px solid #333333;" src="images/fencing.jpg">
 <div class="content-body">
 <p>
-Fencing is an up-and-coming sport that is gaining popularity among youngsters who are seeking new and exciting things to do. Fencing involves quick movements in offense and defense. Not only does it enhance mobility, balance and flexibility, it trains the mind in agility and tactility. It keeps the brain active and prevents cognitive decline or memory loss.</p>
-
-<p>
+Fencing is an up-and-coming sport that is gaining popularity among youngsters who are seeking new and exciting things to do. Fencing involves quick movements in offense and defense. Not only does it enhance mobility, balance and flexibility, it trains the mind in agility and tactility. It keeps the brain active and prevents cognitive decline or memory loss.
 Little wonder, it is also known as a physical chess game!
 </p><p>
+<h3 style="font-size:18px">Details on the workshop</h3><br/>
 G. Nagasubramanian, Fencing coach, Sports Development Authority of Tamil Nadu and secretary and coach at Fencing Association Madurai District, offers a wholistic programme through a staggered play practice approach to fencing. Deliberate play activities, loosely structured activities with same contextual characteristics of fencing, are introduced at early stages of learning. Join fencing now!
 </p>
 </div>
