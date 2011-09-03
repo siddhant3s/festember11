@@ -24,22 +24,24 @@ Dance - Solo
 </div>
 <div class="content-body">
 <p>
+”Man must speak, then sing, then dance. The speaking is the brain, the thinking man. The singing is the emotion. The dancing is the Dionysian ecstasy which carries away all.”</p>
+<p>
+- Isadora Duncan
+</p>
+
+<p>
 “Stomp the yard” is the new solo dance workshop that Festember has to offer this year. By the end of this two day workshop participants will be grooving, krumping, locking and popping in synch to any Michael Jackson’s beat. 
 </p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
 <p>
 It is being organized by Raam’s Hips N toez, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop.
 </p>
-<p>
-”Man must speak, then sing, then dance. The speaking is the brain, the thinking man. The singing is the emotion. The dancing is the Dionysian ecstasy which carries away all.”</p>
-<p>
-- Isadora Duncan
-</p>
 </div>
 
 <div class="content-head">
 Fencing
 </div>
+<div class="content-body">
 <img style="width:200px;position:relative;left:200px;border:1px solid #333333;" src="images/fencing.jpg">
 <div class="content-body">
 <p>
@@ -47,7 +49,7 @@ Fencing is an up-and-coming sport that is gaining popularity among youngsters wh
 Little wonder, it is also known as a physical chess game!
 </p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
-</p>
+<p>
 G. Nagasubramanian, Fencing coach, Sports Development Authority of Tamil Nadu and secretary and coach at Fencing Association Madurai District, offers a wholistic programme through a staggered play practice approach to fencing. Deliberate play activities, loosely structured activities with same contextual characteristics of fencing, are introduced at early stages of learning. Join fencing now!
 </p>
 </div>

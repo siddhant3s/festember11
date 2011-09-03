@@ -129,7 +129,7 @@ The judges' decisions will be final and binding, and are not open to review
 <li>The members of the band without exception shall be college students. </li>
 <li>No pre recorded sound is allowed.</li>
 <li>Instruments provided: 1 bass guitar, drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
-<li>Registration for the event closes by September 10.</li>
+<li>Send your Demo videos by September 10.</li>
 </ul>
 The judges' decisions will be final and binding, and are not open to review
 <br>
@@ -150,7 +150,7 @@ culsec@festember.in
 <li>Band members do not necessarily have to be from college.</li>
 <li>No obscenity on stage.</li>
 <li>Instruments provided: 1 bass guitar, 1 keyboard (KORG N364), drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
-<li>Registration for the event closes by September 10.</li>
+<li>Send your demo videos by September 10.</li>
 </ul>
 
 The judges decisions will be final and binding, and are not open to review
@@ -189,6 +189,7 @@ SHOWTIME is a short film making contest. The contestants are given an option to 
 Rules:
 <ul>
 <li>The entries have to be original. Plagiarized content will lead to disqualification.</li>
+<li>No specific topics for the film.</li>
 <li>No restriction on the number of entries per college.</li>
 <li>Entries cannot exceed 10 minutes including the time for titles and credits.</li>
 <li>Maximum of 15 people can appear as part of the cast and 10 people behind the scenes.</li>
@@ -209,6 +210,12 @@ The judges' decisions will be final and binding, and are not open to review
 <div class="content-head">FLASH (Ad Making)</div>
 It is an advertisement making contest. The contestants are given an option to choose from any of the three topics and are expected to come up with original, non-documentary entries made to publicize any of the three products/services/causes. The main judging criteria are creativity in implementation, direction, editing, presentation etc.
 
+Topics:
+<ul>
+<li>Right to information act</li>
+<li>Glue</li>
+<li>Bubble Gum</li>
+</ul>
 Rules: 
 <ul>
 <li>The participants are required to submit an advertisement video which is to be based any of the themes given on the website.</li>
@@ -227,8 +234,11 @@ Rules:
 <li>NO REGISTRATIONS are necessary for the event, however the entries must reach the organizers on or before 11:59 PM on 20th of September 2011. </li>
 </ul>
 The judges' decisions will be final and binding, and are not open to review
-For further details contact:
+For further details and the submissions must be sent to:
 Deepak Valagam
+Roomno 49
+Garnet-C, NIT Trichy
+Trichy 15
 +91 96774 77694
 vrdeepakprakash@gmail.com
 
@@ -343,7 +353,7 @@ A blood curling howl shatters the peace of the night,
 Lone Wolf...
 A solo general quiz where all you Gyaan Gurus can compete against others of your creed in an intense
 battle of the brains. Bring it fo’ shizzle.</p>
-<img href="images/english1.png">
+<img style="position:relative;left:200px;border:1px solid #333333;" src="images/english1.png">
 <ul>
 <li>Single man quiz event</li>
 <li>Event would consist of a written prelims followed by two semi-finals and a final</li>
@@ -376,7 +386,7 @@ A quiz about our glorious country. Come and rediscover India at Festember India 
 There is a need for speed at the Festember Buzzer quiz!
 A general quiz where it’s fastest finger first. But beware! Quick thinking is more important than quick fingering.
 </p>
-<img href="images/english2.png">
+<img style="position:relative;left:200px;border:1px solid #333333;" src="images/english2.png">
 <ul>
 <li>Teams of two members.</li>
 <li>The Buzzer quiz would consist of a printed preliminary round, where participants have to answer questions within the stipulated period of time. </li>
