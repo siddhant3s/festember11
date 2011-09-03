@@ -184,12 +184,13 @@ Rules are subject to change and will be updated on the official website
 
 <?php break; case "showtime" :  ?>
 <div class="content-head">SHOWTIME (Short Film Making)</div>
+<br />
 SHOWTIME is a short film making contest. The contestants are given an option to choose from any (one or more) of the three styles of movie making and are expected to come up with original, non-documentary entries made in any of the styles. The main judging criteria are creativity in implementation, direction, editing, presentation etc. Also provide a short write up on your implementation of the topic as well as a short description of your video.
 
 Rules:
 <ul>
-<li>The entries have to be original. Plagiarized content will lead to disqualification.</li>
 <li>No specific topics for the film.</li>
+<li>The entries have to be original. Plagiarized content will lead to disqualification.</li>
 <li>No restriction on the number of entries per college.</li>
 <li>Entries cannot exceed 10 minutes including the time for titles and credits.</li>
 <li>Maximum of 15 people can appear as part of the cast and 10 people behind the scenes.</li>
@@ -215,8 +216,9 @@ vrdeepakprakash@gmail.com
 
 <?php break; case "flash" :  ?>
 <div class="content-head">FLASH (Ad Making)</div>
+<br />
 It is an advertisement making contest. The contestants are given an option to choose from any of the three topics and are expected to come up with original, non-documentary entries made to publicize any of the three products/services/causes. The main judging criteria are creativity in implementation, direction, editing, presentation etc.
-
+<br />
 Topics:
 <ul>
 <li>Right to information act</li>
