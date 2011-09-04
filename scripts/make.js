@@ -212,31 +212,35 @@ window.onload=function(){
 
     
 };
+     var cttx=new Array("#can1","#can2","#can3","#can4","#can5","#can6");
+     var cttx_elems = new Array($("#can1"),$("#can2"),$("#can3"),$("#can4"),$("#can5"),$("#can6"));
+     var cttx_class = $('.can');
+
      var animation = setInterval(function() {
-				     if(i<6) //can be used to pause the animation, just put i>6 the animation will pause
+				     if(i<6){ //can be used to pause the animation, just put i>6 the animation will pause
+					 animate(i,cttx_elems);
 					 i++;
+				     }
 				     if(i==6)
 					 i=0;
-				     animate(i);
+				     			     
 				 },200);
 
-     var cttx=new Array("#can1","#can2","#can3","#can4","#can5","#can6");
-     var cttx_elems = new Array();
-     for (var i=0; i<5;i++)
-	 cttx_elems.push( $(cttx[i])  );
+
+
      
-     function animate(I){
-	 for(j=0;j<6;j++){ 
+     function animate(I,cttx_elems){
+	 for(var j=0;j<6;j++){ 
 	     if(j == 5)
-		 $(cttx[j]).fadeOut();	
+		 cttx_elems[j].fadeOut();	
 	     else
-		 $(cttx[j]).css("display","none");
+		 cttx_elems[j].css("display","none");
 	 }
 	 
 	 if(I!=5)
-	     $(cttx[I]).css("display","block");
+	     cttx_elems[I].css("display","block");
 	 if(I==5){
-	     $(cttx[I]).fadeIn(100);
+	     cttx_elems[I].fadeIn(100);
 	 }
 	 
      }
@@ -245,30 +249,31 @@ window.onload=function(){
 	 if(i>6){//if animation is stoped already, resume it by putting i=0
 	     
 	     setTimeout(function(){
-			    for(j=0;j<6;j++)$(cttx[j]).css("display","block");
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},100);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },500);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},550);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); for(j=0;j<6;j++)$(cttx[j]).css("opacity","0.9");},600);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},650);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },700);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},750);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },800);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},850);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },900);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},950);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("opacity","1.0");},1000);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","block"); },1050);
-			    setTimeout(function(){for(j=0;j<6;j++)$(cttx[j]).css("display","none");},1100);
+			    cttx_class.css("display","block");
+			    setTimeout(function(){cttx_class.css("display","none");},100);
+			    setTimeout(function(){cttx_class.css("display","block"); },500);
+			    setTimeout(function(){cttx_class.css("display","none");},550);
+			    setTimeout(function(){cttx_class.css("display","block"); 
+						  cttx_class.css("opacity","0.9");},600);
+			    setTimeout(function(){cttx_class.css("display","none");},650);
+			    setTimeout(function(){cttx_class.css("display","block"); },700);
+			    setTimeout(function(){cttx_class.css("display","none");},750);
+			    setTimeout(function(){cttx_class.css("display","block"); },800);
+			    setTimeout(function(){cttx_class.css("display","none");},850);
+			    setTimeout(function(){cttx_class.css("display","block"); },900);
+			    setTimeout(function(){cttx_class.css("display","none");},950);
+			    setTimeout(function(){cttx_class.css("opacity","1.0");},1000);
+			    setTimeout(function(){cttx_class.css("display","block"); },1050);
+			    setTimeout(function(){cttx_class.css("display","none");},1100);
 			    setTimeout(function() {i=0;},1400); //resume animation
 			},100);	
 	 }
 	 else{
 	     i=10;//pause the animation
-	     var j;
-	     for(j=0;j<6;j++)
+
+	     for(var j=0;j<6;j++)
 	     { 
-		 $(cttx[j]).css("display","none");//hide all glow
+		 cttx_elems[j].css("display","none");//hide all glow
 	     }
 	 }
      }

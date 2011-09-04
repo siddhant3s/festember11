@@ -1,5 +1,4 @@
 
-window.onload = function() {
       FB.init({
         appId:appId,
         status:true,
@@ -7,4 +6,3 @@ window.onload = function() {
         fbml:true,
         oauth:true,
       });
-};
