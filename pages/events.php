@@ -756,6 +756,7 @@ The judges' decisions will be final and binding, and are not open to review
 <div class="content-head">KODAMBAKKAM</div>
 <img class="tamil1" src="images/tamil/13-1.png" >
 <img class="tamil2" src="images/tamil/13-2.png" >
+<br />
 -Tamil Cinema Quiz
 
 <?php break; default : ?>
