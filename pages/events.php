@@ -697,6 +697,66 @@ The judges' decisions will be final and binding, and are not open to review
 <img class="tamil1" src="images/tamil/1-1.png" >
 <img class="tamil2" src="images/tamil/1-2.png" >
 
+<?php break; case "kurukkezhuttu" :  ?>
+<div class="content-head">KURUKKEZHUTTHU</div>
+<img class="tamil1" src="images/tamil/2-1.png" >
+<img class="tamil2" src="images/tamil/2-2.png" >
+
+<?php break; case "sirukkathai" :  ?>
+<div class="content-head">SIRUKKATHAI MANNAN</div>
+<img class="tamil1" src="images/tamil/3-1.png" >
+<img class="tamil2" src="images/tamil/3-2.png" >
+
+<?php break; case "kavithai" :  ?>
+<div class="content-head">KAVITHAI</div>
+<img class="tamil1" src="images/tamil/4-1.png" >
+<img class="tamil2" src="images/tamil/4-2.png" >
+
+<?php break; case "koothampalam" :  ?>
+<div class="content-head">KOOTHAMPALAM</div>
+<img class="tamil1" src="images/tamil/5-1.png" >
+<img class="tamil2" src="images/tamil/5-2.png" >
+
+<?php break; case "kuraloviyum" :  ?>
+<div class="content-head">KURALOVIUM</div>
+<img class="tamil1" src="images/tamil/6-1.png" >
+<img class="tamil2" src="images/tamil/6-2.png" >
+
+<?php break; case "kolam" :  ?>
+<div class="content-head">KOLAM</div>
+<img class="tamil1" src="images/tamil/7-1.png" >
+<img class="tamil2" src="images/tamil/7-2.png" >
+
+<?php break; case "kaatrodu" :  ?>
+<div class="content-head">KAATRODU KATHAI PESAVA</div>
+<img class="tamil1" src="images/tamil/8-1.png" >
+<img class="tamil2" src="images/tamil/8-2.png" >
+
+<?php break; case "kelichittiram" :  ?>
+<div class="content-head">KELICHITTIRAM</div>
+<img class="tamil1" src="images/tamil/9-1.png" >
+<img class="tamil2" src="images/tamil/9-2.png" >
+
+<?php break; case "thinamthorum" :  ?>
+<div class="content-head">THINAMTHORUM</div>
+<img class="tamil1" src="images/tamil/10-1.png" >
+<img class="tamil2" src="images/tamil/10-2.png" >
+
+<?php break; case "dhilirunthal" :  ?>
+<div class="content-head">DHIL IRUNTHAL DHOOL</div>
+<img class="tamil1" src="images/tamil/11-1.png" >
+<img class="tamil2" src="images/tamil/11-2.png" >
+
+<?php break; case "nagarigakomali" :  ?>
+<div class="content-head">NAGARIGA KOMALI</div>
+<img class="tamil1" src="images/tamil/12-1.png" >
+<img class="tamil2" src="images/tamil/12-2.png" >
+
+<?php break; case "kodambakkam" :  ?>
+<div class="content-head">KODAMBAKKAM</div>
+<img class="tamil1" src="images/tamil/13-1.png" >
+<img class="tamil2" src="images/tamil/13-2.png" >
+-Tamil Cinema Quiz
 
 <?php break; default : ?>
 
@@ -706,19 +766,46 @@ The judges' decisions will be final and binding, and are not open to review
  
  <h2>TAMIL LITS</h2>
  <ul>
-<li><a ajaxify="2" href="./events+uyarthani">UYARTHANI CHEMMOZHI</li>
-<li><a ajaxify="2" href="./events+kurukkezhuttu">KURUKKEZHUTTHU</li>
-<li><a ajaxify="2" href="./events+sirukkathai">SIRUKKATHAI MANNAN</li>
-<li><a ajaxify="2" href="./events+kavithai">KAVITHAI</li>
-<li><a ajaxify="2" href="./events+koothampalam">KOOTHAMPALAM</li>
-<li><a ajaxify="2" href="./events+kuraloviyum">KURALOVIUM</li>
-<li><a ajaxify="2" href="./events+kolam">KOLAM</li>
-<li><a ajaxify="2" href="./events+kaatrodu">KAATRODU KATHAI PESAVA</li>
-<li><a ajaxify="2" href="./events+kelichittiram">KELICHITTIRAM</li>
-<li><a ajaxify="2" href="./events+thinamthorum">THINAMTHORUM</li>
-<li><a ajaxify="2" href="./events+dhilirunthal">DHIL IRUNTHAL DHOOL</li>
-<li><a ajaxify="2" href="./events+nagarigakomali">NAGARIGA KOMALI</li>
-<li><a ajaxify="2" href="./events+kodambakkam">KODAMBAKKAM</li>
+<li><a ajaxify="2" href="./events+uyarthani">UYARTHANI CHEMMOZHI</a></li>
+<li><a ajaxify="2" href="./events+kurukkezhuttu">KURUKKEZHUTTHU</a></li>
+<li><a ajaxify="2" href="./events+sirukkathai">SIRUKKATHAI MANNAN</a></li>
+<li><a ajaxify="2" href="./events+kavithai">KAVITHAI</a></li>
+<li><a ajaxify="2" href="./events+koothampalam">KOOTHAMPALAM</a></li>
+<li><a ajaxify="2" href="./events+kuraloviyum">KURALOVIUM</a></li>
+<li><a ajaxify="2" href="./events+kolam">KOLAM</a></li>
+<li><a ajaxify="2" href="./events+kaatrodu">KAATRODU KATHAI PESAVA</a></li>
+<li><a ajaxify="2" href="./events+kelichittiram">KELICHITTIRAM</a></li>
+<li><a ajaxify="2" href="./events+thinamthorum">THINAMTHORUM</a></li>
+<li><a ajaxify="2" href="./events+dhilirunthal">DHIL IRUNTHAL DHOOL</a></li>
+<li><a ajaxify="2" href="./events+nagarigakomali">NAGARIGA KOMALI</a></li>
+<li><a ajaxify="2" href="./events+kodambakkam">KODAMBAKKAM</a></li>
+ </ul>
+
+ <h2>DRAMATICS</h2>
+ <ul>
+ <li><a ajaxify="2" href="./events+theatrix">THEATRIX</a></li>
+ </ul>
+
+ <h2>CINEMATICS</h2>
+ <ul>
+ <li><a ajaxify="2" href="./events+showtime">SHOWTIME (Short Film Making)</a></li> 
+ <li><a ajaxify="2" href="./events+flash">FLASH (Ad Making)</a></li>
+ </ul>
+
+</div>
+
+<div class="content-body-col2">
+  <h2>DANCE</h2>
+ <ul>
+ <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
+ <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
+ </ul>
+
+ <h2>MUSIC</h2>
+ <ul>
+ <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
+ <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern)</a></li>
+ <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
  </ul>
 
  <h2>ENGLISH LITS</h2>
@@ -737,40 +824,7 @@ The judges' decisions will be final and binding, and are not open to review
  <li><a ajaxify="2" href="./events+dumbcharadses">DUMB CHARADES</a></li>
  <li><a ajaxify="2" href="./events+potpourri">POT POURRI</a></li>
  </ul>
-</div>
 
-<div class="content-body-col2">
-  <h2>DANCE</h2>
- <ul>
- <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
- <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
- </ul>
-
- <h2>MUSIC</h2>
- <ul>
- <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
- <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern)</a></li>
- <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
- </ul>
-
- <h2>DRAMATICS</h2>
- <ul>
- <li><a ajaxify="2" href="./events+theatrix">THEATRIX</a></li>
- </ul>
-
- <h2>CINEMATICS</h2>
- <ul>
- <li><a ajaxify="2" href="./events+showtime">SHOWTIME (Short Film Making)</a></li> 
- <li><a ajaxify="2" href="./events+flash">FLASH (Ad Making)</a></li>
- </ul>
-
- <h2>ART EVENTS</h2>
- <ul>
- <li><a ajaxify="2" href="./events+dominoes">DOMINOES</a></li>
- <li><a ajaxify="2" href="./events+photography">PHOTOGRAPHY</a></li>
- <li><a ajaxify="2" href="./events+graffiti">GRAFFITI</a></li>
- <li><a ajaxify="2" href="./events+facepainting">FACE PAINTING</a></li>
- </ul>
 </div>
 
 <div class="content-body-col3">
@@ -788,6 +842,14 @@ The judges' decisions will be final and binding, and are not open to review
  </ul> 
 
  </ul>
+ <h2>ART EVENTS</h2>
+ <ul>
+ <li><a ajaxify="2" href="./events+dominoes">DOMINOES</a></li>
+ <li><a ajaxify="2" href="./events+photography">PHOTOGRAPHY</a></li>
+ <li><a ajaxify="2" href="./events+graffiti">GRAFFITI</a></li>
+ <li><a ajaxify="2" href="./events+facepainting">FACE PAINTING</a></li>
+ </ul>
+
 </div>
 
 <div class="content-body-rules">
