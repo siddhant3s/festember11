@@ -686,6 +686,19 @@ position:relative;
 top:10px;
 left:37px;
 }
+
+/*tamil pictures event css*/
+
+.tamil1{
+position:relative;
+top:20px;
+}
+
+.tamil2{
+position:relative;
+top:100px;
+}
+
 /*
  * #openid_btns a{
  * display:none;

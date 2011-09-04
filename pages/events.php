@@ -692,6 +692,11 @@ The judges' decisions will be final and binding, and are not open to review
 <li>Top 6 teams from prelims qualify for the finals.</li>
 <ul/>
 
+<?php break; case "uyarthani" :  ?>
+<div class="content-head">UYARTHANI CHEMMOZHI</div>
+<img class="tamil1" src="images/tamil/1-1.png" >
+<img class="tamil2" src="images/tamil/1-2.png" >
+
 
 <?php break; default : ?>
 
@@ -701,7 +706,19 @@ The judges' decisions will be final and binding, and are not open to review
  
  <h2>TAMIL LITS</h2>
  <ul>
-<li>Coming Soon...</li>
+<li><a ajaxify="2" href="./events+uyarthani">UYARTHANI CHEMMOZHI</li>
+<li><a ajaxify="2" href="./events+kurukkezhuttu">KURUKKEZHUTTHU</li>
+<li><a ajaxify="2" href="./events+sirukkathai">SIRUKKATHAI MANNAN</li>
+<li><a ajaxify="2" href="./events+kavithai">KAVITHAI</li>
+<li><a ajaxify="2" href="./events+koothampalam">KOOTHAMPALAM</li>
+<li><a ajaxify="2" href="./events+kuraloviyum">KURALOVIUM</li>
+<li><a ajaxify="2" href="./events+kolam">KOLAM</li>
+<li><a ajaxify="2" href="./events+kaatrodu">KAATRODU KATHAI PESAVA</li>
+<li><a ajaxify="2" href="./events+kelichittiram">KELICHITTIRAM</li>
+<li><a ajaxify="2" href="./events+thinamthorum">THINAMTHORUM</li>
+<li><a ajaxify="2" href="./events+dhilirunthal">DHIL IRUNTHAL DHOOL</li>
+<li><a ajaxify="2" href="./events+nagarigakomali">NAGARIGA KOMALI</li>
+<li><a ajaxify="2" href="./events+kodambakkam">KODAMBAKKAM</li>
  </ul>
 
  <h2>ENGLISH LITS</h2>
