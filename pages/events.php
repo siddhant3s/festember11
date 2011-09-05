@@ -647,7 +647,7 @@ Rules are subject to change and will be updated on the official website
 <ul/>
 
 
-<?php break; case "ywaritsrijnatmaklekhan" :  ?>
+<?php break; case "twaritsrijnatmaklekhan" :  ?>
 <div class="content-head">TWARIT SRIJNATMAK LEKHAN</div>
 <ul>
 <li>Hindi creative writing</li>
@@ -680,6 +680,16 @@ Rules are subject to change and will be updated on the official website
 <li>Top 6 teams from prelims qualify for the finals.</li>
 <ul/>
 The judges' decisions will be final and binding, and are not open to review
+
+<?php break; case "extempore" :  ?>
+<div class="content-head">EXTEMPORE</div>
+<ul>
+<li>Single member, on stage event</li>
+<li>Unlimited entries in prelims</li>
+<li>Topics will be given on spot with one minute to think about it</li>
+<li>On spot speaking abilities will be tested</li>
+<ul/>
+
 
 <?php break; case "dominoes" :  ?>
 <div class="content-head">DOMINOES</div>
@@ -839,6 +849,7 @@ The judges' decisions will be final and binding, and are not open to review
  <li><a ajaxify="2" href="./events+saanpseedhi">SAANP SEEDHI</a></li>
  <li><a ajaxify="2" href="./events+twaritsrijnatmaklekhan">TWARIT SRIJNATMAK LEKHAN</a></li>
  <li><a ajaxify="2" href="./events+rochakmantrana">ROCHAK MANTRANA</a></li>
+ <li><a ajaxify="2" href="./events+extempore">EXTEMPORE</a></li>
  <li><a ajaxify="2" href="./events+bluffmaster">BLUFF MASTER</a></li>
  </ul> 
 
