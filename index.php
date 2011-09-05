@@ -229,7 +229,7 @@ function facebook_click(){
 	<div class="scroller">
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
+                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
                 <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
 		
                 <img
@@ -308,6 +308,7 @@ function facebook_click(){
                                                 <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" height="120" /></a>
                                                 <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
 						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
+						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
