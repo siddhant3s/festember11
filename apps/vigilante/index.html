@@ -1,30 +1,53 @@
 <html>
 <head>
-	<title>
-		Vigilante
-	</title>
+	<title>Festember Games: Vigilante</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png"></link>
 	<link rel="stylesheet" type="text/css" href="index.css"></link>
+	<link rel="Favicon
 	<!--[if lt IE 9]>
 		<script type="application/javascript" src="excanvas.js"></script>
 	<![endif]-->
 	<script type="application/javascript" src="index.js"></script>
 </head>
 <body onload="bodyLoad()" onkeydown="keyPress(event)">
+<div id="bodydiv">
 <input type="hidden" id="userinfo" value="username" />
 <input type="hidden" id="levelinfo" value="1" />
 <input type="hidden" id="leveldesc" value="" />
-<input type="hidden" id="leveladds" value="055s" /><!-- p0+p1 coins sec?s -->
+<input type="hidden" id="leveladds" value="055s54011" />
+<!-- p0+p1 coins sec?s sco0*sc1 bb time0*time1*10s-->
+
+<div class="header">
+	<a href="http://www.festember.in/"><img src="images/festember.png" alt="Festember 11" class="header" /></a>
+</div>
 <div id="checkdiv"></div>
 
 <div id="welcome">
+<h1>Welcome to Vigilante</h1>
+<br/>
+<p><em>Rules of Play</em><br/><br/>
+The objective of the game is to collect the coins straying around in the casino and make some easy money. The drunk and ecstastic people won't notice you picking up the coins unless you are in their DIRECT FIELD OF SIGHT. so, all you have to do is to collect 20 points, without getting caught by the security camera or any of the persons around.<br/>
+If you are seen by any person around while picking up a coin, there is a high probability that you will be caught. If more persons see you at the same time, the probability is higher.</p>
+<br/><p><em>Scores</em><br/>
+For each level you clear, you are awarded 100 points. Clear more levels to earn more points! As you go up the levels, the number of persons increases, the time limit reduces and coins are less laying around.</p>
+<br/><p><em>How to play?</em><br/>
+Move the Barman using the arrow keys. The persons roam around on their own will. To pick up coins, face towards the coin and press <em>A</em> to pick up the coin to score points. You need to pick a minimum number of coins in ach level to upgrade to the next level!</p>
 
-
+&nbsp;&nbsp;&nbsp;<input type="button" value="Start Game!" onclick="toggleWelcome()" />
 </div>
-
-<div id="wrapper" HIDDEN>
-<canvas id="backgroundCanvas" z-index=1>HTML5 canvas are not supported! Please update your browser to a newer version: IE7, Firefox 4.1 or Chrome 7</canvas>
-<canvas id="scratchpadCanvas" z-index=2></canvas>
-<canvas id="lidCanvas" z-index=3></canvas>
+<div id="gameback" onclick="hideGame()"></div>
+<div id="game">
+<div id="wrapper">
+<canvas id="backgroundCanvas" >HTML5 canvas are not supported! Please update your browser to a newer version: IE9, Firefox 1.5 or Chrome 4.1 or higher</canvas>
+<canvas id="scratchpadCanvas" z-index=1></canvas>
+<canvas id="lidCanvas" z-index=2></canvas>
+</div></div>
+</div><!-- end bodydiv -->
+<div id="footer">
+	<a href="http://www.festember.in/"><img src="images/flogo.jpg" id="flogo"></img></a><br/>
+	<div id="shoe">
+		For Sponsorship, contact <b><em>marketing@festember.in</em></b>
+	</div>
 </div>
 <div id="stockDiv" HIDDEN>
 <img src="images/coin.png" id="coin" />
@@ -37,8 +60,11 @@
 <img src="images/bard.png" id="bard" />
 <img src="images/barl.png" id="barl" />
 <img src="images/barr.png" id="barr" />
-<img src="images/levelbg.png" id="levelbg" />
-<audio src="sounds/life.mp3" HIDDEN id="life"/>
+<!--<img src="images/levelbg.png" id="bgimage" />-->
+<audio src="sounds/life.mp3" id="lifelost"></audio>
+<audio src="sounds/collect.mp3" id="score"></audio>
+<audio src="sounds/loss.mp3" id="lose"></audio>
+<audio src="sounds/win.mp3" id="win"></audio>
 </div>
 
 </body>

@@ -1,13 +1,39 @@
 var bgCanvas,drawCanvas,lidCanvas,bgContext,drawContext,lidContext;
 var leveldesc,bar=new Array(),persons=new Array(),coins=new Array(),secam=new Array();
-var dimension,gamestarted=0,level,score=-1,user=0,ajax,personcount,coincount=5,lives=3,securityCam=0;
-var leftpad=10,toppad=10,grid=30,block,padding,arclen=4,arcspread=(60*Math.PI)/180;
+var dimension,gamestarted=0,level,score=-1,user,ajax,personcount,coincount=5,lives=3,scmax,securityCam=0,bosom,timelimit;
+var leftpad=0,toppad=0,grid=30,block,padding,arclen=4,arcspread=(60*Math.PI)/180;
 var rep;
 var checkdiv,dir="d";
 
 var pesonimage,barimage,bgimage,coinimage,lifeimage;
 var winsound,scoresound,losssound,lifesound;
 
+function toggleWelcome(){
+	var item=gi("gameback").style,p,i=0;
+	item.display="block";
+	item.opacity=0;
+	item.filter="alpha(opacity=0)";
+	p=window.setInterval(function(){
+		item.opacity=i;
+		item.filter="alpha(opacity="+i*100+")";
+		i+=0.2;
+		if(i>1){
+			window.clearInterval(p);
+			gi("game").style.display="block";
+			document.body.onkeydown=keyPress;
+		}
+		},20);
+
+}
+function hideGame(){
+	if(gamestarted)
+		window.location.reload();
+	else{
+		gi("game").style.display="none";
+		gi("gameback").style.display="none";
+		document.body.onkeydown=null;
+	}
+}
 function gi(el){
 	return document.getElementById(el);
 }
@@ -16,8 +42,7 @@ function bodyLoad(){
 		ajax=new XMLHttpRequest();
 	else
 		ajax=new ActiveXObject("Microsoft.XMLHTTP");
-	getUser();
-	getLevel();
+	getInfo();
 			
 	bgCanvas=gi("backgroundCanvas");
 	drawCanvas=gi("scratchpadCanvas");
@@ -28,12 +53,10 @@ function bodyLoad(){
 	lidContext=lidCanvas.getContext("2d");
 	
 	getDimension();
-	bgCanvas.width=dimension;
-	bgCanvas.height=dimension;
-	drawCanvas.width=dimension;
-	drawCanvas.height=dimension;
-	lidCanvas.width=dimension;
-	lidCanvas.height=dimension;
+	bgCanvas.width=bgCanvas.height=dimension;
+	drawCanvas.width=drawCanvas.height=dimension;
+	lidCanvas.width=lidCanvas.height=dimension;
+	gi("game").style.height=gi("game").style.width=dimension;
 	
 	drawContext.font = "bold 20px sans-serif";
 	block=Math.floor(dimension/grid);
@@ -48,34 +71,41 @@ function bodyLoad(){
 	welcomeGame();
 }
 function keyPress(e){
+	if(e.keyCode==116){
+		if(gamestarted)
+			gameStop();
+		return;
+	}
 	if(!gamestarted){
 		gamestarted=1;
 		gameInit();
 		return;
 	}
-	e.preventDefault();
 	switch(e.keyCode){
 	case 37:
 		dir="l";
+		e.preventDefault();
+		moveBar(dir);
 		break;
 	case 38:
 		dir="u";
+		e.preventDefault();
+		moveBar(dir);
 		break;
 	case 39:
 		dir="r";
+		e.preventDefault();
+		moveBar(dir);
 		break;
 	case 40:
 		dir="d";
+		e.preventDefault();
+		moveBar(dir);
 		break;
-	case 116:
-		gameStop();
-		window.location.reload();
-		return;
 	case 65:
 		pickCoin();
-		return;
+		break;
 	}	
-	moveBar(dir);
 }
 
 function welcomeGame(){
@@ -92,7 +122,10 @@ function welcomeGame(){
 	bgimage=gi("bgimage");
 	coinimage=gi("coin");
 	lifeimage=gi("life");
-	drawContext.clearRect(drawCanvas.width/2-50,drawCanvas.height/2-50,120,50);
+	winsound=gi("win");
+	scoresound=gi("score");
+	losssound=gi("lose");
+	lifesound=gi("lifelost");
 	drawContext.fillStyle="#999";
 	drawContext.font = "bold 20px sans-serif";
 	drawContext.fillText("Press any key to play Vigilante!",drawCanvas.width/2-150,drawCanvas.height/2-20);
@@ -114,19 +147,25 @@ function getDimension(){
 }
 function gameInit(){
 	bar[0]=bar[1]=Math.floor(grid/2);
-	var k,j;
+	var k,j,i;
 	//bgContext.drawImage(bgimage,0,0,bgCanvas.width,bgCanvas.height);
 	for(i=0;i<coincount;++i)
 		coins[i]=new Array();
 	drawCanvas.width=drawCanvas.width;
 	drawContext.fillStyle="#eee";
-	for(var i=leveldesc.length-1;i>=0;--i)
+	for(i=leveldesc.length-1;i>=0;--i)
 		if(leveldesc[i]=="1")
 			drawContext.fillRect(padding+block*(i%grid),padding+block*Math.floor(i/grid),block,block);
 	lidContext.fillStyle="#990";
 	lidContext.font = "bold 16px sans-serif";
 	lidContext.fillText(user,20,20);
-	lidContext.fillText("Score:",20,40);
+	lidContext.fillText("Score:",20,50);
+	lidContext.fillStyle="#829";
+	lidContext.fillText("Time Left",lidCanvas.width-80,20);
+	lidContext.font = "bold 25px Arial,sans-serif";
+	i=lidContext.measureText(timelimit+"").width;
+	lidContext.fillStyle="#f69";
+	lidContext.fillText(timelimit,lidCanvas.width-i-10,50);
 	for(var temp=personcount-1;temp>=0;--temp){
 		persons[temp]=new Array();//x,x,canvas,interval,dir
 		do{
@@ -164,37 +203,48 @@ function gameInit(){
 	gameStart();
 }
 function gameStart(){
-	var i,c=1;
-	
+	var i,c=0;
+	showAlert("Game Started!",130,30,30);
+	updateTime();
 	rep=window.setInterval(function(){
+		if(timelimit<=0){
+			alert("You Lose! Time Over.");
+			losssound.play();
+			gameStop();
+		}
 		for(var i=persons.length-1;i>=0;--i)
 			movePerson(i);
 		for(i=coins.length-1;i>=0;--i)
 			if(coins[i][0]!=-1)
 				showCoin(i);
 		showBar();
-		if(c%4==0){
+		if(c%10==0){
 			putCoins();
-			c=1;
+			c=0;
 		}
 		else c++;
-		if(score>=20)
+		if(score>=scmax)
 			gameWin();
 	},200);
 }
 function gameWin(){
 	if(hasWonServer()){
-		alert("Congratulations! You won!");
-		//updateLevel();
+		updateLevel();
 		gameStop();
+		alert("Congratulations! You won!");
+		winsound.play();
 	}
 }
 function gameStop(){
 	window.clearInterval(rep);
 	for(var i=persons.length-1;i>=0;--i)
 		dropArc(i);
+	if(securityCam){
+		gi("wrapper").removeChild(secam[2]);
+		window.clearInterval(secam[3]);
+	}
 	gamestarted=0;
-	//window.location.reload();
+	window.location.reload();
 }
 function putCoins(){
 	var i,d,j,k;
@@ -208,6 +258,11 @@ function putCoins(){
 		} else if(d>95 && coins[i][0]!=-1){
 			removeCoin(i);
 		}
+		if(coins[i][0]==-1)
+			if(d>50){
+				getNextFree(coins[i]);
+				showCoin(i);
+			}
 	}
 }
 function getNextFree(arr){
@@ -228,7 +283,7 @@ function removeCoin(cn){
 	coins[cn][0]=-1;
 }
 function pickCoin(){
-	var x,pn;
+	var x,pn,nos=0,con;;
 	
 	var xx,yy;
 	switch(dir){
@@ -245,20 +300,60 @@ function pickCoin(){
 	if(xx>=0 && yy>=0 && xx<grid && yy<grid)
 		for(x=coins.length-1;x>=0;--x)
 			if(coins[x][0]==xx && coins[x][1]==yy){
-				for(pn=persons.length-1;pn>=0;--pn)
-					checkSight(bar,persons[pn][2].getContext("2d"),persons[pn][2]);
-				if(securityCam)
-					checkSight(bar,secam[2].getContext("2d"),secam[2]);
+				if(securityCam){
+					con=secam[2].getContext("2d")
+					if(checkSight(bar,con,secam[2])){
+						con.fillStyle="#e00";
+						con.fill();
+						removeCoin(x);
+						removeLives();
+						return;
+					} else{
+						con.fillStyle="#0e0";
+						con.fill();
+					}
+				}
+				for(pn=persons.length-1;pn>=0;--pn){
+					con=persons[pn][2].getContext("2d");
+					if(checkSight(bar,con,persons[pn][2]))
+						++nos;
+					if((nos*Math.floor(Math.random)*10)>6){
+						con.fillStyle="#e00";
+						con.fill();
+						removeCoin(x);
+						removeLives();
+						return;
+					} else {
+						con.fillStyle="#0e0";
+						con.fill();
+					}
+				}
 				removeCoin(x);
+				getNextFree(coins[x]);
+				showCoin(x);
+				scoresound.play();
 				updateScore();
 			}
 }
 function updateScore(){
-	++score;
 	lidContext.clearRect(75,25,100,100);
 	lidContext.fillStyle="#a0a";
-	lidContext.fillText(score,80,40);
+	lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
+	lidContext.fillText(++score,80,50);
+	showAlert("Score: "+score,10,130,10);
 	updateScoreServer();
+}
+function updateTime(){
+	var i,tl;
+	tl=window.setInterval(function(){
+		--timelimit;
+		lidContext.font = "bold 25px Arial,sans-serif";
+		lidContext.fillStyle="#f69";
+		lidContext.clearRect(lidCanvas.width-100,30,lidCanvas.width-10,55);
+		lidContext.fillText(timelimit,lidCanvas.width-lidContext.measureText(timelimit+"").width-10,50);
+		if(timelimit<=0)
+			window.clearInterval(tl);
+	},1000);
 }
 function attachArc(pn){
 	var x,y, angle=(0*Math.PI)/180, step=Math.PI/180,div=0,pi=Math.PI/180,dirsign=1;;
@@ -324,11 +419,6 @@ function securityArc(direction){
 function dropArc(pn){
 	window.clearInterval(persons[pn][3]);
 	gi("wrapper").removeChild(persons[pn][2]);
-	if(securityCamera){
-		gi("wrapper").removeChild(secam[2]);
-		window.clearInterval(secam[3]);
-	}	
-	persons[pn][2]=null;
 }
 function movePerson(pn){
 	var d,dorand=1,tdir=persons[pn][4];
@@ -374,15 +464,35 @@ function showLives(){
 		lidContext.drawImage(lifeimage,10+i*40,lidCanvas.height-40,30,30);
 }
 function removeLives(){
-	alert("caught");
+	lifesound.play();
+	showAlert("Caught",150,10,10);
 	if(--lives>=0){
 		lidContext.clearRect(10+lives*40,lidCanvas.height-40,30,30);
 		hideBar();
-		getNextFree(bar);
+		getNext(bar,dir);
 		showBar();
 	}
 	else
 		gameStop();
+}
+function showAlert(str,colr,colg,colb){
+	lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
+	var interval,w=lidContext.measureText(str).width/2,y=lidCanvas.height/2,x=lidCanvas.width/2,i=1,color="rgba("+colr+","+colg+","+colb+",",rep=0;
+	interval=window.setInterval(function(){
+		if(i<=0)
+			window.clearInterval(interval);
+		lidContext.fillStyle=color+(i/10)+")";
+		lidContext.clearRect(x-w-10,y-30,2*(w+10),40);
+		lidContext.fillRect(x-w-10,y-30,2*(w+10),40);
+		lidContext.fillStyle="rgba(0,0,0,"+(i/10)+")";
+		lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
+		lidContext.fillText(str,x-w,y);
+		if(i<6){
+			rep==0?i++:i--;
+		} else if(i==6)
+			if(++rep>=50)
+				i-=1;
+		},30);
 }
 function moveBar(direction){
 	hideBar();
@@ -445,12 +555,11 @@ function alignBox(pn){
 function checkSight(target,context,canvas){
 	var x=leftpad+padding+(target[0]*block)-parseInt(canvas.style.left),y=toppad+padding+(target[1]*block)-parseInt(canvas.style.top);
 	if(!(x>0 && y>0 && x<canvas.width && y<canvas.height))
-		return;
+		return 0;
 	if(context.isPointInPath(x,y) || context.isPointInPath(x+block,y) || context.isPointInPath(x,y+block) || context.isPointInPath(x+block,y+block)){
-		context.fillStyle="#e00";
-		context.fill();
-		removeLives();
+		return 1;
 	}
+	return 0;
 }
 function showPerson(pn){
 	drawContext.drawImage(personimage[persons[pn][4]],padding+block*persons[pn][0],padding+block*persons[pn][1],block,block);
@@ -475,10 +584,10 @@ function hideCoin(cn){
 }
 
 //backend interactions
-function getUser(){
-	user=gi("userinfo").value;
-}
-function getLevel(){
+function getInfo(){
+	//var ob=JSON.parse(gi("infojson").value);
+	//alert(ob);
+	user=gi("userinfo").value;//infojson
 	level=parseInt(gi("levelinfo").value);
 //	leveldesc=gi("leveldesc").value;
 	leveldesc=   "000000000000000000000000000000"
@@ -511,17 +620,31 @@ function getLevel(){
 				+"000000000000000000000000000000"
 				+"000000000000000000000000000000"
 				+"000000000000000000000000000000";
+	
 	var adds=gi("leveladds").value;
 	personcount=parseInt(adds[0])+parseInt(adds[1]);
 	coincount=parseInt(adds[2]);
 	if(adds[3]=="s")
-		securityCam=1;
+		securityCam=1;//indexof
+	scmax=parseInt(adds[4])*parseInt(adds[5]);
+	bosom=parseInt(adds[6]);
+	timelimit=parseInt(adds[7])*parseInt(adds[8])*10;
 }
 function updateScoreServer(){
-	//put the score on server
+	//put the score on server; called when user scores
+	/*ajax.onreadystatechange=function(){
+		if(ajax.readyState==4 && ajax.status==200)
+			if(ajax.responseText==1)
+				return 1;
+			else if(ajax.responseText==0)
+				return 0;
+		};
+	
+	ajax.open("GET",encodeURI("update.php?a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount),true);
+	ajax.send();*/
 }
 function hasWonServer(){
-	//return int;1if won 0 if not
+	//return int;1if won 0 if not; called when user wins by js procedures
 	/*
 	ajax.onreadystatechange=function(){
 		if(ajax.readyState==4 && ajax.status==200)
@@ -534,7 +657,7 @@ function hasWonServer(){
 		ajax.send();
 		*/
 }
-function updateLevel(){
+function updateLevel(){//called when js win and server win
 	/*
 	ajax.onreadystatechange=function(){
 		if(ajax.readyState==4 && ajax.status==200)
