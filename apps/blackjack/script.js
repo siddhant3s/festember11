@@ -7,11 +7,12 @@ document.body.appendChild(sheet);
 
 
 
- $("body").css("display", "none");
  
-    $("body").fadeIn(1600);
-$(".cardArea").css("display", "none")
-$(".cardArea").slideDown("slow");
+$("body").effect("pulsate", { times:2 }, 300);
+
+ 
+    $("body").fadeIn(100);
+ 
 
  
 $("#glownow").illuminate({'blinkSpeed':'500'});
@@ -33,20 +34,31 @@ $("#glownow").illuminate({'blinkSpeed':'500'});
 
 	});
 
+ $("#header").hide("explode", 400);
+
+$("#header").fadeIn(1600);
+
+
+
+
 $("#ptable").illuminate();
 $(".result").illuminate();
+$(".result").effect("pulsate",{times:3},"fast");
 $("#powered").illuminate();
  
 $("#lk").illuminate();	
 	
-	
+	$(".name").effect("pulsate",{times:3},"fast");
  $("#rules").mouseover(function () {
 $(this).animate({width:"9em",opacity:0.4},"fast");
-      $(this).effect("bounce", { times:2},"fast");
+ 
+
      
 
 
 });
+
+$("#deal").effect("pulsate",{times:3},"slow");
  $("#rules").mouseout(function () {
       $(this).animate({width:"8em",opacity:1},"fast");
 });
@@ -54,6 +66,7 @@ $(this).animate({width:"9em",opacity:0.4},"fast");
 
  $("#deal").mouseover(function () {
       $(this).animate({width:"9em",opacity:0.5},"fast");
+
 });
  $("#deal").mouseout(function () {
       $(this).animate({width:"8em",opacity:1},"fast");
@@ -109,7 +122,7 @@ $(this).animate({width:"9em",opacity:0.4},"fast");
 	$("#rules").click(function(){
        
 	 
-	 location.href="rules.html";
+	 location.href="rules.php";
 	 
 	
 	});

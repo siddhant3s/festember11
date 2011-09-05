@@ -22,10 +22,19 @@ else
 ?>
 <html>
 <head>
-<script src="jquery.js"></script>
+<script src="jquery1.js"></script>
 <meta charset="utf-8">
 <title>Mankatha</title>
 <style type="text/css" media="screen">@import "screen.css";</style>
+<style type="text/css">
+#hint3{
+	position:absolute;
+	top: 300px;
+	left: 650px;
+     width: 71px;
+     height: 90px;
+    }
+</style>
 <script type="text/javascript" charset="utf-8">
 var k=1;
 document.onkeyup = KeyCheck;       
@@ -62,6 +71,7 @@ document.getElementById("hint2").style.visibility='hidden';
 document.getElementById("hint1").style.visibility='hidden';
 document.getElementById("trash").style.visibility='hidden';
 document.getElementById("trash2").style.visibility='hidden';
+document.getElementById("hint3").style.visibility="hidden";
 var jsonurl="getarray.php";
 $(document).ready(function(){
 	$.getJSON("getarray.php",function (json){
@@ -69,6 +79,7 @@ $(document).ready(function(){
 	});
 });
 };
+var drag1=0;
 var flag=0;
 var num=0;
 var nump=0;
@@ -78,6 +89,8 @@ var i=-1;
 var classFull;
 var t=1;
 function drag(target, e) {
+	drag1=1;
+document.getElementById("hint3").style.visibility="hidden";
 e.target.setAttribute("style","cursor: pointer;");
 document.getElementById("hint").style.visibility='hidden';
 if(flag==0){
@@ -131,7 +144,9 @@ document.getElementById("trash2").style.visibility='visible';
 
 }
 function trashFull1(){
- classFull = "trashfull1";
+	document.getElementById("hint3").style.left=leftpos+'px';
+document.getElementById("hint3").style.top=toppos+'px';
+   classFull = "trashfull1";
 document.getElementById("hint2").style.visibility='hidden';
 trashDiv = document.getElementById("trash");
 if (!trashDiv) { return;}
@@ -149,11 +164,15 @@ if(nump%13==num%13)
 { 
      
 	 setTimeout("win()","1000");
-	
+	 }
+else if(drag1==1)
+{	drag1=0; 
+	setTimeout("animation()","300");
+	return false;
 }
 else
-{	
- setTimeout("trashFull2()","300");
+{
+	setTimeout("trashFull2()","300");
 	return false;
 }
 }
@@ -167,15 +186,15 @@ function win(){
     document.write("</div>");
 	} t=0;
 }function trashFull2(){
- classFull = "trashfull2";
+  classFull = "trashfull2";
 trashDiv = document.getElementById("trash2");
 if (!trashDiv) { return;}
 if (trashDiv.className != classFull)
 {
 trashDiv.className = classFull;
 }
-
- i++;
+	
+   i++;
  numc=numbers[i];
  var url="url(" + numbers[i] + ".gif)";
  $(".trashfull2").css("background-image",url);
@@ -184,6 +203,24 @@ trashDiv.className = classFull;
 	 	setTimeout("lose()","1000");
 		return false;
  }
+}
+function animation(){
+	document.getElementById("hint3").style.visibility="visible";
+	$( "#hint3" ).animate({
+    top: "-=60",
+    left: "+=335"
+  }, {
+    duration: 1000,
+  });
+  setTimeout("animation1()",1000);
+  return false;	
+}
+var leftpos=650;
+var toppos=300;
+function animation1(){
+	document.getElementById("hint3").style.visibility="hidden";
+	trashFull2();
+	return false;	
 }
 function lose(){
     if(t){
@@ -209,6 +246,7 @@ function lose(){
 <div id="hint"><img src="one.png"/></div>
 <div id="hint1"><img src="drophere1.png"/></div>
 <div id="hint2"><img src="dropherec.png"/></div>
+<div id="hint3"><img src="55.gif"/></div>
 </div>
 </div>
 </div>
