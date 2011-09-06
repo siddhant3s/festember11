@@ -1,6 +1,6 @@
 <?php
-$rpath = "../../";
-include("../../fb.php");
+$rpath = "../";
+include("../fb.php");
 ?>
 <?php
 		session_start();
@@ -31,7 +31,7 @@ mysql_query($query);
     <script>
     var appId = <?php echo $facebook->getAppId(); ?>;
     </script>
-<script src="../../gameapi.js"></script>
+<script src="../gameapi.js"></script>
 <script>
 function publish() {
 FB.ui({
