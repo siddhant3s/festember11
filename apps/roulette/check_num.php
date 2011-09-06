@@ -13,7 +13,7 @@ $time=0.0;
 	$carray=array(0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26);
 	$dbtime=0.0;
 	$dbnum=0;
-	$dbc=mysqli_connect('localhost','root','Jude1234','roulette');
+	$dbc=mysqli_connect('localhost','festember','vegas11','festember11');
 	
 	$query="SELECT stoptime, predict_num FROM roulette_verify WHERE username='$name'";
 	
@@ -23,7 +23,7 @@ $time=0.0;
 	$dbnum=$re['predict_num'];
 	mysqli_close($dbc);
 
-	$dbc=mysqli_connect('localhost','root','Jude1234','roulette');
+	$dbc=mysqli_connect('localhost','festember','vegas11','festember11');
         $query="DELETE FROM roulette_verify WHERE username='$name'";
         $res=mysqli_query($dbc,$query) or die("asaaaaa");
 	mysqli_close($dbc);
