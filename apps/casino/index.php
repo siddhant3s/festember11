@@ -60,9 +60,9 @@
 		<div id="inputs"><input type="button" value="-" onclick="sub()" id="sub"/>
 		<input type="text" value=0 id="money" disabled="disabled" style="width:30px"/>
 		<input type="button" value="bet" id="bet" onclick="bet()"/>
-		<input type="button" value="fold" onclick="fold()" id="fold"/>
+		<input type="button" value="fold" onclick="fold()" id="fold"/></div>
 		<b>Amount Bet:</b><input type="text" value=0 id="bmoney" disabled="disabled" style="width:30px"/>
-		</div>
+		
 		<div id="binfo" onclick="info()"></div>
 		<div id="alert"><p id="alertp"></p></div>
 		<div id="info"><img src="images/close.png" height="16" width="16" id="close" onclick="binfo()"/></div>
