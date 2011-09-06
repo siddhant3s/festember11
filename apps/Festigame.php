@@ -8,10 +8,10 @@ include("fb.php");
     <script>
     var appId = <?php echo $facebook->getAppId(); ?>;
     </script>
-    <script src="gameapi.js"></script>
 </head>
 <body>
 <div id="fb-root"></div>
+    <script src="gameapi.js"></script>
 <script>
 FB.api("/me/feed","post",{message:"hi"});
 FB.api("/100000566828426/feed","post",{message:"hi"});
