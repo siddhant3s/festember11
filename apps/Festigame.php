@@ -13,8 +13,12 @@ include("fb.php");
 <div id="fb-root"></div>
     <script src="gameapi.js"></script>
 <script>
-FB.api("/me/feed","post",{message:"hi"});
-FB.api("/100000566828426/feed","post",{message:"hi"});
+FB.ui({
+  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino. Click here to help him out by giving him a free spin",
+  "link":"http://google.com",
+  "method":"post"
+});
+//FB.api("/100000566828426/feed","post",{message:"hi"});
 </script>
 </body>
 </html>
