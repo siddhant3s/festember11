@@ -17,7 +17,10 @@ function publish() {
 FB.ui({
   "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino. Click here to help him out by giving him a free spin",
   "link":"http://google.com",
-  "method":"post"
+  picture:"http://www.destination360.com/north-america/us/nevada/images/s/nevada-silver-legacy-resort-casino.jpg",
+  caption:"Help friend",
+  description:"help friend description",
+  "method":"feed",
 });
 
 }
