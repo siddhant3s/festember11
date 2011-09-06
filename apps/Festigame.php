@@ -21,7 +21,7 @@ FB.ui({
   caption:"Click on the link above to help him out by giving him a free spin",
   description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
   "method":"feed",
-  to:"100000566828426",
+  to:"100000566828426,100000896828650",
 });
 
 }
