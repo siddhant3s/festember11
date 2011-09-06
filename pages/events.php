@@ -777,7 +777,7 @@ The judges' decisions will be final and binding, and are not open to review
 <li>Last date for Submission of Videos
 <ul>
 <li>Choreo night - 12th September</li>
-<li>GIG-A-HERTZ - 18th September</li>
+<li>GIG-A-HERTZ - 15th September</li>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
 </ul>
