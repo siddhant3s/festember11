@@ -17,6 +17,6 @@ public function __toString() {
 $rpath = "";
 include("fb.php");
 
-print_r($user);
+print_r($facebook->api("/me/friends"));
 
 ?>
