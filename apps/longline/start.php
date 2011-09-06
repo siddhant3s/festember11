@@ -56,7 +56,7 @@ yc=20;
     }
   }
 
-arran(true);
+arran();
 </script>
 </body>
 </html>
