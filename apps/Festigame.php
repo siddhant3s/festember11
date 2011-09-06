@@ -1,3 +1,6 @@
+<?php
+include("fb.php");
+?>
 <html>
 <head>
 <title>hi</title>
