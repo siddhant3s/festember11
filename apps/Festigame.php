@@ -27,7 +27,7 @@ function publish() {
 FB.ui({
   "message":"Festember Casino games are out! Play casino games to win free t-shirts, food coupons and more",
   data:"tracking information of the user",
-  "method":"apprequest",
+  "method":"apprequests",
 });
 
 }
