@@ -61,7 +61,7 @@ $(function() {
 	}, 5000);
 	
 	//reloadSponsors();
-	imgslideSponsors(".sponser",10);
+	imgslideSponsors(".sponser",13);
 	//imgslideSponsors(".mediapartners",5);
 	
 	$(window).scroll(fixedFloating());
@@ -96,6 +96,30 @@ $(function() {
 		});
 		return false;
 	});
+
+$("a[ajaxify=2]").live("click", function(evt){
+  evt.preventDefault();
+var to = $(this).attr("href");
+to = to.replace("+","&subpage=");
+$(".loaderr").slideDown(100);
+		$.ajax({
+			url: to + "&_a=1",
+			method: "GET",
+			success: function(data) {
+				$("#content").html(data);
+			},
+			error: function(err){
+				$("#content").html("SOME ERROR OCCURED.\n" + err);
+				console.log(err);
+			},
+			complete: function(data){
+				$(".loaderr").slideUp(250);
+				defer(to, data);
+				$("#content").fadeIn();
+			}
+		});
+  return false;
+});
 	
 	function defer(to, data) {
 		if(to != "sponsors")

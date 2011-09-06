@@ -211,12 +211,12 @@ function facebook_click(){
 	</script>	
 	<div class="headeranimcontainer">
 		<div class="headeranimator">
-			<div id="can1" ><canvas id="myCanvas1" height="201" width="432" ></canvas></div>
-			<div id="can2" ><canvas id="myCanvas2" height="201" width="432" ></canvas></div>
-			<div id="can3" ><canvas id="myCanvas3" height="201" width="432" ></canvas></div>
-			<div id="can4" ><canvas id="myCanvas4" height="201" width="432" ></canvas></div>
-			<div id="can5" ><canvas id="myCanvas5" height="201" width="432" ></canvas></div>
-			<div id="can6"><canvas id="myCanvas6" height="201" width="432" ></canvas></div>
+			<div id="can1" class='can' ><canvas id="myCanvas1" height="201" width="432" ></canvas></div>
+			<div id="can2" class='can' ><canvas id="myCanvas2" height="201" width="432" ></canvas></div>
+			<div id="can3" class='can' ><canvas id="myCanvas3" height="201" width="432" ></canvas></div>
+			<div id="can4" class='can' ><canvas id="myCanvas4" height="201" width="432" ></canvas></div>
+			<div id="can5" class='can' ><canvas id="myCanvas5" height="201" width="432" ></canvas></div>
+			<div id="can6" class='can' ><canvas id="myCanvas6" height="201" width="432" ></canvas></div>
 			<canvas id="myCanvas7" height="201" width="432" style="background-image:url(./images/logo.png);" ></canvas>
 			<div id="can0" onclick="cancel();" style="cursor:pointer"></div>
 		</div>
@@ -229,9 +229,8 @@ function facebook_click(){
 	<div class="scroller">
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
+                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
                 <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
-                <a href="./tender_tshirt.pdf" target="_blank"><img src="images/pic4.png" alt="" title="T-Shirt tenders Welcome. The last date of tender submission is 30th August 3:00 pm." /></a>
 		
                 <img
  src="images/pic5.png" alt="" />
@@ -298,16 +297,19 @@ function facebook_click(){
 				<h3 style="color: #FF115F;font-size:13px;font-weight:bold;margin:10px 0">Sponsors/Partners</h3>
 				<div class="sponser">
 					<div class="slidee">
-						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" /></a>
-						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" /></a>
-						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" /></a>
-						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" /></a>
-						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" /></a>
-						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" /></a>
-						<a href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
-                                                <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" /></a>
-                                                <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" /></a>
-                                                <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" /></a>
+						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" width="120px" height="120" /></a>
+						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" width="120px" height="120" /></a>
+						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" width="120px" height="120" /></a>
+						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" width="120px" height="120" /></a>
+						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" width="120px" height="120" /></a>
+						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" width="120px" height="120" /></a>
+						<a href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" height="120" /></a>
+                                                <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
+						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
+						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
+						<a href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
@@ -329,7 +331,6 @@ margin: 10px 0;
 <h3 style="color: #FF115F;font-size:13px;font-weight:bold;">Downloads</h3>
 <p><a href="./rulebook.pdf" target="_blank">Rule Book</a></p>
 <p><a href="./pamphlets.pdf" target="_blank">Pamphlets</a></p>
-<p><a href="./tender_tshirt.pdf" target="_blank">T-Shirt Tender</a></p>
 </div>
 <br/><br/><br/>
 <div class="external">

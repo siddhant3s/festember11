@@ -1,0 +1,107 @@
+body
+{
+	
+   
+	background-repeat:no-repeat;
+
+
+}
+img{
+	 cursor:pointer;
+	
+}
+#bimage
+{	position:absolute;
+ left:250px;
+height:655px;
+}
+#trash
+	{
+	position:absolute;
+	top:250px;
+	left:320px;
+width:71px;
+height:97px;
+background-image: url(55.gif);		
+
+}
+
+
+#trash2
+{
+	position: absolute;
+	top:250px;
+	left : 990px;
+	width:71px;
+	height:97px;
+	background-image: url(55.gif);		
+}
+#hint
+{
+	position:absolute;
+	top:200px;
+ 	left:350px;
+	width:200px;
+	height:90px;
+	background-image: url(drophere1.png);		
+	background-repeat: no-repeat;		
+
+}
+#hint2
+	{
+	position: absolute;
+	top:200px;
+left : 400px;
+width:250px;
+height:90px;
+background-image: url(drophere1.png);		
+background-repeat: no-repeat;		
+}
+
+#hint1
+{
+	position: absolute;
+	top:300px;
+left : 400px;
+width:250px;
+height:90px;
+background-image: url(drophere1.png);
+background-repeat: no-repeat;		
+}
+
+
+#selected
+{
+	position: absolute;
+	top:450px;
+left : 650px;
+width:71px;
+height:97px;
+background-image: url(55.gif);		
+}
+#const
+{
+position:relative;
+width:71px;
+height:97px;
+	top: 200px;
+	left: 80px;
+}
+img#select
+{
+position:fixed;
+top:150px;
+left:530px;
+}
+
+#files
+	{
+	
+width:71px;
+height:97px;
+	position:fixed;
+	top: 300px;
+	left: 650px;
+	list-style: none;	
+}
+	

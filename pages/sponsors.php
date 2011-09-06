@@ -21,7 +21,18 @@ $("a.media img").css({width:'80px',padding:'20px'});
                 <a class="media" href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" /></a>
                 <a class="media" href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" /></a>
                 <a class="media" href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" /></a>
-                
+                <br/><br/>
+
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">TV Partner</h3>
+		 <a class="media" href="http://www.ssmusic.tv" width="100px" target="_blank"><img src="./images/s13.jpg" /></a>
+		<br /><br />
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Official SMS Partner</h3>
+		<a class="media" href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg"></a>
+		<br /><br />
+
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Recharge Partner</h3>
+		<a class="media" href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg"></a>
+		<br /><br />
 	</div>
 	<h2 style="text-align:center">
 		For sponsorship contact <b>marketing@festember.in</b>
