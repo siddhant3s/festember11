@@ -66,6 +66,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				$("#bet").hide();
 				status++;
 			if(status==2){
+			$("#bet").hide();
 			$("#loading").show();
 			betMoney=curMoney;
 			curMoney=0;
@@ -113,7 +114,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					setTimeout(function(){animate5(temp3);},200);
 					setTimeout(function(){animate6(temp4);},200);
 					setTimeout(function(){animate7(temp2);},400);
-					setTimeout(function(){$("#bet").removeAttr("disabled");},5000);
+					setTimeout(function(){$("#bet").show();},5000);
 			}});
 			setTimeout(function(){dat="money="+betMoney;
 						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},600);
