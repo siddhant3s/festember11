@@ -1,8 +1,8 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
 		$(document).ready(function(){
-					
-					$.ajax({url: "putdata.php",success: function(html){money=html;}});
+				$("#loading").hide();	
+				$.ajax({url: "putdata.php",success: function(html){money=html;}});
 				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",
@@ -66,12 +66,14 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				$("#bet").attr({'disabled':'disabled'});
 				status++;
 			if(status==2){
+			$("#loading").show();
 			betMoney=curMoney;
 			curMoney=0;
 			document.getElementById("money").value=curMoney;
 			document.getElementById("bmoney").value=betMoney;
 			
 			$.ajax({type: "POST",url: "getdata.php",success: function(html){
+					$("#loading").hide();
 					var string=html.split('-');
 					money=parseInt(string[0]);
 					u1=parseInt(string[1]);
@@ -272,6 +274,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			
 		}
 		else if(status==3){
+						$("#loading").show();
 						$("#fold").attr({
 							disabled:'disabled'
 						});
@@ -279,6 +282,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
 						$.ajax({url: "getdata1.php",success: function(html){
+								$("#loading").hide();
 								var string=html.split('-');
 								money=parseInt(string[0]);
 								c4=parseInt(string[1]);
