@@ -153,6 +153,7 @@ box-shadow:5px 5px 5pc #7D0552;}
 
  
 .dollars { color: #006000; 
+
  --webkit-border-radius: 20px; 
 -moz-border-radius: 20px; 
 border-radius: 20px;

@@ -155,6 +155,7 @@ body {
 
 #content {
 	/*background: url(../images/content_bk.png) repeat-y;*/
+	/*min-height: 500px;*/
 }
 
 .rightcont {
@@ -335,7 +336,7 @@ background:url('../images/s1.jpg') no-repeat;
 	background:url('../images/flogo.jpg');
 	position:relative;
 	top:40px;
-	left:625px;
+	left:600px;
 	width:172px;
 	height:85px;
 	float:left;
@@ -686,6 +687,20 @@ position:relative;
 top:10px;
 left:37px;
 }
+
+/*tamil pictures event css*/
+
+.tamil1{
+position:relative;
+top:80px;
+left:30px;
+}
+
+.tamil2{
+position:relative;
+top:120px;
+}
+
 /*
  * #openid_btns a{
  * display:none;

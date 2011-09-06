@@ -211,12 +211,12 @@ function facebook_click(){
 	</script>	
 	<div class="headeranimcontainer">
 		<div class="headeranimator">
-			<div id="can1" ><canvas id="myCanvas1" height="201" width="432" ></canvas></div>
-			<div id="can2" ><canvas id="myCanvas2" height="201" width="432" ></canvas></div>
-			<div id="can3" ><canvas id="myCanvas3" height="201" width="432" ></canvas></div>
-			<div id="can4" ><canvas id="myCanvas4" height="201" width="432" ></canvas></div>
-			<div id="can5" ><canvas id="myCanvas5" height="201" width="432" ></canvas></div>
-			<div id="can6"><canvas id="myCanvas6" height="201" width="432" ></canvas></div>
+			<div id="can1" class='can' ><canvas id="myCanvas1" height="201" width="432" ></canvas></div>
+			<div id="can2" class='can' ><canvas id="myCanvas2" height="201" width="432" ></canvas></div>
+			<div id="can3" class='can' ><canvas id="myCanvas3" height="201" width="432" ></canvas></div>
+			<div id="can4" class='can' ><canvas id="myCanvas4" height="201" width="432" ></canvas></div>
+			<div id="can5" class='can' ><canvas id="myCanvas5" height="201" width="432" ></canvas></div>
+			<div id="can6" class='can' ><canvas id="myCanvas6" height="201" width="432" ></canvas></div>
 			<canvas id="myCanvas7" height="201" width="432" style="background-image:url(./images/logo.png);" ></canvas>
 			<div id="can0" onclick="cancel();" style="cursor:pointer"></div>
 		</div>
@@ -229,7 +229,7 @@ function facebook_click(){
 	<div class="scroller">
 		<div id="slider" class="nivoSlider">
                 <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Dance - Couple and Dance - Solo workshops available. Register now." /></p>
+                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
                 <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
 		
                 <img
@@ -308,6 +308,8 @@ function facebook_click(){
                                                 <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" height="120" /></a>
                                                 <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
 						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
+						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
+						<a href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
