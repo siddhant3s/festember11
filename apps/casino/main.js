@@ -543,10 +543,6 @@ function rules()
 document.getElementById("back").style.display="block";
 document.getElementById("start").style.display="none";
 document.getElementById("rules").style.display="none"; 
- 			var scanvas = oCanvas.create({
-					canvas: "#scanvas",
-				});
-	
 if(!document.getElementById("rules_div"))
 {
  
@@ -604,28 +600,6 @@ document.getElementById("rules_div").style.top=0+"px";
  
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function tutorials()
 {
@@ -719,7 +693,7 @@ document.getElementById("ten").style.zIndex = 20;
 document.getElementById("twenty").style.zIndex = 20;
 document.getElementById("fifty").style.zIndex = 20;
 document.getElementById("bet").style.zIndex = 0;	
-
+document.getElementById("inputs").style.zIndex=0;
 }
 
 };
