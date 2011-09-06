@@ -8,7 +8,7 @@ function P2J($Phpbet,$JA)
 echo "<script>var ".$JA.";</script>";
 echo "<script>".$JA."='".$Phpbet."'</script>";
 }
-$bet=$_POST["txtchar"];
+$bet=$_POST['txtchar'];
 if($bet>=100)
 {
 P2J($bet, 'point');
@@ -76,9 +76,11 @@ var jsonurl="getarray.php";
 $(document).ready(function(){
 	$.getJSON("getarray.php",function (json){
 		numbers=json;
+		len=numbers.length;
 	});
 });
 };
+var len;
 var drag1=0;
 var flag=0;
 var num=0;
@@ -88,6 +90,7 @@ var dom1;
 var i=-1;
 var classFull;
 var t=1;
+var ch=0;
 function drag(target, e) {
 	drag1=1;
 document.getElementById("hint3").style.visibility="hidden";
@@ -160,7 +163,9 @@ trashDiv.className = classFull;
   var url="url(" + numbers[i] + ".gif)";
  
 $(".trashfull1").css("background-image",url);
-if(nump%13==num%13)
+if(ch!=len)
+{   ch++;
+	if(nump%13==num%13)
 { 
      
 	 setTimeout("win()","1000");
@@ -176,15 +181,26 @@ else
 	return false;
 }
 }
+else
+{
+	$.getJSON("last.php",function (json){
+		number=json;
+	});	
+	var url="url(" + number + ".gif)";
+ 	$(".trashfull1").css("background-image",url);
+	setTimeout("win()","1000");
+}
+}
 function win(){
-    if(t){
-	document.write("<img src=\"ropa.png\" alt=\"\" style=\"position:absolute;left:250px;height:655px;\" />");
+    if(t){document.location='delw.php';
+		
+	/*document.write("<img src=\"ropa.png\" alt=\"\" style=\"position:absolute;left:250px;height:655px;\" />");
 	document.write("<div style=\"position:absolute; top:50%; left:45%; color:white;\">");
 	document.write("You won this round. Your win "+point);
 	document.write("<a href=\"start.php\" style=\"position:absolute;left:5%;top:70%;\"><img src=\"bpa.png\" border=\"0\" alt=\"\"/></a>");
 	document.write("<a href=\"index.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
     document.write("</div>");
-	} t=0;
+	*/} t=0;
 }function trashFull2(){
   classFull = "trashfull2";
 trashDiv = document.getElementById("trash2");
@@ -223,30 +239,31 @@ function animation1(){
 	return false;	
 }
 function lose(){
-    if(t){
-	document.write("<img src=\"ropa.png\" alt=\"\" style=\"position:absolute;left:250px;height:655px;\" />");
+    if(t){document.location='dell.php';
+		
+	/*document.write("<img src=\"ropa.png\" alt=\"\" style=\"position:absolute;left:250px;height:655px;\" />");
 	document.write("<div style=\"position:absolute; top:50%; left:45%; color:white;\">");
 	document.write("You lost this round. Your lose "+point);
 	document.write("<a href=\"start.php\" style=\"position:absolute;left:5%;top:70%;\"><img src=\"bpa.png\" border=\"0\" alt=\"\"/></a>");
 	document.write("<a href=\"index.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
     document.write("</div>");
-	} t=0;
+	*/} t=0;
 }
 </script>
 </head>
 <body>
 <div>
 
-<img src="mangatgha.png" alt="" id="bimage"/>
+<img src="mangatgha.png" alt="" id="bimage" draggable="false" />
 <div class="one">
 <div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div>
 <div id="selected" ondrop="drop1(this, event)" ondragenter="return false" ondragover="return false"></div>
 <div id="trash" ondrop="drop(this, event)" ondragenter="return background()" ondragover="return background2()"></div>
 <div id="trash2"></div>
-<div id="hint"><img src="one.png"/></div>
-<div id="hint1"><img src="drophere1.png"/></div>
-<div id="hint2"><img src="dropherec.png"/></div>
-<div id="hint3"><img src="55.gif"/></div>
+<div id="hint"><img src="one.png" draggable="false"/></div>
+<div id="hint1"><img src="drophere1.png" draggable="false"/></div>
+<div id="hint2"><img src="dropherec.png" draggable="false"/></div>
+<div id="hint3"><img src="55.gif" draggable="false"/></div>
 </div>
 </div>
 </div>

@@ -1,0 +1,80 @@
+<html>
+<style type="text/css">
+input
+{
+position:fixed;
+top:100px;
+left:250px;
+}
+img#select
+{
+position:fixed;
+top:100px;
+left:100px;
+}
+
+</style>
+<body>
+<input type="button" value="Click" onclick="mangatha()"/>
+<div id="da">HEY</div>
+<div id="image"><img src="jb.gif" id="click"><img src="jr.gif" id="click2"></div>
+<script type="text/javascript">
+var num=Math.floor(1+52*Math.random());
+
+var name=".gif";
+num=num+name;
+document.write(num);
+document.write("<img src="+num+" id=select");
+var x;
+var a=new Array();
+
+a[0]=0;
+for(x=1;x<53;x++)
+{
+if(x==num)
+a[x]=0;
+else
+a[x]=x;
+}
+var num1=0;
+function mangatha()
+{
+num1=Math.floor(1+52*Math.random());
+if(a[num1]==0)
+{
+setTimeout("mangatha()","0");
+}
+else
+{
+a[num1]=0;
+}
+num1=num1+".gif";
+var element=document.getElementById("click");
+element.setAttribute("src",num1);
+setTimeout("mangatha2()","1000");
+
+}
+
+function mangatha2()
+{
+
+num1=Math.floor(1+52*Math.random());
+if(a[num1]==0)
+{
+
+setTimeout("mangatha2()","0");
+}
+
+else
+{
+a[num1]=0;
+}
+num1=num1+".gif";
+element=document.getElementById("click2");
+element.setAttribute("src",num1);
+}
+
+
+</script>
+</body>
+</html>

@@ -98,7 +98,7 @@ $sum+=$t[$i][0];
 if($sum==55&&$cnt==1){
 $win=1;
 $result="royal flush";
-$multiply=20;;}
+$multiply=15;}
 }
 $sum=0;
 /* dealer starts */
@@ -280,7 +280,7 @@ $cnt=1;
 	if($suc==0)
 	{$win=1;
 	$result="four of a kind";
-$multiply=10;
+$multiply=5;
 	}
 	}
 
@@ -376,6 +376,7 @@ $multiply=2;
 
 
 /* straight starts */
+
 if($win==0){
 $flush=array();$k=0;
 $flush[$k++]=$t[1][0];	
@@ -389,7 +390,7 @@ for($j=0;$j<$k-4;$j++)
 if(($flush[$j]+1==$flush[$j+1])&&($flush[$j]+2==$flush[$j+2])&&($flush[$j]+3==$flush[$j+3])&&($flush[$j]+4==$flush[$j+4]))
 {$win=1;
 $result="straight flush";
-$multiply=20;
+$multiply=7;
 }
 }
 /* straight ends*/
@@ -512,7 +513,7 @@ if($win!=0&&$multiply!=1){
 }
 else if($win==0){
 	$multiply=-1;
-	$won=$money*$multiply;
+	$won=$money*-1;
 }
 else if($win!=0&&$multiply==1){
 	$won=0;
@@ -529,6 +530,5 @@ else{
 		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
 		$result3=mysql_query($sql,$con);
 }
-
 echo $money*$multiply;
 ?>

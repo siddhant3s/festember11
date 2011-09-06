@@ -1,0 +1,27 @@
+
+<html>
+<head>
+<title>Image Fader</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="/examples/jquery.innerfade.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function() { 
+	$('#image_rotate').animate({  
+		speed: 'slow', 
+		timeout: 400, 
+                height:"300px"
+
+	});
+});
+</script>
+
+
+<ul id="image_rotate" style="list-style: none;">
+	<li><img src="robobricks.gif"></li>
+</ul> 
+
+
+</body>
+</html>

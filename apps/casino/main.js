@@ -63,10 +63,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		function bet(){
 			var u1,u2,d1,d2,c1,c2,c3,c4,c5,betMoney=0,temp,temp1,temp2,temp3,temp4;
 			if(curMoney!=0||status==2){
-			$("#bet").attr({
-					disabled:'disabled'
-			});
-			status++;
+				$("#bet").attr({'disabled':'disabled'});
+				status++;
 			if(status==2){
 			betMoney=curMoney;
 			curMoney=0;
@@ -113,6 +111,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					setTimeout(function(){animate5(temp3);},200);
 					setTimeout(function(){animate6(temp4);},200);
 					setTimeout(function(){animate7(temp2);},400);
+					setTimeout(function(){$("#bet").removeAttr("disabled");},5000);
 			}});
 			setTimeout(function(){dat="money="+betMoney;
 						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},600);
@@ -270,7 +269,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			$("#twenty").click(function(){});
 			$("#fifty").click(function(){});
 			
-			setTimeout(function(){$("#bet").removeAttr("disabled");},2000);
+			
 		}
 		else if(status==3){
 						$("#fold").attr({
@@ -389,38 +388,39 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			setTimeout(function(){
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
-			}});},200);
-			
-				setTimeout(function(){
-					$("#inputs").hide();
-	$("#coins").hide();
-	$("#binfo").hide();
-					canvas.clear();
-					var text = canvas.display.text({
-	x: -177,
-	y: 270,
-	align: "center",
-	font: "bold 30px sans-serif",
+							
+								setTimeout(function(){
+									$("#inputs").hide();
+					$("#coins").hide();
+					$("#binfo").hide();
+									canvas.clear();
+									var text = canvas.display.text({
+					x: -177,
+					y: 270,
+					align: "center",
+					font: "bold 30px sans-serif",
 	
-	fill: "#0aa"
-});
-text.text="you have won "+value;
-canvas.addChild(text);
-text.animate({
-		x:400,
-	}, "long", "ease-in-out", function () {
+					fill: "#0aa"
+				});
+				text.text="you have won "+value;
+				canvas.addChild(text);
+				text.animate({
+						x:400,
+					}, "long", "ease-in-out", function () {
 		
-		canvas.redraw();
-	});
-setTimeout(function(){	
-text.animate({
-		x:1000,
-	}, "long", "ease-in-out", function () {
+						canvas.redraw();
+					});
+				setTimeout(function(){	
+				text.animate({
+						x:1000,
+					}, "long", "ease-in-out", function () {
 		
-		canvas.redraw();
-	});},3000);
-	setTimeout(function(){window.location.reload();},5000);
-				},8000);
+						canvas.redraw();
+					});},3000);
+					setTimeout(function(){window.location.reload();},5000);
+								},8000);
+			}});},200);
+
 			}
 		}
 		else{
@@ -528,6 +528,7 @@ document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
 document.getElementById("inputs").style.display="block";
+document.getElementById("tut_button").style.display="block";
 document.getElementById("gcanvas").style.display="block"
 document.getElementById("binfo").style.display="block";
 document.getElementById("coins").style.display="block";
@@ -538,7 +539,10 @@ function rules()
 document.getElementById("back").style.display="block";
 document.getElementById("start").style.display="none";
 document.getElementById("rules").style.display="none"; 
- 				
+ 			var scanvas = oCanvas.create({
+					canvas: "#scanvas",
+				});
+	
 if(!document.getElementById("rules_div"))
 {
  
@@ -546,7 +550,7 @@ if(!document.getElementById("rules_div"))
 rdiv=document.createElement("div");
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p");
-rule_p.innerHTML="RULES:<br/><br/>1.Two cards are dealt face down to each player and dealer. The player may examine his own cards. The dealer will also deal three communinity cards (called the flop) in the center of the table. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
+rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
 
 rdiv.appendChild(rule_p);
 rdiv.setAttribute("id","rules_div");
@@ -557,7 +561,7 @@ document.getElementById("rule_p").style.fontSize=18+"px";
 
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p1");
-rule_p.innerHTML="RULES:<br/><br/>5.The dealer must have a pair of fours or better to qualify. If the dealer does not qualify then the ante will pay according to the ante pay table below and the call bet will push.<br/><br/>6.If the dealer qualifies and beats the player then the player will lose both the ante and call.<br/><br/>7.  If the dealer qualifies and the player beats the dealer then the ante will pay according to the Ante pay table below and the call bet will pay 1 to 1.<br/><br/>8.If the dealer qualifies and the player ties the dealer then both ante and call bets will push.";
+rule_p.innerHTML="RULES:<br/><br/><div id=\"divtable_rules\"><table id=\"table_rules\" border=\"1\" width=\"500px\"><tr><th>HAND</th><th>MULTIPLIER</th></tr><tr><td>ROYAL FLUSH</td><td>15</td></tr><tr><td>STRAIGHT FLUSH</td><td>7</td></tr><tr><td>4 OF A KIND</td><td>5</td></tr><tr><td>FULL HOUSE</td><td>3</td></tr><tr><td>FLUSH</td><td>2</td></tr>         <tr><td>ALL OTHER</td><td>1</td></tr> </table></div>";
 
 rdiv.appendChild(rule_p);
 rdiv.setAttribute("id","rules_div");
@@ -595,4 +599,124 @@ document.getElementById("rules_div").style.top=0+"px";
     $("#rules_div").animate({height:300},"slow");
  
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function tutorials()
+{
+
+var val1="<br><br>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br>  <br>";
+var val2="NO idea";
+$("#tutorials").css({
+"display":"block"
+});
+
+
+document.getElementById("tut_button").value="close";
+document.getElementById("tut_button").onclick=function(){$("#tutorials").css({
+"display":"none"
+});
+$("#tut_div").css({"display":"none"});
+};
+
+rdiv=document.createElement("div");
+subdiv=document.createElement("div");
+subdiv.setAttribute("id","tut_div1");
+button1=document.createElement("input");
+button1.setAttribute("type","button");
+button1.setAttribute("value","next");
+button1.setAttribute("id","tut_button1");
+subdiv.appendChild(button1);
+rule_p=document.createElement("p");
+rule_p.setAttribute("id","tut_p");
+rule_p.innerHTML=val1;
+
+rdiv.appendChild(rule_p);
+rdiv.appendChild(subdiv);
+rdiv.setAttribute("id","tut_div");
+
+
+document.getElementById("wrapper").appendChild(rdiv);
+$("#tut_div").css({
+"display":"block",
+"position":"absolute",
+"top":"0px",
+"z-index":"20"
+});
+$("#tut_p").css({
+"position":"absolute",
+"top":"250px",
+"left":"400px",
+"width":"200px"
+});
+$("#tut_div1").css({
+"font-weight":"bold",
+"color":"#ff",
+"font-size":"16px",
+"display":"block",
+"position":"absolute",
+"left":"300px",
+"top":"10px"
+});
+document.getElementById("five").style.zIndex = 20;
+document.getElementById("ten").style.zIndex = 20;
+document.getElementById("twenty").style.zIndex = 20;
+document.getElementById("fifty").style.zIndex = 20;
+document.getElementById("bet").style.zIndex = 20;	
+document.getElementById("tut_button").style.zIndex=30;
+document.getElementById("tut_button1").onclick=function()
+{
+if(document.getElementById("tut_p").innerHTML==val1){
+
+document.getElementById("tut_p").innerHTML=val2;
+$("#tut_p").css({
+"position":"absolute",
+"top":"470px",
+"left":"22px",
+});
+document.getElementById("five").style.zIndex = 0;
+document.getElementById("ten").style.zIndex = 0;
+document.getElementById("twenty").style.zIndex = 0;
+document.getElementById("fifty").style.zIndex = 0;
+document.getElementById("inputs").style.zIndex=30;
+document.getElementById("bet").style.zIndex=30;
+}
+else{
+document.getElementById("tut_p").innerHTML=val1;
+$("#tut_p").css({
+"position":"absolute",
+"top":"250px",
+"left":"400px",
+
+});
+document.getElementById("five").style.zIndex = 20;
+document.getElementById("ten").style.zIndex = 20;
+document.getElementById("twenty").style.zIndex = 20;
+document.getElementById("fifty").style.zIndex = 20;
+document.getElementById("bet").style.zIndex = 0;	
+
+}
+
+};
 }

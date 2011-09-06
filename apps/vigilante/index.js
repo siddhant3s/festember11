@@ -1,9 +1,9 @@
 var bgCanvas,drawCanvas,lidCanvas,bgContext,drawContext,lidContext;
 var leveldesc,bar=new Array(),persons=new Array(),coins=new Array(),secam=new Array();
-var dimension,gamestarted=0,level,score=-1,user,ajax,personcount,coincount=5,lives=3,scmax,securityCam=0,bosom,timelimit;
+var dimension,gamestarted=0,level=null,score=-1,user,personcount,coincount=5,lives=3,scmax,securityCam=0,bosom,timelimit;
 var leftpad=0,toppad=0,grid=30,block,padding,arclen=4,arcspread=(60*Math.PI)/180;
 var rep;
-var checkdiv,dir="d";
+var dir="d",ajax1,ajax2,ajax3;
 
 var pesonimage,barimage,bgimage,coinimage,lifeimage;
 var winsound,scoresound,losssound,lifesound;
@@ -38,12 +38,17 @@ function gi(el){
 	return document.getElementById(el);
 }
 function bodyLoad(){
-	if(window.XMLHttpRequest)
-		ajax=new XMLHttpRequest();
-	else
-		ajax=new ActiveXObject("Microsoft.XMLHTTP");
-	getInfo();
-			
+	if(window.XMLHttpRequest){
+		ajax1=new XMLHttpRequest();
+		ajax2=new XMLHttpRequest();
+		ajax3=new XMLHttpRequest();
+	}
+	else{
+		ajax1=new ActiveXObject("Microsoft.XMLHTTP");
+		ajax2=new ActiveXObject("Microsoft.XMLHTTP");
+		ajax3=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
 	bgCanvas=gi("backgroundCanvas");
 	drawCanvas=gi("scratchpadCanvas");
 	lidCanvas=gi("lidCanvas");
@@ -63,11 +68,6 @@ function bodyLoad(){
 	padding=(dimension-(block*grid))/2;
 	arclen*=block;
 	
-	checkdiv=gi("checkdiv");
-	bar[0]=30;
-	bar[1]=500;
-	bgContext.fillStyle="#333";
-	bgContext.fillRect(0,0,bgCanvas.width,bgCanvas.height);
 	welcomeGame();
 }
 function keyPress(e){
@@ -109,6 +109,12 @@ function keyPress(e){
 }
 
 function welcomeGame(){
+	drawContext.width=drawContext.width;
+	bgContext.fillStyle="#333";
+	bgContext.fillRect(0,0,bgCanvas.width,bgCanvas.height);
+	drawContext.fillText("Loading",drawCanvas.width/2-40,drawCanvas.height/2);
+	getInfo();
+	
 	personimage=new Array();
 	personimage["u"]=gi("personu");
 	personimage["d"]=gi("persond");
@@ -126,9 +132,6 @@ function welcomeGame(){
 	scoresound=gi("score");
 	losssound=gi("lose");
 	lifesound=gi("lifelost");
-	drawContext.fillStyle="#999";
-	drawContext.font = "bold 20px sans-serif";
-	drawContext.fillText("Press any key to play Vigilante!",drawCanvas.width/2-150,drawCanvas.height/2-20);
 }
 
 function getDimension(){
@@ -146,6 +149,8 @@ function getDimension(){
 		dimension=600;
 }
 function gameInit(){
+	if(level===null)
+		welcomeGame();
 	bar[0]=bar[1]=Math.floor(grid/2);
 	var k,j,i;
 	//bgContext.drawImage(bgimage,0,0,bgCanvas.width,bgCanvas.height);
@@ -190,7 +195,6 @@ function gameInit(){
 		showPerson(temp);
 		attachArc(temp);
 	}
-	updateScore();
 	for(i=coincount-1;i>=0;--i){
 		temp=Math.floor(Math.random()*100);
 		getNextFree(coins[i]);
@@ -203,8 +207,9 @@ function gameInit(){
 	gameStart();
 }
 function gameStart(){
-	var i,c=0;
+	var i,c=1;
 	showAlert("Game Started!",130,30,30);
+	updateScore();
 	updateTime();
 	rep=window.setInterval(function(){
 		if(timelimit<=0){
@@ -220,7 +225,7 @@ function gameStart(){
 		showBar();
 		if(c%10==0){
 			putCoins();
-			c=0;
+			c=1;
 		}
 		else c++;
 		if(score>=scmax)
@@ -317,7 +322,7 @@ function pickCoin(){
 					con=persons[pn][2].getContext("2d");
 					if(checkSight(bar,con,persons[pn][2]))
 						++nos;
-					if((nos*Math.floor(Math.random)*10)>6){
+					if( nos && (nos*Math.floor(Math.random)*10)>5){
 						con.fillStyle="#e00";
 						con.fill();
 						removeCoin(x);
@@ -475,12 +480,18 @@ function removeLives(){
 	else
 		gameStop();
 }
+var showingalert=0;
 function showAlert(str,colr,colg,colb){
 	lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
 	var interval,w=lidContext.measureText(str).width/2,y=lidCanvas.height/2,x=lidCanvas.width/2,i=1,color="rgba("+colr+","+colg+","+colb+",",rep=0;
+	if(showingalert)
+		return;
+	showingalert=1;
 	interval=window.setInterval(function(){
-		if(i<=0)
+		if(i<=0){
+			showingalert=0;
 			window.clearInterval(interval);
+		}
 		lidContext.fillStyle=color+(i/10)+")";
 		lidContext.clearRect(x-w-10,y-30,2*(w+10),40);
 		lidContext.fillRect(x-w-10,y-30,2*(w+10),40);
@@ -567,7 +578,6 @@ function showPerson(pn){
 function hidePerson(pn){
 	drawContext.clearRect(padding+block*persons[pn][0],padding+block*persons[pn][1],block,block);
 	showBar();
-	//show coins after person sweep
 }
 function showBar(){
 	drawContext.drawImage(barimage[dir],padding+block*bar[0],padding+block*bar[1],block,block);
@@ -585,58 +595,30 @@ function hideCoin(cn){
 
 //backend interactions
 function getInfo(){
-	//var ob=JSON.parse(gi("infojson").value);
-	//alert(ob);
-	user=gi("userinfo").value;//infojson
-	level=parseInt(gi("levelinfo").value);
-//	leveldesc=gi("leveldesc").value;
-	leveldesc=   "000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000001111111111111111111100000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000111111111111100000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000"
-				+"000000000000000000000000000000";
-	
-	var adds=gi("leveladds").value;
-	personcount=parseInt(adds[0])+parseInt(adds[1]);
-	coincount=parseInt(adds[2]);
-	if(adds[3]=="s")
-		securityCam=1;//indexof
-	scmax=parseInt(adds[4])*parseInt(adds[5]);
-	bosom=parseInt(adds[6]);
-	timelimit=parseInt(adds[7])*parseInt(adds[8])*10;
+	drawContext.fillStyle="#999";
+	drawContext.font = "bold 20px sans-serif";
+	drawContext.clearRect(drawCanvas.width/2-50,drawCanvas.height/2-30,100,40);
+	drawContext.fillText("Press any key to play Vigilante!",drawCanvas.width/2-150,drawCanvas.height/2-20);
+
+	user=ob.namee;
+	level=ob.level;
+	leveldesc=ob.map;
+	personcount=ob.persons;
+	coincount=ob.coins;
+	if(ob.addons.indexOf("s")!=-1)
+		securityCam=1;
+	if(ob.addons.indexOf("b")!=-1)
+		bosom=1;
+	scmax=ob.score;
+	timelimit=ob.time;
 }
 function updateScoreServer(){
 	//put the score on server; called when user scores
-	/*ajax.onreadystatechange=function(){
-		if(ajax.readyState==4 && ajax.status==200)
-			if(ajax.responseText==1)
+	/*ajax1.onreadystatechange=function(){
+		if(ajax1.readyState==4 && ajax1.status==200)
+			if(ajax1.responseText==1)
 				return 1;
-			else if(ajax.responseText==0)
+			else if(ajax1.responseText==0)
 				return 0;
 		};
 	
@@ -646,25 +628,36 @@ function updateScoreServer(){
 function hasWonServer(){
 	//return int;1if won 0 if not; called when user wins by js procedures
 	/*
-	ajax.onreadystatechange=function(){
-		if(ajax.readyState==4 && ajax.status==200)
-			if(ajax.responseText==1)
+	ajax2.onreadystatechange=function(){
+		if(ajax2.readyState==4 && ajax2.status==200)
+			if(ajax2.responseText==1)
 				return 1;
-			else if(ajax.responseText==0)
+			else if(ajax2.responseText==0)
 				return 0;
 		};
-		ajax.open("GET","form.php?",true);
-		ajax.send();
+		ajax2.open("GET","form.php?",true);
+		ajax2.send();
 		*/
 }
 function updateLevel(){//called when js win and server win
 	/*
-	ajax.onreadystatechange=function(){
-		if(ajax.readyState==4 && ajax.status==200)
-			user=ajax.responseText;
+	ajax3.onreadystatechange=function(){
+		if(ajax3.readyState==4 && ajax3.status==200)
+			user=ajax1.responseText;
 		};
-		ajax.open("POST","form.php",true);
-		ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		ajax.send(posts);
+		ajax3.open("POST","form.php",true);
+		ajax3.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		ajax3.send(posts);
 	*/
+}
+function wallPost(msg){/*
+	FB.ui({
+  "name": msg,
+  //to do
+  "link":"http://google.com",
+  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
+  caption:"Click on the link above to play Festember Games!",
+  description:"In a lonely desert rose a city greater than heaven itself. Men and women flock to it, to find joy, fortunes, glory and themselves. Come this September, history will repeat itself as amidst the arid plains of Trichy will rise a new Vegas. Festember 11 - Vegas style!",
+  "method":"feed"
+});*/
 }

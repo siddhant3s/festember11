@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>Drag and Drop</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="content-style-type" content="text/css">
+
+
+<style type="text/css">
+.dragclass{
+position : relative;
+cursor : move;
+}
+</style>
+
+
+<script type="text/javascript">
+//Drag and Drop script - http://www.btinternet.com/~kurt.grigg/javascript
+
+if  (document.getElementById){
+
+(function(){
+
+//Stop Opera selecting anything whilst dragging.
+if (window.opera){
+document.write("<input type='hidden' id='Q' value=' '>");
+}
+
+var n = 500;
+var dragok = false;
+var y,x,d,dy,dx;
+
+function move(e){
+if (!e) e = window.event;
+ if (dragok){
+  d.style.left = dx + e.clientX - x + "px";
+  d.style.top  = dy + e.clientY - y + "px";
+  return false;
+ }
+}
+
+function down(e){
+if (!e) e = window.event;
+var temp = (typeof e.target != "undefined")?e.target:e.srcElement;
+if (temp.tagName != "HTML"|"BODY" && temp.className != "dragclass"){
+ temp = (typeof temp.parentNode != "undefined")?temp.parentNode:temp.parentElement;
+ }
+if (temp.className == "dragclass"){
+ if (window.opera){
+  document.getElementById("Q").focus();
+ }
+ dragok = true;
+ temp.style.zIndex = n++;
+ d = temp;
+ dx = parseInt(temp.style.left+0);
+ dy = parseInt(temp.style.top+0);
+ x = e.clientX;
+ y = e.clientY;
+ document.onmousemove = move;
+ return false;
+ }
+}
+
+function up(){
+dragok = false;
+document.onmousemove = null;
+}
+
+document.onmousedown = down;
+document.onmouseup = up;
+
+})();
+}//End.
+</script>
+
+
+</head>
+<body>
+
+
+
+
+
+
+<p class="dragclass" style="top:0px;left:0px;width:200px;text-align:center;background-color:#ff0000;color:#ffffff">
+P tag 
+</p>
+
+
+<div class="dragclass" style="height:20px;width:150px;top:0px;left:0px;background-color:#ff0000;color:#ffffff">
+Div: Relative position
+</div>
+
+<p>.</p>
+
+
+
+<img src="http://www.java2s.com/style/logo.png" class="dragclass" style="top:0px;left:0px;height:100px;width:150px;padding:0px"/>
+<p>.<p>
+
+
+<b class="dragclass" style="top:0px;left:0px;background-color:#ff0000;color:#ffffff">
+B tag
+</b>
+
+
+
+<img src="http://www.java2s.com/style/logoRed.png" class="dragclass" style="position:absolute;top:400px;left:200px;height:105px;width:150px;padding:0px"/>
+
+<div id="test" class="dragclass" style="position:absolute;top:330px;left:160px;height:20px;width:150px;background-color:#ff0000;color:#ffffff">
+Div: Absolute position
+</div>
+
+
+</body>
+</html>
+
+           
+       

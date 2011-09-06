@@ -14,13 +14,13 @@ z-index:-1;
 }
 #centerdiv{
 	position:absolute;
-	left:25%;
-	top:70%;
+	left:300px;;
+	top:430px;
 }
 #centerdiv2{
 	position:absolute;
-	left:61%;
-	top:70%;
+	left:870px;
+	top:430px;
 }
 </style>
 <script src="jquery.js"></script>
