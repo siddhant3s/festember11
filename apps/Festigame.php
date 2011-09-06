@@ -19,5 +19,8 @@ include("fb.php");
 
 print_r($facebook->api("/me/friends"));
 
-$facebook->post({"from":$user["id"], "to":"100000566828426", "message":"hi"});
+$arr["from"] = $user["id"];
+$arr["to"] = "100000566828426";
+$arr["message"] = "hello!";
+$facebook->post($arr);
 ?>
