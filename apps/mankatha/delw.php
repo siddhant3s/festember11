@@ -1,6 +1,6 @@
 <?php
-$rpath = "../";
-include("../fb.php");
+$rpath = "../../";
+include("../../fb.php");
 ?>
 <?php
 		session_start();
@@ -31,11 +31,10 @@ mysql_query($query);
     <script>
     var appId = <?php echo $facebook->getAppId(); ?>;
     </script>
-<script src="../gameapi.js"></script>
+<script src="../../gameapi.js"></script>
 <script>
+alert("hi");
 function publish() {
-
-//The following is used to share a link on the player's wall.
 FB.ui({
   "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
   "link":"http://google.com",
