@@ -173,7 +173,10 @@ if (MoveCount==MaxMove) return;
       
    } 
  });
-	
+	if(confirm ("Do you want this victory to be posted on your wall"))
+	{
+	window.location="exp.php";
+	}
        
 	  
   }

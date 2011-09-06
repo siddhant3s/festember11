@@ -17,7 +17,7 @@ window.close();
 <map name="options">
 
 <area shape="rect" coords="471,273,659,311" href="start.php" />
-<area shape="rect" coords="469,329,660,367" href="" />
+<area shape="rect" coords="469,329,660,367" href="highscore.php" />
 <area shape="rect" coords="472,386,663,426" href="help.html" />
 
 <area shape="rect" coords="468,442,664,480" onclick="javascript:closeWindow();" />

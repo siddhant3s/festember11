@@ -11,6 +11,7 @@
   define('DB_USER', 'root');
   define('DB_PASSWORD', 'computer');
   define('DB_NAME', 'longline');
+  define('DB_TABLE','longline_user');
 ?>
 
 

@@ -31,7 +31,7 @@ $time=$_GET['time'];
 $dbc = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)
     or die('Error connecting to MySQL server.');
 	mysql_select_db(DB_NAME,$dbc);
-	$query="INSERT INTO longline_user VALUES ('$name','$score')";
+	$query="INSERT INTO ".DB_TABLE." VALUES ('$name','$score')";
 	
 	  $result = mysql_query($query)
     or die('Error querying database.');
