@@ -942,6 +942,7 @@ function endRound() {
              (p <= 21 && d > 21) || (p <= 21 && p > d)) {
 
       player[i].resultTextNode.nodeValue = "Player Wins";
+
 poppy(1);
      
       tmp = 2 * player[i].bet;
@@ -957,6 +958,7 @@ poppy(1);
     else if ((dealer.blackjack && !player[i].blackjack) ||
              p > 21 || p < d) {
       player[i].resultTextNode.nodeValue = "Player Loses";
+
 poppy(0);
       addClassName(player[i].betTextNode.parentNode, "lost");
 	    document.getElementById("deal").disabled=false;
@@ -975,15 +977,17 @@ function poppy(h)
 {
 
 if(h==1)
-{
+{$(".result").effect("pulsate",{times:3},"fast");
 alert(" you have won..! your credits are $" +credits);
+$(".dollars").effect("pulsate",{times:3},"fast");
 startRound();
 document.forms["controls"].elements["hit"].disabled   = false;
 }
 
 if(h==0)
-{
+{$(".result").effect("pulsate",{times:3},"fast");
 alert(" toooo bad..! you lose . your credits are $" +credits);
+$(".dollars").effect("pulsate",{times:3},"fast");
 startRound();
 document.forms["controls"].elements["hit"].disabled   = false;
 }
