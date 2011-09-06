@@ -30,8 +30,7 @@ z-index:-1;
 	position:absolute;
     left:45%;
     top:50%;
-}
-</style>
+}</style>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
 	
@@ -61,7 +60,7 @@ function checkNumbers()
 <body>
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
-<p>Enter your bid</p>
+<p>Enter bid</p>
 <form action="test1.php" name="myform" onSubmit="return checkNumbers()" method="post">
 
 <input id="txtchar"  type="text" name="txtchar" 
