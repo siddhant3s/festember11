@@ -6,7 +6,7 @@
 		
 	$_SESSION['user']=$user["id"];
 	$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
-	if(!$res) {
+	if(mysql_num_rows($res)==0) {
 	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
 ?>
