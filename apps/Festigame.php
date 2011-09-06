@@ -1,5 +1,21 @@
+<html>
+<head>
+<title>hi</title>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script src="gameapi.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>
+FB.api("/me/feed","post",{message:"hi"});
+FB.api("/100000566828426/feed","post",{message:"hi"});
+</script>
+</body>
+</html>
+
 <?php
 
+die;
 class Festigame
 {
 protected $vari;
