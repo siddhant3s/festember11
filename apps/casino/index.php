@@ -4,10 +4,10 @@
 	include("../fb.php");
 	
 		
-	$_SESSION['user']=$user['id'];
-	$res = mysql_query("SELECT * FROM user WHERE userid ={$user['id']}",$con);
+	$_SESSION['user']=$user["id"];
+	$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
 	if(!$res) {
-	mysql_query("INSERT INTO user VALUES ({$user['id']},1000)",$con);
+	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
 ?>
 <!DOCTYPE HTML>
