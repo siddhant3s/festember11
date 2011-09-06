@@ -33,7 +33,9 @@ function StartTheTimer()
     if (secs==0)
     {
         StopTheClock()
-         window.location='score.php?a='+name+'&b='+score;
+		
+        alert ("You lost the game");
+		arran();
     }
     else
     {
@@ -159,7 +161,10 @@ if (MoveCount==MaxMove) return;
   if (MaxMoveCount<MoveCount)
     MaxMoveCount=MoveCount;
   if (MoveCount==MaxMove) 
-  { alert("hi"); $.ajax({ 
+  {  
+  var name=prompt("Enter your name");
+  
+  $.ajax({ 
    type: "POST", 
    url: "score.php", 
    data: "name="+name+"&time="+secs, 

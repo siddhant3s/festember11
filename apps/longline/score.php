@@ -19,6 +19,7 @@ body {
 <body>
  <p align="center">
    <?php
+  require_once('connectvars.php');
 
 $name=$_GET['name'];
 $time=$_GET['time'];
@@ -27,10 +28,10 @@ $time=$_GET['time'];
 	   else if($time<180) $score=300;
 	   else if($time<240) $score=200;
 	   else if($time<300) $score=100;
-$dbc = mysql_connect('localhost', 'root', 'computer')
+$dbc = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)
     or die('Error connecting to MySQL server.');
-	mysql_select_db('longline',$dbc);
-	$query="INSERT INTO game VALUES ('$name','$score')";
+	mysql_select_db(DB_NAME,$dbc);
+	$query="INSERT INTO longline_user VALUES ('$name','$score')";
 	
 	  $result = mysql_query($query)
     or die('Error querying database.');
@@ -47,17 +48,6 @@ $dbc = mysql_connect('localhost', 'root', 'computer')
 <map name="Map" id="Map"><area shape="rect" coords="1,1,241,38" href="index.php" /></map></p>
  <p class="style1">&nbsp;</p>
  <?php }
- else
- {
- ?>
- <h1 align="center" class="style1">OOOOOOOOOOPS!!!!!!!!!!!!!!</h1>
- <p align="center" class="style1">Your time is up .</p>
- <p align="center" class="style1">Your score is 0 </p>
- <p align="center" class="style1"><img src="backtomp.png" border="0" usemap="#Map2" />
-<map name="Map2" id="Map2"><area shape="rect" coords="2,2,240,37" href="index.php" /></map></p>
- <p class="style1">&nbsp;</p>
- <?php
- }
  
  ?>
 </body>
