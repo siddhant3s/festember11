@@ -63,10 +63,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		function bet(){
 			var u1,u2,d1,d2,c1,c2,c3,c4,c5,betMoney=0,temp,temp1,temp2,temp3,temp4;
 			if(curMoney!=0||status==2){
-			$("#bet").attr({
-					disabled:'disabled'
-			});
-			status++;
+				$("#bet").attr({disabled:'disabled'});
+				status++;
 			if(status==2){
 			betMoney=curMoney;
 			curMoney=0;
