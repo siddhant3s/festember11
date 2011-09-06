@@ -1,8 +1,6 @@
 <?php
 $rpath = "../";
 include("../fb.php");
-?>
-<?php
 		session_start();
 $connection=mysql_connect("localhost","festember","vegas11");
 
