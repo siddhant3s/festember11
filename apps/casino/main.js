@@ -274,9 +274,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		}
 		else if(status==3){
 						$("#loading").show();
-						$("#fold").attr({
-							disabled:'disabled'
-						});
+						$("#fold").hide();
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
@@ -396,6 +394,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 									$("#inputs").hide();
 					$("#coins").hide();
 					$("#binfo").hide();
+					$("#tut_button").hide();
 									canvas.clear();
 									var text = canvas.display.text({
 					x: -177,
