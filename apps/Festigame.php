@@ -3,6 +3,9 @@
 <title>hi</title>
     <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script src="gameapi.js"></script>
+    <script>
+    var appId = <?php echo $facebook->getAppId(); ?>;
+    </script>
 </head>
 <body>
 <div id="fb-root"></div>
