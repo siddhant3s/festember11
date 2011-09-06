@@ -47,7 +47,6 @@
 
 		}
 		</script>
-		<input type="button" value="Click on this button to share" onclick="publish();">	
 		<div id="wrapper">
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
@@ -74,6 +73,6 @@
 		</div>		
 		
 		</div>		
-		
+		<input type="button" value="Click on this button to share" onclick="publish();">
 	</body>
 </html>

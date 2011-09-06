@@ -232,9 +232,19 @@ display:none;
 {
 display:none;
 position:absolute;
-bottom:20px;
+bottom:40px;
 right:20px;
+background:url(images/input.png);
+width:100px;
+	height:30px;
 }
+#tut_button1
+{
+background:url(images/input.png);
+width:100px;
+height:30px;
+}
+
 #table_rules
 {
 text-align:center;
