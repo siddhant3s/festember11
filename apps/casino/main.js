@@ -63,9 +63,10 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		function bet(){
 			var u1,u2,d1,d2,c1,c2,c3,c4,c5,betMoney=0,temp,temp1,temp2,temp3,temp4;
 			if(curMoney!=0||status==2){
-				$("#bet").attr({'disabled':'disabled'});
+				$("#bet").hide();
 				status++;
 			if(status==2){
+			$("#bet").hide();
 			$("#loading").show();
 			betMoney=curMoney;
 			curMoney=0;
@@ -113,7 +114,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					setTimeout(function(){animate5(temp3);},200);
 					setTimeout(function(){animate6(temp4);},200);
 					setTimeout(function(){animate7(temp2);},400);
-					setTimeout(function(){$("#bet").removeAttr("disabled");},5000);
+					setTimeout(function(){$("#bet").show();},5000);
 			}});
 			setTimeout(function(){dat="money="+betMoney;
 						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},600);
@@ -261,9 +262,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						}
 						setTimeout(hey,700);	
 					}
-			$("#bet").attr({
-					value:'call'
-			});
+			$("#bet").show();
 			$("#sub").hide();
 			$("#money").hide();
 			$("#five").click(function(){});
@@ -275,12 +274,12 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		}
 		else if(status==3){
 						$("#loading").show();
-						$("#fold").attr({
-							disabled:'disabled'
-						});
+						$("#fold").hide();
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
+						dat="money="+betMoney
+						$.ajax({type: "POST",data:dat,url: "putmoney.php"});
 						$.ajax({url: "getdata1.php",success: function(html){
 								$("#loading").hide();
 								var string=html.split('-');
@@ -314,9 +313,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								setTimeout(function(){animate10(temp2);},400);
 								setTimeout(function(){animate11(temp3);},600);
 						}});
-						setTimeout(function(){
-							dat="money="+betMoney
-						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},200);
+						
 			function animate8(url){
 						
 						card8.animate({
@@ -397,6 +394,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 									$("#inputs").hide();
 					$("#coins").hide();
 					$("#binfo").hide();
+					$("#tut_button").hide();
 									canvas.clear();
 									var text = canvas.display.text({
 					x: -177,
