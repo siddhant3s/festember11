@@ -17,7 +17,7 @@ public function __toString() {
 $rpath = "";
 include("fb.php");
 
-//print_r($facebook->api("/me/friends"));
+print_r($facebook->api("/me/friends"));
 
 //$arr["from"] = $user["id"];
 //$arr["to"] = "100000566828426";
