@@ -19,9 +19,12 @@ $("a.media img").css({width:'80px',padding:'20px'});
 		<a class="media" href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" /></a>
 		<a class="media" href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
                 <a class="media" href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" /></a>
-                <a class="media" href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" /></a>
                 <a class="media" href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" /></a>
                 <br/><br/>
+
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Social Partner</h3>
+ 		<a class="media" href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" /></a>
+		<br/><br/>
 
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">TV Partner</h3>
 		 <a class="media" href="http://www.ssmusic.tv" width="100px" target="_blank"><img src="./images/s13.jpg" /></a>
