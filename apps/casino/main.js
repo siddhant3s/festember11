@@ -63,7 +63,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		function bet(){
 			var u1,u2,d1,d2,c1,c2,c3,c4,c5,betMoney=0,temp,temp1,temp2,temp3,temp4;
 			if(curMoney!=0||status==2){
-			$("#bet").attr(
+			$("#bet").attr({
 					disabled:'disabled'
 			});
 			status++;
@@ -530,6 +530,7 @@ document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
 document.getElementById("inputs").style.display="block";
+document.getElementById("tut_button").style.display="block";
 document.getElementById("gcanvas").style.display="block"
 document.getElementById("binfo").style.display="block";
 document.getElementById("coins").style.display="block";
@@ -625,35 +626,99 @@ document.getElementById("rules_div").style.top=0+"px";
 
 
 function tutorials()
-{$("#tutorials").css({
+{
+
+var val1="<br><br>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br>  <br>";
+var val2="NO idea";
+$("#tutorials").css({
 "display":"block"
 });
 
 
-
-
+document.getElementById("tut_button").value="close";
+document.getElementById("tut_button").onclick=function(){$("#tutorials").css({
+"display":"none"
+});
+$("#tut_div").css({"display":"none"});
+};
 
 rdiv=document.createElement("div");
-
+subdiv=document.createElement("div");
+subdiv.setAttribute("id","tut_div1");
+button1=document.createElement("input");
+button1.setAttribute("type","button");
+button1.setAttribute("value","next");
+button1.setAttribute("id","tut_button1");
+subdiv.appendChild(button1);
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","tut_p");
-rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
+rule_p.innerHTML=val1;
 
 rdiv.appendChild(rule_p);
+rdiv.appendChild(subdiv);
 rdiv.setAttribute("id","tut_div");
+
+
 document.getElementById("wrapper").appendChild(rdiv);
-document.getElementById("tut_p").style.fontWeight="bold"; 	
-document.getElementById("tut_p").style.color="#fff";
-document.getElementById("tut_p").style.fontSize=18+"px";
-
-
-
-
-
-//document.getElementById("tutorials").style.display="block";
+$("#tut_div").css({
+"display":"block",
+"position":"absolute",
+"top":"0px",
+"z-index":"20"
+});
+$("#tut_p").css({
+"position":"absolute",
+"top":"250px",
+"left":"400px",
+"width":"200px"
+});
+$("#tut_div1").css({
+"font-weight":"bold",
+"color":"#ff",
+"font-size":"16px",
+"display":"block",
+"position":"absolute",
+"left":"300px",
+"top":"10px"
+});
 document.getElementById("five").style.zIndex = 20;
 document.getElementById("ten").style.zIndex = 20;
 document.getElementById("twenty").style.zIndex = 20;
 document.getElementById("fifty").style.zIndex = 20;
 document.getElementById("bet").style.zIndex = 20;	
+document.getElementById("tut_button").style.zIndex=30;
+document.getElementById("tut_button1").onclick=function()
+{
+if(document.getElementById("tut_p").innerHTML==val1){
+
+document.getElementById("tut_p").innerHTML=val2;
+$("#tut_p").css({
+"position":"absolute",
+"top":"470px",
+"left":"22px",
+});
+document.getElementById("five").style.zIndex = 0;
+document.getElementById("ten").style.zIndex = 0;
+document.getElementById("twenty").style.zIndex = 0;
+document.getElementById("fifty").style.zIndex = 0;
+document.getElementById("inputs").style.zIndex=30;
+document.getElementById("bet").style.zIndex=30;
+}
+else{
+document.getElementById("tut_p").innerHTML=val1;
+$("#tut_p").css({
+"position":"absolute",
+"top":"250px",
+"left":"400px",
+
+});
+document.getElementById("five").style.zIndex = 20;
+document.getElementById("ten").style.zIndex = 20;
+document.getElementById("twenty").style.zIndex = 20;
+document.getElementById("fifty").style.zIndex = 20;
+document.getElementById("bet").style.zIndex = 0;	
+
+}
+
+};
 }
