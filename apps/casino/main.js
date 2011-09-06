@@ -267,6 +267,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			$("#bet").show();
 			$("#bet").attr("disabled");
 			$("#sub").hide();
+			$("#money").hide();
 			$("#five").click(function(){});
 			$("#ten").click(function(){});
 			$("#twenty").click(function(){});
