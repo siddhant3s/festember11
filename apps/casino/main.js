@@ -275,6 +275,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		else if(status==3){
 						$("#loading").show();
 						$("#fold").hide();
+						$("#bet").hide();
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
@@ -384,7 +385,9 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						canvas.redraw();
 						
 					}	
-								
+				$("#coins").hide();
+					$("#binfo").hide();
+					$("#tut_button").hide();				
 				var value;		
 			setTimeout(function(){
 			$.ajax({type: "POST",data:dat,url: "putmoney.php",success:function(html){
