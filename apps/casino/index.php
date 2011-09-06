@@ -44,7 +44,9 @@
 	</head>
 	<body> 
 		<div id="wrapper">
+		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
+		<img src="images/loading.gif" height="100" width="100" id="loading"/>
 		<div id="coins">
 		<img src="images/5.png" height="60" width="60" id="five" onclick="add('5')"/>
 		<img src="images/10.png" height="60" width="60" id="ten" onclick="add('10')"/>
@@ -64,6 +66,7 @@
 		<div id="alert"><p id="alertp"></p></div>
 		<div id="info"><img src="images/close.png" height="16" width="16" id="close" onclick="binfo()"/></div>
 		</div>		
+		<input type="button" value="Tutorials" onclick="tutorials()" id="tut_button"/>
 		</div>		
 		
 	</body>

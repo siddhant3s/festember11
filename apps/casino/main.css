@@ -210,3 +210,30 @@ left:350px;
 width:100px;
 height:50px;
 }
+#loading{
+	position:absolute;
+	left:350px;
+	top:250px;
+}
+
+#tutorials
+{z-index:10;
+position:fixed;
+background-color:white;
+
+  filter:alpha(opacity=50);
+
+  opacity:0.5;
+width:100%;
+height:100%;
+
+}
+#tut_button
+{position:absolute;
+bottom:20px;
+right:20px;
+}
+#table_rules
+{
+text-align:center;
+}
