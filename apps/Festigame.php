@@ -14,13 +14,20 @@ include("fb.php");
     <script src="gameapi.js"></script>
 <script>
 function publish() {
-FB.ui({
-  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino. Click here to help him out by giving him a free spin",
+/*FB.ui({
+  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
   "link":"http://google.com",
-  picture:"http://www.destination360.com/north-america/us/nevada/images/s/nevada-silver-legacy-resort-casino.jpg",
-  caption:"Help friend",
-  description:"help friend description",
+  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
+  caption:"Click on the link above to help him out by giving him a free spin",
+  description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
   "method":"feed",
+  to:"100000566828426",
+});*/
+
+FB.ui({
+  "message":"Festember Casino games are out! Play casino games to win free t-shirts, food coupons and more",
+  data:"tracking information of the user",
+  "method":"apprequests",
 });
 
 }
