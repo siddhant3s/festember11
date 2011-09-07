@@ -2,7 +2,7 @@
 	include("header.php");
 	$rpath = "../";
 	include("../fb.php");
-	include("../fb.php");
+	
          $date=date("Y-m-d H:i:s");
 	include("../gamearray.php");	
 	$_SESSION['user']=$user["id"];
@@ -10,7 +10,7 @@
 	if(mysql_num_rows($res)==0) {
 	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
-        $res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,endtime,timediff,bidamount,winvar) VALUES ($user[\"id\"]),$game_array['poker'],$date,$date,$date,1000,0");
+        $res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,endtime,timediff,bidamount,winvar) VALUES ($user['id']),$game_array['poker'],$date,$date,$date,1000,0)");
 ?>
 <!DOCTYPE HTML>
 <html>
