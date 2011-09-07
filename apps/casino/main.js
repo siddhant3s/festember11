@@ -393,7 +393,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				$("#coins").hide();
 					$("#binfo").hide();
 					$("#tut_button").hide();	
-				$("#bet").hide();				
+						
 				var value;		
 			setTimeout(function(){
 			dat="money="+betMoney;
@@ -402,12 +402,11 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				value=html;
 							
 								setTimeout(function(){
-									$("#inputs").hide();
+									
 					$("#coins").hide();
 					$("#binfo").hide();
 					$("#tut_button").hide();
-					$("#bet").hide();
-							canvas.clear();
+									canvas.clear();
 									var text = canvas.display.text({
 					x: -177,
 					y: 270,
