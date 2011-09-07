@@ -7,6 +7,7 @@ include("fb.php");
 <title>FESTEMBER 11</title>
 <link href="main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="jquery.js" ></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 <script type="text/javascript">
   var appId = <?php echo $facebook->getAppId(); ?>;
   function pokere()
