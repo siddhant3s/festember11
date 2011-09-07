@@ -67,9 +67,9 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				$("#bet").attr("disabled","disabled");
 				status++;
 			if(status==2){
-			$("#bet").hide();
-			$("#bet").attr("disabled","disabled");
-			$("#loading").show();
+				$("#bet").hide();
+				$("#bet").attr("disabled","disabled");
+				$("#loading").show();
 			betMoney=curMoney;
 			curMoney=0;
 			document.getElementById("money").value=curMoney;
@@ -265,7 +265,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						setTimeout(hey,700);	
 					}
 			$("#bet").show();
-			$("#bet").attr("disabled");
+			$("#bet").removeAttr("disabled");
+			document.getElementById("bet").value="call";
 			$("#sub").hide();
 			$("#money").hide();
 			$("#five").click(function(){});
@@ -283,7 +284,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
-						dat="money="+betMoney
+						
 						
 						$.ajax({url: "getdata1.php",success: function(html){
 								$("#loading").hide();
@@ -391,15 +392,17 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					}	
 				$("#coins").hide();
 					$("#binfo").hide();
-					$("#tut_button").hide();				
+					$("#tut_button").hide();	
+						
 				var value;		
 			setTimeout(function(){
+			dat="money="+betMoney;
 			$.ajax({type: "POST",data:dat,url: "putmoney.php",success:function(html){
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
 							
 								setTimeout(function(){
-									$("#inputs").hide();
+					$("#bet").hide();				
 					$("#coins").hide();
 					$("#binfo").hide();
 					$("#tut_button").hide();
