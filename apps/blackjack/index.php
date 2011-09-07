@@ -62,24 +62,20 @@ margin: 0 auto;
 <script>
 var appId = <?php echo $facebook->getAppId(); ?>;
 </script>
-<script src="../gameapi.js"></script>
 <script src="script.js" type="text/javascript"></script>
 
 
 
 </head>
-<body> 
-<script type="text/javascript">
+<body>
+<div id="fb-root"></div>
+<script src="../gameapi.js"></script>
 
+<script type="text/javascript">
 function doit()
 {
-
-
-
-self.location="blackjack.php";
-
+  self.location="blackjack.php";
 }
-
 
 function sharewin() {
       obj = {
@@ -88,14 +84,14 @@ function sharewin() {
           picture:"http://www.westerndistributingco.com/Images/Upload/blackjack-fp-f.jpg",
           caption:"Casino games at Festember 11",
           description:"Play the game now to get goodies and stuff",
-       }
-       pub(obj);  
+     }
+     pub(obj);  
 }
 
 function pub(o) {
-       o.method = "feed";
-        FB.ui(o);
-      }
+    o.method = "feed";
+    FB.ui(o);
+}
       
 
 </script>

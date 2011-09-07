@@ -267,3 +267,11 @@ font-weight:700;
 color:#fff;
 
 }
+#tmoney
+{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	width:170px;
+	height:20px;
+}
