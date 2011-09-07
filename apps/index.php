@@ -111,13 +111,13 @@ include("fb.php");
 </div>
 
 <div id="div_game"><img src="images/main casino pg.jpg" alt="casino" />
-<div id="poker" onmouseover="pokere()" onmouseout="pokerl()"><a href="#"><img src="images/POKER1.png" alt="poker" width="380" id="poker_img"></a></div>
-<div id="roulette"><a href="#"><img src="images/roulette1.png" alt="roulette" width="450" id="roul_img"></a></div>
-<div id="mankatha" onmouseover="mankathae()" onmouseout="mankathal()"<a href="#">><img src="images/MANKATHA1.png" alt="mankatha" width="310" id="mang_img"></a></div>
-<div id="claw" ><a href="#"><img src="images/CLAWS1.png" alt="claw" width="500" id="claw_img"></a></div>
-<div id="blackjack"><a href="#"><img src="images/BLACK JACK1.png" alt="blackjack" width="530" id="bljack_img"></a></div>
-<div id="slotm"><a href="#"><img src="images/slot1.png" alt="slot" width="360" height="280" id="slot_img"></a></div>
+<div id="poker" onmouseover="pokere()" onmouseout="pokerl()"><a href="./poker/"><img src="images/POKER1.png" alt="poker" width="380" id="poker_img"></a></div>
+<div id="roulette"><a href="./roulette/"><img src="images/roulette1.png" alt="roulette" width="450" id="roul_img"></a></div>
+<div id="mankatha" onmouseover="mankathae()" onmouseout="mankathal()"<a href="./mankatha/">><img src="images/MANKATHA1.png" alt="mankatha" width="310" id="mang_img"></a></div>
+<div id="claw" ><a href="./claw/"><img src="images/CLAWS1.png" alt="claw" width="500" id="claw_img"></a></div>
+<div id="blackjack"><a href="./blackjack/"><img src="images/BLACK JACK1.png" alt="blackjack" width="530" id="bljack_img"></a></div>
+<div id="slotm"><a href="./longline/"><img src="images/slot1.png" alt="slot" width="360" height="280" id="slot_img"></a></div>
 <div id="slotm1"><a href="#"><img src="images/slot1.png" alt="slot1" width="265" id="slot1_img"></a></div>
-<div id="ants"><a href="#"><img src="images/ants1.png" alt="slot" width="300"id="ants_img"></a></div>
+<div id="ants"><a href="./ants/"><img src="images/ants1.png" alt="slot" width="300"id="ants_img"></a></div>
 </div>
 </body></html>
