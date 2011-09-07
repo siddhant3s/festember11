@@ -279,7 +279,6 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		else if(status==3){
 						$("#loading").show();
 						$("#fold").hide();
-						
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
@@ -317,6 +316,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								setTimeout(function(){animate9(temp1);},200);
 								setTimeout(function(){animate10(temp2);},400);
 								setTimeout(function(){animate11(temp3);},600);
+								$("#bet").hide();
 						}});
 						
 			function animate8(url){
