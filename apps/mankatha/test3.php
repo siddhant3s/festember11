@@ -1,4 +1,3 @@
-
 <?php
 if(!isset($_POST['txtchar'])){
 	header('Location:start.php');

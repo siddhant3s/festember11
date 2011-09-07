@@ -223,3 +223,15 @@ function md(Event)
 { 
    MouseDown(Event.pageX, Event.pageY);
 }
+ xc=eval(Math.floor((window.innerWidth-580)/2));
+yc=20;
+
+ for (i=0; i<8; i++)
+  { for (j=0; j<4; j++)
+    { document.writeln("<div id=\"c"+eval(4*i+j)+"0\" style=\"position:absolute; top:"+eval(yc+j*108)+"; left:"+eval(xc+i*58)+"; width:71; height:96; visibility:hidden;\">");
+      document.writeln("<img src=\"card_"+eval(j+1)+eval(i+7)+".gif\">");
+      document.writeln("</div>");
+    }
+  }
+
+arran();

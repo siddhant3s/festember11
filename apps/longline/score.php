@@ -19,7 +19,7 @@ body {
 <body>
  <p align="center">
    <?php
-  require_once('connectvars.php');
+  require_once('config.php');
 
 $name=$_GET['name'];
 $time=$_GET['time'];
