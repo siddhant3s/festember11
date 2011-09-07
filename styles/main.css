@@ -96,10 +96,10 @@ body {
 	color: white;
 }
 
-#menu  .events 		{top: 30px; left: 10px;}
-#menu  .pronite 	{top: 85px; left: 40px;}
-#menu  .workshops	{top: 140px; left: 40px;}
-#menu  .informals	{top: 190px; left: 110px;}
+#menu  .events 		{top: 30px; left: 30px;}
+#menu  .pronite 	{top: 85px; left: 60px;}
+#menu  .workshops	{top: 140px; left: 60px;}
+#menu  .informals	{top: 190px; left: 130px;}
 
 #menu  .sponsors	{top: 140px; right: 100px;}
 #menu  .gallery		{top: 85px; right: 85px;}
