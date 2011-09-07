@@ -1,7 +1,8 @@
 <html>
 <head>
-	<title>Festember Games: Vigilante</title>
-	<link rel="shortcut icon" href="images/favicon.png" type="image/png"></link>
+	<title>
+		Festember Games: Vigilante
+	</title>
 	<link rel="stylesheet" type="text/css" href="index.css"></link>
 	<link rel="Favicon
 	<!--[if lt IE 9]>
@@ -9,7 +10,7 @@
 	<![endif]-->
 	<script type="application/javascript" src="index.js"></script>
 </head>
-<body onload="bodyLoad()" onkeydown="keyPress(event)">
+<body onload="bodyLoad()">
 <div id="bodydiv">
 <input type="hidden" id="userinfo" value="username" />
 <input type="hidden" id="levelinfo" value="1" />
@@ -18,9 +19,8 @@
 <!-- p0+p1 coins sec?s sco0*sc1 bb time0*time1*10s-->
 
 <div class="header">
-	<a href="http://www.festember.in/"><img src="images/festember.png" alt="Festember 11" class="header" /></a>
+<a href="http://www.festember.in/"><img src="images/festember.png" alt="Festember 11" class="header" /></a>
 </div>
-<div id="checkdiv"></div>
 
 <div id="welcome">
 <h1>Welcome to Vigilante</h1>
@@ -38,7 +38,7 @@ Move the Barman using the arrow keys. The persons roam around on their own will.
 <div id="gameback" onclick="hideGame()"></div>
 <div id="game">
 <div id="wrapper">
-<canvas id="backgroundCanvas" >HTML5 canvas are not supported! Please update your browser to a newer version: IE9, Firefox 1.5 or Chrome 4.1 or higher</canvas>
+<canvas id="backgroundCanvas" >HTML5 canvas are not supported! Please update your browser to a newer version: IE7, Firefox 4.1 or Chrome 7</canvas>
 <canvas id="scratchpadCanvas" z-index=1></canvas>
 <canvas id="lidCanvas" z-index=2></canvas>
 </div></div>
@@ -60,7 +60,7 @@ Move the Barman using the arrow keys. The persons roam around on their own will.
 <img src="images/bard.png" id="bard" />
 <img src="images/barl.png" id="barl" />
 <img src="images/barr.png" id="barr" />
-<!--<img src="images/levelbg.png" id="bgimage" />-->
+<img src="images/levelbg.png" id="levelbg" />
 <audio src="sounds/life.mp3" id="lifelost"></audio>
 <audio src="sounds/collect.mp3" id="score"></audio>
 <audio src="sounds/loss.mp3" id="lose"></audio>

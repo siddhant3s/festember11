@@ -1,10 +1,11 @@
 <?php
 session_set_cookie_params(0);
 session_start();
-$_SESSION['id']=session_id();echo '<pre>';
-//require('fb.php');
+$_SESSION['id']=session_id();
+$rpath = "../";
+//require('../fb.php');
 function getUserInfo(){
-	$_SESSION['name']="nUsernmae".time();
+	$_SESSION['namee']="nUsernmae".time();
 	$_SESSION['player']="NavoPlayer";
 	$_SESSION['balance']="1000";
 }
@@ -14,18 +15,11 @@ require('db_conn.php');
 if(!$c)
 	throw new Exception(mysql_error());
 getUserInfo();
-/*
-"update.php?a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount
- p0+p1 coins sec?s sco0*sc1 bb time0*time1*10s
- map
- level
- playername
-*/
-$r=mysql_query('SELECT `level` FROM `'.$DB_NAME.'`.`vigilante_users` WHERE name=\''.$_SESSION['name'].'\';',$c);
+$r=mysql_query('SELECT `level` FROM `'.$DB_NAME.'`.`vigilante_users` WHERE name=\''.$_SESSION['namee'].'\';',$c);
 if(!$r)
 	throw new Exception(mysql_error());
-if(!($r=mysql_fetch_array($r))){
-	if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_users` (`name`,`level`) VALUES('{$_SESSION['name']}',1);" ,$c))
+if(!($r=mysql_fetch_row($r))){
+	if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_users` (`name`,`level`) VALUES('{$_SESSION['namee']}',1);" ,$c))
 		throw new Exception(mysql_error());
 	$r[0]=1;
 	}
@@ -35,7 +29,7 @@ $_SESSION['persons']=10+$level;
 $_SESSION['coins']=10+5*floor($level/10);
 $_SESSION['score']=20+floor($level/10);
 $_SESSION['time']=30+10*$level;
-$_SESSION['addons']=($level>5?'s':null);
+$_SESSION['addons']=($level>5?'s':'');
 $map;
 if($level<3)
 	$map=1;
@@ -50,17 +44,15 @@ else{
 $desc=mysql_query('SELECT * FROM `'.$DB_NAME.'`.`vigilante_maps` LIMIT '.$map.',1;',$c);
 if(!desc)
 	throw new Exception(mysql_error());
-$map=mysql_fetch_array($desc,0);
+$map=mysql_fetch_row($desc);
+$_SESSION['map']=$map[0];
 unset($map);
-/*
-$json=json_encode(array('name'=>$_SESSION['player'],'level'=>) );
-*/
+$json=json_encode(array('namee'=>$_SESSION['player'],'level'=>$_SESSION['level'],'map'=>$_SESSION['map'],'persons'=>$_SESSION['persons'],'coins'=>$_SESSION['coins'],'score'=>$_SESSION['score'],'time'=>$_SESSION['time'],'addons'=>$_SESSION['addons']));
 }catch(Exception $e){
 	echo '<br/>Error: '.$e->getMessage();
 	session_destroy();
 	die('Error!');
 }
-var_dump($json);
 ?>
 <html>
 <head>
@@ -71,16 +63,18 @@ var_dump($json);
 	<!--[if lt IE 9]>
 		<script type="application/javascript" src="excanvas.js"></script>
 	<![endif]-->
+	<!--<script src="http://connect.facebook.net/en_US/all.js"></script>-->
+	<?php echo '<script type="text/javascript">var ob='.$json.';</script>'; ?>
 	<script type="application/javascript" src="index.js"></script>
 </head>
-<body onload="bodyLoad()" onkeydown="keyPress(event)">
+<body onload="bodyLoad()">
+<div id="fb-root"></div>
+<script src="../gameapi.js"></script>
 <div id="bodydiv">
-<input type="hidden" id="infojson" value="<?php echo $json; ?>" />
 
 <div class="header">
 	<a href="http://www.festember.in/"><img src="images/festember.png" alt="Festember 11" class="header" /></a>
 </div>
-<div id="checkdiv"></div>
 
 <div id="welcome">
 <h1>Welcome to Vigilante</h1>
