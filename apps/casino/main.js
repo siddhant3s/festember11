@@ -619,7 +619,7 @@ function tutorials()
 {
 
 var val1="<br><br>Click on the chips to bet<br>  <br>";
-var val2="<br>'-' for reducing you bet amount <br> 'bet' to bet <br> 'fold' to quit";
+var val2="click to bet,fold and reduce bet amount";
 $("#tutorials").css({
 "display":"block"
 });
