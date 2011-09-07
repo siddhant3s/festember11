@@ -1,6 +1,6 @@
-
 <?php
-if(!isset($_POST['txtchar'])){
+session_start();
+if(!isset($_SESSION['cht'])){
 	header('Location:start.php');
 	exit;}
 else{
@@ -9,7 +9,7 @@ function P2J($Phpbet,$JA)
 echo "<script>var ".$JA.";</script>";
 echo "<script>".$JA."='".$Phpbet."'</script>";
 }
-$bet=$_POST['txtchar'];
+$bet=$_SESSION['cht'];
 if($bet>=100)
 {
 P2J($bet, 'point');
@@ -24,6 +24,7 @@ else
 <html>
 <head>
 <script src="jquery1.js"></script>
+
 <meta charset="utf-8">
 <title>Mankatha</title>
 <style type="text/css" media="screen">@import "screen.css";</style>
@@ -37,6 +38,7 @@ else
     }
 </style>
 <script type="text/javascript" charset="utf-8">
+
 var k=1;
 document.onkeyup = KeyCheck;       
 function KeyCheck(e)

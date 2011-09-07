@@ -1,25 +1,17 @@
 <?php
 		session_start();
-$connection=mysql_connect("localhost","festember","vegas11");
-
-if(!$connection){
-
-  die("Databaase connection failed:" . mysql_error());
-
-}
-
-$db_select=mysql_select_db("festember11",$connection);
-
-if(!$db_select){
-
-  die("Database connection failed:" . mysql_error());
-
-}
-
-
-
+	$connection=mysql_connect("localhost","festember","vegas11");
+	if(!$connection){
+		die("Databaase connection failed:" . mysql_error());
+	}
+	$db_select=mysql_select_db("festember11",$connection);
+	if(!$db_select){
+		die("Database connection failed:" . mysql_error());
+		}
 	$query="DELETE FROM mankatha_random";
-mysql_query($query);
+	mysql_query($query,$connection);
+    mysql_close($connection);
+	session_destroy();
 ?>
 <html>
 

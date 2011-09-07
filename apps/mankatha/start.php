@@ -1,4 +1,3 @@
-
 <html>
 <title>mangatha</title>
 <head>
@@ -61,7 +60,7 @@ function checkNumbers()
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
 <p>Enter bid</p>
-<form action="test1.php" name="myform" onSubmit="return checkNumbers()" method="post">
+<form action="cht.php" name="myform" onSubmit="return checkNumbers()" method="post">
 
 <input id="txtchar"  type="text" name="txtchar" 
 onkeypress="return onlyNumbers(event);">
