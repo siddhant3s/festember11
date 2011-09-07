@@ -38,9 +38,8 @@ mysql_query($query);
 <script src="../gameapi.js"></script>
 <script>
 function publish() {
-  alert("hi");
-FB.ui({
-  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
+ FB.ui({
+  "name":"<?php echo $user["name"]; ?> has won<?php  $_SESSION['cht'];?> ",
   "link":"http://google.com",
   picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
   caption:"Click on the link above to help him out by giving him a free spin",
@@ -49,6 +48,7 @@ FB.ui({
 //  to:"100000566828426",
     });}
 </script>
+<?php session_destroy();?>
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You won this round.
