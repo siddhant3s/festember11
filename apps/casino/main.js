@@ -402,7 +402,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				value=html;
 							
 								setTimeout(function(){
-									
+					$("#bet").hide();				
 					$("#coins").hide();
 					$("#binfo").hide();
 					$("#tut_button").hide();
