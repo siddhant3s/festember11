@@ -101,6 +101,7 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	      //echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	      destroy_session();
 	      $fbuser = null;
+	      header("Location: " . $fbloginurl);
 	    }
 
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
