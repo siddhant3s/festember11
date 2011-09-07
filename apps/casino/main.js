@@ -1,8 +1,11 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
 		$(document).ready(function(){
+				$("#start").attr("disabled","disabled");
 				$("#loading").hide();	
-				$.ajax({url: "putdata.php",success: function(html){money=html;}});
+				$.ajax({url: "putdata.php",success: function(html){
+				$("#start").removeAttr("disabled");
+				money=html;}});
 				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",
@@ -277,10 +280,9 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			
 		}
 		else if(status==3){
+						$("#bet").remove();
 						$("#loading").show();
 						$("#fold").hide();
-						$("#bet").hide();
-						$("#bet").attr("disabled","disabled");
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
@@ -318,6 +320,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								setTimeout(function(){animate9(temp1);},200);
 								setTimeout(function(){animate10(temp2);},400);
 								setTimeout(function(){animate11(temp3);},600);
+								$("#bet").hide();
 						}});
 						
 			function animate8(url){
@@ -402,7 +405,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				value=html;
 							
 								setTimeout(function(){
-					$("#bet").hide();				
+									
 					$("#coins").hide();
 					$("#binfo").hide();
 					$("#tut_button").hide();
