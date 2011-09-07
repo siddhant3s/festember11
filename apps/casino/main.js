@@ -1,8 +1,11 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
 		$(document).ready(function(){
+				$("#start").attr("disabled","disabled");
 				$("#loading").hide();	
-				$.ajax({url: "putdata.php",success: function(html){money=html;}});
+				$.ajax({url: "putdata.php",success: function(html){
+				$("#start").removeAttr("disabled");
+				money=html;}});
 				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",

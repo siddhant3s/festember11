@@ -175,10 +175,10 @@ if (MoveCount==MaxMove) return;
   MoveCount++;
   if (MaxMoveCount<MoveCount)
     MaxMoveCount=MoveCount;
-  if (MoveCount==MaxMoveCount) 
+  if (MoveCount==MaxMove) 
   {  
   name="";
-  while(name==""||name==NULL)
+  while(name=="")
   {
     var name=prompt(" You won the game \nEnter your name");
   }
