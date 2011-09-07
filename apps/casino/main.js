@@ -626,13 +626,16 @@ $("#tutorials").css({
 
 
 document.getElementById("tut_button").value="close";
-document.getElementById("tut_button").onclick=function(){$("#tutorials").css({
+document.getElementById("tut_button").value="close";
+document.getElementById("tut_button").onclick=function(){
+if(document.getElementById("tut_button").value=="close")
+{$("#tutorials").css({
 "display":"none"
 });
 $("#tut_div").css({"display":"none"});
-};
-
-rdiv=document.createElement("div");
+document.getElementById("tut_button").value="Tutorials";
+document.getElementById("tut_button").onclick=tutorials();
+}};rdiv=document.createElement("div");
 subdiv=document.createElement("div");
 subdiv.setAttribute("id","tut_div1");
 button1=document.createElement("input");
