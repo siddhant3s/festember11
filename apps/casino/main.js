@@ -618,7 +618,8 @@ document.getElementById("rules_div").style.top=0+"px";
 function tutorials()
 {
 
-
+var val1="<br><br>Click on the chips to bet<br>  <br>";
+var val2="<br>'-' for reducing you bet amount <br> 'bet' to bet <br> 'fold' to quit";
 $("#tutorials").css({
 "display":"block"
 });
