@@ -10,7 +10,6 @@ include("fb.php");
       body {width:760px;margin: auto; }
     </style>
     <script src="http://connect.facebook.net/en_US/all.js"></script>
-    <script src="gameapi.js"></script>
     <script>
       var appId = <?php echo $facebook->getAppId(); ?>;
       function pub(o) {
@@ -26,6 +25,7 @@ include("fb.php");
           description:"Play the game now to get goodies and stuff",
        }
     </script>
+    <script src="gameapi.js"></script>
   </head>
   <body>
     <h3>Festember11 Games coming up soon!</h3>
