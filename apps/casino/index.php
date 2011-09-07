@@ -4,13 +4,10 @@
 	include("../fb.php");
 	
 		
-	$_SESSION['user']=$user["name"];
-	error_log("###### " . "SELECT * FROM `user` WHERE `userid` = '" . $user["id"] . "'");
-	$res = mysql_query("SELECT COUNT(*) AS `count` FROM `user` WHERE `userid` = '" . $user["id"] . "'");
-	error_log("###### num rows - " . $res['count']);
-	if(mysql_num_rows($res) == 0) {
-	mysql_query("INSERT INTO `user` (`userid`,`money`) VALUES ('" . $user["id"] . "','1000')");
-	error_log("###### new user added to the table.");
+	$_SESSION['user']=$user["id"];
+	$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
+	if(mysql_num_rows($res)==0) {
+	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
 ?>
 <!DOCTYPE HTML>
