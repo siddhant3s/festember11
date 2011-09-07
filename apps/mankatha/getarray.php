@@ -1,10 +1,10 @@
 <?php
 	session_start();
-	$connection=mysql_connect("localhost","root","");
+	$connection=mysql_connect("localhost","festember","vegas11");
 	if(!$connection){
 		die("Databaase connection failed:" . mysql_error());
 	}
-	$db_select=mysql_select_db("delta",$connection);
+	$db_select=mysql_select_db("festember11",$connection);
 	if(!$db_select){
 		die("Database connection failed:" . mysql_error());
 	}	
