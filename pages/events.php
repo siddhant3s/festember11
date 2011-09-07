@@ -119,12 +119,13 @@ The judges' decisions will be final and binding, and are not open to review
 
 
 <?php break; case "tarangini" :  ?>
-<div class="content-head">TARANGINI (Eastern)</div>
+<div class="content-head">TARANGINI (Eastern - Semi Pro)</div>
 <ul>
 <li>Max no. of participants: 14 onstage + 1 offstage. </li>
 <li>Twenty (20) minutes on stage inclusive of setup time.</li>
 <li>Bands are required to post an audio-visual recording of any ONE song of their choice; the video will be used for the purpose of short listing.</li>
 <li>Shortlisted teams would be intimated by e-mail; the names of the bands would also be put up on the website. </li>
+<li>Participants need not necessarily belong to the same college</li>
 <li>More than one team can register from a single college, but the members of the bands must necessarily be mutually exclusive. </li>
 <li>The members of the band without exception shall be college students. </li>
 <li>No pre recorded sound is allowed.</li>
@@ -783,6 +784,7 @@ The judges' decisions will be final and binding, and are not open to review
 <li>Flash (Ad making) - 11:59, 20th September</li>
 </ul>
 </li>
+<li>Rules for Tarangini updated</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
