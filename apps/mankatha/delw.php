@@ -38,6 +38,7 @@ mysql_query($query);
 <script src="../gameapi.js"></script>
 <script>
 function publish() {
+  alert("hi");
 FB.ui({
   "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
   "link":"http://google.com",
@@ -46,7 +47,7 @@ FB.ui({
   description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
   "method":"feed",
 //  to:"100000566828426",
-});
+    });}
 </script>
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
