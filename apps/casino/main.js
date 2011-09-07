@@ -626,12 +626,14 @@ $("#tutorials").css({
 
 
 document.getElementById("tut_button").value="close";
-document.getElementById("tut_button").onclick=function(){$("#tutorials").css({
+document.getElementById("tut_button").onclick=function(){
+if(document.getElementById("tut_button").value=="close")
+{$("#tutorials").css({
 "display":"none"
 });
 $("#tut_div").css({"display":"none"});
-};
-
+document.getElementById("tut_button").value="Tutorials";
+}};
 rdiv=document.createElement("div");
 subdiv=document.createElement("div");
 subdiv.setAttribute("id","tut_div1");
