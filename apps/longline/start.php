@@ -175,7 +175,7 @@ if (MoveCount==MaxMove) return;
   MoveCount++;
   if (MaxMoveCount<MoveCount)
     MaxMoveCount=MoveCount;
-  if (MoveCount==1) 
+  if (MoveCount==MaxMove) 
   {  
   name="";
   while(name=="")
