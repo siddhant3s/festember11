@@ -63,6 +63,7 @@ Mente Magica
 As a whole decade filled with the fascinations and fantasies of Harry Potter passes, a new generation needs a dose inspiration and we at Festember, are here to provide just that! Mark the date 25th September 2011 in your calendar folks. Coming to mesmerize all of us and leave us with an awestruck expression on our faces is Arvind Jayashankar, namma NITT alumni, a master magician and a class act!
 </p>
 <a href="http://arvindjshankar.com/default.aspx">http://arvindjshankar.com/default.aspx</a><br />
+<br/><br/>
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
 <p>
 Have you ever wondered what happens in the backrooms of Vegas? Are you intrigued by cards, cheating and demonstrations of skill? Get ready to enroll in this exclusive, one-session only workshop. Arvind’s sleight of hand has taken him around the world and now he is headed to NIT, Trichy to share what he has learned, with you!. He will go over moves straight from the card table, demonstrate secret techniques and subterfuge gamblers have used for years to their advantage and also fine sleight of hand card work. During this workshop, you will learn basic to intermediate card handling methods and develop a foundation for future study in magic and sleight of hand. It will be highly interactive with explanations, videos, notes and also important points covering theory and the art of performance.
