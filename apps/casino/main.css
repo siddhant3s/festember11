@@ -267,3 +267,9 @@ font-weight:700;
 color:#fff;
 
 }
+
+#bmoney{
+	position:absolute;
+	right:20px;
+	bottom:20px;
+}
