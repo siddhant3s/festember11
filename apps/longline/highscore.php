@@ -31,9 +31,11 @@ body {
 
 <body>
 <?php
+//include("../../connect.php");
  require_once('config.php');
 $dbc = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)     or die('Error connecting to MySQL server.'); 
 mysql_select_db(DB_NAME,$dbc);
+
 	$query="SELECT * FROM ".DB_TABLE." ORDER BY Score DESC LIMIT 5";
 	
 	  $result = mysql_query($query)
