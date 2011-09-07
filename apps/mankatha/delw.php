@@ -1,24 +1,9 @@
 <?php
 		session_start();
-$connection=mysql_connect("10.0.0.126","festember11","festember");
-
-if(!$connection){
-
-  die("Database connection failed:" . mysql_error());
-
-}
-
-$db_select=mysql_select_db("festember11",$connection);
-
-if(!$db_select){
-
-  die("Database connection failed:" . mysql_error());
-
-}
+include("../../connect.php");
 
 	$query="DELETE FROM mankatha_random";
-mysql_query($query,$connection);
-    mysql_close($connection);
+mysql_query($query);
 ?>
 <html>
 

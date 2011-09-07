@@ -1,22 +1,5 @@
 <?php
-$connection=mysql_connect("10.0.0.126","festember11","festember");
-
-if(!$connection){
-
-  die("Databaase connection failed:" . mysql_error());
-
-}
-
-$db_select=mysql_select_db("festember11",$connection);
-
-if(!$db_select){
-
-  die("Database connection failed:" . mysql_error());
-
-}
-
-
-		
+include("../../connect.php");
 
 $k=0;
 $j=0;
@@ -93,8 +76,7 @@ else
 	$a=implode(",",$c);
 	$query="INSERT INTO mankatha_random(rand)
 		VALUES('{$a}')";
-mysql_query($query,$connection);
-    mysql_close($connection);
+mysql_query($query);
 	 echo json_encode($c);
 
  ?>
