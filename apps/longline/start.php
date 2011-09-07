@@ -1,6 +1,16 @@
+<?php
+$rpath = "../";
+include("../fb.php");
+?>
+
 <HTML>
 <HEAD>
 <title>Long Line</title>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script>
+    var appId = <?php echo $facebook->getAppId(); ?>;
+    </script>
+
 <script type="text/javascript" src="jquery.js"></script>
  
 <script type="text/javascript">
@@ -35,7 +45,12 @@ function StartTheTimer()
         StopTheClock()
 		
         alert ("You lost the game");
+		if(confirm("Do you want to play again"))
+		{
 		arran();
+		}
+		else
+		window.location="index.php";
     }
     else
     {
@@ -160,22 +175,23 @@ if (MoveCount==MaxMove) return;
   MoveCount++;
   if (MaxMoveCount<MoveCount)
     MaxMoveCount=MoveCount;
-  if (MoveCount==MaxMove) 
+  if (MoveCount==MaxMoveCount) 
   {  
-  var name=prompt("Enter your name");
+  name="";
+  while(name==""||name==NULL)
+  {
+    var name=prompt(" You won the game \nEnter your name");
+  }
   
   $.ajax({ 
    type: "POST", 
    url: "score.php", 
    data: "name="+name+"&time="+secs, 
-   
-   success: function(msg){ 
-      
-   } 
  });
+ 
 	if(confirm ("Do you want this victory to be posted on your wall"))
 	{
-	window.location="exp.php";
+	publish();
 	}
        
 	  
@@ -242,6 +258,24 @@ body {
 </style>
 </head>
 <body>
+<div id="fb-root"></div>
+<script src="../gameapi.js"></script>
+<script>
+function publish() {
+
+//The following is used to share a link on the player's wall.
+FB.ui({
+  "name":"<?php echo $user["name"]; ?> won the game Longline .",
+  "link":"http://www.festember.in/11/apps/longline",
+  picture:"http://www.clipartguide.com/_named_clipart_images/0511-0810-1304-1534_Face_Playing_Cards_clipart_image.jpg",
+  caption:"Click on the link above to play the game-longline",
+  description:"A card game played with 32 cards ",
+  "method":"feed",
+//  to:"100000566828426",
+});
+}
+</script>
+
 <div align=center>
   <table width="1084" border="0">
     <tr>
