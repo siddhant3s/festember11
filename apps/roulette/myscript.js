@@ -379,7 +379,7 @@ chip100.animate({opacity:c100},"200","ease-in-out");
 
 function verifyResult(){
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://localhost:80/roulette/check_num.php",type:"GET", data:{name : 'jude', num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){alert(html);}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{name : 'jude', num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){alert(html);}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 
@@ -448,7 +448,7 @@ if (wheelspeed>0)  setTimeout(function(){wheelspeed=(wheelspeed>0)? wheelspeed-0
 else wheelspeed=0;
 if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0; alert(LuckyNum);
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://localhost:80/roulette/store_verify.php",type:"GET", data:{name : 'jude', num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{name : 'jude', num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
  decrSpd();}
@@ -458,7 +458,7 @@ function stopspin(){
 spinwheel=0;
 var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://localhost:80/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){t=html; stptime=html;}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){t=html; stptime=html;}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 alert(t);
