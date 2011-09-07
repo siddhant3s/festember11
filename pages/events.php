@@ -835,7 +835,7 @@ For further details, checkout their respective events' page.
  <h2>MUSIC</h2>
  <ul>
  <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
- <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern)</a></li>
+ <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern - Semi Pro)</a></li>
  <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
  </ul>
 
@@ -861,6 +861,7 @@ For further details, checkout their respective events' page.
 <div class="content-body-col3">
  <h2>HINDI LITS</h2>
  <ul>
+ <li><a ajaxify="2" href="./events+atulyabharat">ATULYA BHARAT (Quiz)</a></li>
  <li><a ajaxify="2" href="./events+sursangam">SUR SANGAM (Antakshari)</a></li>
  <li><a ajaxify="2" href="./events+kurukshetra">KURUKSHETRA (Debate)</a></li>
  <li><a ajaxify="2" href="./events+isharoisharomein">ISHARO ISHARO MEIN (Dumb C)</a></li>
