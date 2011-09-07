@@ -632,7 +632,6 @@ if(document.getElementById("tut_button").value=="close")
 {$("#tutorials").css({
 "display":"none"
 });
-$("#tut_div").css({"display":"none"});
 document.getElementById("tut_button").value="Tutorials";
 document.getElementById("tut_button").onclick="tutorials()";
 }};rdiv=document.createElement("div");
