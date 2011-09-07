@@ -634,7 +634,8 @@ if(document.getElementById("tut_button").value=="close")
 });
 $("#tut_div").css({"display":"none"});
 document.getElementById("tut_button").value="Tutorials";
-document.getElementById("tut_button").onclick="tutorials";
+
+document.getElementById("tut_button").onclick=function(){tutorials();};
 }};rdiv=document.createElement("div");
 subdiv=document.createElement("div");
 subdiv.setAttribute("id","tut_div1");
