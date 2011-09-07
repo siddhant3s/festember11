@@ -11,7 +11,7 @@
 	$query="DELETE FROM mankatha_random";
 	mysql_query($query,$connection);
     mysql_close($connection);
-	session_destroy();
+unset($_SESSION['cht']);
 ?>
 <html>
 
