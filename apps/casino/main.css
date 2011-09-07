@@ -230,10 +230,27 @@ display:none;
 }
 #tut_button
 {
+border:none;
 display:none;
 position:absolute;
-bottom:20px;
+bottom:40px;
 right:20px;
+background:url(images/b.png);
+width:100px;
+	height:30px;
+}
+#tut_button1
+{
+border:none;
+background:url(images/b.png);
+width:100px;
+height:30px;
+}
+#tut_button1:hover{
+	background:url(images/b1.png);
+}
+#tut_button:hover{
+	background:url(images/b1.png);
 }
 #table_rules
 {

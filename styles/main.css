@@ -96,21 +96,23 @@ body {
 	color: white;
 }
 
-#menu  .events 		{top: 30px; left: 50px;}
-#menu  .pronite 	{top: 110px; left: 105px;}
-#menu  .workshops	{top: 195px; left: 200px;}
+#menu  .events 		{top: 30px; left: 30px;}
+#menu  .pronite 	{top: 85px; left: 60px;}
+#menu  .workshops	{top: 140px; left: 60px;}
+#menu  .informals	{top: 190px; left: 130px;}
 
-#menu  .sponsors	{top: 195px; right: 220px;}
-#menu  .gallery		{top: 110px; right: 105px;}
-#menu  .contacts	{top: 30px; right: 30px;}
+#menu  .sponsors	{top: 140px; right: 100px;}
+#menu  .gallery		{top: 85px; right: 85px;}
+#menu  .contacts	{top: 30px; right: 10px;}
+#menu  .games		{top: 190px; right: 200px;}
 
 #floatingMenu {
 	position: fixed;
 	top: 0;
 	display: none;
-	width: 960px;
+	width: 1260px;
 	left: 50%;
-	margin-left: -480px;
+	margin-left: -600px;
 	text-align: left;
 	background: #000;
 	z-index: 99;
@@ -140,6 +142,8 @@ body {
 }
 
 .contentouter {
+	position:relative;
+	top:0px;
 	width: 100%;
 	background: url(../images/content_bg.png) no-repeat top center;
 }
@@ -193,7 +197,7 @@ body {
 	color: #ee002d;
 	text-shadow: 0px 0px 2px;
 	border-radius: 5px;
-	padding: 1px 25px;
+	padding: 10px;
 }
 
 .content-body {
@@ -273,17 +277,21 @@ color:#fff
 }
 
 .scroller {
+	position:relative;
+	top:0px;
 	height: 200px;
 }
 
 .footer {
+	position:relative;
+	top:100px;
 	text-align: center;
 	/*
- * 	border-radius: 5px;
- * 		-moz-border-radius: 5px;
- * 			-webkit-border-radius: 5px;
- * 				background: #111;
- * 					padding: 10px;*/
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #111;
+	padding: 10px;*/
 }
 .footer img {
 	vertical-align: middle;
@@ -358,6 +366,8 @@ background:url('../images/s1.jpg') no-repeat;
 	position: relative;
 }
 .fglow{
+	position:relative;
+	top:100px;
 	background:url('../images/fglow.jpg') no-repeat;
 	margin:auto;
 	height:38px;

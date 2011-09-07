@@ -1,8 +1,8 @@
 var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,card8,card9,canvas;
 		
 		$(document).ready(function(){
-					
-					$.ajax({url: "putdata.php",success: function(html){money=html;}});
+				$("#loading").hide();	
+				$.ajax({url: "putdata.php",success: function(html){money=html;}});
 				
 				canvas = oCanvas.create({
 					canvas: "#gcanvas",
@@ -63,15 +63,20 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		function bet(){
 			var u1,u2,d1,d2,c1,c2,c3,c4,c5,betMoney=0,temp,temp1,temp2,temp3,temp4;
 			if(curMoney!=0||status==2){
-				$("#bet").attr({'disabled':'disabled'});
+				$("#bet").hide();
+				$("#bet").attr("disabled","disabled");
 				status++;
 			if(status==2){
+			$("#bet").hide();
+			$("#bet").attr("disabled","disabled");
+			$("#loading").show();
 			betMoney=curMoney;
 			curMoney=0;
 			document.getElementById("money").value=curMoney;
 			document.getElementById("bmoney").value=betMoney;
 			
 			$.ajax({type: "POST",url: "getdata.php",success: function(html){
+					$("#loading").hide();
 					var string=html.split('-');
 					money=parseInt(string[0]);
 					u1=parseInt(string[1]);
@@ -111,7 +116,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					setTimeout(function(){animate5(temp3);},200);
 					setTimeout(function(){animate6(temp4);},200);
 					setTimeout(function(){animate7(temp2);},400);
-					setTimeout(function(){$("#bet").removeAttr("disabled");},5000);
+					setTimeout(function(){$("#bet").show();$("#bet").removeAttr("disabled");},5000);
 			}});
 			setTimeout(function(){dat="money="+betMoney;
 						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},600);
@@ -259,9 +264,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						}
 						setTimeout(hey,700);	
 					}
-			$("#bet").attr({
-					value:'call'
-			});
+			$("#bet").show();
+			$("#bet").attr("disabled");
 			$("#sub").hide();
 			$("#money").hide();
 			$("#five").click(function(){});
@@ -272,13 +276,17 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			
 		}
 		else if(status==3){
-						$("#fold").attr({
-							disabled:'disabled'
-						});
+						$("#loading").show();
+						$("#fold").hide();
+						$("#bet").hide();
+						$("#bet").attr("disabled","disabled");
 						betMoney=document.getElementById("bmoney").value;
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
+						dat="money="+betMoney
+						
 						$.ajax({url: "getdata1.php",success: function(html){
+								$("#loading").hide();
 								var string=html.split('-');
 								money=parseInt(string[0]);
 								c4=parseInt(string[1]);
@@ -310,9 +318,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 								setTimeout(function(){animate10(temp2);},400);
 								setTimeout(function(){animate11(temp3);},600);
 						}});
-						setTimeout(function(){
-							dat="money="+betMoney
-						$.ajax({type: "POST",data:dat,url: "putmoney.php"});},200);
+						
 			function animate8(url){
 						
 						card8.animate({
@@ -383,9 +389,12 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						canvas.redraw();
 						
 					}	
-								
+				$("#coins").hide();
+					$("#binfo").hide();
+					$("#tut_button").hide();				
 				var value;		
 			setTimeout(function(){
+			$.ajax({type: "POST",data:dat,url: "putmoney.php",success:function(html){
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
 							
@@ -393,6 +402,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 									$("#inputs").hide();
 					$("#coins").hide();
 					$("#binfo").hide();
+					$("#tut_button").hide();
 									canvas.clear();
 									var text = canvas.display.text({
 					x: -177,
@@ -419,7 +429,9 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 					});},3000);
 					setTimeout(function(){window.location.reload();},5000);
 								},8000);
-			}});},200);
+				}});
+				}});
+			},200);
 
 			}
 		}
@@ -539,10 +551,6 @@ function rules()
 document.getElementById("back").style.display="block";
 document.getElementById("start").style.display="none";
 document.getElementById("rules").style.display="none"; 
- 			var scanvas = oCanvas.create({
-					canvas: "#scanvas",
-				});
-	
 if(!document.getElementById("rules_div"))
 {
  
@@ -600,28 +608,6 @@ document.getElementById("rules_div").style.top=0+"px";
  
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function tutorials()
 {
@@ -715,7 +701,7 @@ document.getElementById("ten").style.zIndex = 20;
 document.getElementById("twenty").style.zIndex = 20;
 document.getElementById("fifty").style.zIndex = 20;
 document.getElementById("bet").style.zIndex = 0;	
-
+document.getElementById("inputs").style.zIndex=0;
 }
 
 };

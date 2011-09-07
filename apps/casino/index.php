@@ -4,13 +4,10 @@
 	include("../fb.php");
 	
 		
-	$_SESSION['user']=$user["name"];
-	error_log("###### " . "SELECT * FROM `user` WHERE `userid` = '" . $user["id"] . "'");
-	$res = mysql_query("SELECT COUNT(*) AS `count` FROM `user` WHERE `userid` = '" . $user["id"] . "'");
-	error_log("###### num rows - " . $res['count']);
-	if(mysql_num_rows($res) == 0) {
-	mysql_query("INSERT INTO `user` (`userid`,`money`) VALUES ('" . $user["id"] . "','1000')");
-	error_log("###### new user added to the table.");
+	$_SESSION['user']=$user["id"];
+	$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
+	if(mysql_num_rows($res)==0) {
+	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
 ?>
 <!DOCTYPE HTML>
@@ -20,29 +17,36 @@
 		<script type="text/javascript" src="canvas.js" ></script>
 		<script type="text/javascript" src="jquery.js" ></script>
 		<script type="text/javascript" src="main.js"></script>
-		
 		<script src="http://connect.facebook.net/en_US/all.js"></script>
-		<script src="../gameapi.js"></script>
-    <script>
-      var appId = <?php echo $facebook->getAppId(); ?>;
-      function pub(o) {
-        o.method = "feed";
-        FB.ui(o);
-      }
-      
-      obj = {
-          name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
-          link:"http://www.festember.in/11/games/",
-          picture:"http://www.destination360.com/north-america/us/nevada/images/s/nevada-silver-legacy-resort-casino.jpg",
-          caption:"Casino games at Festember 11",
-          description:"Play the game now to get goodies and stuff",
-       }
-    </script>
-
-
+    		<script>
+    		var appId = <?php echo $facebook->getAppId(); ?>;
+    		</script>
 		<link rel="stylesheet" type="text/css" href="main.css" />	
 	</head>
 	<body> 
+		<div id="fb-root"></div>
+		<script src="../gameapi.js"></script>
+		<script>
+		function publish() {
+
+		//The following is used to share a link on the player's wall.
+		FB.ui({
+		  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
+		  "link":"http://google.com",
+		  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
+		  caption:"Click on the link above to help him out by giving him a free spin",
+		  description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
+		  "method":"feed",
+		//  to:"100000566828426",
+		});
+		/*FB.ui({
+		  "message":"Festember Casino games are out! Play casino games to win free t-shirts, food coupons and more",
+		  data:"tracking information of the user",
+		  "method":"apprequests",
+		});*/
+
+		}
+		</script>
 		<div id="wrapper">
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
@@ -69,6 +73,6 @@
 		</div>		
 		
 		</div>		
-		
+		<input type="button" value="Click on this button to share" onclick="publish();">
 	</body>
 </html>

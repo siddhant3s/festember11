@@ -129,7 +129,7 @@ The judges' decisions will be final and binding, and are not open to review
 <li>The members of the band without exception shall be college students. </li>
 <li>No pre recorded sound is allowed.</li>
 <li>Instruments provided: 1 bass guitar, drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
-<li>Send your Demo videos by September 10.</li>
+<li>Send your Demo videos by September 12.</li>
 </ul>
 The judges' decisions will be final and binding, and are not open to review
 <br>
@@ -150,7 +150,7 @@ culsec@festember.in
 <li>Band members do not necessarily have to be from college.</li>
 <li>No obscenity on stage.</li>
 <li>Instruments provided: 1 bass guitar, 1 keyboard (KORG N364), drum kit (Mapex M Series, 1 ride/crash, 1 crash, 1 ride)</li>
-<li>Send your demo videos by September 10.</li>
+<li>Send your demo videos by September 12.</li>
 </ul>
 
 The judges decisions will be final and binding, and are not open to review
@@ -777,7 +777,8 @@ The judges' decisions will be final and binding, and are not open to review
 <li>Last date for Submission of Videos
 <ul>
 <li>Choreo night - 12th September</li>
-<li>GIG-A-HERTZ - 10h September</li>
+<li>GIG-A-HERTZ - 12th September</li>
+<li>Tarangini - 12th September</li>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
 </ul>

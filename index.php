@@ -99,7 +99,9 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	  catch (FacebookApiException $e) 
 	    {
 	      //echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+	      session_destroy();
 	      $fbuser = null;
+	      header("Location: " . $fbloginurl);
 	    }
 
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
@@ -254,6 +256,8 @@ function facebook_click(){
 		<div class="sponsors item itright abso"><a href="sponsors" ajaxify="1"><img src="./images/sponsors.png" /></a></div>
 		<div class="gallery item itright abso"><a href="gallery" ajaxify="1"><img src="./images/gallery.png" /></a></div>
 		<div class="contacts item itright abso"><a href="contacts" ajaxify="1"><img src="./images/contacts.png" /></a></div>
+		<div class="games item itright abso"><a href="games" ajaxify="1"><img src="./images/games.png" /></a></div>
+		<div class="informals item itright abso"><a href="informals" ajaxify="1"><img src="./images/informals.png" /></a></div>
 	</div>
 	
 	<div id="floatingMenu">
@@ -263,6 +267,8 @@ function facebook_click(){
 		<div class="workshops item"><a href="workshops" ajaxify="1"><span>WORKSHOPS</span></a></div>
 		<div class="sponsors item"><a href="sponsors" ajaxify="1"><span>SPONSORS</span></a></div>
 		<div class="gallery item"><a href="gallery" ajaxify="1"><span>GALLERY</span></a></div>
+		<div class="informals item"><a href="informals" ajaxify="1"><span>INFORMALS</span></a></div>
+		<div class="games item"><a href="games" ajaxify="1"><span>GAMES</span></a></div>
 		<div class="contacts item"><a href="contacts" ajaxify="1"><span>CONTACTS</span></a></div>
 	</div>
 	
