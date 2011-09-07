@@ -39,7 +39,7 @@ mysql_query($query);
 <script>
 function publish() {
  FB.ui({
-  "name":"<?php echo $user["name"]; ?> has won<?php  $_SESSION['cht'];?> ",
+  "name":"<?php echo $user["name"]; ?> has won<?php echo $_SESSION['cht'];?> ",
   "link":"http://google.com",
   picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
   caption:"Click on the link above to help him out by giving him a free spin",
