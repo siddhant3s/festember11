@@ -618,8 +618,8 @@ document.getElementById("rules_div").style.top=0+"px";
 function tutorials()
 {
 
-var val1="<br><br>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br>  <br>";
-var val2="NO idea";
+var val1="<br><br>Click on the chips to bet<br>  <br>";
+var val2="'-' for reducing you bet amount <br> 'bet' to bet <br> 'fold' to quit";
 $("#tutorials").css({
 "display":"block"
 });
