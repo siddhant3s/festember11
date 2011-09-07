@@ -10,7 +10,7 @@
 	if(mysql_num_rows($res)==0) {
 	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
 	}
-        $res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','winvar') VALUES ({$user["id"]},$game_array['poker'],$date,$date,$date,1000,0)");
+        $res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','winvar') VALUES ({$user["id"]},{$game_array['poker']},{$date},{$date},{$date},1000,0)",$con);
 ?>
 <!DOCTYPE HTML>
 <html>
