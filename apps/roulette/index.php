@@ -3,8 +3,9 @@ $rpath = "../";
 include("../fb.php");
 include("../game.php");
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Festember11 - Roulette</title>
 
 <link rel="stylesheet" type="text/css" href="main.css" />
