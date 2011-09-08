@@ -39,7 +39,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			i=parseInt(i);
 			if(money>=parseInt(curMoney+i)){
 				curMoney+=i;
-				if(CurMoney*3<=money){
+				if(curMoney*3<=money){
 				document.getElementById("money").value=curMoney;
 				}
 				else{
@@ -83,7 +83,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			document.getElementById("money").value=curMoney;
 			document.getElementById("bmoney").value=betMoney;
 			var data2="id=1";
-			$.ajax({type: "POST",data:dat,url: "getdata.php",success: function(html){
+			$.ajax({type: "POST",data:data2,url: "getdata.php",success: function(html){
 					$("#loading").hide();
 					var string=html.split('-');
 					money=parseInt(string[0]);
