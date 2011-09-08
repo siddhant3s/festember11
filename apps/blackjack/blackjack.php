@@ -366,13 +366,11 @@ border-width:2px;
 <script type="text/javascript" src="illuminate.js"></script>
 <script src="script.js" type="text/javascript"></script>
 <script src="game.js" type="text/javascript"></script>
-<script src="../http://connect.facebook.net/en_US/all.js"></script>
-  <script src="../gameapi.js" type="text/javascript"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 
 <script type="text/javascript">
 
-
-
+var appId = <?php echo $facebook->getAppId(); ?>;
 function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Blackjack in Festember Casino!",
@@ -380,14 +378,10 @@ function sharewin() {
           picture:"http://www.westerndistributingco.com/Images/Upload/blackjack-fp-f.jpg",
           caption:"Casino games at Festember 11",
           description:"Play the game now to get goodies and stuff",
+			method:"feed",
        }
-       pub(obj);  
+        FB.ui(obj);
 }
-
-function pub(o) {
-       o.method = "feed";
-        FB.ui(o);
-      }
       
 
 </script>
@@ -395,7 +389,8 @@ function pub(o) {
 
 </head>
 <body background="fff.jpg" >
-
+<div id="fb-root"></div>
+  <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
 <div id="header">
  <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
