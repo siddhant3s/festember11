@@ -11,8 +11,9 @@
 	$result=mysql_query($sql);
 	$sql="SELECT * FROM game_info WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'";
 	$result=mysql_query($sql);
+	
 	echo $sql;
-	if(!$result){
+	if(mysql_num_rows($result)==0){
 	$time=time();
 	$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$usid},{$game_array['poker']},{$time},{$_GET['money']})");
 	echo "INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$usid},{$game_array['poker']},{$time},{$_GET['money']})";
