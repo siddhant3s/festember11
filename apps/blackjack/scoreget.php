@@ -2,7 +2,7 @@
 
 $rpath="../";
 include("../game.php");
-include("../../connect.php");
+//include("../../connect.php");
 $score=getCash();
 $sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
 
