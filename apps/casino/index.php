@@ -2,7 +2,7 @@
 	include("header.php");
 	$rpath = "../";
 	include("../fb.php");
-	include("../game.php")
+	include("../game.php");
   //      include("../gamearray.php");
     //     $date=date("Y-m-d H:i:s");
 	//$_SESSION['user']=$user["id"];
