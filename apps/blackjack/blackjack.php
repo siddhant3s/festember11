@@ -1,4 +1,9 @@
+<?php
 
+$rpath = "../";
+include("../fb.php");
+include("../game.php");
+?>
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 
@@ -307,6 +312,33 @@ border:none;
 cursor:pointer;
 
 }
+.happy{
+width:600px;
+border-style:solid;
+border-width:1px;
+margin: 0 auto;
+z-index:1000;
+background-color:white;
+opacity:0.9;
+display:none;
+position:fixed;
+margin-left: 400px;
+    margin-right: auto;
+
+}
+.happy:hover{
+opacity:1;
+}
+.picd{
+opacity:0.6;
+}
+.picd:hover{
+cursor:pointer;
+opacity:1;
+border-style:solid;
+border-width:2px;
+
+}
 .spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
 .spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
 .spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
@@ -326,7 +358,7 @@ cursor:pointer;
 .spotC5 { position: absolute; left: 2.50em; top: 3.5em; }
  
 </style> 
-
+  
 <script src="jquery.js" type="text/javascript"></script>
 <script src="jquery-1.6.2.js" type="text/javascript"></script>
 <script src="jquery2.js" type="text/javascript"></script>
@@ -334,18 +366,31 @@ cursor:pointer;
 <script type="text/javascript" src="illuminate.js"></script>
 <script src="script.js" type="text/javascript"></script>
 <script src="game.js" type="text/javascript"></script>
+<script src="../http://connect.facebook.net/en_US/all.js"></script>
+  <script src="../gameapi.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 
-function close_window() {
-  if (confirm("you wanna quit?")) {
-    location.href="http://www.festember.in/11";
-  }
+
+
+function sharewin() {
+      obj = {
+          name:"<?php echo $user["name"]; ?> has won the game of Blackjack in Festember Casino!",
+          link:"http://www.festember.in/11/games/",
+          picture:"http://www.westerndistributingco.com/Images/Upload/blackjack-fp-f.jpg",
+          caption:"Casino games at Festember 11",
+          description:"Play the game now to get goodies and stuff",
+       }
+       pub(obj);  
 }
 
+function pub(o) {
+       o.method = "feed";
+        FB.ui(o);
+      }
+      
 
 </script>
-
 
 
 </head>
@@ -356,7 +401,29 @@ function close_window() {
  <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
 
 </div>
+<div align="center" class="happy" id="happy">
 
+<pre>Congo..! you have won ...! 
+Your blackjack credits now are $<span id="winscore"></span>
+wanna share this win on FB?? ..
+
+</pre>
+<img src="fb.jpg" id="picd" class="picd" onclick="sharewin()"/><br><br><br>
+<input type="button" value="cancel" id="winclosenow" class="picd">
+<br><br>
+
+</div>
+<div align="center" class="happy" id="sad">
+<div align="right"> <a href="#" id="closemenow" class="closeme"> <font color="white"><b>close </b></font> </a></div>
+<pre>You lose..!  
+your blackjack credits now are $<span id="losescore"></span>
+
+</pre>
+
+<input type="button" value="Ok" selected="selected" id="loseclose" class="picd">
+<br><br>
+
+</div>
 <div align="center" id="mainrules">
 <div align="right"> <a href="#" id="closeme" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <iframe src="rules.php" id="rulesbox"></iframe></div>
@@ -438,8 +505,9 @@ function close_window() {
 
     <input id="hit"       class="button" type="reset" value="Hit"        disabled="disabled" />
     <input id="stand"     class="button" type="reset" value="Stand"    disabled="disabled" />
-	<input type="button" class="button" id="feedbj" onclick="feedback()" value=" Feedback"/>
+	<!--<input type="button" class="button" id="feedbj" onclick="feedback()" value=" Feedback"/>-->
 <div align="right">
+<!--<input type="button" class="button" value="fb share" id="fbshare" onclick="sharewin()" disabled="disabled"></button>-->
     <input id="rules"     class="button" type="button" value="Show Rules"><span>        </span>
    <input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">
 </div>
