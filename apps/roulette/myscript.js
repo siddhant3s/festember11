@@ -69,6 +69,7 @@ x:700,
 y:50,
 height:75,
 width:200,
+fill:"#095e09",
 stroke: "5px #0f881e"
 
 });
@@ -162,10 +163,13 @@ text: "Clear Bets",
 fill: "#fff",
 });
 
-//var lucknum=stopbtn.clone({width:130, height:50,x:400, y:400, opacity:0.6, fill:"#1a441a"});
-//var lucknumtext=stopbtntext.clone({ x:lucknum.width/2, y:lucknum.height/2, size:25, text:"Waiting"});
-//var balancebox=stopbtn.clone({x:400, y:0});
-//var balancetext=stopbtntext.clone({ x:balancebox.width/2, y:balancebox.height/2, text:interCash});
+var fbBtn=canvas.display.image({
+x:1090,
+y:55,
+image:"fb_share.png",
+
+
+});
 //////////////////////////////////////////////////////////////
 
 function randomFromTo(from, to){
@@ -669,6 +673,7 @@ chip10.bind("click tap",function(){ chipSel=10; selectChip();});
 chip100.bind("click tap",function(){ chipSel=100; selectChip();});
 layout.bind("click tap",function(){ if(ballDropped==0)setTimeout(function(){guessBetPos();},5) });
 clearbtn.bind("click tap", function() { if(ballDropped==0)resetTurn(1);  });
+fbBtn.bind("click tap", function() { sharewin(); });
 
 
 ball.bind("mouseenter",function(){  
@@ -698,6 +703,7 @@ ball.bind("mouseleave",function(){ball.dragAndDrop(false);});
 
 //stopbtn.addChild(stopbtntext);
 //canvas.addChild(stopbtn);
+canvas.addChild(fbBtn);
 clearbtn.addChild(cleartxt);
 canvas.addChild(clearbtn);
 balancebox.addChild(balancetext);
@@ -709,10 +715,11 @@ canvas.addChild(ball);
 //lucknum.addChild(lucknumtext);
 //canvas.addChild(lucknum);
 canvas.addChild(layout);
+canvas.addChild(chipRect);
 canvas.addChild(chip1);
 canvas.addChild(chip10);
 canvas.addChild(chip100);
-canvas.addChild(chipRect);
+
 selectChip();
 
 });
