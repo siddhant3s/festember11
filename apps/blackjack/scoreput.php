@@ -9,11 +9,10 @@ include("../game.php");
 
 //$sql="SELECT * FROM game_info WHERE playerid = '".$user[id]."'";
 $sql="SELECT * FROM game_info WHERE playerid = '".$user['id']."'";
-$result = mysql_num_rows($sql);
+$result = mysql_query($sql);
 if(!$result)
 {
-$sql="INSERT INTO game_info 
-(playerid,gameid,starttime,bidamount,returnpercent) VALUES('".$user[id]."',2,CURRENT_TIMESTAMP,'".$_POST["bid"]."','".$_POST["ret"]."' ) ";
+$sql="INSERT INTO game_info (playerid,gameid,starttime,bidamount,returnpercent) VALUES('".$user[id]."',2,CURRENT_TIMESTAMP,'".$_POST["bid"]."','".$_POST["ret"]."' ) ";
 
 $result = mysql_query($sql);
 }
