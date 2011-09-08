@@ -5,8 +5,8 @@ $_SESSION['id']=session_id();
 $rpath = "../";
 //require('../fb.php');
 function getUserInfo(){
-	$_SESSION['namee']="nUsernmae";
-	$_SESSION['player']="NavoPlayer";
+	$_SESSION['namee']=$user['id'];
+	$_SESSION['player']=$user['name'];
 	$_SESSION['balance']="1000";
 }
 $json;
@@ -20,13 +20,13 @@ if(!($r=mysql_fetch_row($r))){
 	if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_users` (`name`,`level`) VALUES('{$_SESSION['namee']}',1);" ))
 		throw new Exception(mysql_error());
 	$r[0]=1;
+	$_SESSION['new_user']=1;
 	}
 $level=$r[0];
 $_SESSION['level']=$level;
 $_SESSION['persons']=10+$level;
 $_SESSION['coins']=10+5*floor($level/10);
-//$_SESSION['score']=20+floor($level/10);
-$_SESSION['score']=1;
+$_SESSION['score']=20+floor($level/10);
 $_SESSION['time']=40+10*$level;
 $_SESSION['addons']=($level>5?'s':'').($level>5 && $level%2==0?'b':'');
 $map;
@@ -62,8 +62,28 @@ $json=json_encode(array('namee'=>$_SESSION['player'],'level'=>$_SESSION['level']
 	<!--[if lt IE 9]>
 		<script type="application/javascript" src="excanvas.js"></script>
 	<![endif]-->
-	<!--<script src="http://connect.facebook.net/en_US/all.js"></script>-->
-	<?php echo '<script type="text/javascript">var ob='.$json.';</script>'; ?>
+	<script src="http://connect.facebook.net/en_US/all.js"></script>
+	<script type="text/javascript">
+		var ob=<?php echo $json; ?>;
+		var appId=<?php echo $facebook->getAppId(); ?>;
+	function wallPost(msg){
+		FB.ui({
+ 		"name": msg,
+  //to do
+		"link":"http://google.com",
+		picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
+		caption:"Click on the link above to play Festember Games!",
+		description:"In a lonely desert rose a city greater than heaven itself. Men and women flock to it, to find joy, fortunes, glory and themselves. Come this September, history will repeat itself as amidst the arid plains of Trichy will rise a new Vegas. Festember 11 - Vegas style!",
+		"method":"feed"
+		});
+	}
+<?php
+if(isset($_SESSION['new_user'])){
+	echo 'wallPost("'.$_SESSION['player'].' started playing Vigilante on Festember Games!"';
+	unset($_SESSION['new_user']);
+}
+?>
+	</script>
 	<script type="application/javascript" src="index.js"></script>
 </head>
 <body onload="bodyLoad()">
@@ -91,7 +111,8 @@ Move the Barman using the arrow keys. The persons roam around on their own will.
 <div id="gameback" onclick="hideGame()"></div>
 <div id="game">
 <div id="wrapper">
-<canvas id="backgroundCanvas" >HTML5 canvas are not supported! Please update your browser to a newer version: IE9, Firefox 1.5 or Chrome 4.1 or higher</canvas>
+<canvas id="backgroundCanvas" >HTML5 canvas are not supported! Please update your browser to a newer version: IE9, Firefox 1.5 or Chrome 4.1 or higher.
+</canvas>
 <canvas id="scratchpadCanvas" z-index=1></canvas>
 <canvas id="lidCanvas" z-index=2></canvas>
 </div></div>
