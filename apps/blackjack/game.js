@@ -514,7 +514,7 @@ function getNextCard() {
 }
 
 function startRound() {
-var xmlhttp;
+/*var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
   xmlhttp=new XMLHttpRequest();
@@ -531,7 +531,7 @@ xmlhttp.onreadystatechange=function()
     }
   }
 xmlhttp.open("GET","deck.php",true);
-xmlhttp.send();
+xmlhttp.send();*/
   var i;
 
   // Reset all hands.
@@ -978,17 +978,34 @@ function poppy(h)
 
 if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
-alert(" you have won..! your credits are $" +credits);
+$("#deal").effect("pulsate",{times:3},"fast");
+alert(" you have won..! your credits are $" +credits+"  . click on deal to start ");
 $(".dollars").effect("pulsate",{times:3},"fast");
-startRound();
-document.forms["controls"].elements["hit"].disabled   = false;
+   dealer.reset();
+for (i = 0; i < player.length; i++) {
+    player[i].reset();
+    if (i > 0)
+      player[i].fieldNode.style.display = "none";
+  }
+     $("#deal").animate({width:"9em",opacity:0.5},"fast");
+  document.getElementById("deal").disabled   = false;
+  document.forms["controls"].elements["hit"].disabled   = false;
 }
 
 if(h==0)
-{$(".result").effect("pulsate",{times:3},"fast");
-alert(" toooo bad..! you lose . your credits are $" +credits);
+{
+$(".result").effect("pulsate",{times:3},"fast");
+$("#deal").effect("pulsate",{times:3},"fast");
+alert(" toooo bad..! you lose . your credits are $" +credits+"  .click on deal to start");
 $(".dollars").effect("pulsate",{times:3},"fast");
-startRound();
+ dealer.reset();
+for (i = 0; i < player.length; i++) {
+    player[i].reset();
+    if (i > 0)
+      player[i].fieldNode.style.display = "none";
+  }
+     $("#deal").animate({width:"9em",opacity:0.5},"fast");
+document.getElementById("deal").disabled   = false;
 document.forms["controls"].elements["hit"].disabled   = false;
 }
 

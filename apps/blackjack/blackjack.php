@@ -205,7 +205,12 @@ border-color:#7F5217;
 box-shadow:5px 5px 5pc #7D0552;
 
  }
+#feedbj{
+margin-right:10px;
 
+
+
+}
  
 .card {
   background-image: url("graphics/cardback.gif");
@@ -259,7 +264,49 @@ opacity:1;
   width:  2.6em;
   height: 4.0em;
 }
- 
+
+ #rulesbox{
+
+align:center;
+margin:0 auto;
+width:850px;
+height:600px;
+}
+#mainrules{
+display:none;
+
+
+
+}
+.closeme{
+margin-right:300px;
+position:relative;
+text-decoration:none;
+font-weight:bold;
+font-size:20px;
+}
+#closemee{
+margin-right:500px;
+position:relative;
+text-decoration:none;
+font-weight:bold;
+font-size:20px;
+}
+#showfeed{
+color:white;
+display:none;
+}
+#feednow{
+width:400px;
+height:400px;
+}
+.buttonn{
+background-color:black;
+color:white;
+border:none;
+cursor:pointer;
+
+}
 .spotA1 { position: absolute; left: 0.60em; top: 0.5em; }
 .spotA2 { position: absolute; left: 0.60em; top: 1.5em; }
 .spotA3 { position: absolute; left: 0.60em; top: 2.0em; }
@@ -288,7 +335,16 @@ opacity:1;
 <script src="script.js" type="text/javascript"></script>
 <script src="game.js" type="text/javascript"></script>
 
+<script type="text/javascript">
 
+function close_window() {
+  if (confirm("you wanna quit?")) {
+    location.href="http://www.festember.in/11";
+  }
+}
+
+
+</script>
 
 
 
@@ -299,6 +355,14 @@ opacity:1;
 <div id="header">
  <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
 
+</div>
+
+<div align="center" id="mainrules">
+<div align="right"> <a href="#" id="closeme" class="closeme"> <font color="white"><b>close </b></font> </a></div>
+<iframe src="rules.php" id="rulesbox"></iframe></div>
+<div id="showfeed">
+<div align="right"> <a href="#" id="closemee" class="closeme"> <font color="white"><b>close </b></font> </a></div>
+<iframe src="feedback.php" id="feednow"></iframe>
 </div>
 
 <!-- Dealer's area. -->
@@ -368,18 +432,22 @@ opacity:1;
     <input id="increase"  class="button" type="reset" value="Increase Bet" />
     <br />
     <input id="split"     class="button" type="reset" value="Split"      disabled="disabled" />
-    <input id="double"    class="button" type="reset" value="Double"   "    disabled="disabled" />
+    <input id="double"    class="button" type="reset" value="Double"       disabled="disabled" />
     <input id="surrender" class="button" type="reset" value="Surrender"  disabled="disabled" />
     <br />
 
     <input id="hit"       class="button" type="reset" value="Hit"        disabled="disabled" />
     <input id="stand"     class="button" type="reset" value="Stand"    disabled="disabled" />
-<div align="center">
-    <input id="rules"     class="button" type="reset" value="Show Rules">
+	<input type="button" class="button" id="feedbj" onclick="feedback()" value=" Feedback"/>
+<div align="right">
+    <input id="rules"     class="button" type="button" value="Show Rules"><span>        </span>
+   <input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">
+</div>
+
+  </div>
+<div align="right">
 
 </div>
-  </div>
-
 </form>
 
 <!-- Rules text. -->
