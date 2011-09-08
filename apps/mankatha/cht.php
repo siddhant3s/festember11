@@ -1,5 +1,5 @@
 <?php
-include('../game.php');
+  include("../game.php");
 session_start();
 if(!isset($_POST['txtchar']))
 {
@@ -8,7 +8,7 @@ if(!isset($_POST['txtchar']))
 }
 else
   { $money=0;     
-$money=getCash();
+    $money=getCash();
        echo $money;
 	if($_POST['txtchar']>$money)
 	  { 
