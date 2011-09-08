@@ -1,14 +1,13 @@
 <?php
 
 $rpath="../";
-include("../fb.php");
 include("../game.php");
 include("../../connect.php");
 $score=getCash();
 $sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
 
 $result = mysql_query($sql);
-echo $user['id'];
+echo "user id is : ". $user['id'];
 echo "<table border='1'>
 <tr>
 <th>playerid</th>
