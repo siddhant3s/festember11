@@ -188,9 +188,9 @@ for (key in chip_count)
 delete chip_count[key];
 for (key in bets)
 delete bets[key];
-console.log(chips);
-console.log(code_chip);
-console.log(chip_count);
+//console.log(chips);
+//console.log(code_chip);
+//console.log(chip_count);
 balancetext.text=interCash;
 canvas.redraw();
 }
@@ -240,7 +240,7 @@ opacity:1.0
 			function(){
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
-			console.log("resetting");
+			//console.log("resetting");
 			resetTurn();
 			}
 		);
@@ -343,7 +343,7 @@ if(interCash-chipSel>=0){
 	balancetext.text=interCash;
 	setTimeout(function(){ generateChip(i);},2);
 	////// Update balanceCash on dropball();
-	console.log(bettingCash);
+	//console.log(bettingCash);
 	}
 }
 
@@ -369,7 +369,7 @@ case 100:
   break;
 }
 }
-console.log(c1+" "+c10+" "+c100);
+//console.log(c1+" "+c10+" "+c100);
 chip1.animate({opacity:c1},"200","ease-in-out");
 chip10.animate({opacity:c10},"200","ease-in-out");
 chip100.animate({opacity:c100},"200","ease-in-out");
@@ -456,11 +456,12 @@ $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_ve
 
 function stopspin(){
 spinwheel=0;
+var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
 $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){stptime=html;}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
-setTimeout(function(){ reducespin();},(t*1000));
+setTimeout(function(){ reducespin();},(stptime*1000));
 }
 
 function incrSpd(){
@@ -506,7 +507,7 @@ function ballAccelrt(){
 		turnOver=1;
 		verifyResult();
 		setTimeout(function(){getTurnResult();},1);
-		console.log(x);
+		//console.log(x);
 	}
 	setTimeout(function(){if (posrad<130) incrRadius();},5);
 	if (wheelRotStatus==1)
@@ -535,7 +536,7 @@ ball.dragAndDrop({
 		if(ballDropped==0 && bettingCash!=0 && checkBallWithinWheel())
 		{
 
-			console.log("asdasdasd");
+			//console.log("asdasdasd");
 			getBallPos();		
 			dropball();    ////////////For debugging remove asap
 			setTimeout(function(){stopspin();},1000);
