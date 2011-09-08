@@ -2,7 +2,7 @@
 
 
 include("../fb.php");
-include("../reqconnect.php");
+include("../../connect.php");
 
 $sql="SELECT * FROM game_info WHERE playerid = '".$user[id]."'";
 
