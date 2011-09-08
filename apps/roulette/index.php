@@ -22,7 +22,24 @@ include("../game.php");
 <script language='javascript' src="ocanvas.js" ></script>
 
 <script src="../gameapi.js" type="text/javascript"></script>
+<script language='javascript'>
 
+function sharewin() {
+      obj = {
+          name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
+          link:"http://www.festember.in/11/games/",
+          picture:"roulette_share.jpg",
+          caption:"Casino Games at FESTEMBER 11",
+          description:"Play the game now to get goodies and stuff..!",
+       }
+       pub(obj);  
+}
+
+function pub(o) {
+       o.method = "feed";
+        FB.ui(o);
+      }
+</script>
 <script language='javascript' src="myscript.js" ></script>
 </body>
 
