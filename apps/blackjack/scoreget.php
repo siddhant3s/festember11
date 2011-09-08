@@ -2,8 +2,11 @@
 
 $rpath="../";
 include("../game.php");
-include("../../connect.php");
-$score=getCash();
+//include("../../connect.php");
+echo getCash();
+
+/*
+$score=getCash()
 $sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
 
 $result = mysql_query($sql);
@@ -24,6 +27,6 @@ while($row = mysql_fetch_array($result))
   echo "</tr>";
   }
 echo "</table>";
-
+*/
 //mysql_close($con);
 ?>
