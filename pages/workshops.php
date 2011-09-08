@@ -69,3 +69,28 @@ As a whole decade filled with the fascinations and fantasies of Harry Potter pas
 Have you ever wondered what happens in the backrooms of Vegas? Are you intrigued by cards, cheating and demonstrations of skill? Get ready to enroll in this exclusive, one-session only workshop. Arvind’s sleight of hand has taken him around the world and now he is headed to NIT, Trichy to share what he has learned, with you!. He will go over moves straight from the card table, demonstrate secret techniques and subterfuge gamblers have used for years to their advantage and also fine sleight of hand card work. During this workshop, you will learn basic to intermediate card handling methods and develop a foundation for future study in magic and sleight of hand. It will be highly interactive with explanations, videos, notes and also important points covering theory and the art of performance.
 </p>
 </div>
+
+<div class="content-head">
+Flair Bartending
+</div>
+<div class="content-body">
+<p>
+Wanna be the life of every party? Wanna learn how mixing moves can fix
+you drinks? Wanna impress your friends with an impressive arsenal of
+moves? Flip,switch,shake,juggle and...voila! you got yourself a
+cocktail!
+</p><p>
+Bartending is not longer just about mixing drinks... its an art!
+</p><p>
+This Festember, we proudly bring to you a workshop on 'Flairtending'!
+Conducted by leading expert Mr. Kumar from Indian Institute of
+Bartending, the workshop promises to give a participants a hands-on
+approach on flairtending!
+</p><p>
+To get a better idea about the workshop, check out the videos at
+http://www.iibtindia.com/videogallery.html
+</p>
+<p>
+So you better catch this flaming chance with both hands!! Register NOW!
+</p>
+</div>
