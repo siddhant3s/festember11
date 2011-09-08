@@ -66,7 +66,7 @@ rotation:0
 
 var chipRect=canvas.display.rectangle({
 x:700,
-y:0,
+y:50,
 height:75,
 width:200,
 stroke: "5px #0f881e"
@@ -107,28 +107,28 @@ stroke: "1px #000 "
 
 var chip1=canvas.display.image({
 x:735,
-y:20,
+y:70,
 image:"chip1.png",
 });
 
 var chip10=chip1.clone({x:chip1.x+50, image:"chip10.png"});
 var chip100=chip1.clone({x:chip1.x+100, image:"chip100.png"});
 
-var stopbtn = canvas.display.rectangle({
-x:500,
-y:100,
+var balancebox = canvas.display.rectangle({
+x:400,
+y:0,
 width:100,
 height:50,
 fill: "#343",
 });
 
 
-var stopbtntext=canvas.display.text({
-x: stopbtn.width/2,
-y: stopbtn.height/2,
+var balancetext=canvas.display.text({
+x: balancebox.width/2,
+y: balancebox.height/2,
 origin: {x:"center", y:"center"},
 font: "bold 15px sans-serif",
-text:"Stop",
+text: interCash,
 fill: "#0aa",
 });
 
@@ -143,10 +143,10 @@ image:"chip.png",
 opacity:0.5
 });
 
-var lucknum=stopbtn.clone({x:200, y:0});
-var lucknumtext=stopbtntext.clone({ x:lucknum.width/2, y:lucknum.height/2, text:"Waiting"});
-var balancebox=stopbtn.clone({x:400, y:0});
-var balancetext=stopbtntext.clone({ x:balancebox.width/2, y:balancebox.height/2, text:interCash});
+//var lucknum=stopbtn.clone({width:130, height:50,x:400, y:400, opacity:0.6, fill:"#1a441a"});
+//var lucknumtext=stopbtntext.clone({ x:lucknum.width/2, y:lucknum.height/2, size:25, text:"Waiting"});
+//var balancebox=stopbtn.clone({x:400, y:0});
+//var balancetext=stopbtntext.clone({ x:balancebox.width/2, y:balancebox.height/2, text:interCash});
 //////////////////////////////////////////////////////////////
 
 function randomFromTo(from, to){
@@ -437,7 +437,7 @@ function guessBetPos(){
 	else	presentBetNum=100;
 	if(presentBetNum!=100)
 		addBet(presentBetNum);
-	stopbtntext.text=betMouseX+"    "+betMouseY+"    "+presentBetNum ;
+	//stopbtntext.text=betMouseX+"    "+betMouseY+"    "+presentBetNum ;
 
 }
 
@@ -446,7 +446,7 @@ function reducespin(){
 
 if (wheelspeed>0)  setTimeout(function(){wheelspeed=(wheelspeed>0)? wheelspeed-0.005:0; reducespin();},5);
 else wheelspeed=0;
-if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0; alert(LuckyNum);
+if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
 $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{name : 'jude', num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
 });
@@ -456,12 +456,10 @@ $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_ve
 
 function stopspin(){
 spinwheel=0;
-var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){t=html; stptime=html;}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){stptime=html;}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
-alert(t);
 setTimeout(function(){ reducespin();},(t*1000));
 }
 
@@ -533,7 +531,6 @@ return false;
 function dropball(){
 ball.dragAndDrop(false);
 ball.dragAndDrop({
-	move: function(){ stopbtntext.text="x:"+(posx)+" y:"+(posy)+" a:"+posangle;},
 	end: function(){
 		if(ballDropped==0 && bettingCash!=0 && checkBallWithinWheel())
 		{
@@ -598,7 +595,7 @@ function getBallPos(){
 canvas.setLoop(function(){
 	wheel.rotation+=wheelspeed;
 	indi.rotation= (upperhalf==0)? ((ball.y<0)? posangle+180:posangle):(-1*posangle);
-	stopbtntext.text=posangle+"      "+wheel.rotation+"      "+upperhalf;//ballDropped+"  "+bettingCash+"   "+checkBallWithinWheel();
+	//stopbtntext.text=posangle+"      "+wheel.rotation+"      "+upperhalf;//ballDropped+"  "+bettingCash+"   "+checkBallWithinWheel();
 	if (wheel.rotation==360) wheel.rotation=0;
 	if(ballDropped==1)
 	{
@@ -608,7 +605,7 @@ canvas.setLoop(function(){
 		x=x%360;
 		x=x<0?-x	:x;
 		x=angles[Math.floor(x/9.7297)];
-		lucknumtext.text=x;
+		//lucknumtext.text=x;
 		LuckyNum=x;
 	}
 	else{	var x=(posangle-4.8648)*-1;
@@ -616,7 +613,7 @@ canvas.setLoop(function(){
 		x=x%360;
 		x=x<0?-x:x;
 		x=angles[Math.floor(x/9.7297)];
-		lucknumtext.text=x;
+		//lucknumtext.text=x;
 		LuckyNum=x;
 	}
 	}
@@ -625,7 +622,7 @@ canvas.setLoop(function(){
 
 
 
-stopbtn.bind("click tap",function(){if(spinwheel!=0) stopspin();});
+//stopbtn.bind("click tap",function(){if(spinwheel!=0) stopspin();});
 chip1.bind("click tap",function(){ chipSel=1; selectChip();});
 chip10.bind("click tap",function(){ chipSel=10; selectChip();});
 chip100.bind("click tap",function(){ chipSel=100; selectChip();});
@@ -637,7 +634,6 @@ ball.bind("mouseenter",function(){
 if(ballDropped==0){
 
 ball.dragAndDrop({
-	move: function(){ stopbtntext.text="x:"+(posx)+" y:"+(posy)+" a:"+posangle;},
 	end: function(){
 		if(ballDropped==0 && bettingCash!=0 && checkBallWithinWheel())
 		{
@@ -659,16 +655,16 @@ ball.bind("mouseleave",function(){ball.dragAndDrop(false);});
 
 
 
-stopbtn.addChild(stopbtntext);
-canvas.addChild(stopbtn);
+//stopbtn.addChild(stopbtntext);
+//canvas.addChild(stopbtn);
 balancebox.addChild(balancetext);
 canvas.addChild(balancebox);
 canvas.addChild(rect);
 canvas.addChild(wheel);
 canvas.addChild(indi);
 canvas.addChild(ball);
-lucknum.addChild(lucknumtext);
-canvas.addChild(lucknum);
+//lucknum.addChild(lucknumtext);
+//canvas.addChild(lucknum);
 canvas.addChild(layout);
 canvas.addChild(chip1);
 canvas.addChild(chip10);
