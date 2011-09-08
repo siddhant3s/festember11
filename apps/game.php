@@ -9,7 +9,6 @@ function getCash() {
    $query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "'"; //" AND `end_time` != '0'";
 
    $res = mysql_query($query);
-   echo $query;
    $cash = 1000;
    
    $sarr["0"] = -1;
@@ -17,7 +16,6 @@ function getCash() {
 
    while ($row = mysql_fetch_array($res)) {
        print_r($row);
-       echo "### - " .  $sarr[$row['winvar']] . " - ###<br>";
        $cash += $row['bidamount'] * $sarr[$row['winvar']];
    }
    
