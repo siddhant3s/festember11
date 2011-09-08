@@ -1,4 +1,4 @@
-<?php include("header.php");?>
+<?php include("../../connect.php");?>
 <?php include("getuser.php");?>
 <?php
 	include("../game.php");
