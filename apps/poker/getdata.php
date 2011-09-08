@@ -3,7 +3,7 @@
 <?php
 	$mon=getCash();
 	include("../game.php");
-	if($_POST['id']=1){
+	if($_POST['id']==1){
 	$string="{$mon}-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);
@@ -11,7 +11,7 @@
 	$string .= "{$row['u1']}-{$row['u2']}-{$row['c1']}-{$row['c2']}-{$row['c3']}";
 	echo $string;
 	}
-	else if($_POST['id']=2){
+	else if($_POST['id']==2){
 		
 	$string="{$mon}-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
