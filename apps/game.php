@@ -29,4 +29,8 @@ function getXP() {
     
     return $xp;
 }
+
+echo "You have " . getCash() . " dollars in your account.<br>";
+echo "Your XP score is " . getXP() . ".<br>";
+
 ?>
