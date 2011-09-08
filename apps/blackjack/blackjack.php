@@ -398,8 +398,8 @@ function sharewin() {
 </div>
 <div align="center" class="happy" id="happy">
 
-<pre>Congo..! you have won ...! 
-Your blackjack credits now are $<span id="winscore"></span>click on deal to start again!
+<pre><font face="cursive" color="green">Congo..! you have won ...! 
+Your blackjack credits now are </font>$<span id="winscore"></span>click on deal to start again!
 wanna share this win on FB?? ..
 
 </pre>
@@ -410,8 +410,8 @@ wanna share this win on FB?? ..
 </div>
 <div align="center" class="happy" id="sad">
 <div align="right"> <a href="#" id="closemenow" class="closeme"> <font color="white"><b>close </b></font> </a></div>
-<pre>You lose..!  
-your blackjack credits now are $<span id="losescore"></span>
+<pre><font face="cursive" color="red">You lose..!  
+your blackjack credits now are  </font>$<span id="losescore"></span>
 click on deal to start again!
 </pre>
 

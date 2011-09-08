@@ -1,10 +1,10 @@
-<?php include("header.php");?>
+<?php include("../../connect.php");?>
 <?php include("getuser.php");?>
 <?php include("../game.php");?>
 <?php include("../gamearray.php");?>
 <?php	
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
-	$result2=mysql_query($sql,$con);
+	$result2=mysql_query($sql);
 	$row=mysql_fetch_array($result2);
 	$u1=$row['u1'];
 	$u2=$row['u2'];
@@ -521,10 +521,10 @@ else if($win!=0&&$multiply==1){
 	$won=0;
 }
 $sql="SELECT * FROM windata WHERE userid={$usid}";
-$result3=mysql_query($sql,$con);
+$result3=mysql_query($sql);
 if(!mysql_num_rows($result3)){
 	$sql="INSERT INTO windata VALUES({$usid},{$won})";
-	$result3=mysql_query($sql,$con);
+	$result3=mysql_query($sql);
 }
 else{	
 		$row=mysql_fetch_array($result3);
