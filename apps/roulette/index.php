@@ -12,7 +12,7 @@ include("../game.php");
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript' src="ocanvas.js" ></script>
 <script language='javascript' src="myscript.js" ></script>
-<script>
+<script language='javascript'>
 var appId = <?php echo $facebook->getAppId(); ?>;
 function sharewin() {
       obj = {
@@ -32,7 +32,7 @@ function pub(o) {
 </script>
 </head>
 
-<body>
+<body bgcolor="#000000">
 <div id="canvas_div" style="position:relative;" height=500px width=1200px> 
 <canvas id='canvas' height=500px width=1200px > <p> Your Browser does not support Canvas!!! </p></canvas>
 
