@@ -2,17 +2,31 @@
 include("../connect.php");
 include("fb.php");
 
-$query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "'";
-$res = mysql_query($query);
 
-$cash = 1000;
+function getCash() {
+   $query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "' AND `end_time` != '0'";
+   $res = mysql_query($query);
 
-$sarr["0"] = -1;
-$sarr["1"] = 2;
+   $cash = 1000;
+   
+   $sarr["0"] = -1;
+   $sarr["1"] = 2;
 
-while ($row = mysql_fetch_array($res)) {
-    $cash += $row['bidamount'] * $row[$sarr['winvar']];
+   while ($row = mysql_fetch_array($res)) {
+       $cash += $row['bidamount'] * $row[$sarr['winvar']];
+   }
+   
+   return $cash;
 }
 
-echo "You have " . $cash . " in your account!";
+function getXP() {
+    $query = "SELECT COUNT(*) AS `gameid`,`count` FROM `game_info` WHERE `playerid` = '" . $user["id"] . "' GROUP BY `gameid`";
+    $res = mysql_query($query);
+    $xp = 0;
+    while ($row = mysql_fetch_array($res)) {
+        $xp += $row['count'] * 20;
+    }
+    
+    return $xp;
+}
 ?>
