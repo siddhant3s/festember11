@@ -1,8 +1,8 @@
 <?php include("header.php");?>
 <?php include("getuser.php");?>
 <?php
+	//include("../game.php");
 	if($_POST['id']=1){
-	include("../game.php")
 	$string=getCash()."-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);
@@ -11,7 +11,7 @@
 	echo $string;
 	}
 	else if($_POST['id']=2){
-		include("../game.php");
+		
 	$string=getCash()."-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);

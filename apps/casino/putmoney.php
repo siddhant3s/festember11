@@ -1,5 +1,6 @@
 <?php include("header.php");?>
 <?php include("getuser.php");?>
+<?php include("../gamearray.php");?>
 <?php
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql,$con);
