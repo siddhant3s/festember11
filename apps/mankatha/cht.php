@@ -4,7 +4,6 @@ $rpath = "../";
   include("../game.php");
 	    $q="INSERT into game_info (`playerid`,`gameid`, `starttime`,`bidamount`) VALUES(" . $user["id"] . ",'4' , now(),{$_SESSION['cht']})";
 
-
 if(!isset($_POST['txtchar']))
 {
 	header('Location:start.php');
