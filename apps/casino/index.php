@@ -2,16 +2,6 @@
 	include("header.php");
 	$rpath = "../";
 	include("../fb.php");
-	include("../game.php");
-  //      include("../gamearray.php");
-    //     $date=date("Y-m-d H:i:s");
-	//$_SESSION['user']=$user["id"];
-	//$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
-	//if(mysql_num_rows($res)==0) {
-	//mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
-	//}
-        //$res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','returnpercent') VALUES ({$user["id"]},{$game_array['poker']},{time()},{$date},{$date},1000,0)");
-
 ?>
 <!DOCTYPE HTML>
 <html>
