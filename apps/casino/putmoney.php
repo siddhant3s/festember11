@@ -13,7 +13,7 @@
 	$result=mysql_query($sql,$con);
 	if(!$result){
 	$time=time();
-	$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$user["id"]},{$game_array['poker']},{$time},{$_POST['money']})",$con);
+	$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$usid},{$game_array['poker']},{$time},{$_POST['money']})",$con);
 	}
 	else{
 		$row=mysql_fetch_array($result);
