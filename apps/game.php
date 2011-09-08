@@ -1,5 +1,6 @@
 <?php
 include("../connect.php");
+include("fb.php");
 
 $query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "'";
 $res = mysql_query($query);
