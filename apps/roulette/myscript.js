@@ -1,6 +1,3 @@
-
-
-
 (window.onload=function(){
 var spinwheel=1;
 var wheelspeed=5.0;
