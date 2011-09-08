@@ -26,7 +26,7 @@ function getCash() {
 
 function getXP() {
     global $user;
-    $query = "SELECT COUNT(*) AS `gameid`,`count` FROM `game_info` WHERE `playerid` = '" . $user["id"] . "' GROUP BY `gameid`";
+    $query = "SELECT`gameid`, COUNT(*) AS `count` FROM `game_info` WHERE `playerid` = '" . $user["id"] . "' GROUP BY `gameid`";
     $res = mysql_query($query);
     $xp = 0;
     while ($row = mysql_fetch_array($res)) {
