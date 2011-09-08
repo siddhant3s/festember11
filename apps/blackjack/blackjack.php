@@ -399,8 +399,8 @@ function sharewin() {
 <div align="center" class="happy" id="happy">
 
 <pre><font face="cursive" color="green">Congo..! you have won ...! 
-Your blackjack credits now are </font>$<span id="winscore"></span>click on deal to start again!
-wanna share this win on FB?? ..
+Your blackjack credits now are </font>$<span id="winscore"></span><font face="cursive" color="green">click on deal to start again!
+wanna share this win on FB?? ..</font>
 
 </pre>
 <img src="fb.jpg" id="picd" class="picd" onclick="sharewin()"/><br><br><br>
@@ -412,7 +412,7 @@ wanna share this win on FB?? ..
 <div align="right"> <a href="#" id="closemenow" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <pre><font face="cursive" color="red">You lose..!  
 your blackjack credits now are  </font>$<span id="losescore"></span>
-click on deal to start again!
+<font face="cursive" color="red">click on deal to start again!</font>
 </pre>
 
 <input type="button" value="Ok" selected="selected" id="loseclose" class="picd">
