@@ -7,7 +7,7 @@ $score=getCash();
 $sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
 
 $result = mysql_query($sql);
-echo "user id is : ". $user['id'];
+echo "user id is : ". $user_profile['id'];
 echo "<table border='1'>
 <tr>
 <th>playerid</th>
