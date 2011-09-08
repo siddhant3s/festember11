@@ -18,7 +18,7 @@
 	else{
 		$row=mysql_fetch_array($result);
 		$money=$row['bitamount']+$_POST['money'];
-		$res=mysql_query("UPDATE game_info SET bitamount={$money} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00' ,$con);
+		$res=mysql_query("UPDATE game_info SET bitamount={$money} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'",$con);
 	}
 	echo "";
 ?>
