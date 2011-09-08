@@ -20,7 +20,7 @@ else
 	    $date=date_create();
 
 	    $d=date_format($date,'Y-m-d H:i:s');
-	    $q="INSERT into game_info (starttime,bidamount) VALUES(now(),{$_SESSION['cht']}) where playerid='" . $user["id"] . "'";
+	    $q="INSERT into game_info (starttime,bidamount,gameid,playerid) VALUES(now(),{$_SESSION['cht']},'4','" . $user["id"] . "')";
 	      mysql_query($q);
 	    header('Location:test1.php');
 	    exit;
