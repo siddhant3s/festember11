@@ -6,10 +6,9 @@ if(!isset($_POST['txtchar']))
 {
 	header('Location:start.php');
 	exit;
-	
 }
 else
-{       
+  {       echo $money;
 	if($_POST['txtchar']>$money)
 	  { 
 	    header('Location:start.php?alertnobalance=1');
