@@ -1,7 +1,7 @@
 <?php include("../../connect.php");?>
 <?php include("getuser.php");?>
 <?php
-	$mon=POSTCash();
+	$mon=getCash();
 	include("../game.php");
 	//echo $_POST['id'];
 	if($_POST['id']==1){
