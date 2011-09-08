@@ -1,3 +1,9 @@
+<?php
+if(isset($_GET['alertnobalance']))
+  {
+    echo "<script> alert(\"no balance \");</script>";
+  }
+?>
 <html>
 <title>mangatha</title>
 <head>

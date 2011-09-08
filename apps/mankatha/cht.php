@@ -1,4 +1,5 @@
 <?php
+include('../game.php');
 session_start();
 if(!isset($_POST['txtchar']))
 {
@@ -9,7 +10,16 @@ if(!isset($_POST['txtchar']))
 else
 {
 	$_SESSION['cht']=$_POST['txtchar'];
-	header('Location:test1.php');
-	exit;
+        $money=getCash();
+	if($_POST['txtchar']>$money)
+	  { 
+	    header('Location:start.php?alertnobalance=1');
+	    exit;
+	  }
+	else
+	  {
+	    header('Location:test1.php');
+	    exit;
+	  }
 }
 ?>	
