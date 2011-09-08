@@ -1,9 +1,8 @@
 <?php
-session_set_cookie_params(0);
-session_start();
-$_SESSION['id']=session_id();
 $rpath = "../";
-//require('../fb.php');
+include('../fb.php');
+
+//$_SESSION['id']=session_id();
 function getUserInfo(){
 	$_SESSION['namee']=$user['id'];
 	$_SESSION['player']=$user['name'];
@@ -55,7 +54,7 @@ $json=json_encode(array('namee'=>$_SESSION['player'],'level'=>$_SESSION['level']
 ?>
 <html>
 <head>
-	<title>Festember Games: Vigilante</title>
+	<title>Festember: Vigilante</title>
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png"></link>
 	<link rel="stylesheet" type="text/css" href="index.css"></link>
 	<link rel="Favicon
