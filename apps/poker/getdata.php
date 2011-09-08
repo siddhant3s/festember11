@@ -3,6 +3,7 @@
 <?php
 	$mon=getCash();
 	include("../game.php");
+	echo $_POST['id'];
 	if($_POST['id']==1){
 	$string="{$mon}-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
