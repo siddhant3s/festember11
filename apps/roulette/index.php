@@ -13,7 +13,7 @@ include("../game.php");
 <script language='javascript' src="ocanvas.js" ></script>
 <script language='javascript' src="myscript.js" ></script>
 <script>
-/*var appId = <?php echo $facebook->getAppId(); ?>;
+var appId = <?php echo $facebook->getAppId(); ?>;
 function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
@@ -29,7 +29,7 @@ function pub(o) {
        o.method = "feed";
         FB.ui(o);
       }
-*/</script>
+</script>
 </head>
 
 <body>
