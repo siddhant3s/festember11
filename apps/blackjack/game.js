@@ -1078,21 +1078,10 @@ function updateBetDisplay(n) {
 
   // Display current credits.
 
- 
+  creditsTextNode.nodeValue = "get lucky!";
 }
 
-function formatDollar(n) {
 
-  var a, b;
-
-  // Format the given number as a dollar amount for display.
-
-  a = Math.abs(n);
-  b = 100 * (a - Math.floor(a));
-  if (b < 10)
-    b = "0" + b;
-  return (n < 0 ? "-" : "" ) + "$" + Math.floor(a) + "." + b;
-}
 
 function changeBet(n) {
 
