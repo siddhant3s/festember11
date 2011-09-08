@@ -18,11 +18,12 @@ include("../game.php");
 </div>
 <script language='javascript' src="jquery.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>var appId = <?php echo $facebook->getAppId(); ?>;</script>
 <script language='javascript' src="ocanvas.js" ></script>
 <script language='javascript' src="myscript.js" ></script>
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript'>
-var appId = <?php echo $facebook->getAppId(); ?>;
+
 function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
