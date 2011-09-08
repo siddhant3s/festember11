@@ -17,7 +17,7 @@ include("../fb.php");
 var appId = <?php echo $facebook->getAppId(); ?>;
 function sharewin() {
       obj = {
-          name:<?php echo $user["name"]; ?>+" has won the game of Roulette in Festember Casino!",
+          name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
           link:"http://www.festember.in/11/games/",
           picture:"roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
