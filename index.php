@@ -10,7 +10,8 @@ include_once "facebook_details.php";//should contain app_id and app_secrete
 $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
-$fbloginurl=$facebook->getLoginUrl($fbperm);
+if(!$fbuser)
+  $fbloginurl=$facebook->getLoginUrl($fbperm);
 
 /** <Login Related Shit **/
   try {
@@ -93,15 +94,29 @@ $fbloginurl=$facebook->getLoginUrl($fbperm);
 	if ($fbuser) {
 	  try 
 	    {
+	      
 	      // Proceed knowing you have a logged in user who's authenticated.
 	      $user_profile = $facebook->api('/me');
 	    } 
+
 	  catch (FacebookApiException $e) 
 	    {
-	      //echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
-	      session_destroy();
+	      
+	      //print_r($fbuser);
+	      // echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
+	     //Deleting all cookies from the client browser
+/* 	     if (isset($_SERVER['HTTP_COOKIE'])) { */
+/* 	       $cookies = explode(';', $_SERVER['HTTP_COOKIE']); */
+/* 	       foreach($cookies as $cookie) { */
+/* 		 $parts = explode('=', $cookie); */
+/* 		 $name = trim($parts[0]); */
+/* 		 setcookie($name, '', time()-1000); */
+/* 		 setcookie($name, '', time()-1000, '/'); */
+/* 	       } */
+/* 	     } */
+	     
 	      $fbuser = null;
-	      header("Location: " . $fbloginurl);
+	      // header("Location: " . $fbloginurl);
 	    }
 
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
@@ -413,6 +428,7 @@ margin: 10px 0;
 
 
 <a class="active trigger logout" href="logout">Logout</a>
+
 <a class="registerbut" style="position:absolute;top: 15px;"  href="login" ajaxify="1">Register</a>
 						<?php endif; ?>
 
