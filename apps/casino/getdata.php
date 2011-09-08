@@ -1,7 +1,7 @@
 <?php include("header.php");?>
 <?php include("getuser.php");?>
 <?php
-	//include("../game.php");
+	include("../game.php");
 	if($_POST['id']=1){
 	$string=getCash()."-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
