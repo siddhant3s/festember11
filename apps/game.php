@@ -36,7 +36,13 @@ function getXP() {
     return $xp;
 }
 
+$time1 = microtime(true);
 echo "You have " . getCash() . " dollars in your account.<br>";
+$time2 = microtime(true);
+echo "Tiem diff is " . ($time2 - $time1) . "<br>";
 echo "Your XP score is " . getXP() . ".<br>";
+$time3 = microtime(true);
+echo "Tiem diff is " . ($time3 - $time2) . "<br>";
+
 
 ?>
