@@ -6,18 +6,11 @@ include("fb.php");
 
 function getCash() {
    global $user;
-   $query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "'"; //" AND `end_time` != '0'";
+   $query = "SELECT SUM(`bidamount` * `returnpercent` / 100) - SUM(`bidamount`) AS `cash` FROM `game_info`  WHERE `playerid`='" . $user["id"]  . "'";
 
    $res = mysql_query($query);
-   $cash = 1000;
-   
-   $sarr["0"] = -1;
-   $sarr["1"] = 1;
-
-   while ($row = mysql_fetch_array($res)) {
-       print_r($row);
-       $cash += $row['bidamount'] * $sarr[$row['winvar']];
-   }
+   $row = mysql_fetch_array($res);
+   $cash = $row['cash'] + 1000;
    
    return $cash;
 }
@@ -37,10 +30,10 @@ function getXP() {
 $time1 = microtime(true);
 echo "You have " . getCash() . " dollars in your account.<br>";
 $time2 = microtime(true);
-echo "Tiem diff is " . ($time2 - $time1) . "<br>";
+//echo "Tiem diff is " . ($time2 - $time1) . "<br>";
 echo "Your XP score is " . getXP() . ".<br>";
 $time3 = microtime(true);
-echo "Tiem diff is " . ($time3 - $time2) . "<br>";
+//echo "Tiem diff is " . ($time3 - $time2) . "<br>";
 
 
 ?>
