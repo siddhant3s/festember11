@@ -64,8 +64,8 @@ report any bug here :<br><br>
 </form>
 <?php
 $th=0;
-$rating=$_POST["feedval"];
-$bug=$_POST["bugfix"];
+$rating=mysql_real_escape_string($_POST["feedval"]);
+$bug=mysql_real_escape_string($_POST["bugfix"]);
 
 mysql_query("INSERT  INTO feedback (no,rating,bug) VALUES (NULL,'$rating','$bug')") or die(mysql_error());
 

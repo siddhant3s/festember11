@@ -1,7 +1,6 @@
 <?php
-
-$rpath = "../";
 include("../fb.php");
+include("../game.php");
 
 
 ?>
@@ -53,58 +52,77 @@ margin:0 auto;
 width:600px;
 margin: 0 auto;
 }
+#nick{
+opacity:0.8;
+background-color:white;
+font-weight:bold;
+}
+#pnick{
+display:none;
+}
+#nick:hover{
+opacity:1;
+background:brown;
+color:white;
+font-weight:bold;
+}
 
 </style>
 <script src="jquery.js" type="text/javascript"></script>
+<script src="jquery-1.6.2.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
 <script src="illuminate.js" type="text/javascript"></script>
 <script src="start.js" type="text/javascript"></script>
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-var appId = <?php echo $facebook->getAppId(); ?>;
-</script>
 <script src="script.js" type="text/javascript"></script>
 
+   <script src="../http://connect.facebook.net/en_US/all.js"></script>
+   <script src="../gameapi.js" type="text/javascript"></script>
 
-
-</head>
-<body>
-<div id="fb-root"></div>
-<script src="../gameapi.js"></script>
-
-<script type="text/javascript">
-function doit()
-{
-  self.location="blackjack.php";
-}
-
-function sharewin() {
+<script>
+      var appId = <?php echo $facebook->getAppId(); ?>;
+     function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Blackjack in Festember Casino!",
           link:"http://www.festember.in/11/games/",
-          picture:"http://www.westerndistributingco.com/Images/Upload/blackjack-fp-f.jpg",
-          caption:"Casino games at Festember 11",
-          description:"Play the game now to get goodies and stuff",
-     }
-     pub(obj);  
+          picture:"http://1.bp.blogspot.com/_bNEcw3z5M20/TBpGFBUkWKI/AAAAAAAAADA/1MPHBgQQYTw/s320/online-blackjack.gif",
+          caption:"Casino Games at FESTEMBER 11",
+          description:"Play the game now to get goodies and stuff..!",
+       }
+       pub(obj);  
 }
 
 function pub(o) {
-    o.method = "feed";
-    FB.ui(o);
+       o.method = "feed";
+        FB.ui(o);
+      }
+    </script>
+
+
+</head>
+<body> 
+<script type="text/javascript">
+
+function doit()
+{
+
+self.location="blackjack.php";
+
+
 }
-      
+
+
 
 </script>
-Hi <?php echo $user["name"]; ?>!!!
-
 <div align="center" id="shine">
 <br><br>
 <img src="blackjack.jpg" width="600px" id="lk"/>
-<br><input type="button" class="button" value="play blackjack" onclick="doit()">
-<br><input type="button" class="button" value="Share" onclick="sharewin()">
+ 
+<br><input type="button" class="button" value="play blackjack" onclick="doit()"></button>
+<input type="button" class="button" value="fb share" onclick="sharewin()"></button>
 </div>
 <div align="right" id="si" class="si">
-<h2 id="illu" class="si"><font face="monotype corsiva" id="powered">Powered by festember</font></h2>
+<h2 id="illu" class="si"><font face="monotype corsiva" id="powered">Powered by festember for u..!</font></h2>
+
 </div>
 
 
