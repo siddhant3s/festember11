@@ -293,7 +293,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						document.getElementById("bmoney").value=betMoney;
 						
 						var data1="id=2";
-						$.ajax({url: "getdata.php",data:data1,success: function(html){
+						$.ajax({type:"POST",url: "getdata.php",data:data1,success: function(html){
 								$("#loading").hide();
 								var string=html.split('-');
 								money=parseInt(string[0]);
