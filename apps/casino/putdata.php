@@ -1,7 +1,7 @@
 <?php 
  include("header.php");
  include("getuser.php");
- //include("../game.php"); 
+ include("../game.php"); 
  include("../gamearray.php");
 
 	$cards = range(0, 51);
