@@ -1,11 +1,11 @@
 <?php include("../../connect.php");?>
 <?php include("getuser.php");?>
 <?php
-	$mon=getCash();
+	
 	include("../game.php");
 	//echo $_POST['id'];
 	if($_POST['id']==1){
-	$string="{$mon}-";
+	$string=getCash()."-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql);
 	$row=mysql_fetch_array($result);
@@ -14,7 +14,7 @@
 	}
 	else if($_POST['id']==2){
 		
-	$string="{$mon}-";
+	$string=getCash()."-";
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql);
 	$row=mysql_fetch_array($result);
