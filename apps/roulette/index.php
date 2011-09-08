@@ -4,7 +4,7 @@ include("../game.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 <head>
-<title>Slot Machine</title>
+<title>Festember11 - Roulette</title>
 
 <link rel="stylesheet" type="text/css" href="main.css" />
 <script language='javascript' src="jquery.js"></script>
@@ -18,7 +18,7 @@ function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
           link:"http://www.festember.in/11/games/",
-          picture:"http://1.bp.blogspot.com/_bNEcw3z5M20/TBpGFBUkWKI/AAAAAAAAADA/1MPHBgQQYTw/s320/online-blackjack.gif",
+          picture:"roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
           description:"Play the game now to get goodies and stuff..!",
        }
