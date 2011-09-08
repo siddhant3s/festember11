@@ -1,5 +1,5 @@
 <?php include("../../connect.php");?>
-<?php include("POSTuser.php");?>
+<?php include("getuser.php");?>
 <?php include("../gamearray.php");?>
 <?php
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
