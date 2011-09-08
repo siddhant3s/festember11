@@ -532,6 +532,6 @@ else{
 		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
 		$result3=mysql_query($sql,$con);
 }
-$res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','returnpercent') VALUES ({$user["id"]},{$game_array['poker']},{time()},{time()},'0000-00-00 00:00:00',{$money]},100)");
+$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,endtime,timediff,bidamount,returnpercent) VALUES ({$user["id"]},{$game_array['poker']},{time()},{time()},'0000-00-00 00:00:00',{$money},0)");
 echo $money*$multiply;
 ?>
