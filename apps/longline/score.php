@@ -3,52 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Score Page</title>
-<style type="text/css">
-<!--
-.style1 {font-family: "AR CHRISTY"}
-body {
-	background-image: url(score%20pg%20copy.jpg);
-	background-repeat: no-repeat;
-	background-position:center;
-	background-position:top;
-}
--->
-</style>
 </head>
 
 <body>
  <p align="center">
    <?php
-  require_once('config.php');
-
-$name=$_GET['name'];
-$time=$_GET['time'];
- if($time<60) $score=500;
-	   else if($time<120) $score=400;
-	   else if($time<180) $score=300;
-	   else if($time<240) $score=200;
-	   else if($time<300) $score=100;
-$dbc = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD)
-    or die('Error connecting to MySQL server.');
-	mysql_select_db(DB_NAME,$dbc);
-	$query="INSERT INTO ".DB_TABLE." VALUES ('$name','$score')";
+   include("../game.php");
+ include("../../connect.php");
+$bid=500;
+$iid=$user["id"];
+$time=$_POST['time'];
+ if($time<60) $percent=200;
+	   else if($time<120) $percent=180;
+	   else if($time<180) $percent=160;
+	   else if($time<240) $percent=140;
+	   else if($time<300) $percent=120;
+	   else $percent=100;
+	
+$query="UPDATE game_info SET returnpercent = $percent , endtime = now() WHERE playerid = $iid AND gameid = '6' AND endtime = '0000-00-00 00:00:00'";
+	
 	
 	  $result = mysql_query($query)
     or die('Error querying database.');
-	 mysql_close($dbc);
-	 if($score!=0)
-	 {
- ?>
-</p>
- <h1 align="center" class="style1">&nbsp;</h1>
- <h1 align="center" class="style1">CONGRATS <?php echo $name;?>!!!!!!!!!!!!!!!</h1>
- <p align="center" class="style1">You won the game .</p>
- <p align="center" class="style1">Your score is <?php echo $score; ?> </p>
- <p align="center" class="style1"><img src="backtomp.png" border="0" usemap="#Map" />
-<map name="Map" id="Map"><area shape="rect" coords="1,1,241,38" href="index.php" /></map></p>
- <p class="style1">&nbsp;</p>
- <?php }
- 
+
  ?>
 </body>
 </html>
