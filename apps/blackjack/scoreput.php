@@ -20,8 +20,6 @@ $result = mysql_query($sql);
 else
 {
 $sql="UPDATE game_info SET returnpercent ='".$_POST["ret"]."', endtime = now(),bidamount='".$_POST["bid"]."' WHERE playerid = '".$user[id]."'AND gameid = '2'  ";
-
-
 $result = mysql_query($sql);
 }
 
