@@ -1,6 +1,6 @@
 <?php 
-//$rpath = "../";
-//include("../game.php");
+$rpath = "../";
+include("../game.php");
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 <head>
@@ -8,12 +8,12 @@
 
 <link rel="stylesheet" type="text/css" href="main.css" />
 <script language='javascript' src="jquery.js"></script>
-<script src="../http://connect.facebook.net/en_US/all.js"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript' src="ocanvas.js" ></script>
 <script language='javascript' src="myscript.js" ></script>
 <script>
-/*var appId = <?php echo $facebook->getAppId(); ?>;
+var appId = <?php echo $facebook->getAppId(); ?>;
 function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
@@ -29,7 +29,7 @@ function pub(o) {
        o.method = "feed";
         FB.ui(o);
       }
-*/</script>
+</script>
 </head>
 
 <body>

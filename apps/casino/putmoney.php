@@ -1,5 +1,5 @@
 <?php include("../../connect.php");?>
-<?php include("POSTuser.php");?>
+<?php include("getuser.php");?>
 <?php include("../gamearray.php");?>
 <?php
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
@@ -13,8 +13,7 @@
 	$result=mysql_query($sql);
 	
 	if(mysql_num_rows($result)==0){
-	$time=date("Y-m-d H:i:s");
-	$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$usid},{$game_array['poker']},{$time},{$_POST['money']})");
+		$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,bidamount) VALUES ({$usid},{$game_array['poker']},now(),{$_POST['money']})");
 	}
 	else{
 		$row=mysql_fetch_array($result);

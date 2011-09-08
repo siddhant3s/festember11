@@ -1,9 +1,9 @@
 var bgCanvas,drawCanvas,lidCanvas,bgContext,drawContext,lidContext;
-var leveldesc,bar=new Array(),persons=new Array(),coins=new Array(),secam=new Array();
-var dimension,gamestarted=0,level=null,score=-1,user,personcount,coincount=5,lives=3,scmax,securityCam=0,bosom,timelimit;
+var leveldesc,bar=new Array(),persons=new Array(),coins=new Array(),secam;
+var dimension,gamestarted=0,level=null,score=-1,user,personcount,coincount=5,lives=3,scmax,securityCam=0,timelimit;
 var leftpad=0,toppad=0,grid=30,block,padding,arclen=4,arcspread=(60*Math.PI)/180;
 var rep;
-var dir="d",ajax1,ajax2,ajax3;
+var dir="d",ajax1,ajax2,ajax3,bosom=0,bomb;
 
 var pesonimage,barimage,bgimage,coinimage,lifeimage;
 var winsound,scoresound,losssound,lifesound;
@@ -105,6 +105,9 @@ function keyPress(e){
 	case 65:
 		pickCoin();
 		break;
+	case 83:
+		useBooze();
+		break;
 	}	
 }
 
@@ -200,15 +203,22 @@ function gameInit(){
 		getNextFree(coins[i]);
 		showCoin(i);
 	}
-	if(securityCam)
+	if(securityCam){
+		secam=new Array();
 		securityArc();
+	}bosom=1;
+	if(bosom){
+		bomb=new Array();
+		bomb[0]=-1;
+		bomb[1]=0;
+	}
 	showBar();
 	showLives();
 	gameStart();
 }
 function gameStart(){
-	var i,c=1;
-	showAlert("Game Started!",130,30,30);
+	var i,c=1,j;
+	showAlert("Game Started! Collect "+scmax+" coins to win.",130,30,30);
 	updateScore();
 	updateTime();
 	rep=window.setInterval(function(){
@@ -229,16 +239,25 @@ function gameStart(){
 		}
 		else c++;
 		if(score>=scmax)
-			gameWin();
+			gameWin(rep);
 	},200);
 }
-function gameWin(){
-	if(hasWonServer()){
-		updateLevel();
+var response=-1;
+function gameWin(rep){
+	window.clearInterval(rep);
+	hasWonServer();
+	var wait=window.setInterval(function(){
+		if(response==-1){
+			showAlert("Please Wait...",200,200,200);
+			return;
+		}
+		if(response==1){
+			updateLevel();
+			alert("Congratulations! You won!");
+			winsound.play();
+		}
 		gameStop();
-		alert("Congratulations! You won!");
-		winsound.play();
-	}
+		},100);
 }
 function gameStop(){
 	window.clearInterval(rep);
@@ -287,6 +306,17 @@ function removeCoin(cn){
 	hideCoin(cn);
 	coins[cn][0]=-1;
 }
+function useBooze(){
+	if(bosom){
+		if(score>2){
+			score-=3;
+			updateScore();
+			dropBomb();
+		} else
+			showAlert("Not enough coins to drop BoozeBomb",200,0,0);
+	} else
+		showAlert("No BoozeBomb in this level!",255,150,100);
+}
 function pickCoin(){
 	var x,pn,nos=0,con;;
 	
@@ -305,7 +335,9 @@ function pickCoin(){
 	if(xx>=0 && yy>=0 && xx<grid && yy<grid)
 		for(x=coins.length-1;x>=0;--x)
 			if(coins[x][0]==xx && coins[x][1]==yy){
-				if(securityCam){
+				if(bosom && bomb[0]>=0 && bar[0]>=bomb[0]-1 && bar[0]<=bomb[0]+1 && bar[1]>=bomb[1]-1 && bar[1]<=bomb[1]+1);
+				else{
+					if(securityCam){
 					con=secam[2].getContext("2d")
 					if(checkSight(bar,con,secam[2])){
 						con.fillStyle="#e00";
@@ -332,12 +364,13 @@ function pickCoin(){
 						con.fillStyle="#0e0";
 						con.fill();
 					}
-				}
+				}}
 				removeCoin(x);
 				getNextFree(coins[x]);
 				showCoin(x);
 				scoresound.play();
 				updateScore();
+				break;
 			}
 }
 function updateScore(){
@@ -407,8 +440,8 @@ function securityArc(direction){
 	y=arclen;
 	secam[2]=gi("wrapper").appendChild(document.createElement("canvas"));
 	secam[2].width=secam[2].height=arclen;
-	secam[2].style.left=leftpad+drawCanvas.width-secam[2].width;
-	secam[2].style.top=toppad+drawCanvas.height-secam[2].height;
+	secam[2].style.left=leftpad+padding+drawCanvas.width-secam[2].width;
+	secam[2].style.top=toppad+padding+drawCanvas.height-secam[2].height;
 	var con=secam[2].getContext("2d");
 	secam[3]=window.setInterval(function(){
 		secam[2].height=arclen;
@@ -425,22 +458,38 @@ function dropArc(pn){
 	window.clearInterval(persons[pn][3]);
 	gi("wrapper").removeChild(persons[pn][2]);
 }
+function dropBomb(){
+	bomb[0]=bar[0];
+	bomb[1]=bar[1];
+	bomb[2]=gi("wrapper").appendChild(document.createElement("canvas"));
+	showAlert("Booze Bomb",255,255,100);
+	bomb[2].width=bomb[2].height=3*block;
+	bomb[2].style.left=leftpad+padding+(bar[0]-1)*block;
+	bomb[2].style.top=toppad+padding+(bar[1]-1)*block;
+	var con=bomb[2].getContext("2d");
+	con.fillStyle="rgba(255,255,100,0.4)";
+	con.fillRect(0,0,bomb[2].width,bomb[2].height);
+	window.setTimeout(function(){
+		var i=4;
+		bomb[0]=-1;
+		var t=window.setInterval(function(){
+			if(i<0){
+				gi("wrapper").removeChild(bomb[2]);
+				window.clearInterval(t);
+				bomb[2]=null;
+				return;
+			}
+			con.width=con.width;
+			con.fillStyle="rgba(255,255,100,"+(i/10)+")";
+			con.fillRect(0,0,bomb[2].width,bomb[2].height);
+			i--;
+		},10);
+		},5000);
+}
 function movePerson(pn){
-	var d,dorand=1,tdir=persons[pn][4];
+	var d,tdir=persons[pn][4];
 	hidePerson(pn);
-	for(d=persons.length-1;d>=0;--d){
-		if(d==pn)
-			continue;
-		if(Math.abs(persons[pn][0]-persons[d][0])<=1 && Math.abs(persons[pn][1]-persons[d][1]<=1)){
-			var a=tdir;
-			do{
-				tdir=getRandDir(tdir);
-			} while(a==tdir);
-			dorand=0;
-		}
-	}
-	if(dorand)
-		tdir=getRandDir(persons[pn][4]);
+	tdir=getRandDir(persons[pn][4]);
 	getNext(persons[pn],tdir);
 	persons[pn][4]=tdir;
 	showPerson(pn);
@@ -448,12 +497,12 @@ function movePerson(pn){
 }
 function getRandDir(org){
 	var v1=Math.floor(Math.random()*100),v2;
-	if(v1>80){
-		if(v1<85)
+	if(v1>87){
+		if(v1<90)
 			v2="u";
-		else if(v1<90)
+		else if(v1<94)
 			v2="d";
-		else if(v1<95)
+		else if(v1<97)
 			v2="l";
 		else
 			v2="r";
@@ -482,7 +531,7 @@ function removeLives(){
 }
 var showingalert=0;
 function showAlert(str,colr,colg,colb){
-	lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
+	lidContext.font="bold 20px calibri,Monotype corsiva,sans-serif";
 	var interval,w=lidContext.measureText(str).width/2,y=lidCanvas.height/2,x=lidCanvas.width/2,i=1,color="rgba("+colr+","+colg+","+colb+",",rep=0;
 	if(showingalert)
 		return;
@@ -496,7 +545,7 @@ function showAlert(str,colr,colg,colb){
 		lidContext.clearRect(x-w-10,y-30,2*(w+10),40);
 		lidContext.fillRect(x-w-10,y-30,2*(w+10),40);
 		lidContext.fillStyle="rgba(0,0,0,"+(i/10)+")";
-		lidContext.font="bold 30px calibri,Monotype corsiva,sans-serif";
+		lidContext.font="bold 20px calibri,Monotype corsiva,sans-serif";
 		lidContext.fillText(str,x-w,y);
 		if(i<6){
 			rep==0?i++:i--;
@@ -614,50 +663,41 @@ function getInfo(){
 }
 function updateScoreServer(){
 	//put the score on server; called when user scores
-	/*ajax1.onreadystatechange=function(){
+	ajax1.onreadystatechange=function(){
 		if(ajax1.readyState==4 && ajax1.status==200)
-			if(ajax1.responseText==1)
+			if(ajax1.responseText=='0')
 				return 1;
-			else if(ajax1.responseText==0)
-				return 0;
 		};
 	
-	ajax.open("GET",encodeURI("update.php?a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount),true);
-	ajax.send();*/
+	ajax1.open("GET",encodeURI("checkgame.php?a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount),true);
+	ajax1.send();
 }
 function hasWonServer(){
 	//return int;1if won 0 if not; called when user wins by js procedures
-	/*
 	ajax2.onreadystatechange=function(){
 		if(ajax2.readyState==4 && ajax2.status==200)
-			if(ajax2.responseText==1)
-				return 1;
-			else if(ajax2.responseText==0)
-				return 0;
+			if(ajax2.responseText=='1')
+				response= 1;
+			else if(ajax2.responseText=='0')
+				response= 0;
+			else{
+				alert("An error occured! Please restart the game.");
+				window.location.reload();
+			}
 		};
-		ajax2.open("GET","form.php?",true);
+		ajax2.open("GET",encodeURI("checkgame.php?a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount),true);
 		ajax2.send();
-		*/
 }
 function updateLevel(){//called when js win and server win
-	/*
 	ajax3.onreadystatechange=function(){
 		if(ajax3.readyState==4 && ajax3.status==200)
-			user=ajax1.responseText;
-		};
-		ajax3.open("POST","form.php",true);
+			if(ajax3.responseText=='0')
+				return 0;
+			else if(ajax3.responseText=='1')
+				return 1;
+			};
+		var posts="a="+score+"&b="+level+"&c="+timelimit+"&d="+user+"&e="+personcount+"&f="+coincount;
+		ajax3.open("POST","update.php",true);
 		ajax3.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		ajax3.send(posts);
-	*/
-}
-function wallPost(msg){/*
-	FB.ui({
-  "name": msg,
-  //to do
-  "link":"http://google.com",
-  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
-  caption:"Click on the link above to play Festember Games!",
-  description:"In a lonely desert rose a city greater than heaven itself. Men and women flock to it, to find joy, fortunes, glory and themselves. Come this September, history will repeat itself as amidst the arid plains of Trichy will rise a new Vegas. Festember 11 - Vegas style!",
-  "method":"feed"
-});*/
 }

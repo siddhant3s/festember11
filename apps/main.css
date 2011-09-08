@@ -60,4 +60,8 @@ top:325px;
 left:275px;
 z-index:10;
 }
-
+#games{
+	background:url('images/bg.png');
+	width:1233px;
+	height:833px;
+}
