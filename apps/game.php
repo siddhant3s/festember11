@@ -17,8 +17,8 @@ function getCash() {
 
    while ($row = mysql_fetch_array($res)) {
        print_r($row);
-       echo "### - " .  $row[$sarr['winvar']] . " - ###<br>";
-       $cash += $row['bidamount'] * $row[$sarr['winvar']];
+       echo "### - " .  $sarr[$row['winvar']] . " - ###<br>";
+       $cash += $row['bidamount'] * $sarr[$row['winvar']];
    }
    
    return $cash;
