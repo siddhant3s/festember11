@@ -20,7 +20,7 @@ include("../game.php");
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>var appId = <?php echo $facebook->getAppId(); ?>;</script>
 <script language='javascript' src="ocanvas.js" ></script>
-<script language='javascript' src="myscript.js" ></script>
+
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript'>
 
@@ -40,6 +40,7 @@ function pub(o) {
         FB.ui(o);
       }
 </script>
+<script language='javascript' src="myscript.js" ></script>
 </body>
 
 </html>
