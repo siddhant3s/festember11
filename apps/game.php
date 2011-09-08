@@ -1,7 +1,6 @@
 <?php
-include("../connect.php");
-$rpath = "";
-include("fb.php");
+include($rpath . "../connect.php");
+include($rpath . "fb.php");
 
 
 function getCash() {
