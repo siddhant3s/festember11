@@ -1,5 +1,6 @@
 <?php
 
+$rpath="../";
 include("../fb.php");
 include("../reqconnect.php");
 $bid=0;
