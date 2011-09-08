@@ -1,4 +1,5 @@
 <?php
+$rpath = "../";
   include("../game.php");
 session_start();
 if(!isset($_POST['txtchar']))
