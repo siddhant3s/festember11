@@ -438,7 +438,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 		
 						canvas.redraw();
 					});},3000);
-					setTimeout(function(){publish();},5000);
+					setTimeout(function(){publish(value);},5000);
 								},8000);
 				}});
 				}});
