@@ -404,7 +404,7 @@ function pub(o) {
 <div align="center" class="happy" id="happy">
 
 <pre>Congo..! you have won ...! 
-Your blackjack credits now are $<span id="winscore"></span>
+Your blackjack credits now are $<span id="winscore"></span>click on deal to start again!
 wanna share this win on FB?? ..
 
 </pre>
@@ -417,7 +417,7 @@ wanna share this win on FB?? ..
 <div align="right"> <a href="#" id="closemenow" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <pre>You lose..!  
 your blackjack credits now are $<span id="losescore"></span>
-
+click on deal to start again!
 </pre>
 
 <input type="button" value="Ok" selected="selected" id="loseclose" class="picd">
@@ -509,7 +509,7 @@ your blackjack credits now are $<span id="losescore"></span>
 <div align="right">
 <!--<input type="button" class="button" value="fb share" id="fbshare" onclick="sharewin()" disabled="disabled"></button>-->
     <input id="rules"     class="button" type="button" value="Show Rules"><span>        </span>
-   <input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">
+   <!--<input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">-->
 </div>
 
   </div>
