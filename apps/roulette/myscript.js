@@ -1,3 +1,6 @@
+
+
+
 (window.onload=function(){
 var spinwheel=1;
 var wheelspeed=5.0;
@@ -115,11 +118,12 @@ var chip10=chip1.clone({x:chip1.x+50, image:"chip10.png"});
 var chip100=chip1.clone({x:chip1.x+100, image:"chip100.png"});
 
 var balancebox = canvas.display.rectangle({
-x:400,
-y:0,
+x:900,
+y:55,
 width:100,
-height:50,
-fill: "#343",
+height:65,
+fill: "#095e09",
+stroke: "5px #0f881e"
 });
 
 
@@ -127,9 +131,9 @@ var balancetext=canvas.display.text({
 x: balancebox.width/2,
 y: balancebox.height/2,
 origin: {x:"center", y:"center"},
-font: "bold 15px sans-serif",
-text: interCash,
-fill: "#0aa",
+font: "bold 30px comic-sans",
+text: "$"+interCash,
+fill: "#fff",
 });
 
 
@@ -143,6 +147,24 @@ image:"chip.png",
 opacity:0.5
 });
 
+var clearbtn=canvas.display.rectangle({
+x:400,
+y:60,
+width:200,
+height:60,
+fill: "#095e09",
+stroke: "2px #000"
+});
+
+var cleartxt=canvas.display.text({
+x: clearbtn.width/2,
+y: clearbtn.height/2,
+origin: {x:"center", y:"center"},
+font: "bold 20px comic-sans",
+text: "Clear Bets",
+fill: "#fff",
+});
+
 //var lucknum=stopbtn.clone({width:130, height:50,x:400, y:400, opacity:0.6, fill:"#1a441a"});
 //var lucknumtext=stopbtntext.clone({ x:lucknum.width/2, y:lucknum.height/2, size:25, text:"Waiting"});
 //var balancebox=stopbtn.clone({x:400, y:0});
@@ -153,7 +175,7 @@ function randomFromTo(from, to){
        return Math.random() * (to - from + 1) + from;
     }
 
-function resetTurn(){
+function resetTurn(clearbet){
 wheel.rotation=0;
 indi.rotation=0;
 ballDropped=0;
@@ -169,12 +191,21 @@ turnOver=0;
 betMouseX=0;
 betMouseY=0;
 presentBetNum=0;
+if (clearbet==1)
+{
+balanceCash=interCash+bettingCash;
+setTimeout(function(){resetBallPos(1);});
+}
+else
+{
 balanceCash=interCash+win;
+setTimeout(function(){resetBallPos(0);});
+}
 bettingCash=0;
 interCash=balanceCash;
 win=0;
 LuckyNum=0;
-setTimeout(function(){resetBallPos();});
+
 for (key in code_chip)
 {
 	code_chip[key].removeChild(chip_count[key]);
@@ -191,16 +222,28 @@ delete bets[key];
 //console.log(chips);
 //console.log(code_chip);
 //console.log(chip_count);
-balancetext.text=interCash;
+balancetext.text="$"+interCash;
 canvas.redraw();
 }
 
-function resetBallPos(){
+function resetBallPos(clearbet){
+if(clearbet==1)
+{
+ball.animate({
+x:80,
+y:80,
+radius:10},
+"short","ease-in-out");
+}
+
+else
+{
 ball.animate({
 x:80,
 y:80,
 radius:10},
 "long","ease-in-out");
+}
 }
 
 function showProfit(){
@@ -241,7 +284,7 @@ opacity:1.0
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
 			//console.log("resetting");
-			resetTurn();
+			resetTurn(0);
 			}
 		);
 	},2000);
@@ -340,7 +383,7 @@ if(interCash-chipSel>=0){
 	bets[i]=chipSel;
 	bettingCash+=chipSel;
 	interCash=balanceCash-bettingCash;
-	balancetext.text=interCash;
+	balancetext.text="$"+interCash;
 	setTimeout(function(){ generateChip(i);},2);
 	////// Update balanceCash on dropball();
 	//console.log(bettingCash);
@@ -628,7 +671,7 @@ chip1.bind("click tap",function(){ chipSel=1; selectChip();});
 chip10.bind("click tap",function(){ chipSel=10; selectChip();});
 chip100.bind("click tap",function(){ chipSel=100; selectChip();});
 layout.bind("click tap",function(){ if(ballDropped==0)setTimeout(function(){guessBetPos();},5) });
-
+clearbtn.bind("click tap", function() { if(ballDropped==0)resetTurn(1);  });
 
 
 ball.bind("mouseenter",function(){  
@@ -658,6 +701,8 @@ ball.bind("mouseleave",function(){ball.dragAndDrop(false);});
 
 //stopbtn.addChild(stopbtntext);
 //canvas.addChild(stopbtn);
+clearbtn.addChild(cleartxt);
+canvas.addChild(clearbtn);
 balancebox.addChild(balancetext);
 canvas.addChild(balancebox);
 canvas.addChild(rect);

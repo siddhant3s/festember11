@@ -1,5 +1,7 @@
 <?php include("header.php");?>
 <?php include("getuser.php");?>
+<?php include("../game.php");?>
+<?php include("../gamearray.php");?>
 <?php	
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result2=mysql_query($sql,$con);
@@ -530,5 +532,6 @@ else{
 		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
 		$result3=mysql_query($sql,$con);
 }
+$res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','returnpercent') VALUES ({$user["id"]},{$game_array['poker']},{time()},{time()},'0000-00-00 00:00:00',{$money]},100)");
 echo $money*$multiply;
 ?>

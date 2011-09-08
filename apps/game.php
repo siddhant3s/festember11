@@ -1,7 +1,6 @@
 <?php
-include("../connect.php");
-$rpath = "";
-include("fb.php");
+include($rpath . "../connect.php");
+include($rpath . "fb.php");
 
 
 function getCash() {
@@ -28,10 +27,10 @@ function getXP() {
 }
 
 $time1 = microtime(true);
-echo "You have " . getCash() . " dollars in your account.<br>";
+//echo "You have " . getCash() . " dollars in your account.<br>";
 $time2 = microtime(true);
 //echo "Tiem diff is " . ($time2 - $time1) . "<br>";
-echo "Your XP score is " . getXP() . ".<br>";
+//echo "Your XP score is " . getXP() . ".<br>";
 $time3 = microtime(true);
 //echo "Tiem diff is " . ($time3 - $time2) . "<br>";
 

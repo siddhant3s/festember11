@@ -48,7 +48,7 @@ function publish() {
 //  to:"100000566828426",
     });}
 </script>
-<?php unset($_SESSION['cht']);?>
+<?php unset($_SESSION['cht']); ?>
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You won this round.
