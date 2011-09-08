@@ -7,6 +7,7 @@ $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
 
+global $user;
 $user = $facebook->api("/me");
 
 ?>

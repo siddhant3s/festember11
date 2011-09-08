@@ -1,9 +1,12 @@
 <?php
 include("../connect.php");
+$rpath = "";
 include("fb.php");
 
 
 function getCash() {
+   global $user;
+   print_r($user);echo "<br>";
    $query = "SELECT `bidamount`,`winvar` FROM `game_info` WHERE `playerid`='" . $user["id"]  . "'"; //" AND `end_time` != '0'";
    $res = mysql_query($query);
    echo $query;
@@ -21,6 +24,7 @@ function getCash() {
 }
 
 function getXP() {
+    global $user;
     $query = "SELECT COUNT(*) AS `gameid`,`count` FROM `game_info` WHERE `playerid` = '" . $user["id"] . "' GROUP BY `gameid`";
     $res = mysql_query($query);
     $xp = 0;
