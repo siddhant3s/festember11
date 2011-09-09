@@ -985,6 +985,7 @@ if(h==1)
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
+$("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");
    dealer.reset();
 for (i = 0; i < player.length; i++) {
@@ -1006,6 +1007,7 @@ $("#deal").effect("pulsate",{times:3},"fast");
 
 $("#sad").show(1000);
 document.getElementById("losescore").innerHTML=credits;
+$("#deal").effect("pulsate",{times:3},"fast");
 
 $(".dollars").effect("pulsate",{times:3},"fast");
  dealer.reset();
