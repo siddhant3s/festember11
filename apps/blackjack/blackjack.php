@@ -366,7 +366,7 @@ border-width:2px;
 <script type="text/javascript" src="illuminate.js"></script>
 <script src="script.js" type="text/javascript"></script>
 <script src="game.js" type="text/javascript"></script>
-<script src="../http://connect.facebook.net/en_US/all.js"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 
 <script type="text/javascript">
 
