@@ -302,9 +302,9 @@ var maxBet        =  100;
 	}
 	});
 	*/
-var initCredi  =   $.get("scoreget.php", function(result){
+/*var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
-  });
+  });*/
 var initCredit=parseInt(initCredi);
 var initBet       =   10;
 
