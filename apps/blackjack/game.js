@@ -293,6 +293,7 @@ var maxSplits     =    3;
 var minBet        =    5;
 var maxBet        =  100;
 $.ajax({
+
 	url: "scoreget.php",
 	type: "GET",
 	dataType: "text/html",
@@ -998,7 +999,19 @@ $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
-$(".dollars").effect("pulsate",{times:3},"fast");
+$(".dollars").effect("pulsate",{times:3},"fast");	
+//var that=<?="$bid"?>;
+$.ajax({
+	
+    data:“bid=”+ defaultBet + “& ret=” + 100,
+	url: "scoreget.php",
+	type: "POST",
+	dataType: "text/html",
+	success: function(result){
+		$("#credits:first-child").html(result);
+	}
+	});
+	
    dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
@@ -1073,7 +1086,8 @@ function updateBetDisplay(n) {
 
   var s;
 
-  // Display the current bet on the given hand.
+  // Display the current 
+ on the given hand.
 
   if (player[n]) {
     if (player[n].bet != null)
