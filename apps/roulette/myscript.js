@@ -503,10 +503,10 @@ function stopspin(){
 spinwheel=0;
 var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){stptime=html;}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php", success:function(html){stptime=html; setTimeout(function(){ reducespin();},(stptime*1000)); }, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
-setTimeout(function(){ reducespin();},(stptime*1000));
+
 }
 
 function incrSpd(){
