@@ -1,20 +1,13 @@
 <?php
 $rpath = "../";
 include("../fb.php");
-echo "$user:::" . print_r($user) . ":::<br>";
 ?>
 <?php
-include("../../connect.php");
-
-echo "$user:::" . print_r($user) . ":::<br>";
-
+	include("../../connect.php");
 	/*$query="DELETE FROM mankatha_random";
 	mysql_query($query);*/
-echo "$user:::" . print_r($user) . ":::<br>";
 	$q="INSERT into game_info(endtime,returnpercent) VALUES(now(),'100')";
 	mysql_query($q);
-echo "$user:::" . print_r($user) . ":::<br>";
-	 
 ?>
 <html>
 <head>
