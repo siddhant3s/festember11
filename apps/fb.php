@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 require_once $rpath . "facebook/src/facebook.php";
 include_once $rpath . "../facebook_details.php";//should contain app_id and app_secrete
