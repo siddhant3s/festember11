@@ -1,9 +1,8 @@
 <?php
 $rpath = "../";
 include('../fb.php');
-var_dump($user);
 //$_SESSION['id']=session_id();
-$_SESSION['namee']=$user['id'];
+$_SESSION['namee']=$user['id'];var_dump($_SESSION);
 $_SESSION['player']=$user['name'];
 $_SESSION['balance']="1000";
 $json;

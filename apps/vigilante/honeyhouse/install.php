@@ -9,7 +9,7 @@ else{
 	if(!(mysql_query('DROP TABLE `'.$DB_NAME.'`.`vigilante_users`;',$c) && mysql_query('DROP TABLE `'.$DB_NAME.'`.`vigilante_maps`',$c)))
 		throw new Exception(mysql_error());
 }
-if(!mysql_query('CREATE TABLE  `'.$DB_NAME.'`.`vigilante_users` (`name` VARCHAR(100) NOT NULL,`level` INT(3) NOT NULL,PRIMARY KEY(`name`));',$c))
+if(!mysql_query('CREATE TABLE  `'.$DB_NAME.'`.`vigilante_users` (`name` VARCHAR(30) NOT NULL,`level` INT(3) NOT NULL,PRIMARY KEY(`name`));',$c))
 	throw new Exception(mysql_error());
 else
 	echo 'Table users created<br/>';
