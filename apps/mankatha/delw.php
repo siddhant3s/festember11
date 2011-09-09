@@ -27,7 +27,7 @@ function publish() {
   "link":"http://festember.in/11/apps/",
   picture:"http://www.casinoreviewbank.com/dictionary_images/Card_Game.jpg",
   caption:"Ulley Veliye....Ulley Veliye....Ulley Veliye....Ulley Veliye....",
-  description:""Come to the Festember Casino to gamble with virtual money and win goodies and prizes worth of INR 15,000/-",
+  description:"Come to the Festember Casino to gamble with virtual money and win goodies and prizes worth of INR 15,000/-",
   "method":"feed",
  });
 }
