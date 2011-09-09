@@ -28,6 +28,6 @@
 		$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5},0)";
 		$result=mysql_query($sql,$con);
 	}
-	$res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','returnpercent') VALUES ({$user["id"]},{$game_array['poker']},{time()},{time()},'0000-00-00 00:00:00',0,0)");
+	$res=mysql_query("INSERT INTO game_info (playerid,gameid,starttime,endtime,timediff,bidamount,returnpercent) VALUES ({$user["id"]},{$game_array['poker']},{time()},{time()},'0000-00-00 00:00:00',0,0)");
 	echo getCash();
 ?>
