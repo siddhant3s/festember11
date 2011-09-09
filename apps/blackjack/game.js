@@ -292,7 +292,7 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-$.ajax({
+/*$.ajax({
 
 	url: "scoreget.php",
 	type: "GET",
@@ -301,11 +301,11 @@ $.ajax({
 		$("#credits:first-child").html(result);
 	}
 	});
-	
+	*/
 var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
   });
-var initCredit=parseInt(initCredi);
+var initCredit=parse(initCredi);
 var initBet       =   10;
 
 var dealTimeDelay =  750;
