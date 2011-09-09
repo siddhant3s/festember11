@@ -305,7 +305,7 @@ var maxBet        =  100;
 /*var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
   });*/
-var initCredit=parseInt(initCredi);
+var initCredit=1000;
 var initBet       =   10;
 
 var dealTimeDelay =  750;
