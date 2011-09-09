@@ -27,6 +27,14 @@ include("../game.php");
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript'>
 console.log("<?php echo getCash(); echo $user["name"]; echo $user["id"];  ?>");
+function getMyCash() {
+return <?php echo getCash(); ?>
+}
+
+function getMyXP() {
+return <?php echo getXP(); ?>
+}
+
 function boastcash() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
