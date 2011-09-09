@@ -199,6 +199,7 @@ $.ajax("deck.php",function(data) {
 cardstack = data;
 cardarray = split.cardstack(",");
 //cardstack = data;
+console.log(cardarray);
 });
 //document.writeln(cardstack[0]);
 
