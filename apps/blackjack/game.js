@@ -987,6 +987,7 @@ if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
+	$.post("scoreget.php", { bid: defaultBet, ret: "200" } );  
 document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");
