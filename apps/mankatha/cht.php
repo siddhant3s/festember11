@@ -9,7 +9,7 @@ if(!isset($_POST['txtchar']))
 }
 else
 {
-	$money=0;
+       
 	$money=getCash();
 	if($_POST['txtchar']>$money)
 	{ 

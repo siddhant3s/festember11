@@ -4,10 +4,11 @@ include("../fb.php");
 ?>
 <?php
 	include("../../connect.php");
-	/*$query="DELETE FROM mankatha_random";
-	mysql_query($query);*/
-	$q="INSERT into game_info(endtime,returnpercent) VALUES(now(),'100')";
+	$query="DELETE FROM mankatha_random";
+	mysql_query($query);
+	$q="UPDATE into game_info(endtime,returnpercent) VALUES(now(),'100') WHERE (playerid=$user['id']);";
 	mysql_query($q);
+        unset($_SESSION['cht']);
 ?>
 <html>
 <head>
@@ -32,7 +33,6 @@ function publish() {
  });
 }
 </script>
-<?php unset($_SESSION['cht']); ?>
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You won this round.

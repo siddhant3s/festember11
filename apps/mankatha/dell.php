@@ -1,10 +1,12 @@
 <?php
+$rpath="../";
+include("../fb.php");
+?>
+<?php
 	include("../../connect.php");
 	    	$query="DELETE FROM mankatha_random";
 	mysql_query($query);
-$date=date_create();
-	    $d=date_format($date,'Y-m-d H:i:s');
-$q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','0')";
+$q=" UPDATE game_info set endtime=now(), returnpercent='0' WHERE( playerid=$user['id']);"; 
 	    mysql_query($q);
 unset($_SESSION['cht']);
 ?>
