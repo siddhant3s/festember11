@@ -1,6 +1,3 @@
-
-
-
 (window.onload=function(){
 var spinwheel=1;
 var wheelspeed=5.0;
@@ -250,18 +247,18 @@ function showProfit(){
 var winbox=canvas.display.rectangle({
 x:canvas.width/2,
 y:canvas.height/2,
+origin:{x:"center", y:"center"},
 width:300,
 height:100,
 fill: "f00",
 opacity:0.9
 });
 var wintext=canvas.display.text({
-x:winbox.width/2+50,
-y:winbox.height/2,
+x:0,
+y:0,
 origin:{x:"center", y:"center"},
 font: "bold sans-serif",
 size: 50,
-align:"left",
 fill: "#0aa",
 opacity:1.0
 });
@@ -273,10 +270,10 @@ opacity:1.0
 	canvas.addChild(winbox);
 	setTimeout(function(){
 		wintext.animate(
-		{size:15,x:65,y:25,opacity:0.3},"normal","ease-in-out");
+		{size:15,opacity:0.3},"normal","ease-in-out");
 		winbox.animate({
-			x:balancebox.x,
-			y:balancebox.y,
+			x:balancebox.x+50,
+			y:balancebox.y+32,
 			width:balancebox.width,
 			height:balancebox.height,
 			opacity:0.0},"normal","ease-in-out",

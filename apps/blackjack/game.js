@@ -292,7 +292,7 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-var initCredit    = 1000;
+var initCredit    =  $.get("scoreget.php");
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -676,10 +676,12 @@ function offerInsurance() {
       credits += player[0].bet;
       alert("Dealer has Blackjack, you win " + formatDollar(player[0].bet));
     startRound();
+	 document.getElementById("fbshare").disabled=true;
     }
     else
       alert("Dealer does not have Blackjack, you lose " + formatDollar(amount));
 startRound();
+ document.getElementById("fbshare").disabled=true;
 
 
     // Update credits.
@@ -937,11 +939,13 @@ function endRound() {
       player[i].bet /= 2;
       credits += player[i].bet;
 	  document.getElementById("deal").disabled=false;
+	  poppy(0);
     }
     else if ((player[i].blackjack && !dealer.blackjack) ||
              (p <= 21 && d > 21) || (p <= 21 && p > d)) {
 
       player[i].resultTextNode.nodeValue = "Player Wins";
+	 
 
 poppy(1);
      
@@ -979,7 +983,9 @@ function poppy(h)
 if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
-alert(" you have won..! your credits are $" +credits+"  . click on deal to start ");
+$("#happy").show(1000);
+document.getElementById("winscore").innerHTML=credits;
+$("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");
    dealer.reset();
 for (i = 0; i < player.length; i++) {
@@ -990,13 +996,19 @@ for (i = 0; i < player.length; i++) {
      $("#deal").animate({width:"9em",opacity:0.5},"fast");
   document.getElementById("deal").disabled   = false;
   document.forms["controls"].elements["hit"].disabled   = false;
+   document.getElementById("fbshare").disabled=false;
+	  $("#fbshare").effect("pulsate",{times:2},300);
 }
 
 if(h==0)
 {
 $(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
-alert(" toooo bad..! you lose . your credits are $" +credits+"  .click on deal to start");
+
+$("#sad").show(1000);
+document.getElementById("losescore").innerHTML=credits;
+$("#deal").effect("pulsate",{times:3},"fast");
+
 $(".dollars").effect("pulsate",{times:3},"fast");
  dealer.reset();
 for (i = 0; i < player.length; i++) {
@@ -1007,6 +1019,8 @@ for (i = 0; i < player.length; i++) {
      $("#deal").animate({width:"9em",opacity:0.5},"fast");
 document.getElementById("deal").disabled   = false;
 document.forms["controls"].elements["hit"].disabled   = false;
+ document.getElementById("fbshare").disabled=true;
+	  
 }
 
 

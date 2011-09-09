@@ -1,6 +1,9 @@
-<?php include("header.php");?>
-<?php include("getuser.php");?>
-<?php
+<?php 
+ include("header.php");
+ include("getuser.php");
+ include("../game.php"); 
+ include("../gamearray.php");
+
 	$cards = range(0, 51);
 	shuffle($cards);
 	$u1=$cards[0];
@@ -25,8 +28,5 @@
 		$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5},0)";
 		$result=mysql_query($sql,$con);
 	}
-	$sql="SELECT money FROM user WHERE userid={$usid}";
-	$result=mysql_query($sql,$con);
-	$row=mysql_fetch_array($result);
-	echo $row['money'];
+	echo getCash();
 ?>

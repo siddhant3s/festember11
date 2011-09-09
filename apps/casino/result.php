@@ -1,8 +1,10 @@
-<?php include("header.php");?>
+<?php include("../../connect.php");?>
 <?php include("getuser.php");?>
+<?php include("../game.php");?>
+<?php include("../gamearray.php");?>
 <?php	
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
-	$result2=mysql_query($sql,$con);
+	$result2=mysql_query($sql);
 	$row=mysql_fetch_array($result2);
 	$u1=$row['u1'];
 	$u2=$row['u2'];
@@ -519,16 +521,21 @@ else if($win!=0&&$multiply==1){
 	$won=0;
 }
 $sql="SELECT * FROM windata WHERE userid={$usid}";
-$result3=mysql_query($sql,$con);
+$result3=mysql_query($sql);
 if(!mysql_num_rows($result3)){
 	$sql="INSERT INTO windata VALUES({$usid},{$won})";
-	$result3=mysql_query($sql,$con);
+	$result3=mysql_query($sql);
 }
 else{	
 		$row=mysql_fetch_array($result3);
 		$won+=$row['win'];
 		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
-		$result3=mysql_query($sql,$con);
+		$result3=mysql_query($sql);
 }
+$percent=$multiply*100;
+if($percent==-100){
+	$percent=0;
+}
+$res=mysql_query("UPDATE game_info SET bidamount={$money},endtime=now(),returnpercent={$percent} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'" );
 echo $money*$multiply;
 ?>

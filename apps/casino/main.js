@@ -39,7 +39,12 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			i=parseInt(i);
 			if(money>=parseInt(curMoney+i)){
 				curMoney+=i;
+				if(curMoney*3<=money){
 				document.getElementById("money").value=curMoney;
+				}
+				else{
+					alert1("You wont have enough cash to call");
+				}
 			}	
 			else{
 				alert1("no balance left");
@@ -77,8 +82,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			curMoney=0;
 			document.getElementById("money").value=curMoney;
 			document.getElementById("bmoney").value=betMoney;
-			
-			$.ajax({type: "POST",url: "getdata.php",success: function(html){
+			var data2="id=1";
+			$.ajax({type: "POST",data:data2,url: "getdata.php",success: function(html){
 					$("#loading").hide();
 					var string=html.split('-');
 					money=parseInt(string[0]);
@@ -287,8 +292,8 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						betMoney*=3;
 						document.getElementById("bmoney").value=betMoney;
 						
-						
-						$.ajax({url: "getdata1.php",success: function(html){
+						var data1="id=2";
+						$.ajax({url: "getdata.php",data:data1,success: function(html){
 								$("#loading").hide();
 								var string=html.split('-');
 								money=parseInt(string[0]);

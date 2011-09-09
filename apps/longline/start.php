@@ -2,6 +2,18 @@
 $rpath = "../";
 include("../fb.php");
 ?>
+<?php
+include("../../connect.php");
+include("../game.php");
+$bid=500;
+$iid=$user["id"];
+$percent=100;
+
+$query="INSERT INTO game_info (playerid,gameid,starttime,bidamount,returnpercent) VALUES ('$iid','6',now(),'$bid','$percent')";
+	  $result = mysql_query($query)
+    or die('Error querying database.');
+
+?>
 
 <HTML>
 <HEAD>
@@ -43,7 +55,11 @@ function StartTheTimer()
     if (secs==0)
     {
         StopTheClock()
-		
+		$.ajax({ 
+   type: "POST", 
+   url: "score.php", 
+   data:"time="+secs, 
+ });
         alert ("You lost the game");
 		if(confirm("Do you want to play again"))
 		{
@@ -177,16 +193,11 @@ if (MoveCount==MaxMove) return;
     MaxMoveCount=MoveCount;
   if (MoveCount==MaxMove) 
   {  
-  name="";
-  while(name=="")
-  {
-    var name=prompt(" You won the game \nEnter your name");
-  }
-  
+   
   $.ajax({ 
    type: "POST", 
    url: "score.php", 
-   data: "name="+name+"&time="+secs, 
+   data:"time="+secs, 
  });
  
 	if(confirm ("Do you want this victory to be posted on your wall"))

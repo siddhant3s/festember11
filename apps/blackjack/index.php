@@ -1,4 +1,5 @@
 <?php
+$rpath = "../";
 include("../fb.php");
 include("../game.php");
 
@@ -118,7 +119,7 @@ self.location="blackjack.php";
 <img src="blackjack.jpg" width="600px" id="lk"/>
  
 <br><input type="button" class="button" value="play blackjack" onclick="doit()"></button>
-<input type="button" class="button" value="fb share" onclick="sharewin()"></button>
+<!--<input type="button" class="button" value="fb share" onclick="sharewin()"></button>-->
 </div>
 <div align="right" id="si" class="si">
 <h2 id="illu" class="si"><font face="monotype corsiva" id="powered">Powered by festember for u..!</font></h2>

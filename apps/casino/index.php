@@ -2,16 +2,6 @@
 	include("header.php");
 	$rpath = "../";
 	include("../fb.php");
-	
-         $date=date("Y-m-d H:i:s");
-	include("../gamearray.php");	
-	$_SESSION['user']=$user["id"];
-	$res = mysql_query("SELECT * FROM user WHERE userid ={$user["id"]}",$con);
-	if(mysql_num_rows($res)==0) {
-	mysql_query("INSERT INTO user VALUES ({$user["id"]},1000)",$con);
-	}
-        $res=mysql_query("INSERT INTO game_info ('playerid','gameid','starttime','endtime','timediff','bidamount','winvar') VALUES ({$user["id"]},{$game_array['poker']},{time()},{$date},{$date},1000,0)");
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -35,7 +25,7 @@
 		//The following is used to share a link on the player's wall.
 		FB.ui({
 		  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
-		  "link":"http://google.com",
+		  "link":"../",
 		  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
 		  caption:"Click on the link above to help him out by giving him a free spin",
 		  description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
@@ -77,6 +67,5 @@
 		</div>		
 		
 		</div>		
-		<input type="button" value="Click on this button to share" onclick="publish();">
 	</body>
 </html>
