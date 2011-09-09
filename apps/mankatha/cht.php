@@ -27,6 +27,7 @@ $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid` )
 												  	   
 
 													  	  														    	      mysql_query($q);
+																													      mysql_close($q);
 															      	    header('Location:test1.php');
 																    	    exit;
 																	    	  }
