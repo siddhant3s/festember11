@@ -197,7 +197,8 @@ function Stack() {
 $.ajax({
 url:"deck.php",
 dataType:"text", 
-function(data) {
+success: function(data)
+{
 cardstack = data;
 cardarray = split.cardstack(",");
 //cardstack = data;
