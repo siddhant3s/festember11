@@ -20,6 +20,7 @@ $date=date_create();
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 </head>
 <body>
+<?php print_r($user); ?>
 <div id="fb-root"></div>
     <script>
     var appId = <?php echo $facebook->getAppId(); ?>;
