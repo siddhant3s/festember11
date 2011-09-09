@@ -16,10 +16,7 @@ var betMouseY=0;
 var presentBetNum=0;
 var chipSel=1;
 var balanceCash=-1;
-
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",type:"GET", success:function(html){alert(html);}, async:false, dataType:"html"
-}); 
-
+balanceCash=getMyCash();
 var bettingCash=0;
 var interCash=balanceCash;
 var win=0;
