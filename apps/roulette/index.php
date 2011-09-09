@@ -27,6 +27,7 @@ include("../game.php");
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript'>
 console.log("<?php echo getCash(); echo $user["name"]; echo $user["id"];  ?>");
+
 function getMyCash() {
 return <?php echo getCash(); ?>
 }
@@ -37,11 +38,11 @@ return <?php echo getXP(); ?>
 
 function boastcash() {
       obj = {
-          name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
+          name:"<?php echo $user["name"]; ?> has been playing Roulette in Festember Casino!!! And he possesses $<?php echo getCash(); ?>!!!",
           link:"http://www.festember.in/11/games/",
           picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
-          description:"Play the game now to get goodies and stuff..!",
+          description:"Play the Game, Try your Luck and Hit the Jackpot!!!",
        }
        pub(obj);  
 }
