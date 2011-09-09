@@ -1001,7 +1001,7 @@ document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");	
 
-
+/*
 $.ajax({
 	
     data:“bid=”+ defaultBet + “& ret=” + sendret,
@@ -1012,7 +1012,7 @@ $.ajax({
 		alert(result);
 	}
 	});
-	
+	*/
    dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
