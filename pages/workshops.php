@@ -34,7 +34,7 @@ Dance - Solo
 </p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
 <p>
-It is being organized by Raam’s Hips N toez, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop.
+It is being organized by 5th Element, a Chennai based Dance Company, put up in the heart of Velachery, which specializes in various flavors of dance ranging from jazz to contemporary to B-Boying to hip hop.
 </p>
 </div>
 
