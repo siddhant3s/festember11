@@ -292,20 +292,10 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-/*$.ajax({
-
-	url: "scoreget.php",
-	type: "GET",
-	dataType: "text/html",
-	success: function(result){
-		$("#credits:first-child").html(result);
-	}
-	});
-	*/
-/*var initCredi  =   $.get("scoreget.php", function(result){
+var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
-  });*/
-var initCredit=1000;
+  });
+var initCredit=parseInt(initCredi);
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -992,27 +982,14 @@ startRound();
 }
 function poppy(h)
 {
-var sendret=100;
+
 if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
-$(".dollars").effect("pulsate",{times:3},"fast");	
-
-/*
-$.ajax({
-	
-    data:“bid=”+ defaultBet + “& ret=” + sendret,
-	url: "scoreget.php",
-	type: "POST",
-	dataType: "text/html",
-	success: function(result){
-		alert(result);
-	}
-	});
-	*/
+$(".dollars").effect("pulsate",{times:3},"fast");
    dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
@@ -1087,8 +1064,7 @@ function updateBetDisplay(n) {
 
   var s;
 
-  // Display the current 
- on the given hand.
+  // Display the current bet on the given hand.
 
   if (player[n]) {
     if (player[n].bet != null)
