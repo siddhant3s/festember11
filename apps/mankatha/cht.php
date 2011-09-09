@@ -1,5 +1,7 @@
 <?php
 
+$rpath = "../";
+  include("../game.php");
 	    $q="INSERT into game_info (starttime,bidamount) VALUES(now(),{$_SESSION['cht']}) where playerid='" . $user["id"] . "'";
 	    echo $q;
 die;
@@ -9,8 +11,6 @@ if(!isset($_POST['txtchar']))
 	header('Location:start.php');
 	exit;
 }
-$rpath = "../";
-  include("../game.php");
 include("../../connect.php");
 
 if(isset($_POST['txtchar']))
