@@ -3,6 +3,7 @@
 <?php
 	
 	include("../game.php");
+	error_log($_GET['id']);
 	$id=parseInt($_GET['id']);
 	if($id==1){
 		$string=getCash()."-";
