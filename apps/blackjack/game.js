@@ -1,11 +1,11 @@
 
 
 
-
-
-(window.onload=function(){
 var cardstack;
 var cardarray = new Array();
+
+(window.onload=function(){
+
 //document.getElementById("deal").addEventListener("click",startRound,false);
 
 
