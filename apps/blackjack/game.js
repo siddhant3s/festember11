@@ -292,11 +292,10 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-/*var initCredi  =   $.get("scoreget.php", function(result){
-    $("#credits:first-child").html(result);
+var initCredi  =   $.get("scoreget.php", function(result){
+    $("#credits:first-child").html(+result);
   });
 var initCredit=parseInt(initCredi);
-*/
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -310,9 +309,8 @@ var dealer;
 var player = new Array(maxSplits + 1);
 var curPlayerHand, numPlayerHands;
 
-//var credits
-var defaultBet;
-var defaultTextNode;
+var credits, defaultBet;
+var creditsTextNode, defaultTextNode;
 
 var dealRoundCounter;
 
@@ -326,7 +324,7 @@ function initGame() {
 
   // Locate credits and default bet text nodes on the page.
 
- 
+  creditsTextNode = document.getElementById("credits").firstChild;
   defaultTextNode = document.getElementById("default").firstChild;
 
   // Initialize player's credits and bet amount.
@@ -986,7 +984,9 @@ function poppy(h)
 {
 
 if(h==1)
-{$(".result").effect("pulsate",{times:3},"fast");
+{
+	$.post("scoreget.php", { bid: defaultBet, ret: "200" } );
+	$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
@@ -1003,11 +1003,11 @@ for (i = 0; i < player.length; i++) {
   document.forms["controls"].elements["hit"].disabled   = false;
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
-	//  $.post("scoreget.php", { bid: defaultBet, ret: "200" } );
 }
 
 if(h==0)
 {
+	$.post("scoreget.php", { bid: defaultBet, ret: "0" } );  
 $(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 
@@ -1026,7 +1026,7 @@ for (i = 0; i < player.length; i++) {
 document.getElementById("deal").disabled   = false;
 document.forms["controls"].elements["hit"].disabled   = false;
  document.getElementById("fbshare").disabled=true;
-	//$.post("scoreget.php", { bid: defaultBet, ret: "0" } );  
+	  
 }
 
 
