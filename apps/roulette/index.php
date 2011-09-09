@@ -3,8 +3,9 @@ $rpath = "../";
 include("../fb.php");
 include("../game.php");
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Festember11 - Roulette</title>
 
 <link rel="stylesheet" type="text/css" href="main.css" />
@@ -22,7 +23,24 @@ include("../game.php");
 <script language='javascript' src="ocanvas.js" ></script>
 
 <script src="../gameapi.js" type="text/javascript"></script>
+<script language='javascript'>
 
+function sharewin() {
+      obj = {
+          name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
+          link:"http://www.festember.in/11/games/",
+          picture:"roulette_share.jpg",
+          caption:"Casino Games at FESTEMBER 11",
+          description:"Play the game now to get goodies and stuff..!",
+       }
+       pub(obj);  
+}
+
+function pub(o) {
+       o.method = "feed";
+        FB.ui(o);
+      }
+</script>
 <script language='javascript' src="myscript.js" ></script>
 </body>
 
