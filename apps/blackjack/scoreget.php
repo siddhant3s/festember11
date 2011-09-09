@@ -1,13 +1,13 @@
 <?php
 
 $rpath="../";
-include("../fb.php");
+include("../game.php");
 include("../../connect.php");
-
-$sql="SELECT playerid.game_info,gameid.player_info,money.user FROM game_info,user WHERE playerid = '".$user[id]."'";
+$score=getCash();
+$sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
 
 $result = mysql_query($sql);
-
+echo "user id is : ". $user['id'];
 echo "<table border='1'>
 <tr>
 <th>playerid</th>
@@ -20,7 +20,7 @@ while($row = mysql_fetch_array($result))
   echo "<tr>";
   echo "<td>" . $row['playerid'] . "</td>";
   echo "<td>" . $row['gameid'] . "</td>";
-  echo "<td>" . $row['money'] . "</td>";
+  echo "<td>" . $score . "</td>";
   echo "</tr>";
   }
 echo "</table>";
