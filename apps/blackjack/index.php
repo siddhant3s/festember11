@@ -101,6 +101,7 @@ function pub(o) {
 
 </head>
 <body> 
+hi
 <script type="text/javascript">
 
 function doit()
