@@ -1,13 +1,7 @@
 <?php
 include("../../connect.php");
 
-if(!isset($_SESSION['cht']))
-{
-	header('Location:start.php');
-	exit;
-}
-else
-{
+
 $k=0;
 $j=0;
 $numbers=range(1,52);
@@ -85,6 +79,5 @@ else
 		VALUES('{$a}')";
 	mysql_query($query);
 	 echo json_encode($c);
-}
  ?>
  
