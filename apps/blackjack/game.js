@@ -521,6 +521,7 @@ function getNextCard() {
 }
 
 function startRound() {
+console.log(startRound);
 /*var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
