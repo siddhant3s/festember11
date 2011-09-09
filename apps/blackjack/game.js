@@ -511,7 +511,7 @@ function getNextCard() {
   if (deck.cardCount() == 0) {
     alert("New Deck");
     newDeck();
-    console.log("Made New Deck);
+    console.log("Made New Deck");
   }
 console.log("Got Next card");
   return deck.deal();
