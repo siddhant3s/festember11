@@ -532,15 +532,15 @@ function getNextCard() {
   if (deck.cardCount() == 0) {
     alert("New Deck");
     newDeck();
-    console.log("Made New Deck");
+    //console.log("Made New Deck");
   }
-console.log("Got Next card");
+//console.log("Got Next card");
 
   return deck.deal();
 }
 
 function startRound() {
-console.log("Reached: startRound");
+//console.log("Reached: startRound");
 /*var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -604,7 +604,7 @@ function dealRound()
 {
 
   // Deal a card to the player or the dealer based on the counter.
-console.log("Reached: dealRound");
+//console.log("Reached: dealRound");
   switch(dealRoundCounter)
   {
     case 1:
