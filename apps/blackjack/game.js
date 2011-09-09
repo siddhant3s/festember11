@@ -992,7 +992,7 @@ startRound();
 }
 function poppy(h)
 {
-
+var sendret=100;
 if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
@@ -1001,9 +1001,10 @@ document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");	
 //var that=<?="$bid"?>;
+
 $.ajax({
 	
-    data:“bid=”+ defaultBet + “& ret=” + 100,
+    data:“bid=”+ defaultBet + “& ret=” + sendret,
 	url: "scoreget.php",
 	type: "POST",
 	dataType: "text/html",
