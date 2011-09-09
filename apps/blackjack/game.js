@@ -292,8 +292,10 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-var initCredi  =   $.get("scoreget.php", function(result){
+var initCredi;
+ $.ajax(url:"scoreget.php", success:function(result){
     $("#credits:first-child").html(result);
+		initCredi=html;
   });
 var initCredit=parseInt(initCredi);
 var initBet       =   10;
@@ -1002,16 +1004,16 @@ for (i = 0; i < player.length; i++) {
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
 	
-
+var data2="bid="+defaultBet+"&ret=100";
 $.ajax({  
   type: "POST",  
-  dataType:"json",
   url: "scoreput.php",  
-  data:{bid:defaultBet,ret:100},
-  success: function() { 
-alert("hi");  
+  data:date2,
+  success: function(result2) { 
+     alert(result2);
 }
 });
+
 
 if(h==0)
 {
