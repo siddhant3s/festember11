@@ -24,7 +24,7 @@
 
 		//The following is used to share a link on the player's wall.
 		FB.ui({
-		  "name":"<?php echo $user["name"]; ?> has just won "+value+" in a game poker",
+		  "name":"<?php echo $user["name"]; ?> has just won $"+value+" in a game poker",
 		  "link":"http://festember.in/11/",
 		  picture:"http://www.donkeypoker.me/wp-content/uploads/2009/10/poker.jpg",
 		  caption:"Click on the link to play",

@@ -43,6 +43,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				document.getElementById("money").value=curMoney;
 				}
 				else{
+					curMoney-=i;
 					alert1("You wont have enough cash to call");
 				}
 			}	
