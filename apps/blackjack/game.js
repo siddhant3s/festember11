@@ -245,7 +245,10 @@ function stackShuffle(n) {
   var temp;
 
   // Shuffle the stack 'n' times.
-
+/*var that = this;
+$.ajax("deck.php",function(data) {
+that.
+});*/
   for (i = 0; i < n; i++)
     for (j = 0; j < this.cards.length; j++) {
       k = Math.floor(Math.random() * this.cards.length);
@@ -253,6 +256,7 @@ function stackShuffle(n) {
       this.cards[j] = this.cards[k];
       this.cards[k] = temp;
     }
+    console.log(this.cards);
 }
 
 //-----------------------------------------------------------------------------
@@ -496,7 +500,7 @@ function newDeck() {
 
   // Create a deck.
 
-  deck.makeDeck(numPacks);
+  //deck.makeDeck(numPacks);
   deck.shuffle(numShuffles);
 
   // Set the burn card.
