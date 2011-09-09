@@ -988,15 +988,15 @@ if(h==1)
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 	$.post("scoreput.php", { bid: defaultBet, ret: "200" } );  
-document.getElementById("winscore").innerHTML=credits;
-$("#deal").effect("pulsate",{times:3},"fast");
-$(".dollars").effect("pulsate",{times:3},"fast");
-   dealer.reset();
+ dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
     if (i > 0)
       player[i].fieldNode.style.display = "none";
   }
+$("#deal").effect("pulsate",{times:3},"fast");
+$(".dollars").effect("pulsate",{times:3},"fast");
+  
      $("#deal").animate({width:"9em",opacity:0.5},"fast");
   document.getElementById("deal").disabled   = false;
   document.forms["controls"].elements["hit"].disabled   = false;
@@ -1011,16 +1011,16 @@ $("#deal").effect("pulsate",{times:3},"fast");
 
 $("#sad").show(1000);
 $.post("scoreput.php", { bid: defaultBet, ret: "0" } ); 
-document.getElementById("losescore").innerHTML=credits;
-$("#deal").effect("pulsate",{times:3},"fast");
-
-$(".dollars").effect("pulsate",{times:3},"fast");
- dealer.reset();
+dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
     if (i > 0)
       player[i].fieldNode.style.display = "none";
   }
+$("#deal").effect("pulsate",{times:3},"fast");
+
+$(".dollars").effect("pulsate",{times:3},"fast");
+ 
      $("#deal").animate({width:"9em",opacity:0.5},"fast");
 document.getElementById("deal").disabled   = false;
 document.forms["controls"].elements["hit"].disabled   = false;
@@ -1081,7 +1081,18 @@ function updateBetDisplay(n) {
   creditsTextNode.nodeValue = "get lucky!";
 }
 
+function formatDollar(n) {
 
+  var a, b;
+
+  // Format the given number as a dollar amount for display.
+
+  a = Math.abs(n);
+  b = 100 * (a - Math.floor(a));
+  if (b < 10)
+    b = "0" + b;
+  return (n < 0 ? "-" : "" ) + "$" + Math.floor(a) + "." + b;
+}
 
 function changeBet(n) {
 
