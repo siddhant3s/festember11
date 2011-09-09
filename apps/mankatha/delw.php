@@ -8,7 +8,7 @@ include("../fb.php");
 	mysql_query($query);
 $q="UPDATE game_info                                                            
 SET endtime='now()',                                                              
- returnpercent='0',                                                             
+ returnpercent='100',                                                             
  WHERE playerid='" . $user['id']."'";
 
 	mysql_query($q);
