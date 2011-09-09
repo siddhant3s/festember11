@@ -274,6 +274,7 @@ that.
 
 function stackDeal() {
 console.log("reached stackdeal");
+alert(cardarray);
 
 
   if (this.cards.length > 0)
