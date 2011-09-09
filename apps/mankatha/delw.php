@@ -6,9 +6,9 @@ include("../fb.php");
 	include("../../connect.php");
 	$query="DELETE FROM mankatha_random";
 	mysql_query($query);
-	$q="INSERT into game_info(endtime,returnpercent) VALUES(now(),'100')";
+	$q="UPDATE into game_info(endtime,returnpercent) VALUES(now(),'100') WHERE (playerid=$user['id']);";
 	mysql_query($q);
-unset($_SESSION['cht']);
+        unset($_SESSION['cht']);
 ?>
 <html>
 <head>
