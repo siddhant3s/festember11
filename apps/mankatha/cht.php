@@ -2,7 +2,7 @@
 
 $rpath = "../";
   include("../game.php");
-	    $q="INSERT into game_info (starttime,bidamount) VALUES(now(),{$_SESSION['cht']}) where playerid='" . $user["id"] . "'";
+	    $q="INSERT into game_info (`playerid`,`gameid`, `starttime`,`bidamount`) VALUES(" . $user["id"] . ",'4' , now(),{$_SESSION['cht']})";
 	    echo $q;
 die;
 

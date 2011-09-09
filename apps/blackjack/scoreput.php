@@ -8,8 +8,8 @@ include("../game.php");
 
 
 //$sql="SELECT * FROM game_info WHERE playerid = '".$user[id]."'";
-$sql="SELECT playerid,gameid FROM game_info WHERE playerid = '".$user['id']."'";
-$result = mysql_query($sql);
+$sql="SELECT * FROM game_info WHERE playerid = '".$user['id']."'";
+$result = mysql_num_rows($sql);
 if(!$result)
 {
 $sql="INSERT INTO game_info 
@@ -19,7 +19,7 @@ $result = mysql_query($sql);
 }
 else
 {
-$sql="UPDATE game_info SET returnpercent ='".$_POST["ret"]."', endtime = now() WHERE playerid = '".$user[id]."'AND gameid = '2'  ";
+$sql="UPDATE game_info SET returnpercent ='".$_POST["ret"]."', endtime = now(),bidamount='".$_POST["bid"]."' WHERE playerid = '".$user[id]."'AND gameid = '2'  ";
 
 
 $result = mysql_query($sql);
