@@ -293,9 +293,9 @@ var maxSplits     =    3;
 var minBet        =    5;
 var maxBet        =  100;
 var initCredi  =   $.get("scoreget.php", function(result){
-    $("#credits:first-child").html(+result);
+    $("#credits:first-child").html(result);
   });
-var initCredit=parseInt(initCredi);
+  var initCredit=parseInt(initCredi);
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -984,9 +984,7 @@ function poppy(h)
 {
 
 if(h==1)
-{
-	$.post("scoreget.php", { bid: defaultBet, ret: "200" } );
-	$(".result").effect("pulsate",{times:3},"fast");
+{$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
@@ -1007,7 +1005,6 @@ for (i = 0; i < player.length; i++) {
 
 if(h==0)
 {
-	$.post("scoreget.php", { bid: defaultBet, ret: "0" } );  
 $(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 
