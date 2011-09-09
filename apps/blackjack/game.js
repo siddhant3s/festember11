@@ -514,6 +514,7 @@ function getNextCard() {
     console.log("Made New Deck");
   }
 console.log("Got Next card");
+alert(deck.deal(););
   return deck.deal();
 }
 
