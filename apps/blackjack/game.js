@@ -192,11 +192,12 @@ function cardCreateNode() {
 function Stack() {
 
   // Create an empty array of cards.
-var cardstack;
+//var cardstack;
 $.ajax("deck.php",function(data) {
-cardstack = data;
+//rdstack = data;
+console.log(data);
 });
-document.writeln(cardstack[0]);
+//document.writeln(cardstack[0]);
 
   this.cards = new Array();
 
