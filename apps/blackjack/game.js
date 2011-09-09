@@ -1000,7 +1000,7 @@ $("#happy").show(1000);
 document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");	
-//var that=<?="$bid"?>;
+
 
 $.ajax({
 	
@@ -1009,7 +1009,7 @@ $.ajax({
 	type: "POST",
 	dataType: "text/html",
 	success: function(result){
-		$("#credits:first-child").html(result);
+		alert(result);
 	}
 	});
 	
