@@ -7,7 +7,7 @@ include("../fb.php");
 	$query="DELETE FROM mankatha_random";
 	mysql_query($query);
 $q="UPDATE game_info                                                            
-SET endtime=now(),                                                              
+SET endtime='now()',                                                              
  returnpercent='0',                                                             
  WHERE playerid='" . $user['id']."'";
 
