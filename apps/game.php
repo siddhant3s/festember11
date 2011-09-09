@@ -1,4 +1,6 @@
 <?php
+
+error_log("###### current file - " . $_SERVER['SCRIPT_FILENAME']);
 include($rpath . "../connect.php");
 include($rpath . "fb.php");
 

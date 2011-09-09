@@ -1,13 +1,7 @@
 <?php
 include("../../connect.php");
 
-if(!isset($_SESSION['cht']))
-{
-	header('Location:start.php');
-	exit;
-}
-else
-{
+
 $k=0;
 $j=0;
 $numbers=range(1,52);
@@ -83,9 +77,7 @@ else
 	$a=implode(",",$c);
 	$query="INSERT INTO mankatha_random(rand)
 		VALUES('{$a}')";
-	mysql_query($query,$connection);
-    mysql_close($connection);
+	mysql_query($query);
 	 echo json_encode($c);
-}
  ?>
  
