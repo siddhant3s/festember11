@@ -260,6 +260,7 @@ that.
 //-----------------------------------------------------------------------------
 
 function stackDeal() {
+console.log("reached stackdeal");
 
   if (this.cards.length > 0)
     return this.cards.shift();
@@ -514,7 +515,7 @@ function getNextCard() {
     console.log("Made New Deck");
   }
 console.log("Got Next card");
-alert(deck.deal(););
+
   return deck.deal();
 }
 
