@@ -293,7 +293,7 @@ var maxSplits     =    3;
 var minBet        =    5;
 var maxBet        =  100;
 var initCredi  =   $.get("scoreget.php", function(result){
-    $("#credits:first-child").html(result);
+    $("#credits:first-child").html("<div>"+result+"</div>");
   });
 var initCredit=parseInt(initCredi);
 var initBet       =   10;
