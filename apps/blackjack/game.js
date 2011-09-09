@@ -279,7 +279,7 @@ that.
 
 function stackDeal() {
 //console.log("reached stackdeal");
-alert(cardarray);
+//alert(cardarray);
 
 
   if (this.cards.length > 0)
