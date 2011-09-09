@@ -83,8 +83,7 @@ else
 	$a=implode(",",$c);
 	$query="INSERT INTO mankatha_random(rand)
 		VALUES('{$a}')";
-	mysql_query($query,$connection);
-    mysql_close($connection);
+	mysql_query($query);
 	 echo json_encode($c);
 }
  ?>
