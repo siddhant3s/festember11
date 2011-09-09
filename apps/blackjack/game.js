@@ -7,7 +7,7 @@
 
 
 
-startCardCount;
+
 
 
 //document.getElementById("deal").addEventListener("click",startRound,false);
@@ -292,9 +292,10 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
-var initCredi;
-
-var initCredit;
+var initCredi  =   $.get("scoreget.php", function(result){
+    $("#credits:first-child").html(result);
+  });
+var initCredit=parseInt(initCredi);
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -534,11 +535,6 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","deck.php",true);
 xmlhttp.send();*/
- $.ajax(url:"scoreget.php", success:function(result){
-    $("#credits:first-child").html(result);
-		initCredi=html;
-		initCredit=parseInt(initCredi);
-  });
   var i;
 
   // Reset all hands.
@@ -1006,17 +1002,18 @@ for (i = 0; i < player.length; i++) {
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
 	
-var data2="bid="+defaultBet+"&ret=100";
+/*
 $.ajax({  
   type: "POST",  
+  dataType:"json",
   url: "scoreput.php",  
-  data:date2,
-  success: function(result2) { 
-     alert(result2);
+  data:{bid:defaultBet,ret:100},
+  success: function() { 
+alert("hi");  
 }
 });
 
-
+*/
 if(h==0)
 {
 $(".result").effect("pulsate",{times:3},"fast");
