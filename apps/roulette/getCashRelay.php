@@ -1,7 +1,7 @@
 <?php
 
 include("../game.php");
-getCash();
+echo getCash();
 
 
 ?>
