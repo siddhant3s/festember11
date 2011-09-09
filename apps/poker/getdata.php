@@ -3,6 +3,7 @@
 <?php
 	
 	include("../game.php");
+	$id=parseInt($_GET['id']);
 	if(parseInt($_GET['id'])==1){
 		$string=getCash()."-";
 		$sql="SELECT * FROM gamedata WHERE userid={$usid}";
