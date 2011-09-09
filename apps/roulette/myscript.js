@@ -15,7 +15,7 @@ var betMouseX=0;
 var betMouseY=0;
 var presentBetNum=0;
 var chipSel=1;
-var balanceCash=250;
+var balanceCash=getCash();
 var bettingCash=0;
 var interCash=balanceCash;
 var win=0;
@@ -673,7 +673,7 @@ chip10.bind("click tap",function(){ chipSel=10; selectChip();});
 chip100.bind("click tap",function(){ chipSel=100; selectChip();});
 layout.bind("click tap",function(){ if(ballDropped==0)setTimeout(function(){guessBetPos();},5) });
 clearbtn.bind("click tap", function() { if(ballDropped==0)resetTurn(1);  });
-fbBtn.bind("click tap", function() { sharewin(); });
+fbBtn.bind("click tap", function() { boastcash(); });
 
 
 ball.bind("mouseenter",function(){  
