@@ -38,7 +38,7 @@ return <?php echo getXP(); ?>
 
 function boastcash() {
       obj = {
-          name:"<?php echo $user["name"]; ?> has been playing Roulette in Festember Casino!!! And he possesses $<?php echo getCash(); ?>!!!",
+          name:"<?php echo $user["name"]; ?> has been playing Roulette in Festember Casino!!! And he has $<?php echo getCash(); ?> in his pockets!!!",
           link:"http://www.festember.in/11/games/",
           picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
