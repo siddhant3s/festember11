@@ -1001,12 +1001,12 @@ for (i = 0; i < player.length; i++) {
   document.forms["controls"].elements["hit"].disabled   = false;
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
-	  var dataString = 'bid='+ defaultBet+ '&ret=' + retval ;
+	
 
 $.ajax({  
   type: "POST",  
   url: "scoreput.php",  
-  data: dataString,  
+  data:{bid:defaultBet,ret:100},
   success: function() { 
 alert("hi");  
 }
