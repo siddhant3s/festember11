@@ -521,7 +521,7 @@ function getNextCard() {
 }
 
 function startRound() {
-console.log(startRound);
+console.log("Reached: startRound");
 /*var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -585,7 +585,7 @@ function dealRound()
 {
 
   // Deal a card to the player or the dealer based on the counter.
-
+console.log("Reached: dealRound");
   switch(dealRoundCounter)
   {
     case 1:
