@@ -1,5 +1,5 @@
 <?php 
- include("header.php");
+ include("../../connect.php");
  include("getuser.php");
  include("../game.php"); 
  include("../gamearray.php");
