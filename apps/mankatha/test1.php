@@ -1,5 +1,5 @@
 <?php
-session_start();
+include("../game.php");
 if(!isset($_SESSION['cht'])){
 	header('Location:start.php');
 	exit;}
