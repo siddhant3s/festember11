@@ -11,7 +11,7 @@ include("../fb.php");
 ?>
 <html>
 <head>
-<title>hi</title>
+<title>you won!!!</title>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 </head>
 <body>
@@ -36,7 +36,7 @@ function publish() {
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You won this round.
-<input type="button" value="Share it on facebook" onclick="publish();">
+<a href='#' onClick="return publish()"><img name="jsbutton" src="fb.jpg" alt="javascript button"></a>
 <a href="start.php" style="position:absolute;left:5%;top:70%;"><img src="bpa.png" border="0" alt=""/></a>
 <a href="index.php" style="position:absolute;left:5%;top:650%;"><img src="bq.png" border="0" alt=""/></a>
 </div>
