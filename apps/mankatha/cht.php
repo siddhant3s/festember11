@@ -3,13 +3,15 @@ $rpath = "../";
   include("../game.php");
 include("../fb.php");
 session_start();
+echo '<pre>';
+var_dump($_SESSION,$_POST);
 if(!isset($_POST['txtchar']))
 {
 	header('Location:start.php');
 	exit;
 }
 else
-  { $money=0;     
+  { $money=0;
     $money=getCash();
        echo $money;
 	if($_POST['txtchar']>$money)
@@ -20,7 +22,7 @@ else
 	  { $_SESSION['cht']=$_POST['txtchar'];
 	    $date=date_create();
 	    $connection=mysql_connect("localhost","festember","vegas11");
-
+	    
    if(!$connection){
 	      die("Databaase connection failed:" . mysql_error());
 	    }

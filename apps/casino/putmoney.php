@@ -21,7 +21,7 @@
 		$row=mysql_fetch_array($result);
 		$money=$row['bidamount']+$_GET['money'];
 		$res=mysql_query("UPDATE game_info SET bidamount={$money} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'");
-		echo "UPDATE game_info SET bidamount={$money} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'"";
+		echo "UPDATE game_info SET bidamount={$money} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'";
 	}
 	echo "";
 ?>
