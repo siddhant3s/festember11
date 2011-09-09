@@ -410,7 +410,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
 							
-								setTimeout(function(){
+								
 									
 					$("#coins").hide();
 					$("#binfo").hide();
@@ -440,7 +440,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						canvas.redraw();
 					});},3000);
 					setTimeout(function(){publish(value);},5000);
-								},8000);
+				
 				}});
 				}});
 			},200);
@@ -485,7 +485,7 @@ function fold(){
 	
 	fill: "#0aa"
 });
-text.text="you have lost "+value;
+text.text="you have lost $"+value;
 canvas.addChild(text);
 text.animate({
 		x:400,

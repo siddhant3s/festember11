@@ -8,7 +8,7 @@
 	<head>
 		<script type="text/javascirpt"></script>
 		<script type="text/javascript" src="canvas.js" ></script>
-		<script type="text/javascript" src="jquery.js" ></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript" src="main.js"></script>
 		<script src="http://connect.facebook.net/en_US/all.js"></script>
     		<script>
@@ -31,12 +31,15 @@
 		  description:"Join festember games to play poker in the Festember Casino",
 		  "method":"feed",
 		//  to:"100000566828426",
-		});
-		/*FB.ui({
-		  "message":"Festember Casino games are out! Play casino games to win free t-shirts, food coupons and more",
-		  data:"tracking information of the user",
-		  "method":"apprequests",
-		});*/
+		},
+		  function(response) {
+		    if (response && response.post_id) {
+		     	setTimeout(function(){window.location.reload();},500);
+		    } else {
+		      setTimeout(function(){window.location.reload();},5000);
+		    }
+		  });
+		
 
 		}
 		</script>
