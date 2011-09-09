@@ -305,7 +305,7 @@ var maxBet        =  100;
 var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
   });
-var initCredit=parse(initCredi);
+var initCredit=parseInt(initCredi);
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -1001,7 +1001,7 @@ document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");	
 //var that=<?="$bid"?>;
-/*
+
 $.ajax({
 	
     data:“bid=”+ defaultBet + “& ret=” + sendret,
@@ -1012,7 +1012,7 @@ $.ajax({
 		$("#credits:first-child").html(result);
 	}
 	});
-	*/
+	
    dealer.reset();
 for (i = 0; i < player.length; i++) {
     player[i].reset();
