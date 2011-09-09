@@ -494,7 +494,7 @@ else wheelspeed=0;
 if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
 $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{num : (angles.indexOf(LuckyNum))}, async:true, dataType:"html"
-});
+}); 
 ///------END AJAX REQUEST-------///
  decrSpd();}
 }
