@@ -536,8 +536,6 @@ $percent=$multiply*100;
 if($percent==-100){
 	$percent=0;
 }
-$res=mysql_query("SELECT * game_info WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'" );
-$row=mysql_fetch_array($res);
-$res=mysql_query("UPDATE game_info SET bidamount={$money},endtime=now(),returnpercent={$percent},timediff=now()-{$row['starttime']} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'" );
+$res=mysql_query("UPDATE game_info SET bidamount={$money},endtime=now(),returnpercent={$percent} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'" );
 echo $money*$multiply;
 ?>
