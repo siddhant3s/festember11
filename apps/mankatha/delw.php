@@ -4,8 +4,8 @@ include("../fb.php");
 ?>
 <?php
 	include("../../connect.php");
-	/*$query="DELETE FROM mankatha_random";
-	mysql_query($query);*/
+	$query="DELETE FROM mankatha_random";
+	mysql_query($query);
 	$q="INSERT into game_info(endtime,returnpercent) VALUES(now(),'100')";
 	mysql_query($q);
 ?>
