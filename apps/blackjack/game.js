@@ -496,7 +496,7 @@ function newDeck() {
 
   // Create a deck.
 
-  //deck.makeDeck(numPacks);
+  deck.makeDeck(numPacks);
   deck.shuffle(numShuffles);
 
   // Set the burn card.
