@@ -14,6 +14,7 @@ $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`    
 				else
 				  { $money=0;
 				      $money=getCash();
+				      echo $money;
 				            	if($_POST['txtchar']>$money)
 							  { 
 							  	    header('Location:start.php?alertnobalance=1');
@@ -24,7 +25,7 @@ $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`    
 												  	   
 
 													  	  														    	      mysql_query($q);
-																													      mysql_close($q);
+																													      
 															      	    header('Location:test1.php');
 																    	    exit;
 																	    	  }
