@@ -195,7 +195,7 @@ function Stack() {
 var cardstack;
 $.ajax("deck.php",function(data) {
 cardstack = data;
-console.log(data);
+console.log(cardstack);
 //cardstack = data;
 //alert(cardstack);
 });
