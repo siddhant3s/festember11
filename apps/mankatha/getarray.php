@@ -41,7 +41,7 @@ shuffle($a);
 shuffle($b);
 $c[0]=$numbers[0];
 
-if($dec>0.7)
+if($dec<0.7)
 {
 	for($i=1;$i<52;$i++)
 	{
