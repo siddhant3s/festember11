@@ -982,7 +982,7 @@ startRound();
 }
 function poppy(h)
 {
-
+var retval=100;
 if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
@@ -1001,7 +1001,16 @@ for (i = 0; i < player.length; i++) {
   document.forms["controls"].elements["hit"].disabled   = false;
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
+	  var dataString = 'bid='+ defaultBet+ '&ret=' + retval ;
+
+$.ajax({  
+  type: "POST",  
+  url: "scoreput.php",  
+  data: dataString,  
+  success: function() { 
+alert("hi");  
 }
+});
 
 if(h==0)
 {
