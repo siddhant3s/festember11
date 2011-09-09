@@ -20,10 +20,9 @@ $rpath = "../";
 									    	  }
 										  	else
 												  { $_SESSION['cht']=$_POST['txtchar'];
-												  	    $date=date_create();
+												  	   
 
-													    	    $d=date_format($date,'Y-m-d H:i:s');
-														    	      mysql_query($q);
+													  	  														    	      mysql_query($q);
 															      	    header('Location:test1.php');
 																    	    exit;
 																	    	  }
