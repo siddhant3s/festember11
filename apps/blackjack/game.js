@@ -987,7 +987,7 @@ if(h==1)
 {$(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 $("#happy").show(1000);
-	$.post("scoreget.php", { bid: defaultBet, ret: "200" } );  
+	$.post("scoreput.php", { bid: defaultBet, ret: "200" } );  
 document.getElementById("winscore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 $(".dollars").effect("pulsate",{times:3},"fast");
@@ -1010,6 +1010,7 @@ $(".result").effect("pulsate",{times:3},"fast");
 $("#deal").effect("pulsate",{times:3},"fast");
 
 $("#sad").show(1000);
+$.post("scoreput.php", { bid: defaultBet, ret: "0" } ); 
 document.getElementById("losescore").innerHTML=credits;
 $("#deal").effect("pulsate",{times:3},"fast");
 
