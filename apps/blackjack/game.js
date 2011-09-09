@@ -263,7 +263,7 @@ that.
       this.cards[k] = temp;
     }
     console.log(this.cards);
-    alert(this.cards);
+    
 }
 
 //-----------------------------------------------------------------------------
