@@ -88,7 +88,7 @@ Bartending, the workshop promises to give a participants a hands-on
 approach on flairtending!
 </p><p>
 To get a better idea about the workshop, check out the videos at
-http://www.iibtindia.com/videogallery.html
+<a href="http://www.iibtindia.com/videogallery.html" target="_blank">http://www.iibtindia.com/videogallery.html</a>
 </p>
 <p>
 So you better catch this flaming chance with both hands!! Register NOW!
