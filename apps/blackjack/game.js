@@ -312,7 +312,7 @@ var curPlayerHand, numPlayerHands;
 
 //var credits
 var defaultBet;
-var creditsTextNode, defaultTextNode;
+var defaultTextNode;
 
 var dealRoundCounter;
 
@@ -326,7 +326,7 @@ function initGame() {
 
   // Locate credits and default bet text nodes on the page.
 
-  creditsTextNode = document.getElementById("credits").firstChild;
+ 
   defaultTextNode = document.getElementById("default").firstChild;
 
   // Initialize player's credits and bet amount.
