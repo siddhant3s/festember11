@@ -292,6 +292,14 @@ var maxSplits     =    3;
 
 var minBet        =    5;
 var maxBet        =  100;
+$.ajax({
+	url: "scoreget.php",
+	type: "GET",
+	dataType: "text/html",
+	success: function(result){
+		$("#credits:first-child").html(result);
+	});
+	
 var initCredi  =   $.get("scoreget.php", function(result){
     $("#credits:first-child").html(result);
   });
