@@ -36,6 +36,6 @@ return($card);
 for($q=0;$q<52;$q++)
 {
 deal($deck);
-//echo"<br />";
+echo"<br />";
 }
 ?>
