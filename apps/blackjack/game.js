@@ -5,7 +5,7 @@
 
 (window.onload=function(){
 
-
+console.log("Started game.js");
 
 
 
@@ -585,7 +585,7 @@ function dealRound()
 {
 
   // Deal a card to the player or the dealer based on the counter.
-console.log("Reached: dealRound");
+console.log("Reached: dealRound");s
   switch(dealRoundCounter)
   {
     case 1:
