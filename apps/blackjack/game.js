@@ -194,7 +194,7 @@ function Stack() {
 
   // Create an empty array of cards.
 //var cardarray = new Array();
-$.ajax("deck.php",function(data) {
+$.ajax("deck.php", dataType:"text", function(data) {
 cardstack = data;
 cardarray = split.cardstack(",");
 //cardstack = data;
