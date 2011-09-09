@@ -503,7 +503,7 @@ function stopspin(){
 spinwheel=0;
 var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php", success:function(html){stptime=html; setTimeout(function(){ reducespin();},(stptime*1000)); }, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php", success:function(html){stptime=html; console.log(stptime); setTimeout(function(){ reducespin();},(stptime*1000)); }, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 
