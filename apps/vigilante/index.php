@@ -5,21 +5,19 @@ $_SESSION['id']=session_id();
 $rpath = "../";
 //require('../fb.php');
 function getUserInfo(){
-	$_SESSION['namee']="nUsernmae".time();
+	$_SESSION['namee']="nUsernmae";
 	$_SESSION['player']="NavoPlayer";
 	$_SESSION['balance']="1000";
 }
 $json;
 try{
 require('db_conn.php');
-if(!$c)
-	throw new Exception(mysql_error());
 getUserInfo();
-$r=mysql_query('SELECT `level` FROM `'.$DB_NAME.'`.`vigilante_users` WHERE name=\''.$_SESSION['namee'].'\';',$c);
+$r=mysql_query('SELECT `level` FROM `'.$DB_NAME.'`.`vigilante_users` WHERE name=\''.$_SESSION['namee'].'\';');
 if(!$r)
 	throw new Exception(mysql_error());
 if(!($r=mysql_fetch_row($r))){
-	if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_users` (`name`,`level`) VALUES('{$_SESSION['namee']}',1);" ,$c))
+	if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_users` (`name`,`level`) VALUES('{$_SESSION['namee']}',1);" ))
 		throw new Exception(mysql_error());
 	$r[0]=1;
 	}
@@ -27,21 +25,22 @@ $level=$r[0];
 $_SESSION['level']=$level;
 $_SESSION['persons']=10+$level;
 $_SESSION['coins']=10+5*floor($level/10);
-$_SESSION['score']=20+floor($level/10);
-$_SESSION['time']=30+10*$level;
-$_SESSION['addons']=($level>5?'s':'');
+//$_SESSION['score']=20+floor($level/10);
+$_SESSION['score']=1;
+$_SESSION['time']=40+10*$level;
+$_SESSION['addons']=($level>5?'s':'').($level>5 && $level%2==0?'b':'');
 $map;
 if($level<3)
 	$map=1;
 else{
-	if(!($r=mysql_query('SELECT COUNT(*) FROM `'.$DB_NAME.'`.`vigilante_maps`;',$c)))
+	if(!($r=mysql_query('SELECT COUNT(*) FROM `'.$DB_NAME.'`.`vigilante_maps`;')))
 		throw new Exception(mysql_error());
 	else{
 		$map=mysql_result($r,0);
 		$map=mt_rand(1,$map);
 	}
 }
-$desc=mysql_query('SELECT * FROM `'.$DB_NAME.'`.`vigilante_maps` LIMIT '.$map.',1;',$c);
+$desc=mysql_query('SELECT * FROM `'.$DB_NAME.'`.`vigilante_maps` LIMIT '.$map.',1;');
 if(!desc)
 	throw new Exception(mysql_error());
 $map=mysql_fetch_row($desc);
@@ -81,11 +80,11 @@ $json=json_encode(array('namee'=>$_SESSION['player'],'level'=>$_SESSION['level']
 <br/>
 <p><em>Rules of Play</em><br/><br/>
 The objective of the game is to collect the coins straying around in the casino and make some easy money. The drunk and ecstastic people won't notice you picking up the coins unless you are in their DIRECT FIELD OF SIGHT. so, all you have to do is to collect 20 points, without getting caught by the security camera or any of the persons around.<br/>
-If you are seen by any person around while picking up a coin, there is a high probability that you will be caught. If more persons see you at the same time, the probability is higher.</p>
+If you are seen by any person around while picking up a coin, there is a high probability that you will be caught. If more persons see you at the same time, the probability is higher. If you get seen by the security camers, you are sure to get caught.</p>
 <br/><p><em>Scores</em><br/>
 For each level you clear, you are awarded 100 points. Clear more levels to earn more points! As you go up the levels, the number of persons increases, the time limit reduces and coins are less laying around.</p>
 <br/><p><em>How to play?</em><br/>
-Move the Barman using the arrow keys. The persons roam around on their own will. To pick up coins, face towards the coin and press <em>A</em> to pick up the coin to score points. You need to pick a minimum number of coins in ach level to upgrade to the next level!</p>
+Move the Barman using the arrow keys. The persons roam around on their own will.<br/><strong>Picking up coins: </strong>Face towards the coin and press <em>A</em> to pick up the coin to score points. You need to pick a minimum number of coins in each level to upgrade to the next level!<br/><strong>Using Booze Bomb: </strong/>Press <em>S</em> to throw a Booze Bomb around you. Using a Booze Bomb costs you 2 coins. It sprays a mist of whiskey around you so that any person or camera does not see you picking up coins!</p>
 
 &nbsp;&nbsp;&nbsp;<input type="button" value="Start Game!" onclick="toggleWelcome()" />
 </div>
