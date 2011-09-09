@@ -1003,7 +1003,7 @@ for (i = 0; i < player.length; i++) {
   document.forms["controls"].elements["hit"].disabled   = false;
    document.getElementById("fbshare").disabled=false;
 	  $("#fbshare").effect("pulsate",{times:2},300);
-	  $.post("scoreget.php", { bid: defaultBet, ret: "200" } );
+	//  $.post("scoreget.php", { bid: defaultBet, ret: "200" } );
 }
 
 if(h==0)
@@ -1026,7 +1026,7 @@ for (i = 0; i < player.length; i++) {
 document.getElementById("deal").disabled   = false;
 document.forms["controls"].elements["hit"].disabled   = false;
  document.getElementById("fbshare").disabled=true;
-	$.post("scoreget.php", { bid: defaultBet, ret: "0" } );  
+	//$.post("scoreget.php", { bid: defaultBet, ret: "0" } );  
 }
 
 

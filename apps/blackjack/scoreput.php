@@ -9,7 +9,7 @@ include("../game.php");
 
 //$sql="SELECT * FROM game_info WHERE playerid = '".$user[id]."'";
 $sql="INSERT INTO game_info 
-(playerid,gameid,starttime,bidamount,returnpercent) VALUES('".$user[id]."',2,CURRENT_TIME_STAMP,'".$_POST["bid"]."','".$_POST["ret"]."' ) ";
+(playerid,gameid,starttime,bidamount,returnpercent) VALUES('".$user[id]."',2,CURRENT_TIMESTAMP,'".$_POST["bid"]."','".$_POST["ret"]."' ) ";
 
 $result = mysql_query($sql);
 
