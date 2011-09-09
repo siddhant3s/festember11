@@ -12,10 +12,9 @@ else
 {
 	$money=0;
 	$money=getCash();
-	echo $money;
 	if($_POST['txtchar']>$money)
 	{ 
-	    header('Location:start.php?alertnobalance=1');
+	    header('Location:start.php?alertnobalance=1&m1=' . $money . "&m2=" . $_POST['txtchar']);
 	    exit;
 	}
 	else
