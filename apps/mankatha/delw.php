@@ -1,17 +1,16 @@
 <?php
 $rpath = "../";
 include("../fb.php");
+echo "$user:::" . print_r($user) . ":::<br>";
 ?>
-<?
+<?php
 include("../../connect.php");
 
 
-	$query="DELETE FROM mankatha_random";
-mysql_query($query);
-$date=date_create();
-	    $d=date_format($date,'Y-m-d H:i:s');
-	    $q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','100')";
-	    mysql_query($q);
+	/*$query="DELETE FROM mankatha_random";
+	mysql_query($query);*/
+	$q="INSERT into game_info(endtime,returnpercent) VALUES(now(),'100')";
+	mysql_query($q);
 	 
 ?>
 <html>
