@@ -298,6 +298,7 @@ $.ajax({
 	dataType: "text/html",
 	success: function(result){
 		$("#credits:first-child").html(result);
+	}
 	});
 	
 var initCredi  =   $.get("scoreget.php", function(result){
