@@ -4,7 +4,7 @@ $rpath="../";
 include("../fb.php");
 include("../../connect.php");
 
-$sql="SELECT * FROM game_info WHERE playerid = '".$user[id]."'";
+$sql="SELECT playerid.game_info,gameid.player_info,money.user FROM game_info,user WHERE playerid = '".$user[id]."'";
 
 $result = mysql_query($sql);
 
