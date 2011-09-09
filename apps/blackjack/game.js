@@ -293,11 +293,8 @@ var maxSplits     =    3;
 var minBet        =    5;
 var maxBet        =  100;
 var initCredi;
- $.ajax(url:"scoreget.php", success:function(result){
-    $("#credits:first-child").html(result);
-		initCredi=html;
-  });
-var initCredit=parseInt(initCredi);
+
+var initCredit;
 var initBet       =   10;
 
 var dealTimeDelay =  750;
@@ -537,6 +534,11 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","deck.php",true);
 xmlhttp.send();*/
+ $.ajax(url:"scoreget.php", success:function(result){
+    $("#credits:first-child").html(result);
+		initCredi=html;
+		initCredit=parseInt(initCredi);
+  });
   var i;
 
   // Reset all hands.
