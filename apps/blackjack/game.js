@@ -1078,10 +1078,13 @@ function updateBetDisplay(n) {
 
   // Display current credits.
 
-  creditsTextNode.nodeValue = "get lucky!";
+  creditsTextNode.nodeValue = "get lucky!" + formatDollar(credits);
 }
 
+function formatDollar(n) {
 
+ return (" ");
+}
 
 function changeBet(n) {
 
