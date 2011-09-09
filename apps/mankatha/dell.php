@@ -10,6 +10,19 @@
 		}
 	$query="DELETE FROM mankatha_random";
 	mysql_query($query,$connection);
+$date=date_create();
+	    $connection=mysql_connect("localhost","festember","vegas11");
+
+   if(!$connection){
+	      die("Databaase connection failed:" . mysql_error());
+	    }
+    $db_select=mysql_select_db("festember11",$connection);
+	    if(!$db_select){
+	      die("Database connection failed:" . mysql_error());
+	    }
+	    $d=date_format($date,'Y-m-d H:i:s');
+	    $q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','0')where playerid='{$user[\"id\"]}'";
+	    mysql_query($q,$connection);
     mysql_close($connection);
 unset($_SESSION['cht']);
 ?>
