@@ -155,6 +155,7 @@ function cardCreateNode() {
   // For face cards (Jack, Queen or King), create and add the proper image.
 
   tempNode = document.createElement("IMG");
+  
   tempNode.className = "face";
   if (this.rank == "J")
     tempNode.src = "graphics/jack.gif";
@@ -262,6 +263,7 @@ that.
       this.cards[k] = temp;
     }
     console.log(this.cards);
+    alert(this.cards);
 }
 
 //-----------------------------------------------------------------------------
