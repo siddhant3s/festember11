@@ -1,17 +1,14 @@
 <?php
 $rpath = "../";
 include('../fb.php');
-
+var_dump($user);
 //$_SESSION['id']=session_id();
-function getUserInfo(){
-	$_SESSION['namee']=$user['id'];
-	$_SESSION['player']=$user['name'];
-	$_SESSION['balance']="1000";
-}
+$_SESSION['namee']=$user['id'];
+$_SESSION['player']=$user['name'];
+$_SESSION['balance']="1000";
 $json;
 try{
-require('db_conn.php');
-getUserInfo();
+include('db_conn.php');
 $r=mysql_query('SELECT `level` FROM `'.$DB_NAME.'`.`vigilante_users` WHERE name=\''.$_SESSION['namee'].'\';');
 if(!$r)
 	throw new Exception(mysql_error());
