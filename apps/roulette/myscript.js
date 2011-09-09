@@ -15,7 +15,11 @@ var betMouseX=0;
 var betMouseY=0;
 var presentBetNum=0;
 var chipSel=1;
-var balanceCash=getCash();
+var balanceCash=-1;
+
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",type:"GET", success:function(html){if(balancecash) balanceCash=html; else{alert("server not responding"); }}, async:false, dataType:"html"
+}); 
+
 var bettingCash=0;
 var interCash=balanceCash;
 var win=0;
