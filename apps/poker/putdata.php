@@ -17,7 +17,8 @@
 	$c5=$cards[8];
 	$sql="SELECT * FROM gamedata WHERE userid={$usid}";
 	$result=mysql_query($sql);
-	if(!$result){
+	
+	if(mysql_num_rows($result)==0){
 		$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5})";
 		$result=mysql_query($sql);
 	}
