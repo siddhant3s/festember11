@@ -2,7 +2,7 @@
 
 $rpath="../";
 include("../game.php");
-//include("../../connect.php");
+include("../../connect.php");
 echo getCash();
 
 /*
