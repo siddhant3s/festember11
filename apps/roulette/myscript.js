@@ -17,7 +17,7 @@ var presentBetNum=0;
 var chipSel=1;
 var balanceCash=-1;
 
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",type:"GET", success:function(html){if(balancecash) balanceCash=html; else{alert("server not responding"); }}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",type:"GET", success:function(html){alert(html); else{alert("server not responding"); }}, async:false, dataType:"html"
 }); 
 
 var bettingCash=0;
