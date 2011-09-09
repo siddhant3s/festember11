@@ -15,7 +15,6 @@ include("../fb.php");
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 </head>
 <body>
-user :::<?php print_r($user); ?>:::
 <div id="fb-root"></div>
     <script>
     var appId = <?php echo $facebook->getAppId(); ?>;
