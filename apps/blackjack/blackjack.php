@@ -360,8 +360,7 @@ border-width:2px;
 </style> 
   
 <script src="jquery.js" type="text/javascript"></script>
-<script src="jquery-1.6.2.js" type="text/javascript"></script>
-<script src="jquery2.js" type="text/javascript"></script>
+
 
 <script type="text/javascript" src="illuminate.js"></script>
 <script src="script.js" type="text/javascript"></script>
