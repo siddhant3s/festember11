@@ -1,7 +1,6 @@
 <?php
 $rpath = "../";
 include("../game.php");
-include("../../connect.php");
 
 if(!isset($_POST['txtchar']))
 {
