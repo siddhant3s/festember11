@@ -204,6 +204,7 @@ cardarray = split.cardstack(",");
 
 
   this.cards = cardarray;
+  alert(this.cards);
   //this.cards = new Array();
 
   this.makeDeck  = stackMakeDeck;
