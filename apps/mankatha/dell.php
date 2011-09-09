@@ -9,7 +9,7 @@ $q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','0')";
 unset($_SESSION['cht']);
 ?>
 <html>
-
+<title>you lost</title>
 <body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You lost this round.
