@@ -493,7 +493,7 @@ if (wheelspeed>0)  setTimeout(function(){wheelspeed=(wheelspeed>0)? wheelspeed-0
 else wheelspeed=0;
 if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{num : (angles.indexOf(LuckyNum))}, async:true, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
  decrSpd();}
@@ -503,7 +503,7 @@ function stopspin(){
 spinwheel=0;
 var t;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php", success:function(html){stptime=html; console.log(stptime); setTimeout(function(){ reducespin();},(stptime*1000)); }, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php", success:function(html){stptime=html; console.log(stptime); setTimeout(function(){ reducespin();},(stptime*1000)); }, async:true, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 
