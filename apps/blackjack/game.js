@@ -1005,6 +1005,7 @@ for (i = 0; i < player.length; i++) {
 
 $.ajax({  
   type: "POST",  
+  dataType:"json",
   url: "scoreput.php",  
   data:{bid:defaultBet,ret:100},
   success: function() { 
