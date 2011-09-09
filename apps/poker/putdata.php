@@ -17,7 +17,7 @@
 	$c5=$cards[8];
 	//$sql="DELETE FROM gamedata WHERE userid={$usid}";
 	//$result=mysql_query($sql);
-	$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5}) ON DUPLICATE KEY UPDATE u1={$u1} u2={$u2} c1={$c1} c2={$c2} c3={$c3} c4={$c5} d1={$d1} d2={$d2}";
+	$sql="INSERT INTO gamedata VALUES({$usid},{$u1},{$u2},{$d1},{$d2},{$c1},{$c2},{$c3},{$c4},{$c5}) ON DUPLICATE KEY UPDATE u1={$u1},u2={$u2},c1={$c1},c2={$c2},c3={$c3},c4={$c5},d1={$d1},d2={$d2}";
 	$result=mysql_query($sql);
 	echo getCash();
 ?>
