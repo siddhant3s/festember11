@@ -31,7 +31,7 @@ function sharewin() {
       obj = {
           name:"<?php echo $user["name"]; ?> has won the game of Roulette in Festember Casino!",
           link:"http://www.festember.in/11/games/",
-          picture:"roulette_share.jpg",
+          picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
           description:"Play the game now to get goodies and stuff..!",
        }
