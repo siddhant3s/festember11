@@ -493,7 +493,7 @@ if (wheelspeed>0)  setTimeout(function(){wheelspeed=(wheelspeed>0)? wheelspeed-0
 else wheelspeed=0;
 if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{name : 'jude', num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
  decrSpd();}
