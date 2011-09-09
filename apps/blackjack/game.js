@@ -197,7 +197,7 @@ $.ajax("deck.php",function(data) {
 cardstack = data;
 console.log(cardstack);
 //cardstack = data;
-alert(cardstack);
+alert("Hi");
 });
 //document.writeln(cardstack[0]);
 
