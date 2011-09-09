@@ -194,10 +194,10 @@ function Stack() {
   // Create an empty array of cards.
 var cardstack;
 $.ajax("deck.php",function(data) {
-//rdstack = data;
-console.log(data);
 cardstack = data;
-alert(cardstack);
+console.log(data);
+//cardstack = data;
+//alert(cardstack);
 });
 //document.writeln(cardstack[0]);
 
