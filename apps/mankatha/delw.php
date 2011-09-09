@@ -10,7 +10,7 @@ include("../../connect.php");
 mysql_query($query);
 $date=date_create();
 	    $d=date_format($date,'Y-m-d H:i:s');
-	    $q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','100')where playerid='".$user["id"]."'";
+	    $q="INSERT into game_info(endtime,returnpercent) VALUES('{$d}','100')";
 	    mysql_query($q);
 	 
 ?>
