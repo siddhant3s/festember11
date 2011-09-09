@@ -1,8 +1,8 @@
 
 
 
-var cardstack;
-var cardarray = new Array();
+/*var cardstack;
+var cardarray = new Array();*/
 
 (window.onload=function(){
 
@@ -194,7 +194,7 @@ function Stack() {
 
   // Create an empty array of cards.
 //var cardarray = new Array();
-$.ajax({
+/*$.ajax({
 url:"deck.php",
 dataType:"text", 
 success: function(data)
@@ -209,7 +209,7 @@ console.log(cardarray);
 
 
   //this.cards = cardarray;
-  //alert(this.cards);
+  //alert(this.cards);*/
   this.cards = new Array();
 
   this.makeDeck  = stackMakeDeck;
@@ -269,7 +269,7 @@ that.
       this.cards[j] = this.cards[k];
       this.cards[k] = temp;
     }
-    console.log(this.cards);
+   // console.log(this.cards);
     
 }
 
@@ -278,7 +278,7 @@ that.
 //-----------------------------------------------------------------------------
 
 function stackDeal() {
-console.log("reached stackdeal");
+//console.log("reached stackdeal");
 alert(cardarray);
 
 
