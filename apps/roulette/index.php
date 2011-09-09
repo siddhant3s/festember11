@@ -8,7 +8,7 @@ include("../game.php");
 
 <link rel="stylesheet" type="text/css" href="main.css" />
 <script language='javascript' src="jquery.js"></script>
-<script src="../http://connect.facebook.net/en_US/all.js"></script>
+<script src="http://connect.facebook.net/en_US/all.js"></script>
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript' src="ocanvas.js" ></script>
 <script language='javascript' src="myscript.js" ></script>
