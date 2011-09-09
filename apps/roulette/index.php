@@ -13,7 +13,9 @@ include("../game.php");
 </head>
 
 <body bgcolor="#000000">
+<div id="fb-root"></div>
 <div id="canvas_div" style="position:relative;" height=500px width=1200px> 
+
 <canvas id='canvas' height=500px width=1200px > <p> Your Browser does not support Canvas!!! </p></canvas>
 
 </div>
