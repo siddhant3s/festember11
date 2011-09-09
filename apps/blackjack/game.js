@@ -5,10 +5,6 @@
 
 (window.onload=function(){
 
-console.log("Started game.js");
-
-
-
 
 //document.getElementById("deal").addEventListener("click",startRound,false);
 
@@ -515,8 +511,9 @@ function getNextCard() {
   if (deck.cardCount() == 0) {
     alert("New Deck");
     newDeck();
+    console.log("Made New Deck);
   }
-
+console.log("Got Next card");
   return deck.deal();
 }
 
@@ -585,7 +582,7 @@ function dealRound()
 {
 
   // Deal a card to the player or the dealer based on the counter.
-console.log("Reached: dealRound");s
+console.log("Reached: dealRound");
   switch(dealRoundCounter)
   {
     case 1:
