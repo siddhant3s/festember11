@@ -701,14 +701,3 @@ function updateLevel(){//called when js win and server win
 		ajax3.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 		ajax3.send(posts);
 }
-function wallPost(msg){/*
-	FB.ui({
-  "name": msg,
-  //to do
-  "link":"http://google.com",
-  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
-  caption:"Click on the link above to play Festember Games!",
-  description:"In a lonely desert rose a city greater than heaven itself. Men and women flock to it, to find joy, fortunes, glory and themselves. Come this September, history will repeat itself as amidst the arid plains of Trichy will rise a new Vegas. Festember 11 - Vegas style!",
-  "method":"feed"
-});*/
-}
