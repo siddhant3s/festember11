@@ -34,7 +34,7 @@ $map=
 "000000000000000000000000000000";
 try{
 require('../db_conn.php');
-if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_maps` VALUES ('$map');",$c))
+if(!mysql_query("INSERT INTO `$DB_NAME`.`vigilante_maps` VALUES ('$map');"))
 	throw new Exception(mysql_error());
 else
 	echo 'Value inserted!';
