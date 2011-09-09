@@ -9,6 +9,7 @@
 Dance - Couple
 </div>
 <div class="content-body">
+<img class="workshoppic" src="images/dancecouple.jpg">
 <p>
 For those couples looking to jazz up the dance floor, look no further...  So folks hop on, shake some hips and break some sweat this Festember. Don't  Miss this chance to add some new moves to your dance arsenal...</p><br />
 <h3 style="font-size:18px">Details on the workshop</h3><br/>
@@ -23,6 +24,7 @@ Festember'11 brings you jive workshop with partnership with 5th Element Dance Co
 Dance - Solo
 </div>
 <div class="content-body">
+<img class="workshoppic" src="images/dancesolo.jpg">
 <p>
 ”Man must speak, then sing, then dance. The speaking is the brain, the thinking man. The singing is the emotion. The dancing is the Dionysian ecstasy which carries away all.”</p>
 <p>
@@ -43,7 +45,6 @@ Fencing
 </div>
 <div class="content-body">
 <img style="width:200px;position:relative;left:200px;border:1px solid #333333;" src="images/fencing.jpg">
-<div class="content-body">
 <p>
 Fencing is an up-and-coming sport that is gaining popularity among youngsters who are seeking new and exciting things to do. Fencing involves quick movements in offense and defense. Not only does it enhance mobility, balance and flexibility, it trains the mind in agility and tactility. It keeps the brain active and prevents cognitive decline or memory loss.
 Little wonder, it is also known as a physical chess game!
@@ -59,6 +60,7 @@ G. Nagasubramanian, Fencing coach, Sports Development Authority of Tamil Nadu an
 Mente Magica
 </div>
 <div class="content-body">
+<img class="workshoppic" src="images/magic.jpg">
 <p>
 As a whole decade filled with the fascinations and fantasies of Harry Potter passes, a new generation needs a dose inspiration and we at Festember, are here to provide just that! Mark the date 25th September 2011 in your calendar folks. Coming to mesmerize all of us and leave us with an awestruck expression on our faces is Arvind Jayashankar, namma NITT alumni, a master magician and a class act!
 </p>
@@ -74,6 +76,7 @@ Have you ever wondered what happens in the backrooms of Vegas? Are you intrigued
 Flair Bartending
 </div>
 <div class="content-body">
+<img class="workshoppic" src="images/bartending.jpg">
 <p>
 Wanna be the life of every party? Wanna learn how mixing moves can fix
 you drinks? Wanna impress your friends with an impressive arsenal of
