@@ -194,16 +194,17 @@ function Stack() {
 
   // Create an empty array of cards.
 var cardstack;
+var cardarray = new Array();
 $.ajax("deck.php",function(data) {
 cardstack = data;
-console.log(cardstack);
+cardarray = split.cardstack(",");
 //cardstack = data;
-alert("Hi");
 });
 //document.writeln(cardstack[0]);
 
 
-  this.cards = new Array();
+  this.cards = cardarray;
+  //this.cards = new Array();
 
   this.makeDeck  = stackMakeDeck;
   this.shuffle   = stackShuffle;
@@ -219,7 +220,7 @@ alert("Hi");
 
 function stackMakeDeck(n) {
 
-  var ranks = new Array("A", "2", "3", "4", "5", "6", "7", "8", "9",
+  /*var ranks = new Array("A", "2", "3", "4", "5", "6", "7", "8", "9",
                         "10", "J", "Q", "K");
   var suits = new Array("C", "D", "H", "S");
   var i, j, k;
@@ -236,7 +237,7 @@ function stackMakeDeck(n) {
   for (i = 0; i < n; i++)
     for (j = 0; j < suits.length; j++)
       for (k = 0; k < ranks.length; k++)
-        this.cards[i * m + j * ranks.length + k] = new Card(ranks[k], suits[j]);
+        this.cards[i * m + j * ranks.length + k] = new Card(ranks[k], suits[j]);*/
 
 }
 
@@ -247,7 +248,7 @@ function stackMakeDeck(n) {
 
 function stackShuffle(n) {
 
-  var i, j, k;
+ /* var i, j, k;
   var temp;
 
   // Shuffle the stack 'n' times.
@@ -255,14 +256,14 @@ function stackShuffle(n) {
 $.ajax("deck.php",function(data) {
 that.
 });*/
-  for (i = 0; i < n; i++)
+  /*for (i = 0; i < n; i++)
     for (j = 0; j < this.cards.length; j++) {
       k = Math.floor(Math.random() * this.cards.length);
       temp = this.cards[j];
       this.cards[j] = this.cards[k];
       this.cards[k] = temp;
     }
-    console.log(this.cards);
+    console.log(this.cards);*/
     
 }
 
