@@ -7,7 +7,7 @@
 
 
 
-
+startCardCount;
 
 
 //document.getElementById("deal").addEventListener("click",startRound,false);
