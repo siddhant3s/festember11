@@ -11,13 +11,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript" src="main.js"></script>
 		<script src="http://connect.facebook.net/en_US/all.js"></script>
-		<style type="text/css">
-			#header{
-				width:800px;
-				margin:0 auto;
-			}
-		</style>
-    		<script>
+		<script>
     		var appId = <?php echo $facebook->getAppId(); ?>;
     		</script>
 		<link rel="stylesheet" type="text/css" href="main.css" />	
@@ -49,8 +43,9 @@
 
 		}
 		</script>
-		<iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe>
+		
 		<div id="wrapper">
+		<iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe>
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
 		<img src="images/loading.gif" height="100" width="100" id="loading"/>

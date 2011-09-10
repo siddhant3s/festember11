@@ -4,7 +4,7 @@ html{
 #wrapper{
 	margin:0 auto;
 	width:800px;
-	height:600px;
+	height:700px;
 	position:relative;
 	overflow:hidden;
 	background-image:url('images/board.png');
