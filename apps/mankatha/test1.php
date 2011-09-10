@@ -292,6 +292,8 @@ function lose(){
 	height:100px;
 }
 #wrapper{
+	height:655px;
+	background:url('mangatgha.jpg');
 	position:absolute;
 	-webkit-user-select: none;
 -khtml-user-select: none;
@@ -306,7 +308,7 @@ user-select: none;
 
 <div id="wrapper">
 
-<img src="mangatgha.png" alt="" id="bimage" draggable="false" />
+
 <div class="one">
 <div id="block1"><div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div></div>
 <div id="selected" ondrop="drop1(this, event)" ondragenter="return false" ondragover="return false"></div>
