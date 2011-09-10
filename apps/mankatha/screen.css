@@ -20,7 +20,7 @@ height:655px;
 	{
 	position:absolute;
 	top:250px;
-	left:320px;
+	left:70px;
 width:71px;
 height:97px;
 background-image: url(55.gif);		
@@ -32,7 +32,7 @@ background-image: url(55.gif);
 {
 	position: absolute;
 	top:250px;
-	left : 990px;
+	left : 740px;
 	width:71px;
 	height:97px;
 	background-image: url(55.gif);		
@@ -41,7 +41,7 @@ background-image: url(55.gif);
 {
 	position:absolute;
 	top:200px;
- 	left:450px;
+ 	left:200px;
 	width:200px;
 	height:90px;
 	background-image: url(drophere1.png);		
@@ -52,7 +52,7 @@ background-image: url(55.gif);
 	{
 	position: absolute;
 	top:200px;
-left : 400px;
+left : 150px;
 width:250px;
 height:90px;
 background-image: url(drophere1.png);		
@@ -63,7 +63,7 @@ background-repeat: no-repeat;
 {
 	position: absolute;
 	top:300px;
-left : 400px;
+left : 150px;
 width:250px;
 height:90px;
 background-image: url(drophere1.png);
@@ -75,7 +75,7 @@ background-repeat: no-repeat;
 {
 	position: absolute;
 	top:450px;
-left : 600px;
+left : 350px;
 width:71px;
 height:97px;
 background-image: url(55.gif);		
@@ -86,13 +86,13 @@ position:relative;
 width:71px;
 height:97px;
 	top: 200px;
-	left: 330px;
+	left: 80px;
 }
 img#select
 {
 position:fixed;
 top:150px;
-left:430px;
+left:180px;
 }
 
 #files
