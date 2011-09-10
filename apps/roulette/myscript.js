@@ -173,8 +173,8 @@ image:"fb_share.png",
 });
 
 var loading=canvas.display.image({
-x:250,
-y:600,
+x:600,
+y:250,
 origin: {x:"center", y:"center"},
 image:"loading.png",
 opacity:0.0
@@ -440,7 +440,7 @@ loadanimate=loading.animate({ rotation:5400},
 
 $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; alert(html);}, async:true, dataType:"html"
 });
-console.log("im utside");
+
 ///------END AJAX REQUEST-------///
 
 }
