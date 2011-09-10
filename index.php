@@ -104,7 +104,6 @@ if(!$fbuser) {
 	    {
 	      
 	      print_r($fbuser);
-	      die("reached here");
 	      // echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	     //Deleting all cookies from the client browser
 /* 	     if (isset($_SERVER['HTTP_COOKIE'])) { */
@@ -118,6 +117,8 @@ if(!$fbuser) {
 /* 	     } */
 	     
 	      $fbuser = null;
+	      echo "nullied $fbuser";
+	      die("reached here");
 	      // header("Location: " . $fbloginurl);
 	    }
 
