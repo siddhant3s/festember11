@@ -25,7 +25,7 @@ include("../game.php");
 
 <script src="../gameapi.js" type="text/javascript"></script>
 <script language='javascript'>
-
+console.log(<?php echo $user['id'];  ?>)
 function getMyCash() {
 return <?php echo getCash(); ?>
 }
