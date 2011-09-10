@@ -38,22 +38,22 @@ return <?php echo getXP(); ?>
 
 function boastcash() {
       obj = {
-          name:"<?php echo $user["name"]; ?> has been playing Roulette in Festember Casino!!! And he has $<?php echo getCash(); ?> in his pockets!!!",
+          name:"<?php echo $user["name"]; ?> is having the time of his life at Roulette in Festember Casino!!!",
           link:"http://www.festember.in/11/games/",
           picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
-          description:"Play the Game, Try your Luck and Hit the Jackpot!!!",
+          description:"Play Games, Try your Luck and Hit the Jackpot Vegas Style!!!",
        }
        pub(obj);  
 }
 
-function boastwin() {
+function boastwin(win) {
       obj = {
-          name:"<?php echo $user["name"]; ?> has just hit Jackpot and won 300$ in Roulette in the Festember11 Casino Games!",
+          name:"<?php echo $user["name"]; ?> has just hit Jackpot and won $"+win+" in Roulette in the Festember11 Casino Games!",
           link:"http://www.festember.in/11/games/",
           picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
-          description:"Join the fun and see if you Get Lucky!!!!",
+          description:"Play Games, Try your Luck and Hit the Jackpot Vegas Style!!!",
        }
        pub(obj);  
 }

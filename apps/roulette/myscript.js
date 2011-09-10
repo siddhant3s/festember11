@@ -307,9 +307,8 @@ opacity:1.0
 			function(){
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
+			boastwin(win);
 			sendReturnPercent();
-			console.log("asdadssa");
-			//console.log("resetting");
 			
 			}
 		);
