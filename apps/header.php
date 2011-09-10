@@ -76,9 +76,12 @@
 					c=string[0];
 					s=string[1];				
 				}});
+				x;
 			}
 			var time=10000;
-			setInterval(function(){
+			function x{
+			
+				
 				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
 					document.getElementById("star1").innerHTML=string[1];
@@ -90,7 +93,9 @@
 						time=10000;
 					}					
 				}});
-			},time);
+				
+				setTimeout(x,time);
+			}
 		</script>
 	</head>
 	<body>
