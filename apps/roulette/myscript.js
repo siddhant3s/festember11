@@ -257,6 +257,18 @@ radius:10},
 }
 }
 
+
+function sendReturnPercent(){
+
+loading.opacity=1.0;
+loadanimate=loading.animate({ rotation:5400},
+"30000","linear");
+
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; }, async:true, dataType:"html"
+});
+
+}
+
 function showProfit(){
 var winbox=canvas.display.rectangle({
 x:canvas.width/2,
@@ -294,6 +306,8 @@ opacity:1.0
 			function(){
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
+			sendReturnPercent();
+			console.log("asdadssa");
 			//console.log("resetting");
 			resetTurn(0);
 			}
