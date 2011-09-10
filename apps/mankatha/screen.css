@@ -1,5 +1,10 @@
 body
-{background-repeat:no-repeat;
+{
+	
+   
+	background-repeat:no-repeat;
+
+
 }
 img{
 	 cursor:pointer;
@@ -7,13 +12,14 @@ img{
 }
 #bimage
 {	position:absolute;
- height:655px;
+ 
+height:655px;
 }
 #trash
-{
+	{
 	position:absolute;
 	top:250px;
-	left:50px;
+	left:320px;
 width:71px;
 height:97px;
 background-image: url(55.gif);		
@@ -25,7 +31,7 @@ background-image: url(55.gif);
 {
 	position: absolute;
 	top:250px;
-	left : 650px;
+	left : 990px;
 	width:71px;
 	height:97px;
 	background-image: url(55.gif);		
