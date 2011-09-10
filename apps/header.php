@@ -8,7 +8,7 @@
 			#wrapper{
 				width:100%;
 				height:100px;
-				
+				background:#ccc;
 			}
 			#xp{
 				float:right;
@@ -80,13 +80,6 @@
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
-			<div id="fbinfo">
-				<?php
-					echo "<img src=\"{$user["pic"]}\"/>";
-					echo $user["name"];
-				?>
-			</div>
-			
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
 				<b><p id="cash1"></p></b>
