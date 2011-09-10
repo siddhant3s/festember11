@@ -410,9 +410,9 @@ if(interCash-chipSel>=0){
         console.log("bettingCash b4:"+bettingCash);
         bettingCash+=chipSel;
         console.log("bettingCash aftr:"+bettingCash);
-        console.log("bettingCash : "+balanceCash+"  interCash: "+interCash);
+        console.log("balanceCash : "+balanceCash+"  interCash: "+interCash);
         interCash=balanceCash-bettingCash;
-        console.log("balanceCash:"+balanceCash);
+        console.log("balanceCash:"+balanceCash+"  interCash: "+interCash);
         balancetext.text="$"+interCash;
         setTimeout(function(){ generateChip(i);},2);
         }
