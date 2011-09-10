@@ -14,11 +14,11 @@ include("../game.php");
 <body bgcolor="#000000">
 <div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="1200" id="header"></iframe></div>
 <div id="fb-root"></div>
-<div id="canvas_div" style="position:relative;" height=500px width=1200px> 
+
 
 <canvas id='canvas' height=500px width=1200px > <p> Your Browser does not support Canvas!!! </p></canvas>
 
-</div>
+
 <script language='javascript' src="jquery.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>var appId = <?php echo $facebook->getAppId(); ?>;</script>
