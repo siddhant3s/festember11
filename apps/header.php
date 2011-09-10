@@ -1,5 +1,5 @@
 <?php
-	$rpath = "../";
+	$rpath = "";
 	include("../fb.php");
 ?>
 <html>
