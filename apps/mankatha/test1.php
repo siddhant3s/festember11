@@ -293,7 +293,7 @@ function lose(){
 }
 #wrapper{
 	position:absolute;
-	left:-250px;
+
 }
 </style>
 </head>
