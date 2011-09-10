@@ -47,8 +47,9 @@
 				color:white;
 			}
 			#ph{
-				border:5px solid #000;
-				box-shadow:0px 0px 5px 5px #ccc;
+				margin:auto 0px;
+				border:5px solid #fff;
+				box-shadow:0px 0px 2px 2px #ccc;
 			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
