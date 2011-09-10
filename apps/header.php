@@ -23,8 +23,8 @@
 			setInterval(function(){
 				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
-					$("star1").html(string[0]);
-					$("cash1").html(string[1]);
+					document.getElementById("star1").innerHTML=string[1];
+					document.getElementById("cash1").innerHTML=string[0];					
 				}});
 			},3000);
 		</script>
