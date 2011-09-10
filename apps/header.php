@@ -7,12 +7,12 @@
 		<style type="text/css">
 			#wrapper{
 				width:100%;
-				height:50px;
+				height:100px;
 				background:#eee;
-				border:1px #aaa solid;
+				border:1px #eee solid;
 			}
 			#wrapper:hover{
-				border:1px #eee solid;
+				border:1px #ccc solid;
 			}
 			#xp{
 				float:right;
@@ -27,8 +27,8 @@
 				float:left;
 			}
 			.logo{
-				 width:75px;
-				 height:50px;
+				 width:150px;
+				 height:100px;
 			}
 			#cash1{
 				position:absolute;
