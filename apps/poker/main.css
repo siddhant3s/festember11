@@ -9,6 +9,10 @@ html{
 	overflow:hidden;
 	
 }
+#frame{
+	margin:0px;
+	padding:0px;
+}
 #wrapper1{
 	width:800px;
 	height:600px;

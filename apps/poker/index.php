@@ -45,7 +45,7 @@
 		</script>
 		
 		<div id="wrapper">
-		<iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe>
+		<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
 		<div id="tutorials"></div>
 		<div id="wrapper1">
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
