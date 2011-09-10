@@ -295,7 +295,7 @@ function lose(){
 	position:absolute;
 	left:-250px;
 }
-#block{
+#block1{
 	position:absolute;
 	right:250px;
 }
@@ -307,7 +307,7 @@ function lose(){
 
 <img src="mangatgha.png" alt="" id="bimage" draggable="false" />
 <div class="one">
-<div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div>
+<div id="block"><div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div></div>
 <div id="selected" ondrop="drop1(this, event)" ondragenter="return false" ondragover="return false"></div>
 <div id="trash" ondrop="drop(this, event)" ondragenter="return background()" ondragover="return background2()"></div>
 <div id="trash2"></div>
