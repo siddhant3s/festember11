@@ -44,6 +44,7 @@
 		}
 		</script>
 		<div id="wrapper">
+		<iframe src="../header.php"></iframe>
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
 		<img src="images/loading.gif" height="100" width="100" id="loading"/>
