@@ -216,6 +216,7 @@ bettingCash=0;
 interCash=balanceCash;
 win=0;
 LuckyNum=0;
+balancetext.text="$"+interCash;
 
 for (key in code_chip)
 {
@@ -233,7 +234,7 @@ delete bets[key];
 //console.log(chips);
 //console.log(code_chip);
 //console.log(chip_count);
-balancetext.text="$"+interCash;
+
 canvas.redraw();
 }
 
