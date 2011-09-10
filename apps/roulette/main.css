@@ -5,4 +5,12 @@
 	background:url(4.png);
 	border:1px solid #000;
 }
-
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
