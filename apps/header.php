@@ -20,8 +20,9 @@
 			#cash1{
 				color:white;
 				position:absolute;
-				left:110px;
-				top:35px;
+				left:40px;
+				top:40px;
+				
 			}
 			#star1{
 				color:white;
