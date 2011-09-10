@@ -1,5 +1,4 @@
 <?php
-	$rpath = "";
 	include("fb.php");
 ?>
 <html>
@@ -71,7 +70,7 @@
 			</div>
 			<div id="fbinfo">
 				<?php
-					echo "<img src=\"".$user["pic_square"]"\"/>";
+					echo "<img src=\"{$user["pic_square"]}\"/>";
 					echo $user["name"];
 				?>
 			</div>
