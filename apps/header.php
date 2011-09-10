@@ -53,7 +53,7 @@
 				box-shadow:0px 0px 2px 2px #666;
 			}
 			.fb-like{
-				margin-top:30px;	
+				margin-top:35px;	
 			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
@@ -99,7 +99,7 @@
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
 			<div id="fbinfo">
 				<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" /></div>
-				
+				<p><?php echo $user["name"]; ?></p>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
