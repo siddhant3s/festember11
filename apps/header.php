@@ -52,6 +52,9 @@
 				border:5px solid #fff;
 				box-shadow:0px 0px 2px 2px #666;
 			}
+			#fb-root{
+				margin-top:30px;	
+			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
