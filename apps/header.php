@@ -28,7 +28,7 @@
 			}
 			#cash1{
 				position:absolute;
-				left:103px;
+				left:105px;
 				top:45px;
 				font-size:10px;
 			}
