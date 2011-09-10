@@ -262,7 +262,7 @@ function animation(){
   setTimeout("animation1()",1000);
   return false;	
 }
-var leftpos=400;
+var leftpos=350;
 var toppos=300;
 function animation1(){
 	document.getElementById("hint3").style.visibility="hidden";
