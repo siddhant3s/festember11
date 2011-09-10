@@ -9,19 +9,22 @@
 				width:100%;
 				height:100px;
 				background:#eee;
-				border:1px #eee solid;
+				border:1px #777 solid;
 			}
 			#wrapper:hover{
 				border:1px #ccc solid;
 			}
 			#xp{
 				float:right;
+				background:#1BA1E2;
 			}
 			#fbinfo{
 				float:right;
+				background:#1BA1E2;
 			}
 			#cash{
 				float:left;
+				background:#1BA1E2;
 			}
 			#wrapper1{
 				float:left;
