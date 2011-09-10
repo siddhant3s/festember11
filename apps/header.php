@@ -21,7 +21,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
 			setInterval(function(){
-				$.ajax({url:getdata.php,success:function(html){
+				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
 					$("star1").html(string[0]);
 					$("cash1").html(string[1]);
