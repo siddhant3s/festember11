@@ -291,6 +291,9 @@ function lose(){
 	padding:0px;
 	height:100px;
 }
+body{
+	margin-left:-250px;
+}
 </style>
 </head>
 <body>
