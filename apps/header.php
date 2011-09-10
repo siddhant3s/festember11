@@ -8,12 +8,13 @@
 			#wrapper{
 				width:100%;
 				height:100px;
-				background:#ccc;
-				box-shadow:#000 1px 1px 1px;
+				background:#ddd;
+				box-shadow:#ccc 1px 1px 1px;
+				border:1px #eee solid;
 			}
 			#wrapper:hover{
 				box-shadow:#000 0px 0px 0px;
-				border:1px blue solid;
+				border:1px #ccc solid;
 			}
 			#xp{
 				float:right;
