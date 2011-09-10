@@ -55,6 +55,9 @@
 			.fb-like{
 				margin-top:35px;	
 			}
+			#fb-name{
+				float:left;
+			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
@@ -98,10 +101,12 @@
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
 			<div id="fbinfo">
-				<div><div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" /></div></div>
-				<p><?php echo $user["name"]; ?></p>	
+				<div><div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true"></div>
+					
 			</div>
-			
+			<div id="fb-name">
+				<p><?php echo $user["name"]; ?></p>
+			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
 				<b><p id="cash1"></p></b>
