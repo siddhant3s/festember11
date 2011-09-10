@@ -17,7 +17,7 @@ html, body {
 }
 
 .centered {
-  position: fixed;
+  position:absolute ;
   top: 50%;
   left: 50%;
   margin-top: -50px;
@@ -73,6 +73,7 @@ function checkNumbers()
 </script>
 <body>
 <div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
+<div>
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
 <p>Enter bid</p>
@@ -82,6 +83,7 @@ function checkNumbers()
 onkeypress="return onlyNumbers(event);">
 <input type="submit" value="Bet" >
 </form>
+</div>
 </body>
 
 </head>
