@@ -8,7 +8,7 @@
 			#wrapper{
 				width:100%;
 				height:100px;
-				background:#ccc;
+				background:#eee;
 				border:1px #aaa solid;
 			}
 			#wrapper:hover{
