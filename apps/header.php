@@ -19,7 +19,7 @@
 			}
 			#fb-name{
 				margin-top:40px;
-				margin-right:4px;
+				margin-left:4px;
 				color:white;
 				font-weight:bold;
 				float:right;
