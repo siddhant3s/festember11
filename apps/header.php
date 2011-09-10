@@ -52,7 +52,7 @@
 				border:5px solid #fff;
 				box-shadow:0px 0px 2px 2px #666;
 			}
-			#fb-like{
+			.fb-like{
 				margin-top:30px;	
 			}
 		</style>
