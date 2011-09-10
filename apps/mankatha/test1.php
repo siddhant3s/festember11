@@ -294,7 +294,7 @@ function lose(){
 </style>
 </head>
 <body>
-<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
+
 <div>
 
 <img src="mangatgha.png" alt="" id="bimage" draggable="false" />

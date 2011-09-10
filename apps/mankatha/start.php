@@ -72,7 +72,7 @@ function checkNumbers()
 
 </script>
 <body>
-<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
+
 <div>
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">

@@ -40,7 +40,7 @@ z-index:-1;
 
 
 <body>
-<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
+
 <img src="mangatha cover.png" alt="" id="bimage"/>
 <a href="start.php" id="centerdiv"><img
 name="jsbutton" id="centered"  src="bs.png" border="0" alt=""></a>

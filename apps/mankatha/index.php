@@ -19,7 +19,7 @@
 #frame1{
 	margin:0px;
 	padding:0px;
-	height:100px;
+	height:655px;
 }
 </style>
 </head>
