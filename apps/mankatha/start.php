@@ -21,6 +21,7 @@ html, body {
 
 height:655px;
 z-index:-1;
+width:800px;
 }
 #pos
 {
