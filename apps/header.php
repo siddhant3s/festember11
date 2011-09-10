@@ -53,7 +53,14 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fapps%2Fapplication.php%3Fid%3D263593520331172%26sk%3Dwall&amp;width=292&amp;colorscheme=light&amp;show_faces=false&amp;border_color=%23444&amp;stream=false&amp;header=false&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:62px;" allowTransparency="true" style="position:absolute; "></iframe>
+			<div id="fb-root"></div>
+<script>(function(d){
+  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+  js = d.createElement('script'); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=159692317449601&xfbml=1";
+  d.getElementsByTagName('head')[0].appendChild(js);
+}(document));</script>
+<div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
 			<div id="xp">
 				<img src="images/star.png" class="logo"/>
 				<b><p id="star1"></p></b>
