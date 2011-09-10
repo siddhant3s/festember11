@@ -18,8 +18,9 @@
 				 height:100px;
 			}
 			#cash1{
-				float:right;
-				
+				position:absolute;
+				left:100px;
+				top:40px;
 			}
 			#star1{
 				float:left;
@@ -28,13 +29,14 @@
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
+			var time=10000;
 			setInterval(function(){
 				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
 					document.getElementById("star1").innerHTML=string[1];
 					document.getElementById("cash1").innerHTML=string[0];					
 				}});
-			},3000);
+			},time);
 		</script>
 	</head>
 	<body>
