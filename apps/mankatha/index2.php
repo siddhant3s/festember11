@@ -8,18 +8,17 @@ body
 }
 #bimage
 {	position:absolute;
-
 height:655px;
 z-index:-1;
 }
 #centerdiv{
 	position:absolute;
-	
+	left:50px;;
 	top:430px;
 }
 #centerdiv2{
 	position:absolute;
-	
+	left:420px;
 	top:430px;
 }
 #frame iframe{
