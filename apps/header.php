@@ -79,7 +79,7 @@
 				x;
 			}
 			var time=10000;
-			function x{
+			function x(){
 			
 				
 				$.ajax({url:"getdata.php",success:function(html){
