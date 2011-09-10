@@ -9,7 +9,7 @@ html{
 	overflow:hidden;
 	
 }
-#frame{
+#frame iframe{
 	margin:0px;
 	padding:0px;
 }
