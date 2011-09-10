@@ -430,14 +430,16 @@ chip100.animate({opacity:c100},"200","ease-in-out");
 
 }
 
+
 function verifyResult(){
 loading.opacity=1.0;
 loadanimate=loading.animate({ rotation:5400},
 "30000","linear");
 ///------AJAX REQUEST TO RANDOMIZE-------///
 
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; alert(html);}, async:false, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; alert(html);}, async:true, dataType:"html"
 });
+console.log("im utside");
 ///------END AJAX REQUEST-------///
 
 }
