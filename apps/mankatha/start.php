@@ -35,6 +35,15 @@ z-index:-1;
 	position:absolute;
     left:45%;
     top:50%;
+}
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
 }</style>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
@@ -63,6 +72,7 @@ function checkNumbers()
 
 </script>
 <body>
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
 <p>Enter bid</p>
