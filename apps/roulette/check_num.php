@@ -17,8 +17,7 @@ $time=0.0;
 	$re=mysql_fetch_array($res);
 	$dbtime=$re['stoptime'];
 	$dbnum=$re['predict_num'];
-        $sql="DELETE FROM roulette_verify WHERE username='$usid'";
-        $res=mysql_query($sql);
+        
 	$c1=$dbnum-8;
 	$c2=$dbnum-9;
 	$c3=$dbnum-7;
