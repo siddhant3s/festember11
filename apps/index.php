@@ -75,15 +75,15 @@ include("fb.php");
 <div style="padding:200px; padding-left:300px;">
 <h3>Festember Casino</h3>
 <ul>
-<li>Ants</li>
-<li>Blackjack</li>
-<li>Claws</li>
-<li>Long Line</li>
-<li>Mankatha</li>
-<li>Poker</li>
-<li>Roulette</li>
-<li>Slot Machine</li>
-<li>Vigilante</li>
+<li><a href="./ants">Ants</a></li>
+<li><a href="./blackjack">Blackjack</a></li>
+<li><a href="./claw">Claws</a></li>
+<li><a href="./longline">Long Line</a></li>
+<li><a href="./mankatha">Mankatha</a></li>
+<li><a href="./poker">Poker</a></li>
+<li><a href="./roulette">Roulette</a></li>
+<li><a href="#">Slot Machine</a></li>
+<li><a href="#">Vigilante</a></li>
 </ul>
 </div>
 </div>
