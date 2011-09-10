@@ -185,7 +185,9 @@ function randomFromTo(from, to){
 
 
 function setBalanceText(){
-balancetext.text="$"+getMyCash();
+balanceCash=getMyCash();
+interCash=balanceCash;
+balancetext.text="$"+balanceCash;
 }
 
 function resetTurn(clearbet){
@@ -210,14 +212,13 @@ setTimeout(function(){resetBallPos(1);});
 }
 else
 {
-balanceCash=interCash+win;
+window.setTimeout(function(){ setBalanceText(); },1);
 setTimeout(function(){resetBallPos(0);});
 }
 bettingCash=0;
-interCash=balanceCash;
 win=0;
 LuckyNum=0;
-window.setTimeout(function(){ setBalanceText(); },1);
+
 
 for (key in code_chip)
 {
