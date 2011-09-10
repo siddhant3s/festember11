@@ -29,7 +29,7 @@
 			#cash1{
 				color:white;
 				position:absolute;
-				left:100px;
+				left:103px;
 				top:45px;
 				font-size:10px;
 			}
