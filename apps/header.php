@@ -108,7 +108,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#appId=159692317449601&xfbml=1";
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
-<div class="fb-like" data-href="https://www.facebook.com/festember" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+<div class="fb-like" data-href="https://apps.facebook.com/festember" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
 			
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
