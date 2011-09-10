@@ -382,12 +382,12 @@ else
                           if(tu3==0){$("#grabber").css({"background":"url('images/untitled-1.png') no-repeat"});
 			switch(drop)
 			{
-			case 1:$("#bottle_1").stop("true");$("#bottle_1").animate({top:360},500,"linear",function(){s10();
-				$("#bottle_1").clearQueue();completed=1;$("#bottle_1").hide();lift=0;});break;
-			case 2:$("#bottle_2").stop("true");$("#bottle_2").animate({top:360},500,"linear",function(){s10();
-				$("#bottle_2").clearQueue();completed=1;$("#bottle_2").hide();lift=0;});break;
-		    case 3:$("#bottle_3").stop("true");$("#bottle_3").animate({top:400},360,"linear",function(){s10();
-				$("#bottle_3").clearQueue();completed=1;$("#bottle_3").hide();lift=0;});break;
+			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},500,"linear",function(){alert(left($("#bottle_1")));alert(left($("#basket")));s10();
+				$("#bottle_1").clearQueue();completed=1;$("#bottle_1").hide();lift=0;tu3=0;});break;
+			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},500,"linear",function(){alert(left($("#bottle_2")));alert(left($("#basket")));s10();
+				$("#bottle_2").clearQueue();completed=1;$("#bottle_2").hide();lift=0;tu3=0;});break;
+		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},500,"linear",function(){alert(left($("#bottle_3")));alert(left($("#basket")));s10();
+				$("#bottle_3").clearQueue();completed=1;$("#bottle_3").hide();lift=0;tu3=0;});break;
 			}}
 			}
 		});
@@ -527,17 +527,17 @@ function s10()
 {
 	
 
-if(    (left($("#bottle_1"))+10)>left($("#basket")) && (left($("#bottle_1"))+23)<(left($("#basket"))+150) )
+if(    (left($("#bottle_1"))+10)>left($("#basket")) && (left($("#bottle_1")))<(left($("#basket"))+120)&&left($("#basket"))>0 )
 {//alert("w");       
                    
                    $("#basket").css({"background":"url('images/tub1.png') no-repeat"});
 }
-if(   (left($("#bottle_2"))+10)>left($("#basket")) && (left($("#bottle_2"))+23)<(left($("#basket"))+150))
+if(   (left($("#bottle_2"))+10)>left($("#basket")) && (left($("#bottle_2")))<(left($("#basket"))+120)&&left($("#basket"))>0)
 {//alert("w");      
           
                     $("#basket").css({"background":"url('images/tub1.png') no-repeat"});
 }
-if(   (left($("#bottle_3"))+10)>left($("#basket")) && (left($("#bottle_3"))+23)<(left($("#basket"))+150)  )
+if(   (left($("#bottle_3"))+10)>left($("#basket")) && (left($("#bottle_3")))<(left($("#basket"))+120)&&left($("#basket"))>0 )
 {//alert("w"); 
                           
                   
