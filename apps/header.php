@@ -105,12 +105,13 @@
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+			
+			<div id="fb-name">
+				<?php echo $user["name"]; ?>
+			</div>
 			<div id="fbinfo">
 				<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true"></div>
 	
-			</div>
-			<div id="fb-name">
-				<?php echo $user["name"]; ?>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
