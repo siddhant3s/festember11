@@ -106,7 +106,6 @@
 				<img src="images/cash.png" class="logo"/>
 				<b><p id="cash1"></p></b>
 			</div>
-			</div>
 			<div id="xp">
 				<img src="images/star.png" class="logo"/>
 				<b><p id="star1"></p></b>
