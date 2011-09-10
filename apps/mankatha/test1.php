@@ -60,7 +60,7 @@ else
 #hint3{
 	position:absolute;
 	top: 300px;
-	left: 650px;
+	left: 400px;
      width: 71px;
      height: 90px;
     }
