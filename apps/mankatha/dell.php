@@ -16,7 +16,7 @@ unset($_SESSION['cht']);
 <html>
 <title>you lost</title>
 <body>
-<div id="wrapper" style="background-image:url('ropa.png');">
+<div id="wrapper" style="background-image:url('mangatha cover.png');">
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You lost this round.
 <a href="start.php" style="position:absolute;left:5%;top:70%;"><img src="bpa.png" border="0" alt=""/></a>
