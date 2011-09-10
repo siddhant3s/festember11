@@ -208,6 +208,8 @@ presentBetNum=0;
 if (clearbet==1)
 {
 balanceCash=interCash+bettingCash;
+interCash=balanceCash;
+balancetext.text="$"+balanceCash;
 setTimeout(function(){resetBallPos(1);});
 }
 else
