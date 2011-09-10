@@ -20,7 +20,7 @@ unset($_SESSION['cht']);
 <div style="color:white;"?>
 <p style="position:absolute;left:350px;top:350px;">You lost this round.</p>
 <a href="start.php" style="position:absolute;left:50px;top:400px;"><img src="bpa.png" border="0" alt=""/></a>
-<a href="index.php" style="position:absolute;left:650px;top:400px;"><img src="bq.png" border="0" alt=""/></a>
+<a href="index.php" style="position:absolute;left:550px;top:400px;"><img src="bq.png" border="0" alt=""/></a>
 </div>
 </div>
 </body>
