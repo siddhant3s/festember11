@@ -173,8 +173,8 @@ image:"fb_share.png",
 });
 
 var loading=canvas.display.image({
-x:400,
-y:300,
+x:250,
+y:600,
 origin: {x:"center", y:"center"},
 image:"loading.png",
 opacity:0.0
