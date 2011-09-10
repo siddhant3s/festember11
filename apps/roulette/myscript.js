@@ -13,7 +13,7 @@ var betMouseY=0;
 var presentBetNum=0;
 var chipSel=1;
 var balanceCash=-1;
-balanceCash=getMyCash();
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",success:function(html){ balanceCash=html}, dataType:"html" });
 var bettingCash=0;
 var interCash=balanceCash;
 var win=0;
@@ -185,7 +185,8 @@ function randomFromTo(from, to){
 
 
 function setBalanceText(){
-balanceCash=getMyCash();
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",success:function(html){ balanceCash=html; loading.opacity=0.0; loading.stop(); canvas.removeChild(loading);}, dataType:"html" 
+});
 console.log(balanceCash);
 interCash=balanceCash;
 balancetext.text="$"+balanceCash;
@@ -266,8 +267,8 @@ loading.opacity=1.0;
 loadanimate=loading.animate({ rotation:5400},
 "30000","linear");
 ///------AJAX REQUEST TO STORE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; canvas.removeChild(loading); setBalanceText(); resetTurn(0); boastcash();}, async:true, dataType:"html"
-});
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){   setBalanceText(); resetTurn(0); boastcash();}, async:true, dataType:"html"
+});//canvas.removeChild(loading); loadanimate.stop(); loading.opacity=0.0;
 ///------END AJAX REQUEST-------///
 
 }
