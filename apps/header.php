@@ -105,7 +105,7 @@
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
-			<?php echo $user["picture"]; ?>
+			<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" /></div>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
