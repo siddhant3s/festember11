@@ -14,10 +14,10 @@
 				float:right;
 			}
 			#fbinfo{
-				float:left;
+				float:right;
 			}
 			#cash{
-				float:right;
+				float:left;
 			}
 			#wrapper1{
 				float:left;
