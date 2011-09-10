@@ -17,14 +17,20 @@
 				 width:75px;
 				 height:75px;
 			}
+			#cash1{
+				float:right;
+			}
+			#star1{
+				float:left;
+			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
 			setInterval(function(){
-				$.ajax({url:getdata.php,success:function(html){
+				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
-					$("star1").html(string[0]);
-					$("cash1").html(string[1]);
+					document.getElementById("star1").innerHTML=string[1];
+					document.getElementById("cash1").innerHTML=string[0];					
 				}});
 			},3000);
 		</script>
