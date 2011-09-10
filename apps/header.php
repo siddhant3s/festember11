@@ -1,3 +1,7 @@
+<?php
+	$rpath = "";
+	include("fb.php");
+?>
 <html>
 	<head>
 		<title>header</title>
@@ -64,6 +68,12 @@
 			<div id="xp">
 				<img src="images/star.png" class="logo"/>
 				<b><p id="star1"></p></b>
+			</div>
+			<div id="fbinfo">
+				<?php
+					echo "<img src=\"".$user["pic_square"]"\"/>";
+					echo $user["name"];
+				?>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
