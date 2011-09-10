@@ -43,8 +43,8 @@
 
 		}
 		</script>
+		<iframe src="../header.php" scrolling="no" frameborder="0" width="800"></iframe>
 		<div id="wrapper">
-		<iframe src="../header.php" scrolling="no" frameborder="0" width="100%"></iframe>
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
 		<img src="images/loading.gif" height="100" width="100" id="loading"/>
