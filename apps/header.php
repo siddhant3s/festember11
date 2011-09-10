@@ -14,7 +14,7 @@
 				float:left;
 			}
 			.logo{
-				 width:75px;
+				 width:150px;
 				 height:75px;
 			}
 			#cash1{
