@@ -38,7 +38,7 @@ z-index:-1;
 </head>
 
 
-<body>
+<body style="margin:0px;">
 
 <img src="mangatha cover.png" alt="" id="bimage"/>
 <a href="start.php" id="centerdiv"><img

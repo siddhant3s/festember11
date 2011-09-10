@@ -15,7 +15,7 @@ unset($_SESSION['cht']);
 ?>
 <html>
 <title>you lost</title>
-<body>
+<body style="margin:0px;">
 <div id="wrapper" style="background-image:url('mangatha cover.png'); width:800px; height:600px;">
 <div style="color:white;"?>
 <p style="position:absolute;left:350px;top:350px;">You lost this round.</p>

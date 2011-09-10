@@ -64,7 +64,7 @@ function checkNumbers()
 }
 
 </script>
-<body>
+<body style="margin:0px;">
 
 <div id="wrapper">
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
