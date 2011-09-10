@@ -89,7 +89,7 @@
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
 			<div id="fbinfo">
-				<?php echo {$user["pic"]}; ?>
+				<?php echo $user["pic"]; ?>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
