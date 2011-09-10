@@ -291,6 +291,14 @@ function lose(){
 	padding:0px;
 	height:100px;
 }
+#wrapper{
+	position:absolute;
+	left:-250px;
+}
+#files{
+	position:absolute;
+	right:250px;
+}
 </style>
 </head>
 <body>
