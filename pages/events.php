@@ -279,19 +279,49 @@ The judges' decisions will be final and binding, and are not open to review
 <?php break; case "photography" :  ?>
 <div class="content-head">PHOTOGRAPHY</div>
 <br>
-<p>Campus views- Faces, Places and Fancies
-
-What does your College Look like through your eyes? This contest seeks to illuminate your perspective; what you love; your colours; or anything that reflects your campus and experience. Let your photos do the talking!</p>
+<p>This is a solo or team of two contest and it has two phases,<br />
+Phase I : Online
+</p>
 <br>
 
 <ul>
-<li>Participants need to capture elements of their college (only) in photos taken by any camera of their choice.</li>
-<li>The photos can be colour or b/w.</li>
-<li>Any number of participants allowed from a college, but it is not a team event.</li>
-<li>A set of 10-15 photos should be submitted.</li>
-<li>The Photos should not have any information regarding the name of the college, area or the participant's name.</li>
+<li>Each registrant can mail a maximum of 5 photographs to photography@festember.in</li>
+<li>Out of this 2 or 3 photographs will be chosen and displayed on the photography page of the
+Festember website.</li>
+<li>The showcased photographs will be open for online user ratings.</li>
+<li>The photographs can be of any style and theme.</li>
+<li>The entries have to be original. Plagiarized content will be disqualified. It should not be a
+snapshot from any video.</li>
+<li>However the photographs can be post-processed or edited without adding additional
+elements to the photograph.</li>
+<li>Original photographs of the edited photographs should also be sent along with it.</li>
+<li>No obscenities or profanities allowed.</li>
+<li>The entries will be judged based on the user ratings, the number of voters and the judges’
+panel.</li>
+<li>Special weightage will be given for Locations, Post-processing, Facial expressions, Lighting,
+Light painting, HDR, Wild-life and Macrophotography.</li>
+<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
+RAW format) with a minimum resolution of 1280x720.</li>
+<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
+speed etc.</li>
+<li>All entries must be mailed before 20th Sep 2011, 11:59pm.</li>
+<li>This phase is Non-Eliminative.</li>
 </ul>
-The judges' decisions will be final and binding, and are not open to review
+<br />
+<p>Phase II : On-campus</p>
+<ul>
+<li>All the participants should bring their own camera.(Any digital camera)</li>
+<li>Participants can directly take part in Phase 2 without taking part in Phase 1, but are
+bound to lose the scores of their competitors.</li>
+<li>A theme will be given on the first day of Festember and the participants can take any
+photographs relating to the theme and can submit a maximum of 5 photographs.</li>
+<li>The photographs can be submitted any time before 25th Sep 1011, 11:59am.</li>
+<li>Photographs won’t be displayed anywhere on the website in this phase.</li>
+<li>Results will be put up on the website at the end of Phase 2.</li>
+<li>There will be a special prize for the winner who takes part in the Phase 1 alone and
+couldn’t take part in the Phase 2.</li>
+</ul>
+
 
 
 <?php break; case "graffiti" :  ?>
