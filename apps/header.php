@@ -20,7 +20,7 @@
 				float:right;
 			}
 			#wrapper1{
-				float:right;
+				float:left;
 			}
 			.logo{
 				 width:150px;
