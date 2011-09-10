@@ -27,14 +27,12 @@
 				 height:100px;
 			}
 			#cash1{
-				color:white;
 				position:absolute;
 				left:103px;
 				top:45px;
 				font-size:10px;
 			}
 			#star1{
-				color:white;
 				position:absolute;
 				right:40px;
 				top:40px;
