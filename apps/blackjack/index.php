@@ -74,7 +74,7 @@ font-weight:bold;
 <script src="start.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>
 
-   <script src="../http://connect.facebook.net/en_US/all.js"></script>
+   <script src="http://connect.facebook.net/en_US/all.js"></script>
 
 <script>
      var appId = <?php echo $facebook->getAppId(); ?>;
