@@ -69,32 +69,26 @@
 		<script type="text/javascript">
 			var s,c;
 			window.onload=function(){
-				$.ajax({url:"getdata.php",success:function(html){
-					var string=html.split('-');	
-					document.getElementById("star1").innerHTML=string[1];
-					document.getElementById("cash1").innerHTML=string[0];	
-					c=string[0];
-					s=string[1];				
-				}});
+				$.ajax({url:"getdata.php",success:y(html)});
 				x();
 			}
 			var time=10000;
-			function x(){
-			
+			function x(){$.ajax({url:"getdata.php",success:y(html)});
 				
-				$.ajax({url:"getdata.php",success:function(html){
-					var string=html.split('-');	
-					document.getElementById("star1").innerHTML=string[1];
-					document.getElementById("cash1").innerHTML=string[0];
-					if(c==string[0]&&s==string[1]){
+				if(c==string[0]&&s==string[1]){
 						time+=500;
 					}
 					else{
 						time=10000;
-					}					
-				}});
-				
+				}
 				setTimeout(x,time);
+			}
+			function y(html){
+				var string=html.split('-');	
+					document.getElementById("star1").innerHTML=string[1];
+					document.getElementById("cash1").innerHTML=string[0];
+					c=string[0];
+					s=string[1];
 			}
 		</script>
 	</head>
