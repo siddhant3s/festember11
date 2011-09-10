@@ -12,6 +12,8 @@ if(!$fbuser) {
   $fbloginurl=$facebook->getLoginUrl($fbperm);
   header("Location:" . $fbloginurl);
 }
+print_r($fpuser);
+die;
 
 /** <Login Related Shit **/
   try {
