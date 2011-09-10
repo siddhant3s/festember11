@@ -128,7 +128,7 @@ x: balancebox.width/2,
 y: balancebox.height/2,
 origin: {x:"center", y:"center"},
 font: "bold 30px comic-sans",
-text: "$"+balanceCash,
+text: "$"+Math.round(balanceCash),
 fill: "#fff",
 });
 
@@ -211,7 +211,7 @@ if (clearbet==1)
 {
 balanceCash=interCash+bettingCash;
 interCash=balanceCash;
-balancetext.text="$"+balanceCash;
+balancetext.text="$"+Math.round(balanceCash);
 setTimeout(function(){resetBallPos(1);});
 }
 else
@@ -413,7 +413,7 @@ if(interCash-chipSel>=0){
         console.log("balanceCash : "+balanceCash+"  interCash: "+interCash);
         interCash=balanceCash-bettingCash;
         console.log("balanceCash:"+balanceCash+"  interCash: "+interCash);
-        balancetext.text="$"+interCash;
+        balancetext.text="$"+Math.round(interCash);
         setTimeout(function(){ generateChip(i);},2);
         }
 }
