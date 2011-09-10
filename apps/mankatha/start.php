@@ -16,14 +16,6 @@ html, body {
   margin: 0;
 }
 
-.centered {
-  position:absolute ;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
-
 #bimage
 {	position:absolute;
 
@@ -32,9 +24,8 @@ z-index:-1;
 }
 #pos
 {
-	position:absolute;
-    left:45%;
-    top:50%;
+	margin:0 auto;
+	width:100%;
 }
 #frame iframe{
 	margin:0px;
