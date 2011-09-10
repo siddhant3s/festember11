@@ -69,11 +69,15 @@
 		<script type="text/javascript">
 			var s,c;
 			window.onload=function(){
-				$.ajax({url:"getdata.php",success:y(html)});
+				$.ajax({url:"getdata.php",success:function(html){
+					y(html);
+				}});
 				x();
 			}
 			var time=10000;
-			function x(){$.ajax({url:"getdata.php",success:y(html)});
+			function x(){$.ajax({url:"getdata.php",success:function(html){
+					y(html);
+				}});
 				
 				if(c==string[0]&&s==string[1]){
 						time+=500;
