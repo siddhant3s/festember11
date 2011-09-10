@@ -25,7 +25,7 @@
 </head>
 <body>
 <div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870"  id="header"></iframe></div>
-<div id="frame1"><iframe src="index2.php" scrolling="no" frameborder="0" width="870" height="655" id="header"></iframe></div>
+<div id="frame1"><iframe src="index2.php" scrolling="no" frameborder="0" width="870" height="800" id="header"></iframe></div>
 </body>
 
 </html>
