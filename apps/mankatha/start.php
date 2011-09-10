@@ -73,7 +73,7 @@ function checkNumbers()
 </script>
 <body>
 
-<div>
+<div id="wrapper">
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
 <p>Enter bid</p>
