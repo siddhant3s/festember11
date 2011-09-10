@@ -18,8 +18,8 @@ else
 	}
 	else
 	{
-	    $_SESSION['cht']=$_POST['txtchar'];
-	    $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`)  VALUES (now(), ".$_SESSION['cht'].", '4', '" . $user["id"] ."' )";
+	    
+	    $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`)  VALUES (now(), ".$_POST['txtchar'].", '4', '" . $user["id"] ."' )";
 	    mysql_query($q) or die("failed to execute query!");
       	    //header('Location:test1.php');
     	    //exit;
