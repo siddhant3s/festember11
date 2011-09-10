@@ -30,7 +30,7 @@
 				color:white;
 				position:absolute;
 				left:110px;
-				top:35px;
+				top:40px;
 				font-size:10px;
 			}
 			#star1{
