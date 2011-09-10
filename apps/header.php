@@ -14,10 +14,13 @@
 				float:right;
 			}
 			#fbinfo{
-				float:left;
+				float:right;
 			}
 			#cash{
 				float:left;
+			}
+			#wrapper1{
+				float:right;
 			}
 			.logo{
 				 width:150px;
@@ -60,7 +63,7 @@
 	<body>
 		<div id="wrapper">
 			
-			
+			<div id="wrapper1">
 			<div id="fbinfo">
 				<div id="fb-root"></div>
 <script>(function(d){
@@ -78,6 +81,7 @@
 			<div id="xp">
 				<img src="images/star.png" class="logo"/>
 				<b><p id="star1"></p></b>
+			</div>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
