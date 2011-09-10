@@ -263,10 +263,12 @@ function sendReturnPercent(){
 loading.opacity=1.0;
 loadanimate=loading.animate({ rotation:5400},
 "30000","linear");
-
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; }, async:true, dataType:"html"
+var x=0;
+///------AJAX REQUEST TO RANDOMIZE-------///
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; x=1;}, async:true, dataType:"html"
 });
-
+///------END AJAX REQUEST-------///
+while (x==0){;}
 }
 
 function showProfit(){
@@ -450,11 +452,13 @@ function verifyResult(){
 loading.opacity=1.0;
 loadanimate=loading.animate({ rotation:5400},
 "30000","linear");
+var x=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
 
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; alert(html);}, async:true, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; x=1; alert(html);}, async:true, dataType:"html"
 });
-
+while (x==0)
+{;}
 ///------END AJAX REQUEST-------///
 
 }
