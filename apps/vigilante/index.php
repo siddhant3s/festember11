@@ -44,7 +44,7 @@ unset($map);
 $json=json_encode(array('namee'=>$_SESSION['player'],'level'=>$_SESSION['level'],'map'=>$_SESSION['map'],'persons'=>$_SESSION['persons'],'coins'=>$_SESSION['coins'],'score'=>$_SESSION['score'],'time'=>$_SESSION['time'],'addons'=>$_SESSION['addons']));
 }catch(Exception $e){
 	echo '<br/>Error: '.$e->getMessage();
-	session_destroy();
+	//session_destroy();
 	die('Error!');
 }
 ?>
