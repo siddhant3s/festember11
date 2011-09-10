@@ -716,6 +716,7 @@ ball.bind("mouseleave",function(){ball.dragAndDrop(false);});
 
 //stopbtn.addChild(stopbtntext);
 //canvas.addChild(stopbtn);
+canvas.addChild(loading);
 canvas.addChild(fbBtn);
 clearbtn.addChild(cleartxt);
 canvas.addChild(clearbtn);
