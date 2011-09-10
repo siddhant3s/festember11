@@ -44,13 +44,13 @@
 			#cash1{
 				position:absolute;
 				left:105px;
-				top:45px;
+				top:40px;
 				font-size:10px;
 			}
 			#star1{
 				position:absolute;
 				right:40px;
-				top:40px;
+				top:35px;
 			}
 			p{
 				color:white;
