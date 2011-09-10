@@ -13,10 +13,10 @@
 			#xp{
 				float:right;
 			}
-			#cash{
+			#fbinfo{
 				float:left;
 			}
-			#fbinfo{
+			#cash{
 				float:left;
 			}
 			.logo{
