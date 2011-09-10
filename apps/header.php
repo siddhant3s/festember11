@@ -29,10 +29,7 @@
 					
 			}
 			#cash{
-				position:absolute;
-				left:0px;
-				top:0px;
-				
+				float:left;			
 			}
 			#wrapper1{
 				float:left;
@@ -102,12 +99,12 @@
 		<div id="wrapper">
 		
 			<div id="wrapper1">
-			
+			<div id="fbinfo">
 		<iframe src="//www.facebook.com/plugins/like.php?app_id=250561451648935&amp;href=https%3A%2F%2Fwww.facebook.com%2Fapps%2Fapplication.php%3Fid%3D263593520331172%26sk%3Dpage_getting_started&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:80px;" allowTransparency="true"></iframe>
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
-			<div id="fbinfo">
+			
 				<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" facebook-logo="true" linked="false" width="75" height="100"></fb:profile-pic></div>
 	
 			</div>
