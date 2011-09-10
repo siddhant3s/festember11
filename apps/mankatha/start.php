@@ -25,7 +25,7 @@ z-index:-1;
 #pos
 {
 	position:absolute;
-    left:250px;
+    left:300px;
    	top:350px;
 }
 #frame iframe{
