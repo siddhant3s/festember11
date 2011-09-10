@@ -17,9 +17,16 @@
 			#xp{
 				float:right;
 			}
+			#fb-name{
+				margin-top:40px;
+				margin-right:4px;
+				color:white;
+				font-weight:bold;
+				float:right;
+			}
 			#fbinfo{
 				float:right;
-				width:auto;	
+					
 			}
 			#cash{
 				float:left;
@@ -55,13 +62,7 @@
 			.fb-like{
 				margin-top:35px;	
 			}
-			#fb-name{
-				margin-top:40px;
-				margin-right:4px;
-				color:white;
-				font-weight:bold;
-				float:right;
-			}
+			
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
