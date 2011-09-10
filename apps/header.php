@@ -47,7 +47,8 @@
 				color:white;
 			}
 			#ph{
-				margin-top:10px;
+				margin-top:5px;
+				margin-left:0px;
 				border:5px solid #fff;
 				box-shadow:0px 0px 2px 2px #000;
 			}
@@ -92,7 +93,7 @@
   js.src = "//connect.facebook.net/en_US/all.js#appId=159692317449601&xfbml=1";
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
-<div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
+<div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
 			<div id="fbinfo">
 				<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" /></div>
 				
