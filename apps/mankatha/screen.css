@@ -10,6 +10,7 @@ img{
 	 cursor:pointer;
 	
 }
+
 #bimage
 {	position:absolute;
  
@@ -101,7 +102,7 @@ width:71px;
 height:97px;
 	position:fixed;
 	top: 300px;
-	left: 650px;
+	left: 400px;
 	list-style: none;	
 }
 	
