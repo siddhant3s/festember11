@@ -50,7 +50,7 @@
 				margin-top:5px;
 				margin-left:0px;
 				border:5px solid #fff;
-				box-shadow:0px 0px 2px 2px #000;
+				box-shadow:0px 0px 2px 2px #666;
 			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
