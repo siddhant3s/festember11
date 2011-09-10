@@ -297,7 +297,7 @@ function lose(){
 }
 #block{
 	position:absolute;
-	left:-250px;
+	right:250px;
 }
 </style>
 </head>
