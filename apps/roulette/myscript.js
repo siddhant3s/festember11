@@ -400,20 +400,24 @@ if(key==0 && res==0)
 return 1;
 return 0;
 }
-
-
 function addBet(i){
 if(interCash-chipSel>=0){
-	if (bets[i])
-	bets[i]+=chipSel;
-	else
-	bets[i]=chipSel;
-	bettingCash+=chipSel;
-	interCash=balanceCash-bettingCash;
-	balancetext.text="$"+interCash;
-	setTimeout(function(){ generateChip(i);},2);
-	}
+        console.log("Chipsel:"+chipSel);
+        if (bets[i])
+        bets[i]+=chipSel;
+        else
+        bets[i]=chipSel;
+        console.log("bettingCash b4:"+bettingCash);
+        bettingCash+=chipSel;
+        console.log("bettingCash aftr:"+bettingCash);
+        console.log("bettingCash : "+balanceCash+"  interCash: "+interCash);
+        interCash=balanceCash-bettingCash;
+        console.log("balanceCash:"+balanceCash);
+        balancetext.text="$"+interCash;
+        setTimeout(function(){ generateChip(i);},2);
+        }
 }
+
 
 function selectChip(){
 var c1,c10,c100;
