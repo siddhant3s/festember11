@@ -5,7 +5,7 @@ include("../game.php");
 
 if(!isset($_POST['txtchar']))
 {
-    	header('Location:start.php');
+    	header('Location:index.php');
 	
 }
 else
@@ -29,7 +29,7 @@ else
 <?php
 
 if(!isset($_SESSION['cht'])){
-	header('Location:start.php');
+	header('Location:index.php');
 }
 else{
 function P2J($Phpbet,$JA)
@@ -292,6 +292,10 @@ function lose(){
 	height:100px;
 }
 #wrapper{
+	position:absolute;
+	left:-250px;
+}
+#block{
 	position:absolute;
 	left:-250px;
 }
