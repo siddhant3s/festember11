@@ -59,7 +59,7 @@
 				border:5px solid #fff;
 				box-shadow:0px 0px 2px 2px #666;
 			}
-			.fb-like{
+			iframe{
 				margin-top:35px;
 				margin-left:4px;	
 			}
@@ -71,8 +71,9 @@
 			window.onload=function(){
 				$.ajax({url:"getdata.php",success:function(html){
 					y(html);
+					x();
 				}});
-				x();
+				
 			}
 			var time=10000;
 			function x(){$.ajax({url:"getdata.php",success:function(html){
@@ -101,15 +102,7 @@
 			
 			<div id="wrapper1">
 			
-				<div id="fb-root"></div>
-<script>(function(d){
-  var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-  js = d.createElement('script'); js.id = id; js.async = true;
-  js.src = "//connect.facebook.net/en_US/all.js#appId=159692317449601&xfbml=1";
-  d.getElementsByTagName('head')[0].appendChild(js);
-}(document));</script>
-<div class="fb-like" data-href="https://apps.facebook.com/festember" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true"></div>
-			
+		<iframe src="//www.facebook.com/plugins/like.php?app_id=250561451648935&amp;href=https%3A%2F%2Fwww.facebook.com%2Fapps%2Fapplication.php%3Fid%3D263593520331172%26sk%3Dpage_getting_started&amp;send=false&amp;layout=standard&amp;width=200&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:80px;" allowTransparency="true"></iframe>
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
