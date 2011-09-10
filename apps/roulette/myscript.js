@@ -175,6 +175,7 @@ image:"fb_share.png",
 var loading=canvas.display.image({
 x:400,
 y:300,
+origin: {x:"center", y:"center"},
 image:"loading.png",
 opacity:0.0
 
