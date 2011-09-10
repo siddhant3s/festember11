@@ -254,8 +254,20 @@ function lose(){
 	*/} t=0;
 }
 </script>
+<style type="text/css">
+	#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
+</style>
 </head>
 <body>
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="870" id="header"></iframe></div>
 <div>
 
 <img src="mangatgha.png" alt="" id="bimage" draggable="false" />
