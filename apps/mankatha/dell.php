@@ -18,9 +18,9 @@ unset($_SESSION['cht']);
 <body>
 <div id="wrapper" style="background-image:url('mangatha cover.png'); width:800px; height:600px;">
 <div style="color:white;"?>
-You lost this round.
+<p style="position:absolute;left:350px;top:350px;">You lost this round.</p>
 <a href="start.php" style="position:absolute;left:50px;top:400px;"><img src="bpa.png" border="0" alt=""/></a>
-<a href="index.php" style="position:absolute;rigt:50px;top:400px;"><img src="bq.png" border="0" alt=""/></a>
+<a href="index.php" style="position:absolute;right:50px;top:400px;"><img src="bq.png" border="0" alt=""/></a>
 </div>
 </div>
 </body>
