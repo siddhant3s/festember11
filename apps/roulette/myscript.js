@@ -171,6 +171,14 @@ image:"fb_share.png",
 
 
 });
+
+var loading=canvas.display.image({
+x:400,
+y:300,
+image:"loading.png",
+opacity:0.0
+
+});
 //////////////////////////////////////////////////////////////
 
 function randomFromTo(from, to){
@@ -423,8 +431,12 @@ chip100.animate({opacity:c100},"200","ease-in-out");
 }
 
 function verifyResult(){
+loading.opacity=1.0;
+loadanimate=loading.animate({ rotation:5400},
+"30000","linear");
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){alert(html);}, async:false, dataType:"html"
+
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; alert(html);}, async:false, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 
