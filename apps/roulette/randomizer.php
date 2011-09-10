@@ -2,6 +2,7 @@
 include("getuser.php");
 include("../../connect.php");
 include("setscorebegin.php");
+include("../gamearray.php");
 $min=0;
 $max=4;
 $val=0;
