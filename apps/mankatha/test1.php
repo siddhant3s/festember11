@@ -22,8 +22,7 @@ else
 	    $_SESSION['cht']=$_POST['txtchar'];
 	    $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`)  VALUES (now(), ".$_POST['txtchar'].", '4', '" . $user["id"] ."' )";
 	    mysql_query($q);
-	    //header('Location:test1.php');
-    	    //exit;
+	   
 	}
 }
 ?>
@@ -32,7 +31,7 @@ $rpath = "../";
 include("../game.php");
 if(!isset($_SESSION['cht'])){
 	header('Location:start.php');
-	exit;}
+}
 else{
 function P2J($Phpbet,$JA)
 {
@@ -47,7 +46,7 @@ P2J($bet, 'point');
 else
 {
 		header('Location:start.php');
-	exit;
+	
 	}
 }
 ?>
