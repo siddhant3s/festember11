@@ -18,23 +18,36 @@
 				 height:100px;
 			}
 			#cash1{
-				float:right;
-				
+				color:white;
+				position:absolute;
+				left:110px;
+				top:35px;
 			}
 			#star1{
-				float:left;
+				color:white;
+				position:absolute;
+				right:110px;
+				top:35px;
 			}
 			
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
+			window.onload=function(){
+				$.ajax({url:"getdata.php",success:function(html){
+					var string=html.split('-');	
+					document.getElementById("star1").innerHTML=string[1];
+					document.getElementById("cash1").innerHTML=string[0];					
+				}});
+			}
+			var time=10000;
 			setInterval(function(){
 				$.ajax({url:"getdata.php",success:function(html){
 					var string=html.split('-');	
 					document.getElementById("star1").innerHTML=string[1];
 					document.getElementById("cash1").innerHTML=string[0];					
 				}});
-			},3000);
+			},time);
 		</script>
 	</head>
 	<body>
