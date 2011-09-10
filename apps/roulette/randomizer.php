@@ -1,7 +1,8 @@
 <?php
-include("getuser.php");
-include("../../connect.php");
+$rpath="../";
+include("../game.php");
 include("../gamearray.php");
+include("getuser.php");
 include("setscorebegin.php");
 $min=0;
 $max=4;
