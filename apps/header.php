@@ -16,6 +16,10 @@
 			#cash{
 				float:left;
 			}
+			#fbinfo{
+				margin:0 auto;
+				width:300px;
+			}
 			.logo{
 				 width:150px;
 				 height:100px;
@@ -70,7 +74,7 @@
 			</div>
 			<div id="fbinfo">
 				<?php
-					echo "<img src=\"{$user["pic_square"]}\"/>";
+					echo "<img src=\"{$user["pic"]}\"/>";
 					echo $user["name"];
 				?>
 			</div>
