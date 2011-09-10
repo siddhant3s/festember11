@@ -12,16 +12,6 @@ body
 height:655px;
 z-index:-1;
 }
-#centerdiv{
-	position:absolute;
-	left:300px;;
-	top:430px;
-}
-#centerdiv2{
-	position:absolute;
-	left:870px;
-	top:430px;
-}
 #frame iframe{
 	margin:0px;
 	padding:0px;
