@@ -105,7 +105,7 @@
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
-			<?php echo $user["picture"]; ?>
+			<div id="ph"><iframe src="http://graph.facebook.com/<?php echo $user["username"];?>/picture"></iframe></div>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
