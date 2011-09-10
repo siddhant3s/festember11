@@ -186,6 +186,11 @@ function randomFromTo(from, to){
        return Math.random() * (to - from + 1) + from;
     }
 
+
+function setBalanceText(){
+balancetext.text="$"+interCash;
+}
+
 function resetTurn(clearbet){
 wheel.rotation=0;
 indi.rotation=0;
@@ -216,7 +221,7 @@ bettingCash=0;
 interCash=balanceCash;
 win=0;
 LuckyNum=0;
-balancetext.text="$"+interCash;
+window.setTimeout(function(){ setBalanceText(); },1);
 
 for (key in code_chip)
 {
