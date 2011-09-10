@@ -46,6 +46,10 @@
 			p{
 				color:white;
 			}
+			#ph{
+				border:5px solid #000;
+				box-shadow:0px 0px 5px 5px #ccc;
+			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
@@ -89,7 +93,7 @@
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
 			<div id="fbinfo">
-				<fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" />
+				<div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true" /></div>
 				
 			</div>
 			<div id="cash">
