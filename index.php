@@ -12,8 +12,7 @@ if(!$fbuser) {
   $fbloginurl=$facebook->getLoginUrl($fbperm);
   header("Location:" . $fbloginurl);
 }
-print_r($fbuser);
-die;
+
 
 /** <Login Related Shit **/
   try {
@@ -99,6 +98,8 @@ die;
 	      
 	      // Proceed knowing you have a logged in user who's authenticated.
 	      $user_profile = $facebook->api('/me');
+	      print_r($user_profile);
+	      die;
 	    } 
 
 	  catch (FacebookApiException $e) 
