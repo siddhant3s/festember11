@@ -26,7 +26,7 @@ html, body {
 
 #bimage
 {	position:absolute;
- left:250px;
+
 height:655px;
 z-index:-1;
 }

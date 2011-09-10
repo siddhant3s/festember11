@@ -18,7 +18,7 @@ z-index:-1;
 }
 #centerdiv2{
 	position:absolute;
-	left:420px;
+	left:520px;
 	top:430px;
 }
 #frame iframe{
