@@ -188,7 +188,7 @@ function randomFromTo(from, to){
 
 
 function setBalanceText(){
-balancetext.text="$"+interCash;
+balancetext.text="$"+getMyCash();
 }
 
 function resetTurn(clearbet){
