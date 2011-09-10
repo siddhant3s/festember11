@@ -55,6 +55,9 @@
 			.fb-like{
 				margin-top:35px;	
 			}
+			#fb-name{
+				float:right;
+			}
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
