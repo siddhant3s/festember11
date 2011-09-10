@@ -5,7 +5,7 @@ include("../game.php");
 
 if(!isset($_POST['txtchar']))
 {
-    	header('Location:start.php');
+    	header('Location:index.php');
 	
 }
 else
@@ -29,7 +29,7 @@ else
 <?php
 
 if(!isset($_SESSION['cht'])){
-	header('Location:start.php');
+	header('Location:index.php');
 }
 else{
 function P2J($Phpbet,$JA)
@@ -291,14 +291,19 @@ function lose(){
 	padding:0px;
 	height:100px;
 }
-body{
-	margin-left:-250px;
+#wrapper{
+	position:absolute;
+	left:-250px;
+}
+#block{
+	position:absolute;
+	left:-250px;
 }
 </style>
 </head>
 <body>
 
-<div>
+<div id="wrapper">
 
 <img src="mangatgha.png" alt="" id="bimage" draggable="false" />
 <div class="one">
