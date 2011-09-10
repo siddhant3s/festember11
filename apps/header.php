@@ -29,8 +29,10 @@
 					
 			}
 			#cash{
-				float:left;
-				background:#1BA1E2;
+				position:absolute;
+				left:0px;
+				top:0px;
+				
 			}
 			#wrapper1{
 				float:left;
