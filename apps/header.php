@@ -71,7 +71,7 @@
 		<div id="wrapper">
 			
 			<div id="wrapper1">
-			<div id="fbinfo">
+			
 				<div id="fb-root"></div>
 <script>(function(d){
   var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
@@ -80,6 +80,7 @@
   d.getElementsByTagName('head')[0].appendChild(js);
 }(document));</script>
 <div class="fb-like" data-href="http://apps.facebook.com/festigame/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
+			<div id="fbinfo">
 				<?php
 					echo "<img src=\"{$user["pic"]}\"/>";
 					echo $user["name"];
