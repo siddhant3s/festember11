@@ -47,16 +47,6 @@ function boastcash() {
        pub(obj);  
 }
 
-function boastwin(win) {
-      obj = {
-          name:"<?php echo $user["name"]; ?> has just hit Jackpot and won $"+win+" in Roulette in the Festember11 Casino Games!",
-          link:"http://www.festember.in/11/games/",
-          picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
-          caption:"Casino Games at FESTEMBER 11",
-          description:"Play Games, Try your Luck and Hit the Jackpot Vegas Style!!!",
-       }
-       pub(obj);  
-}
 
 function pub(o) {
        o.method = "feed";

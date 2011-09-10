@@ -307,7 +307,7 @@ opacity:1.0
 			function(){
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
-			boastwin(win);
+			boastcash();
 			sendReturnPercent();
 			
 			}
