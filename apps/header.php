@@ -5,6 +5,9 @@
 	<head>
 		<title>header</title>
 		<style type="text/css">
+			body{
+				margin:0px;
+			}
 			#wrapper{
 				width:100%;
 				height:100px;
