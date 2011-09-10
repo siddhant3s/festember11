@@ -185,11 +185,11 @@ function randomFromTo(from, to){
 
 
 function setBalanceText(){
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",success:function(html){ balanceCash=html; loading.opacity=0.0; loading.stop(); canvas.removeChild(loading);}, async:false , dataType:"html" 
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/getCashRelay.php",success:function(html){ balanceCash=html; loading.opacity=0.0; loading.stop(); canvas.removeChild(loading);}, async:true , dataType:"html" 
 });
 console.log(balanceCash);
 interCash=balanceCash;
-balancetext.text="$"+balanceCash;
+balancetext.text="$"+Math.round(balanceCash);
 }
 
 function resetTurn(clearbet){
