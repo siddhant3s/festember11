@@ -55,7 +55,6 @@
 			.fb-like{
 				margin-top:35px;	
 			}
-			
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
@@ -102,9 +101,11 @@
 				<div><div id="ph"><fb:profile-pic uid="<?php echo $user["id"]; ?>" linked="true"></div>
 					
 			</div>
+			
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
 				<b><p id="cash1"></p></b>
+			</div>
 			</div>
 			<div id="xp">
 				<img src="images/star.png" class="logo"/>
