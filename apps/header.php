@@ -60,10 +60,7 @@
 	<body>
 		<div id="wrapper">
 			
-			<div id="xp">
-				<img src="images/star.png" class="logo"/>
-				<b><p id="star1"></p></b>
-			</div>
+			
 			<div id="fbinfo">
 				<div id="fb-root"></div>
 <script>(function(d){
@@ -77,6 +74,10 @@
 					echo "<img src=\"{$user["pic"]}\"/>";
 					echo $user["name"];
 				?>
+			</div>
+			<div id="xp">
+				<img src="images/star.png" class="logo"/>
+				<b><p id="star1"></p></b>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
