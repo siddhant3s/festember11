@@ -9,7 +9,11 @@
 				width:100%;
 				height:100px;
 				background:#ccc;
-				box-shadow:#ccc 1px 1px 1px;
+				box-shadow:#000 1px 1px 1px;
+			}
+			#wrapper:hover{
+				box-shadow:#000 0px 0px 0px;
+				border:1px blue solid;
 			}
 			#xp{
 				float:right;
