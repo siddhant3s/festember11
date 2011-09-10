@@ -291,14 +291,6 @@ function lose(){
 	padding:0px;
 	height:100px;
 }
-#wrapper{
-	position:absolute;
-	left:-250px;
-}
-#block1{
-	position:absolute;
-	right:250px;
-}
 </style>
 </head>
 <body>
