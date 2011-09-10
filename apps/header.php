@@ -57,9 +57,9 @@
 			}
 			#fb-name{
 				margin-top:40px;
-				margin-left:0px;
-				border:5px solid #fff;
-				box-shadow:0px 0px 2px 2px #666;
+				margin-right:4px;
+				color:white;
+				font-weight:bold;
 				float:right;
 			}
 		</style>
