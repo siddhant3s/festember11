@@ -24,8 +24,9 @@ z-index:-1;
 }
 #pos
 {
-	margin:0 auto;
-	width:100%;
+	position:absolute;
+    left:250px;
+   	top:350px;
 }
 #frame iframe{
 	margin:0px;
