@@ -20,7 +20,7 @@
 			#cash1{
 				float:right;
 			}
-			#star{
+			#star1{
 				float:left;
 			}
 		</style>
