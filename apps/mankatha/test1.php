@@ -291,14 +291,15 @@ function lose(){
 	padding:0px;
 	height:100px;
 }
-body{
-	margin-left:-250px;
+#wrapper{
+	position:absolute;
+	left:-250px;
 }
 </style>
 </head>
 <body>
 
-<div>
+<div id="wrapper">
 
 <img src="mangatgha.png" alt="" id="bimage" draggable="false" />
 <div class="one">
