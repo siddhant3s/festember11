@@ -47,6 +47,7 @@
 		<div id="wrapper">
 		<iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe>
 		<div id="tutorials"></div>
+		<div id="wrapper1">
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
 		<img src="images/loading.gif" height="100" width="100" id="loading"/>
 		<div id="coins">
@@ -70,7 +71,7 @@
 		<div id="info"><img src="images/close.png" height="16" width="16" id="close" onclick="binfo()"/></div>
 		<input type="button" value="Help" onclick="tutorials()" id="tut_button"/>
 		</div>		
-		
+		</div>
 		</div>		
 	</body>
 </html>

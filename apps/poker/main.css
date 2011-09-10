@@ -7,7 +7,12 @@ html{
 	height:700px;
 	position:relative;
 	overflow:hidden;
-	background-image:url('images/board.png');
+	
+}
+#wrapper{
+	width:800px;
+	height:600px;
+	background:url('images/board.png') no-repeat;
 }
 #ani{
 	position:fixed;
