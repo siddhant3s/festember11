@@ -9,6 +9,7 @@
 				width:100%;
 				height:100px;
 				background:#ccc;
+				box-shadow:#ccc 1px 1px 1px;
 			}
 			#xp{
 				float:right;
