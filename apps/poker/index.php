@@ -43,7 +43,7 @@
 
 		}
 		</script>
-		<iframe src="../header.php" scrolling="no" frameborder="0" width="800"></iframe>
+		<iframe src="../header.php" scrolling="no" frameborder="0" width="800" style="margin:0 auto; margin:0;"></iframe>
 		<div id="wrapper">
 		<div id="tutorials"></div>
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
