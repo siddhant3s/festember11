@@ -295,10 +295,6 @@ function lose(){
 	position:absolute;
 	left:-250px;
 }
-#files{
-	position:absolute;
-	right:250px;
-}
 </style>
 </head>
 <body>
