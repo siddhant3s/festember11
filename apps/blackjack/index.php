@@ -75,7 +75,6 @@ font-weight:bold;
 <script src="script.js" type="text/javascript"></script>
 
    <script src="../http://connect.facebook.net/en_US/all.js"></script>
-   <script src="../gameapi.js" type="text/javascript"></script>
 
 <script>
      var appId = <?php echo $facebook->getAppId(); ?>;
@@ -94,29 +93,20 @@ function shareplay() {
           name:"<?php echo $user["name"]; ?> is now playing Blackjack in the Festember Casino!",
           link:"http://www.festember.in/11/games/",
           picture:"http://1.bp.blogspot.com/_bNEcw3z5M20/TBpGFBUkWKI/AAAAAAAAADA/1MPHBgQQYTw/s320/online-blackjack.gif",
-          caption:""<?php echo $user["name"]; ?> is now playing Blackjack in the Festember Casino!",
+          caption:"<?php echo $user["name"]; ?> is now playing Blackjack in the Festember Casino!",
           description:"Come join in with him to win t-shirts, food coupons, goodies and prizes worth INR 15,000/-",
 	  method:"feed",
        });
      }
 </script>
-
-
 </head>
 <body> 
+<div id="fb-root"></div>
+<script src="../gameapi.js" type="text/javascript"></script>
+
 
 <script type="text/javascript">
-
-function doit()
-{
-
-self.location="blackjack.php";
-
-
-}
-
-
-
+    function doit() { self.location="blackjack.php"; }
 </script>
 <div align="center" id="shine">
 <br><br>
