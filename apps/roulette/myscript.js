@@ -186,6 +186,7 @@ function randomFromTo(from, to){
 
 function setBalanceText(){
 balanceCash=getMyCash();
+console.log(balanceCash);
 interCash=balanceCash;
 balancetext.text="$"+balanceCash;
 }
@@ -265,7 +266,7 @@ loading.opacity=1.0;
 loadanimate=loading.animate({ rotation:5400},
 "30000","linear");
 ///------AJAX REQUEST TO STORE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; canvas.removeChild(loading); resetTurn(0); boastcash();}, async:true, dataType:"html"
+$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; canvas.removeChild(loading); setBalanceText(); resetTurn(0); boastcash();}, async:true, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
 
