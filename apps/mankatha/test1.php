@@ -292,8 +292,9 @@ function lose(){
 	height:100px;
 }
 #wrapper{
-	height:655px;
-	background:url('mangatgha.jpg');
+	height:600px;
+	width:800px;
+	background-image:url('mangatgha.jpg');
 	position:absolute;
 	-webkit-user-select: none;
 -khtml-user-select: none;
