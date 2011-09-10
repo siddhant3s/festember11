@@ -815,6 +815,7 @@ The judges' decisions will be final and binding, and are not open to review
 </ul>
 </li>
 <li>Rules for Tarangini updated</li>
+<li>Rules for Photography updated</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
