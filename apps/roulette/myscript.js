@@ -128,7 +128,7 @@ x: balancebox.width/2,
 y: balancebox.height/2,
 origin: {x:"center", y:"center"},
 font: "bold 30px comic-sans",
-text: "$"+interCash,
+text: "$"+balanceCash,
 fill: "#fff",
 });
 
