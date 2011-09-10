@@ -6,7 +6,7 @@ include("../game.php");
 if(!isset($_POST['txtchar']))
 {
     	header('Location:start.php');
-	exit;
+	
 }
 else
 {
@@ -15,7 +15,7 @@ else
 	if($_POST['txtchar']>$money)
 	{ 
 	    header('Location:start.php?alertnobalance=1&m1=' . $money . "&m2=" . $_POST['txtchar']);
-	    exit;
+	    
 	}
 	else
 	{
