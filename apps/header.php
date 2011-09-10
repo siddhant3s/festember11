@@ -67,7 +67,7 @@
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
 		<script type="text/javascript">
-			var s,c;
+			var s,c,string;
 			window.onload=function(){
 				$.ajax({url:"getdata.php",success:function(html){
 					y(html);
@@ -88,7 +88,7 @@
 				setTimeout(x,time);
 			}
 			function y(html){
-				var string=html.split('-');	
+				string=html.split('-');	
 					document.getElementById("star1").innerHTML=string[1];
 					document.getElementById("cash1").innerHTML=string[0];
 					c=string[0];
