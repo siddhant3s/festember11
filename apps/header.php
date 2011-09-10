@@ -8,7 +8,7 @@
 			#wrapper{
 				width:100%;
 				height:100px;
-				background:#333;
+				background:#1ba1e2;
 				border:1px #eee solid;
 			}
 			#wrapper:hover{
@@ -16,11 +16,10 @@
 			}
 			#xp{
 				float:right;
-				background:#1BA1E2;
 			}
 			#fbinfo{
 				float:right;
-				background:#1BA1E2;
+				
 			}
 			#cash{
 				float:left;
