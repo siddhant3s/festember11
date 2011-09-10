@@ -9,7 +9,7 @@
 				width:100%;
 				height:100px;
 				background:#eee;
-				border:1px #777 solid;
+				border:1px #333 solid;
 			}
 			#wrapper:hover{
 				border:1px #ccc solid;
