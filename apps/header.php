@@ -7,7 +7,7 @@
 		<style type="text/css">
 			#wrapper{
 				width:100%;
-				height:100px;
+				height:50px;
 				background:#eee;
 				border:1px #aaa solid;
 			}
@@ -27,8 +27,8 @@
 				float:left;
 			}
 			.logo{
-				 width:150px;
-				 height:100px;
+				 width:75px;
+				 height:50px;
 			}
 			#cash1{
 				position:absolute;
