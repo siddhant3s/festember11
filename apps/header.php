@@ -17,9 +17,7 @@
 				float:left;
 			}
 			#fbinfo{
-				margin:0 auto;
 				width:100%;
-				float:left;
 			}
 			.logo{
 				 width:150px;
