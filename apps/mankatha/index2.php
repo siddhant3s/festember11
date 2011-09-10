@@ -8,9 +8,19 @@ body
 }
 #bimage
 {	position:absolute;
- left:250px;
+
 height:655px;
 z-index:-1;
+}
+#centerdiv{
+	position:absolute;
+	
+	top:430px;
+}
+#centerdiv2{
+	position:absolute;
+	
+	top:430px;
 }
 #frame iframe{
 	margin:0px;
