@@ -29,8 +29,8 @@
 			#cash1{
 				color:white;
 				position:absolute;
-				left:110px;
-				top:40px;
+				left:100px;
+				top:45px;
 				font-size:10px;
 			}
 			#star1{
