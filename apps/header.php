@@ -76,7 +76,7 @@
 					c=string[0];
 					s=string[1];				
 				}});
-				x;
+				x();
 			}
 			var time=10000;
 			function x(){
