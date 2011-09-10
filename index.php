@@ -95,7 +95,6 @@ if(!$fbuser) {
 	if ($fbuser) {
 	  try 
 	    {
-	      
 	      // Proceed knowing you have a logged in user who's authenticated.
 	      $user_profile = $facebook->api('/me');
 	      print_r($user_profile);
@@ -105,7 +104,8 @@ if(!$fbuser) {
 	  catch (FacebookApiException $e) 
 	    {
 	      
-	      //print_r($fbuser);
+	      print_r($fbuser);
+	      die("reached here");
 	      // echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	     //Deleting all cookies from the client browser
 /* 	     if (isset($_SERVER['HTTP_COOKIE'])) { */
