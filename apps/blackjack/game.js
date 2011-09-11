@@ -1,7 +1,6 @@
 
 
-
-/*var cardstack;
+/*var cardstack
 var cardarray = new Array();*/
 
 (window.onload=function(){
@@ -1152,22 +1151,7 @@ function DisablePlayButtons() {
 }
 
 
-function toggleRules() {
 
-  var el;
-
-  // Display or hide the game rules text.
-
-  el = document.getElementById("rulesBox");
-  if (el.style.display == "") {
-    el.style.display = "block";
-    document.forms["controls"].elements["rules"].value = "Hide Rules";
-  }
-  else {
-    el.style.display = "";
-    document.forms["controls"].elements["rules"].value = "Show Rules";
-  }
-}
 
 function addClassName(el, name)
 {

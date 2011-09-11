@@ -4,19 +4,10 @@ html{
 #wrapper{
 	margin:0 auto;
 	width:800px;
-	height:700px;
+	height:600px;
 	position:relative;
 	overflow:hidden;
 	
-}
-#frame iframe{
-	margin:0px;
-	padding:0px;
-}
-#frame{
-	margin:0px;
-	padding:0px;
-	height:100px;
 }
 #wrapper1{
 	width:800px;

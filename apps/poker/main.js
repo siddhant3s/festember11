@@ -548,6 +548,8 @@ document.getElementById("rules_div").style.display="none";
 
 function start()
 {
+document.getElementById("coins").style.display="block";
+$("#coins").show();
 document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
@@ -556,6 +558,7 @@ document.getElementById("tut_button").style.display="block";
 document.getElementById("gcanvas").style.display="block"
 document.getElementById("binfo").style.display="block";
 document.getElementById("coins").style.display="block";
+$("#coins").show();
 }
 
 function rules()

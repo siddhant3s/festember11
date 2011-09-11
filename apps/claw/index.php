@@ -11,29 +11,36 @@
 			<div id="bottle_2"></div>
 			<div id="bottle_3"></div>
 			<div id="grabber"></div>
-			<div id="grabberend"></div>
 			<div id="claw"></div>
 			<div id="obs"></div>
 			<div id="basket"></div>
 			<div id="score"></div>
 			<div id="time"></div>
 			<div id="pause"></div>
+			<div id="pickinst"></div>
 		</div>
 		<div id="startmenu">
 			<div id="startbutton"></div>
 			<div id="htpbutton"></div>
+			<div id="instructions">
+				<div id="back"></div>
+			</div>
 		</div>
 		<div id="pausemenu">
 			<div id="mainmenubutton"></div>
 			<div id="exitbutton"></div>
 			<div id="contbutton"></div>
 		</div>	
+		<div id="gameover">
+			<div id="startnewgame"></div>
+		</div>
 		</div>
 	</body>
 	<script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
-var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3=0;
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
         	if(penable == 0){
         		$("#pausemenu").toggle();
@@ -59,7 +66,7 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3
         function gameovertoggle(){
         	if(genable == 0){
         		$("#gameover").toggle();
-        		$("#gameover").animate({left:32},600);
+        		$("#gameover").animate({left:140},600);
         		genable=1;
         	}else
         	{
@@ -67,38 +74,64 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3
         		genable=0;
         	}
         }
+        function pickinsttoggle(){
+        	if(penable == 0){
+        		$("#pickinst").toggle();
+        		$("#pickinst").animate({left:182},600);
+        		penable=1;
+        	}else
+        	{
+        		$("#pickinst").animate({left:-275},600,function(){$("#pickinst").toggle();});
+        		penable=0;
+        	}
+        }
 
 //startmenu n its children
-		$("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","width":"640","background-image":"url('images/bar.png')"});
-		$("#startbutton").css({"position":"absolute","top":"423","left":"459","height":"35","width":"157","background-image":"url('images/pause.png')"});
+$("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","width":"640","background-image":"url('images/backdrop.png')"});
+		$("#startbutton").css({"position":"absolute","top":"194","left":"245","height":"60","width":"144","background-image":"url('images/pause.png')"});
 		$("#startbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});		
-		$("#startbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/sgold.png')"});});
+		$("#startbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/startbackdrop.png')"});});
 		$("#startbutton").bind("click",function(){s5();startscreen=0; $("#startmenu").toggle(); $("#gamescreen").toggle(); if(ienable){$("#instructions").toggle(); ienable=0;}});
-		$("#htpbutton").css({"position":"absolute","top":"417","left":"33","height":"44","width":"159","background-image":"url('images/pause.png')"});
+		$("#htpbutton").css({"position":"absolute","top":"240","left":"192","height":"60","width":"253","background-image":"url('images/pause.png')"});
 		$("#htpbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});		
-		$("#htpbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/htpold.png')"});});
+		$("#htpbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/instructionsbackdrop.png')"});});
 		$("#instructions").css({"position":"absolute","left":"143","top":"480","height":"357","width":"353","background-image":"url('images/instructions.png')"});
 		$("#instructions").hide();
 		$("#htpbutton").bind("click",function(){insttoggle();});
-		$("#back").css({"position":"absolute","left":"350","top":"275","width":"52","height":"71","background-image":"url('images/back.png')"});
+		$("#back").css({"position":"absolute","left":"298","top":"17","width":"21","height":"32","background-image":"url('images/pause.png')"});
 		$("#back").bind("click",function(){insttoggle();});
-		$("#back").bind("mouseover",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-		$("#back").bind("mouseleave",function(){$(this).css({"background-image":"url('images/back.png')"});});
+		$("#back").bind("mouseover",function(){$(this).css({"background-image":"url('images/xglow.png')"});});
+		$("#back").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
 //gamescreen n its children				
 		$("#gamescreen").css({"position":"absolute","left":"0","top":"0","height":"480","width":"640","background-image":"url('images/background.png')"});
 		$("#gamescreen").hide();
-                $("#pause").css({"position":"absolute","left":"600","top":"440","height":"20","width":"20","background-image":"url('images/grabber2.png')"});
-		$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
-		$("#bottle_1").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
-		$("#bottle_2").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
-		$("#bottle_3").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
-		$("#basket").css({"position":"absolute","top":"400","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
-	    $("#pausemenu").css({"position":"absolute","left":"640","top":"90","height":"288","width":"364","background-image":"url('images/pausescreen.png')"});
+		$("#pause").css({"position":"absolute","left":"594","top":"438","height":"40","width":"38","background-image":"url('images/pause.png')"});
+		$("#pause").bind("mouseover",function(){$(this).css({"background-image":"url('images/pauseglow.png')"});});
+		$("#pause").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
+		$("#pickinst").css({"position":"absolute","left":"-275","top":"144","height":"172","width":"275","background-image":"url('images/spacedrop.png')"});
+		$("#pickinst").hide();		
+
+
+$(document).bind("keydown",function (event) {
+			var key=event.keyCode;
+			
+			if(key==65)gameovertoggle();              /////for testing only
+			if(key==66)pickinsttoggle();
+		});
+
+
+
+                $("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
+		$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
+		$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
+		$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
+		$("#basket").css({"position":"absolute","top":"365","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
+	 $("#pausemenu").css({"position":"absolute","left":"640","top":"90","height":"288","width":"364","background-image":"url('images/pausescreen.png')"});
         $("#pausemenu").hide();
         $("#mainmenubutton").css({"position":"absolute","left":"99","top":"75","height":"55","width":"175","background-image":"url('images/pause.png')"});
         $("#mainmenubutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#mainmenubutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-        $("#mainmenubutton").bind("click",function(){penable=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"}); $("#gamescreen").toggle(); $("#startmenu").toggle();});
+        $("#mainmenubutton").bind("click",function(){penable=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"});$("#gamescreen").toggle(); $("#startmenu").toggle();});
         $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"});
         $("#exitbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/exithover.png')"});});
         $("#exitbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
@@ -106,6 +139,14 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3
         $("#contbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/continuehover.png')"});});
         $("#contbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
         $("#contbutton").bind("click",function(){$("#pause").trigger("click");});
+//gameover
+        $("#gameover").css({"position":"absolute","left":"640","top":"90","height":"271","width":"359","background-image":"url('images/gameover.png')"});
+        $("#gameover").hide();
+        //$("#gameover").bind("click",function(){$("#gameover").toggle();});
+        $("#startnewgame").css({"position":"absolute","left":"88","top":"169","height":"55","width":"175","background-image":"url('images/pause.png')"});
+        $("#startnewgame").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
+        $("#startnewgame").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
+        $("#startnewgame").bind("click",function(){$("#startmenu").toggle(); $("#gamescreen").toggle(); if(genable)gameovertoggle();});
 		var dir=0;
 		var flag=1,lift=0;
 		var f,f1,f2;
@@ -118,13 +159,14 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3
                                                                                          tu=1;   $("#bottle_1").stop("true");
                                                                                             $("#bottle_2").stop("true");
                                                                                             $("#bottle_3").stop("true");
-																							$("#basket").stop("true");
+				
+																			                    $("#basket").stop("true");         
 																							}
                                                                                  else if(tu==1 )
                                                                                     {tu=0;
                                                                                            if(lift==0) 
 																						   {
-                                                                                       if(sel==0)
+ if(sel==0)
 {
 if(!side1){
  if(left($("#bottle_1"))>300)
@@ -171,19 +213,29 @@ else
     $("#bottle_3").animate({left:600},2500,"linear",function(){s5();});
      }
 
-}
-}
-if(completed==0){
-if(!side8){
+}}
+if(top($("#bottle_3"))>100&&top($("#bottle_3"))<300)
+   s12();
+if(top($("#bottle_2"))>100&&top($("#bottle_2"))<300)
+   s12();
+if(top($("#bottle_1"))>100&&top($("#bottle_1"))<300)
+   s12();
+
+
+
+
+if((tu4==0||completed==0)&&((left($("#basket"))>-150)&&(left($("#basket"))<550))){
+if(!side8){ 
  if(left($("#basket"))>300)
-$("#basket").animate({left:-150},5000,"linear",function(){s9();});
+$("#basket").animate({left:-150},5000,"linear",function(){$("#basket").hide();s9();});
   else
- $("#basket").animate({left:-150},2500,"linear",function(){s9();});}
+ $("#basket").animate({left:-150},2500,"linear",function(){$("#basket").hide();s9();});}
 else
-{  if(left($("#basket"))<300)
-  $("#basket").animate({left:600},5000,"linear",function(){s9();});
+{    
+    if(left($("#basket"))<300)
+  $("#basket").animate({left:550},5000,"linear",function(){$("#basket").hide();s9();});
     else
-    $("#basket").animate({left:600},2500,"linear",function(){s9();});
+    $("#basket").animate({left:550},2500,"linear",function(){$("#basket").hide();s9();});
      }}
 
 }
@@ -216,7 +268,7 @@ else
                                 }
 			
 
-			if(key==39&&tu==0)
+			if(key==39&&tu==0&&tu3==0)
 			{
 			if(pos.left<500)
 			{
@@ -244,7 +296,7 @@ else
 		   //});
 			}
 			}
-			else if(key==37&&tu==0)
+			else if(key==37&&tu==0&&tu3==0)
 			{
 			if(pos.left>73)
 			{
@@ -499,12 +551,16 @@ else
 
 var t=0;
  function s9(){
- 
+               if(tu5==1)
+                   { tu5=0;
+                      s5();
+
+                   }
  //alert("workin");
-       
+      
   var temp9=Math.random();
-  if(tu==0)
-  {
+  if((tu==0&&completed==0))
+  { 
 $("#basket").css({"background":"url('images/tub.png') no-repeat"});
 $("#basket").show();
   
@@ -512,6 +568,7 @@ if(temp9>0.5)
 { $("#basket").css({left:490});
 t=490;
 side8=0;
+
 $("#basket").animate({left:left($("#basket"))-490},5000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
 }
  else
@@ -519,6 +576,7 @@ $("#basket").animate({left:left($("#basket"))-490},5000,"linear",function(){$("#
  $("#basket").css({left:-150});
  t=-150;
  side8=1;
+ 
 $("#basket").animate({left:left($("#basket"))+640},5000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
 }
 }
@@ -543,6 +601,30 @@ if(   (left($("#bottle_3"))+10)>left($("#basket")) && (left($("#bottle_3")))<(le
                   
                              $("#basket").css({"background":"url('images/tub1.png') no-repeat"});
 }
+
+}
+function s12()
+{
+
+
+
+
+
+
+
+if(drop!=0)
+			{
+			
+                     
+			switch(drop)
+			{
+			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_1").clearQueue();$("#bottle_1").hide();lift=0;tu3=0;tu5=1;});break;
+			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_2").clearQueue();$("#bottle_2").hide();lift=0;tu3=0;tu5=1;});break;
+		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_3").clearQueue();$("#bottle_3").hide();lift=0;tu3=0;tu5=1;});break;
+			}}
 
 }
 </script>
