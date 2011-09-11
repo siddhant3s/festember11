@@ -270,6 +270,15 @@ body {
 	margin:0 auto;
 	width:1000px;
 }
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
 </style>
 </head>
 <body>
@@ -291,6 +300,7 @@ FB.ui({
 }
 </script>
 <div id="wrapper">
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="1000" id="header"></iframe></div>
 <div align=center>
   <table width="1084" border="0">
     <tr>
