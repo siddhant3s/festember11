@@ -16,7 +16,7 @@
     		</script>
 		<link rel="stylesheet" type="text/css" href="main.css" />	
 	</head>
-	<body> 
+	<body style="margin:0px;"> 
 		<div id="fb-root"></div>
 		<script src="../gameapi.js"></script>
 		<script>
