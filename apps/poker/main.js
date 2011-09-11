@@ -548,6 +548,7 @@ document.getElementById("rules_div").style.display="none";
 
 function start()
 {
+document.getElementById("next").style.display="none";
 document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
