@@ -269,6 +269,8 @@ body {
 #wrapper{
 	margin:0 auto;
 	width:1000px;
+	position:absolute;
+	top:100px;
 }
 #frame iframe{
 	margin:0px;
