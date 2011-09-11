@@ -390,14 +390,14 @@ function toggleRules() {
   }
 }      
 
-$("#winclosenow").click(function(){
+function winclosefunction(){
 $("#happy").hide(1000);
 
-});
-	$("#loseclose").click(function(){
+}
+	function loseclosefunction(){
 $("#sad").hide(1000);
 
-});
+}
 </script>
 
 
@@ -417,7 +417,7 @@ wanna share this win on FB?? ..</font>
 
 </pre>
 <img src="fb.jpg" id="picd" class="picd" onclick="sharewin()"/><br><br><br>
-<input type="button" value="cancel" id="winclosenow" class="picd">
+<input type="button" value="cancel" id="winclosenow" class="picd" onclick="winclosefunction()">
 <br><br>
 
 </div>
@@ -428,7 +428,7 @@ wanna share this win on FB?? ..</font>
 <font face="cursive" color="red">click on deal to start again!</font>
 </pre>
 
-<input type="button" value="Ok" selected="selected" id="loseclose" class="picd">
+<input type="button" value="Ok" selected="selected" id="loseclose" onclick="loseclosefunction()" class="picd">
 <br><br>
 
 </div>
