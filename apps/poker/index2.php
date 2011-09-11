@@ -63,8 +63,7 @@
 		</div>
 		<div id="tmoney">Amount Bet:</b><input type="text" value=0 id="bmoney" disabled="disabled" style="width:30px"/></div>
 		<div id="alert"><p id="alertp"></p></div>
-		<div id="info"><img src="images/close.png" height="16" width="16" id="close" onclick="binfo()"/></div>
-		<div id="startpage"><input type="button" value="rules" onclick="rules()" id="rules"/><input type="button" value="start" onclick="start()" id="start"/><input type="button" value="HOME" onclick="home()" id="back"/><input type="button" value="NEXT" onclick="next()" id="next"/></div>		<div id="binfo" onclick="info()"></div>
+		<div id="startpage"><input type="button" value="rules" onclick="rules()" id="rules"/><input type="button" value="start" onclick="start()" id="start"/><input type="button" value="HOME" onclick="home()" id="back"/><input type="button" value="NEXT" onclick="next()" id="next"/></div>		
 		<div id="alert"><p id="alertp"></p></div>
 		<div id="info"><img src="images/close.png" height="16" width="16" id="close" onclick="binfo()"/></div>
 		<input type="button" value="Help" onclick="tutorials()" id="tut_button"/>
