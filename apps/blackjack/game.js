@@ -1158,13 +1158,13 @@ function toggleRules() {
 
   // Display or hide the game rules text.
 
-  el = document.getElementById("rulesBox");
+  el = document.getElementById("rulesbox");
   if (el.style.display == "") {
     el.style.display = "block";
     document.forms["controls"].elements["rules"].value = "Hide Rules";
   }
   else {
-    el.style.display = "";
+    el.style.display = "none";
     document.forms["controls"].elements["rules"].value = "Show Rules";
   }
 }
