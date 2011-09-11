@@ -39,7 +39,7 @@
 	<script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
-var tu2=0;var tu3=0;var tu4=1;
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
         	if(penable == 0){
@@ -214,6 +214,15 @@ else
      }
 
 }}
+if(top($("#bottle_3"))>100&&top($("#bottle_3"))<300)
+   s12();
+if(top($("#bottle_2"))>100&&top($("#bottle_2"))<300)
+   s12();
+if(top($("#bottle_1"))>100&&top($("#bottle_1"))<300)
+   s12();
+
+
+
 
 if((tu4==0||completed==0)&&((left($("#basket"))>-150)&&(left($("#basket"))<550))){
 if(!side8){ 
@@ -542,12 +551,16 @@ else
 
 var t=0;
  function s9(){
- 
+               if(tu5==1)
+                   { tu5=0;
+                      s5();
+
+                   }
  //alert("workin");
-       
+      
   var temp9=Math.random();
-  if(tu==0&&completed==0)
-  {
+  if((tu==0&&completed==0))
+  { 
 $("#basket").css({"background":"url('images/tub.png') no-repeat"});
 $("#basket").show();
   
@@ -563,7 +576,7 @@ $("#basket").animate({left:left($("#basket"))-490},5000,"linear",function(){$("#
  $("#basket").css({left:-150});
  t=-150;
  side8=1;
-
+ 
 $("#basket").animate({left:left($("#basket"))+640},5000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
 }
 }
@@ -588,6 +601,30 @@ if(   (left($("#bottle_3"))+10)>left($("#basket")) && (left($("#bottle_3")))<(le
                   
                              $("#basket").css({"background":"url('images/tub1.png') no-repeat"});
 }
+
+}
+function s12()
+{
+
+
+
+
+
+
+
+if(drop!=0)
+			{
+			
+                     
+			switch(drop)
+			{
+			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_1").clearQueue();$("#bottle_1").hide();lift=0;tu3=0;tu5=1;});break;
+			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_2").clearQueue();$("#bottle_2").hide();lift=0;tu3=0;tu5=1;});break;
+		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},500,"linear",function(){s10();tu5=1;completed=1;
+				$("#bottle_3").clearQueue();$("#bottle_3").hide();lift=0;tu3=0;tu5=1;});break;
+			}}
 
 }
 </script>
