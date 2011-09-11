@@ -4,10 +4,19 @@ html{
 #wrapper{
 	margin:0 auto;
 	width:800px;
-	height:600px;
+	height:700px;
 	position:relative;
 	overflow:hidden;
 	
+}
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
 }
 #wrapper1{
 	width:800px;
@@ -200,7 +209,7 @@ font-size:50px;
 width:300px;
 height:100px;
 }
-#gcanvas,#binfo,#back,#next{
+#gcanvas,#coins,#binfo,#back,#next{
 display:none;
 }
 

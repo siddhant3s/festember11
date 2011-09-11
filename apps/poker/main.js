@@ -548,7 +548,6 @@ document.getElementById("rules_div").style.display="none";
 
 function start()
 {
-document.getElementById("next").style.display="none";
 document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
@@ -571,14 +570,14 @@ if(!document.getElementById("rules_div"))
 rdiv=document.createElement("div");
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p");
-rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the previous bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>5.Dealer's cards are valid only if he has four of a kind or better.</br>";
+rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
 
 rdiv.appendChild(rule_p);
 rdiv.setAttribute("id","rules_div");
 document.getElementById("startpage").appendChild(rdiv);
 document.getElementById("rule_p").style.fontWeight="bold"; 	
 document.getElementById("rule_p").style.color="#fff";
-document.getElementById("rule_p").style.fontSize=16+"px";
+document.getElementById("rule_p").style.fontSize=18+"px";
 
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p1");
