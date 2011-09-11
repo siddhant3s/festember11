@@ -22,6 +22,22 @@ background-color:black;
 #blackj:hover{
 opacity:1;
 }
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
+#header{
+	
+	margin:0 auto;
+	padding:0px;
+	height:100px;
+	width:800px;
+}
 body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,32 +45,7 @@ body {
   margin-top: 1em;
   text-align: center;
 }
- 
-#header
-{
-  background-color: grey;
-  border-color: lavender;
-  border-style: solid;
-  border-width: 1px;
-  color: #ffffc0;
-  margin-bottom: 1ex;
-  padding: 4px 1em;
-margin:0 auto;
-width:280px;
-opacity:0.4;
-}
-#header:hover{
-opacity:0.6;
--webkit-box-shadow:5px 5px 5px #ffffff;
--moz-box-shadow:5px 5px 5px #ffffff;
-box-shadow:5px 5px 5pc #ffffff;
-}
- 
-#header h2
-{
-	margin: 0px;
-	padding: 0px;
-}
+
 
 #Ptable
 {
@@ -390,12 +381,11 @@ function sharewin() {
 </head>
 <body background="fff.jpg" >
 <div id="fb-root"></div>
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
+<div id="wrapper">
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
-<div id="header">
- <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
 
-</div>
 <div align="center" class="happy" id="happy">
 
 <pre><font face="cursive" color="green">Congo..! you have won ...! 
@@ -422,9 +412,6 @@ wanna share this win on FB?? ..</font>
 <div align="center" id="mainrules">
 <div align="right"> <a href="#" id="closeme" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <iframe src="rules.php" id="rulesbox"></iframe></div>
-<div id="showfeed">
-<div align="right"> <a href="#" id="closemee" class="closeme"> <font color="white"><b>close </b></font> </a></div>
-<iframe src="feedback.php" id="feednow"></iframe>
 </div>
 
 <!-- Dealer's area. -->
@@ -503,7 +490,7 @@ wanna share this win on FB?? ..</font>
 	<!--<input type="button" class="button" id="feedbj" onclick="feedback()" value=" Feedback"/>-->
 <div align="right">
 <!--<input type="button" class="button" value="fb share" id="fbshare" onclick="sharewin()" disabled="disabled"></button>-->
-    <input id="rules"     class="button" type="button" value="Show Rules"><span>        </span>
+    <input id="rules"     class="button" type="button" value="Show Rules" onclick="toggleRules()"><span>        </span>
    <!--<input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">-->
 </div>
 
@@ -511,10 +498,11 @@ wanna share this win on FB?? ..</font>
 <div align="right">
 
 </div>
+
 </form>
 
 <!-- Rules text. -->
 
-
+</div>
 </body>
 </html>
