@@ -277,9 +277,10 @@ body {
 	padding:0px;
 }
 #frame{
-	margin:0px;
+	margin:0 auto;
 	padding:0px;
 	height:100px;
+	width:1000px;
 }
 </style>
 </head>
