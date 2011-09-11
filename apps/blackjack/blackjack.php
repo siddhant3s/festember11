@@ -383,7 +383,7 @@ function sharewin() {
 <div id="fb-root"></div>
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
-<div id="header"><div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div></div>
+<div id="header"><div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800"></iframe></div></div>
 <div align="center" class="happy" id="happy">
 
 <pre><font face="cursive" color="green">Congo..! you have won ...! 
