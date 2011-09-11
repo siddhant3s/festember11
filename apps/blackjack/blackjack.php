@@ -22,6 +22,22 @@ background-color:black;
 #blackj:hover{
 opacity:1;
 }
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
+#header{
+	
+	margin:0 auto;
+	padding:0px;
+	height:100px;
+	width:800px;
+}
 body {
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -367,7 +383,7 @@ function sharewin() {
 <div id="fb-root"></div>
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
-
+<div id="header"><div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div></div>
 <div align="center" class="happy" id="happy">
 
 <pre><font face="cursive" color="green">Congo..! you have won ...! 
