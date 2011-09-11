@@ -35,21 +35,15 @@ return <?php echo getXP(); ?>
 }
 
 function boastcash() {
-      obj = {
+      FB.ui({
           name:"<?php echo $user["name"]; ?> is having the time of his life at Roulette in Festember Casino!!!",
           link:"http://www.festember.in/11/games/",
           picture:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/roulette_share.jpg",
           caption:"Casino Games at FESTEMBER 11",
           description:"Play Games, Try your Luck and Hit the Jackpot Vegas Style!!!",
-       }
-       pub(obj);  
+	  method:"feed",
+       });
 }
-
-
-function pub(o) {
-       o.method = "feed";
-        FB.ui(o);
-      }
 </script>
 <script language='javascript' src="myscript.js" ></script>
 </body>
