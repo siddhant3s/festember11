@@ -268,7 +268,7 @@ else
                                 }
 			
 
-			if(key==39&&tu==0)
+			if(key==39&&tu==0&&tu3==0)
 			{
 			if(pos.left<500)
 			{
@@ -296,7 +296,7 @@ else
 		   //});
 			}
 			}
-			else if(key==37&&tu==0)
+			else if(key==37&&tu==0&&tu3==0)
 			{
 			if(pos.left>73)
 			{
