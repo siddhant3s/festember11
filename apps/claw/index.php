@@ -122,9 +122,9 @@ $(document).bind("keydown",function (event) {
 
 
                 $("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
-		$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
-		$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
-		$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
+		$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
+		$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
+		$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/14.png') no-repeat"});
 		$("#basket").css({"position":"absolute","top":"365","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
 	 $("#pausemenu").css({"position":"absolute","left":"640","top":"90","height":"288","width":"364","background-image":"url('images/pausescreen.png')"});
         $("#pausemenu").hide();
@@ -170,14 +170,14 @@ $(document).bind("keydown",function (event) {
 {
 if(!side1){
  if(left($("#bottle_1"))>300)
-$("#bottle_1").animate({left:-50},5000,"linear",function(){s5();});
+$("#bottle_1").animate({left:-50},4000,"linear",function(){s5();});
   else
- $("#bottle_1").animate({left:-50},2500,"linear",function(){s5();});}
+ $("#bottle_1").animate({left:-50},2000,"linear",function(){s5();});}
 else
 {  if(left($("#bottle_1"))<300)
-  $("#bottle_1").animate({left:600},5000,"linear",function(){s5();});
+  $("#bottle_1").animate({left:600},4000,"linear",function(){s5();});
     else
-    $("#bottle_1").animate({left:600},2500,"linear",function(){s5();});
+    $("#bottle_1").animate({left:600},2000,"linear",function(){s5();});
      }
 
 }
@@ -186,14 +186,14 @@ else
 {
 if(!side2){
  if(left($("#bottle_2"))>300)
-$("#bottle_2").animate({left:-50},5000,"linear",function(){s5();});
+$("#bottle_2").animate({left:-50},4000,"linear",function(){s5();});
   else
- $("#bottle_2").animate({left:-50},2500,"linear",function(){s5();});}
+ $("#bottle_2").animate({left:-50},2000,"linear",function(){s5();});}
 else
 {  if(left($("#bottle_2"))<300)
-  $("#bottle_2").animate({left:600},5000,"linear",function(){s5();});
+  $("#bottle_2").animate({left:600},4000,"linear",function(){s5();});
     else
-    $("#bottle_2").animate({left:600},2500,"linear",function(){s5();});
+    $("#bottle_2").animate({left:600},2000,"linear",function(){s5();});
      }
 
 }
@@ -203,14 +203,14 @@ else
 
 if(!side3){
  if(left($("#bottle_3"))>300)
-$("#bottle_3").animate({left:-50},5000,"linear",function(){s5();});
+$("#bottle_3").animate({left:-50},4000,"linear",function(){s5();});
   else
- $("#bottle_3").animate({left:-50},2500,"linear",function(){s5();});}
+ $("#bottle_3").animate({left:-50},2000,"linear",function(){s5();});}
 else
 {  if(left($("#bottle_3"))<300)
-  $("#bottle_3").animate({left:600},5000,"linear",function(){s5();});
+  $("#bottle_3").animate({left:600},4000,"linear",function(){s5();});
     else
-    $("#bottle_3").animate({left:600},2500,"linear",function(){s5();});
+    $("#bottle_3").animate({left:600},2000,"linear",function(){s5();});
      }
 
 }}
@@ -369,17 +369,17 @@ else
 									if(sel==0)
 				{
 				if(left($("#bottle_1"))>left($("#grabber"))  && left($("#bottle_1"))<(left($("#grabber"))+60))
-				{$("#bottle_1").stop(true); lift=1; $("#bottle_1").css({"left":left($("#grabber"))+20}); drop=1;}
+				{$("#bottle_1").stop(true); lift=1; $("#bottle_1").css({"left":left($("#grabber"))+27}); drop=1;}
 				}
 				if(sel==1)
 				{
 			   if(left($("#bottle_2"))>left($("#grabber"))  && left($("#bottle_2"))<(left($("#grabber"))+60))
-				{$("#bottle_2").stop(true); lift=2;$("#bottle_2").css({"left":left($("#grabber"))+20}); drop=2;}
+				{$("#bottle_2").stop(true); lift=2;$("#bottle_2").css({"left":left($("#grabber"))+27}); drop=2;}
 				}
 				if(sel==2)
 				{
 				if(left($("#bottle_3"))>left($("#grabber"))  && left($("#bottle_3"))<(left($("#grabber"))+60))
-				{$("#bottle_3").stop(true); lift=3;$("#bottle_3").css({"left":left($("#grabber"))+20}); drop=3;}
+				{$("#bottle_3").stop(true); lift=3;$("#bottle_3").css({"left":left($("#grabber"))+27}); drop=3;}
 				}
 				}
 				if(temp==0&&top($("#grabber"))>=-252)
@@ -483,9 +483,9 @@ var temp1=Math.random();
 		  }	
 
 if(!side1)
-$("#bottle_1").animate({left:left($("#bottle_1"))-600},5000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))-600},3000,"linear",function(){s5();});
 else
-$("#bottle_1").animate({left:left($("#bottle_1"))+600},5000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))+600},3000,"linear",function(){s5();});
 }
 
  if(sel==1)
@@ -504,9 +504,9 @@ var temp1=Math.random();
 		$("#bottle_2").css({"left":"0"});
 		  }	
 if((!side2))
-$("#bottle_2").animate({left:left($("#bottle_2"))-600},5000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))-600},3000,"linear",function(){s5();});
 else
-$("#bottle_2").animate({left:left($("#bottle_2"))+600},5000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))+600},3000,"linear",function(){s5();});
 }
 
  if(sel==2)
@@ -525,9 +525,9 @@ var temp1=Math.random();
 		  $("#bottle_3").css({"left":"0"});
 		  }	
 if(!side3)
-$("#bottle_3").animate({left:left($("#bottle_3"))-600},5000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))-600},3000,"linear",function(){s5();});
 else
-$("#bottle_3").animate({left:left($("#bottle_3"))+600},5000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))+600},3000,"linear",function(){s5();});
 }
 }
 	}  
