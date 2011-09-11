@@ -32,24 +32,9 @@ body {
  
 #header
 {
-  margin:0 auto;
-  height:100px;
-  width:800px;
-}
-#frame iframe{
-	margin:0px;
-	padding:0px;
-}
-#frame{
-	margin:0px;
-	padding:0px;
-	height:100px;
-}
- 
-#header h2
-{
-	margin: 0px;
-	padding: 0px;
+ 	margin:0 auto;
+ 	width:800px;
+ 	height:100px;
 }
 
 #Ptable
@@ -389,7 +374,7 @@ function sharewin() {
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
 <div id="header">
-<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
+ <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
 
 </div>
 <div align="center" class="happy" id="happy">
