@@ -380,7 +380,7 @@ function toggleRules() {
   // Display or hide the game rules text.
 
   el = document.getElementById("mainrules");
-  if (el.style.display == "") {
+  if (el.style.display == "none") {
     el.style.display = "block";
     document.forms["controls"].elements["rules"].value = "Hide Rules";
   }
