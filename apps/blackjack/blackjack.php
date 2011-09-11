@@ -382,6 +382,7 @@ function sharewin() {
 <body background="fff.jpg" >
 <div id="fb-root"></div>
 <div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
+<div id="wrapper">
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
 
@@ -505,6 +506,6 @@ wanna share this win on FB?? ..</font>
 
 <!-- Rules text. -->
 
-
+</div>
 </body>
 </html>
