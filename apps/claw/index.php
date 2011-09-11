@@ -122,10 +122,10 @@ $(document).bind("keydown",function (event) {
 
 
                 $("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
-		$("#bottle_1").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
-		$("#bottle_2").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
-		$("#bottle_3").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
-		$("#basket").css({"position":"absolute","top":"400","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
+		$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
+		$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
+		$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
+		$("#basket").css({"position":"absolute","top":"365","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
 	 $("#pausemenu").css({"position":"absolute","left":"640","top":"90","height":"288","width":"364","background-image":"url('images/pausescreen.png')"});
         $("#pausemenu").hide();
         $("#mainmenubutton").css({"position":"absolute","left":"99","top":"75","height":"55","width":"175","background-image":"url('images/pause.png')"});
