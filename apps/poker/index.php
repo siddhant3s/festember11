@@ -45,7 +45,6 @@
 		</script>
 		
 		<div id="wrapper">
-		<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
 		<div id="tutorials"></div>
 		<div id="wrapper1">
 		<canvas id="gcanvas" height="600" width="800">no canvas no game</canvas>
@@ -71,6 +70,7 @@
 		<input type="button" value="Help" onclick="tutorials()" id="tut_button"/>
 		</div>		
 		</div>
+		<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
 		</div>		
 	</body>
 </html>
