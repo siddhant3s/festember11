@@ -11,24 +11,27 @@
 			<div id="bottle_2"></div>
 			<div id="bottle_3"></div>
 			<div id="grabber"></div>
-			<div id="grabberend"></div>
 			<div id="claw"></div>
 			<div id="obs"></div>
 			<div id="basket"></div>
 			<div id="score"></div>
 			<div id="time"></div>
 			<div id="pause"></div>
+			<div id="pickinst"></div>
 		</div>
 		<div id="startmenu">
 			<div id="startbutton"></div>
 			<div id="htpbutton"></div>
+			<div id="instructions">
+				<div id="back"></div>
+			</div>
 		</div>
 		<div id="pausemenu">
 			<div id="mainmenubutton"></div>
 			<div id="exitbutton"></div>
 			<div id="contbutton"></div>
 		</div>	
-                     	<div id="gameover">
+		<div id="gameover">
 			<div id="startnewgame"></div>
 		</div>
 		</div>
@@ -36,16 +39,9 @@
 	<script src="jquery.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
-var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3=0;var tu4=1;
+var tu2=0;var tu3=0;var tu4=1;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
-                          if(tu4==0)
-                              tu4=1;
-                          else(tu4==1)
-                               tu4=0;
-
-
-
-
         	if(penable == 0){
         		$("#pausemenu").toggle();
         		$("#pausemenu").animate({left:138},600);
@@ -70,12 +66,23 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 ;var tu2=0;var tu3
         function gameovertoggle(){
         	if(genable == 0){
         		$("#gameover").toggle();
-        		$("#gameover").animate({left:32},600);
+        		$("#gameover").animate({left:140},600);
         		genable=1;
         	}else
         	{
         		$("#gameover").animate({left:640},600,function(){$("#gameover").toggle();});
         		genable=0;
+        	}
+        }
+        function pickinsttoggle(){
+        	if(penable == 0){
+        		$("#pickinst").toggle();
+        		$("#pickinst").animate({left:182},600);
+        		penable=1;
+        	}else
+        	{
+        		$("#pickinst").animate({left:-275},600,function(){$("#pickinst").toggle();});
+        		penable=0;
         	}
         }
 
@@ -98,11 +105,9 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 //gamescreen n its children				
 		$("#gamescreen").css({"position":"absolute","left":"0","top":"0","height":"480","width":"640","background-image":"url('images/background.png')"});
 		$("#gamescreen").hide();
-		
+		$("#pause").css({"position":"absolute","left":"594","top":"438","height":"40","width":"38","background-image":"url('images/pause.png')"});
 		$("#pause").bind("mouseover",function(){$(this).css({"background-image":"url('images/pauseglow.png')"});});
 		$("#pause").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-		
-		
 		$("#pickinst").css({"position":"absolute","left":"-275","top":"144","height":"172","width":"275","background-image":"url('images/spacedrop.png')"});
 		$("#pickinst").hide();		
 
@@ -116,19 +121,7 @@ $(document).bind("keydown",function (event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-                $("#pause").css({"position":"absolute","left":"600","top":"440","height":"20","width":"20","background-image":"url('images/grabber2.png')"});
-		$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
+                $("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
 		$("#bottle_1").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/12.png') no-repeat"});
 		$("#bottle_2").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/13.png') no-repeat"});
 		$("#bottle_3").css({"position":"absolute","top":"310","left":"600","width":"36","height":"149","background":"url('images/14.png') no-repeat"});
@@ -138,7 +131,7 @@ $(document).bind("keydown",function (event) {
         $("#mainmenubutton").css({"position":"absolute","left":"99","top":"75","height":"55","width":"175","background-image":"url('images/pause.png')"});
         $("#mainmenubutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#mainmenubutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-        $("#mainmenubutton").bind("click",function(){penable=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"}); $("#gamescreen").toggle(); $("#startmenu").toggle();});
+        $("#mainmenubutton").bind("click",function(){penable=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"});$("#gamescreen").toggle(); $("#startmenu").toggle();});
         $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"});
         $("#exitbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/exithover.png')"});});
         $("#exitbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
