@@ -410,7 +410,6 @@ wanna share this win on FB?? ..</font>
 
 </div>
 <div align="center" id="mainrules">
-<div align="right"> <a href="#" id="closeme" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <iframe src="rules.php" id="rulesbox"></iframe></div>
 </div>
 

@@ -15,9 +15,7 @@ function toggleRules() {
     document.forms["controls"].elements["rules"].value = "Show Rules";
   }
 }
-$("closeme").click(function(){
-	$("#mainrules").hide();
-});
+
 /*var cardstack
 var cardarray = new Array();*/
 
