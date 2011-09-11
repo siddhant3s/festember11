@@ -299,8 +299,9 @@ FB.ui({
 });
 }
 </script>
-<div id="wrapper">
 <div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="1000" id="header"></iframe></div>
+<div id="wrapper">
+
 <div align=center>
   <table width="1084" border="0">
     <tr>
