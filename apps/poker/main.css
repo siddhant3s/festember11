@@ -200,7 +200,7 @@ font-size:50px;
 width:300px;
 height:100px;
 }
-#gcanvas,#coins,#binfo,#back,#next{
+#gcanvas,#binfo,#back,#next{
 display:none;
 }
 
