@@ -32,22 +32,18 @@ body {
  
 #header
 {
-  background-color: grey;
-  border-color: lavender;
-  border-style: solid;
-  border-width: 1px;
-  color: #ffffc0;
-  margin-bottom: 1ex;
-  padding: 4px 1em;
-margin:0 auto;
-width:280px;
-opacity:0.4;
+  margin:0 auto;
+  height:100px;
+  width:800px;
 }
-#header:hover{
-opacity:0.6;
--webkit-box-shadow:5px 5px 5px #ffffff;
--moz-box-shadow:5px 5px 5px #ffffff;
-box-shadow:5px 5px 5pc #ffffff;
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
 }
  
 #header h2
@@ -393,7 +389,7 @@ function sharewin() {
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
 <div id="header">
- <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="800" id="header"></iframe></div>
 
 </div>
 <div align="center" class="happy" id="happy">
