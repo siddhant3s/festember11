@@ -1,5 +1,20 @@
 
+function toggleRules() {
 
+  var el;
+
+  // Display or hide the game rules text.
+
+  el = document.getElementById("mainrules");
+  if (el.style.display == "") {
+    el.style.display = "block";
+    document.forms["controls"].elements["rules"].value = "Hide Rules";
+  }
+  else {
+    el.style.display = "none";
+    document.forms["controls"].elements["rules"].value = "Show Rules";
+  }
+}
 
 /*var cardstack;
 var cardarray = new Array();*/
@@ -1152,22 +1167,7 @@ function DisablePlayButtons() {
 }
 
 
-function toggleRules() {
 
-  var el;
-
-  // Display or hide the game rules text.
-
-  el = document.getElementById("mainrules");
-  if (el.style.display == "") {
-    el.style.display = "block";
-    document.forms["controls"].elements["rules"].value = "Hide Rules";
-  }
-  else {
-    el.style.display = "none";
-    document.forms["controls"].elements["rules"].value = "Show Rules";
-  }
-}
 
 function addClassName(el, name)
 {
