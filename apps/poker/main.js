@@ -556,6 +556,7 @@ document.getElementById("tut_button").style.display="block";
 document.getElementById("gcanvas").style.display="block"
 document.getElementById("binfo").style.display="block";
 document.getElementById("coins").style.display="block";
+$("#coins").show();
 }
 
 function rules()
