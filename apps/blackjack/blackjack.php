@@ -412,9 +412,6 @@ wanna share this win on FB?? ..</font>
 <div align="center" id="mainrules">
 <div align="right"> <a href="#" id="closeme" class="closeme"> <font color="white"><b>close </b></font> </a></div>
 <iframe src="rules.php" id="rulesbox"></iframe></div>
-<div id="showfeed">
-<div align="right"> <a href="#" id="closemee" class="closeme"> <font color="white"><b>close </b></font> </a></div>
-<iframe src="feedback.php" id="feednow"></iframe>
 </div>
 
 <!-- Dealer's area. -->
@@ -493,7 +490,7 @@ wanna share this win on FB?? ..</font>
 	<!--<input type="button" class="button" id="feedbj" onclick="feedback()" value=" Feedback"/>-->
 <div align="right">
 <!--<input type="button" class="button" value="fb share" id="fbshare" onclick="sharewin()" disabled="disabled"></button>-->
-    <input id="rules"     class="button" type="button" value="Show Rules"><span>        </span>
+    <input id="rules"     class="button" type="button" value="Show Rules" onclick="toggleRules()"><span>        </span>
    <!--<input id="quit"     class="buttonn" type="reset" value="Quit blackjack"  onclick="close_window();return false;">-->
 </div>
 

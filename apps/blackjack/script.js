@@ -119,12 +119,7 @@ $("#deal").effect("pulsate",{times:3},"slow");
 
    $("#rules").illuminate();
 
-	$("#rules").click(function(){
-           $("#mainrules").slideDown(1400);
-            
-	 
 	
-	});
 $("#closeme").click(function(){
 $("#mainrules").hide(1000);
 
