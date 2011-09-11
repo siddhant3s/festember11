@@ -266,6 +266,10 @@ body {
 }
 .style2 {color: #FFFFFF}
 -->
+#wrapper{
+	margin:0 auto;
+	width:1000px;
+}
 </style>
 </head>
 <body>
@@ -286,7 +290,7 @@ FB.ui({
 });
 }
 </script>
-
+<div id="wrapper">
 <div align=center>
   <table width="1084" border="0">
     <tr>
@@ -327,5 +331,6 @@ yc=20;
 
 arran();
 </script>
+</div>
 </body>
 </html>
