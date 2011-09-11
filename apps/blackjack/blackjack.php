@@ -390,6 +390,14 @@ function toggleRules() {
   }
 }      
 
+$("#winclosenow").click(function(){
+$("#happy").hide(1000);
+
+});
+	$("#loseclose").click(function(){
+$("#sad").hide(1000);
+
+});
 </script>
 
 

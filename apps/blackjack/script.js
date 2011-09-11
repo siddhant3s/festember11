@@ -129,14 +129,7 @@ $("#showfeed").show(1000);
 $("#showfeed").hide(1000);
 
 });
-	$("#winclosenow").click(function(){
-$("#happy").hide(1000);
-
-});
-	$("#loseclose").click(function(){
-$("#sad").hide(1000);
-
-});
+	
 //document.getElementById("deal").addEventListener("click",startRound,false);
 
 
