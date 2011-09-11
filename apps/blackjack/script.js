@@ -120,10 +120,7 @@ $("#deal").effect("pulsate",{times:3},"slow");
    $("#rules").illuminate();
 
 	
-$("#closeme").click(function(){
-$("#mainrules").hide(1000);
 
-});
 $("#feedbj").click(function(){
 $("#showfeed").show(1000);
 

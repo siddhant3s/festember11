@@ -15,12 +15,10 @@ function toggleRules() {
     document.forms["controls"].elements["rules"].value = "Show Rules";
   }
 }
-$("#closeme").click(function(){
-$("#mainrules").hide();
-
+$("closeme").click(function(){
+	$("#mainrules").hide();
 });
-
-/*var cardstack;
+/*var cardstack
 var cardarray = new Array();*/
 
 (window.onload=function(){
