@@ -392,10 +392,7 @@ function sharewin() {
 <div id="fb-root"></div>
   <script src="../gameapi.js" type="text/javascript"></script>
 <!-- Header. -->
-<div id="header">
- <img float="center" width="250px" id="blackj" src="fes.jpeg"></img>
 
-</div>
 <div align="center" class="happy" id="happy">
 
 <pre><font face="cursive" color="green">Congo..! you have won ...! 
