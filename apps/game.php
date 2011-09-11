@@ -12,7 +12,7 @@ function getCash() {
    $res = mysql_query($query);
    $row = mysql_fetch_array($res);
    $cash = $row['cash'] + 1000;
-   
+   error_log("###### cash val : " . $row['cash']);   
    return $cash;
 }
 
