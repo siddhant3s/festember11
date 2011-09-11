@@ -269,8 +269,6 @@ body {
 #wrapper{
 	margin:0 auto;
 	width:1000px;
-	position:absolute;
-	top:100px;
 }
 #frame iframe{
 	margin:0px;
@@ -302,7 +300,7 @@ FB.ui({
 });
 }
 </script>
-<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="1000" id="header"></iframe></div>
+
 <div id="wrapper">
 
 <div align=center>
@@ -346,5 +344,6 @@ yc=20;
 arran();
 </script>
 </div>
+<div id="frame"><iframe src="../header.php" scrolling="no" frameborder="0" width="1000" id="header"></iframe></div>
 </body>
 </html>
