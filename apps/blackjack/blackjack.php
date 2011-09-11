@@ -32,9 +32,28 @@ body {
  
 #header
 {
- 	margin:0 auto;
- 	width:800px;
- 	height:100px;
+  background-color: grey;
+  border-color: lavender;
+  border-style: solid;
+  border-width: 1px;
+  color: #ffffc0;
+  margin-bottom: 1ex;
+  padding: 4px 1em;
+margin:0 auto;
+width:280px;
+opacity:0.4;
+}
+#header:hover{
+opacity:0.6;
+-webkit-box-shadow:5px 5px 5px #ffffff;
+-moz-box-shadow:5px 5px 5px #ffffff;
+box-shadow:5px 5px 5pc #ffffff;
+}
+ 
+#header h2
+{
+	margin: 0px;
+	padding: 0px;
 }
 
 #Ptable
