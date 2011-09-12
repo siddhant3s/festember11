@@ -118,7 +118,7 @@ if(!$fbuser) {
 	     
 	      $fbuser = null;
 	      echo "nullied $fbuser";
-	      die("reached here");
+	      //die("reached here");
 	      // header("Location: " . $fbloginurl);
 	    }
 
