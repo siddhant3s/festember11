@@ -573,7 +573,7 @@ if(!document.getElementById("rules_div"))
 rdiv=document.createElement("div");
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p");
-rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
+rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the previous bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>5.The dealer must have 4 of kind or better to qualify.<br/>6.Player can fold any time,but he loses his bet amount.";
 
 rdiv.appendChild(rule_p);
 rdiv.setAttribute("id","rules_div");
