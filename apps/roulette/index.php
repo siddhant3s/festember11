@@ -20,7 +20,7 @@ include("../game.php");
 <canvas id='canvas' height=500px width=1200px > <p> Your Browser does not support Canvas!!! </p></canvas>
 
 
-<script language='javascript' src="jquery.js"></script>
+<script language='javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
 <script src="http://connect.facebook.net/en_US/all.js"></script>
 <script>var appId = <?php echo $facebook->getAppId(); ?>;</script>
 <script language='javascript' src="ocanvas.js" ></script>

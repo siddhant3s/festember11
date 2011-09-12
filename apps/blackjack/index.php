@@ -67,9 +67,7 @@ font-weight:bold;
 }
 
 </style>
-<script src="jquery.js" type="text/javascript"></script>
-<script src="jquery-1.6.2.js" type="text/javascript"></script>
-<script src="jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script src="illuminate.js" type="text/javascript"></script>
 <script src="start.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>

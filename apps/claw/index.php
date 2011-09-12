@@ -36,7 +36,7 @@
 		</div>
 		</div>
 	</body>
-	<script src="jquery.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
 var tu2=0;var tu3=0;var tu4=1;var tu5=0;

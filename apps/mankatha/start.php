@@ -38,7 +38,7 @@ width:800px;
 	padding:0px;
 	height:100px;
 }</style>
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
 <script type="text/javascript">
 	
 function onlyNumbers(evt)

@@ -31,7 +31,7 @@ z-index:-1;
 	height:100px;
 }
 </style>
-<script src="jquery.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
 <script type="text/javascript">
 </script>
 
