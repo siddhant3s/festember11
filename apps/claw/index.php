@@ -127,8 +127,8 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#mainmenubutton").css({"position":"absolute","left":"99","top":"75","height":"55","width":"175","background-image":"url('images/pause.png')"});
         $("#mainmenubutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#mainmenubutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-        $("#mainmenubutton").bind("click",function(){penable=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"});$("#gamescreen").toggle(); $("#startmenu").toggle();});
-        $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"});
+        $("#mainmenubutton").bind("click",function(){penable=0; tu=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"});$("#gamescreen").toggle(); $("#startmenu").toggle();});
+        $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"}); 
         $("#exitbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/exithover.png')"});});
         $("#exitbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
         $("#contbutton").css({"position":"absolute","left":"110","top":"124","height":"46","width":"146","background-image":"url('images/pause.png')"});
@@ -143,6 +143,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         	$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
         	$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/14.png') no-repeat"});
         	$("#basket").css({"position":"absolute","top":"365","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
+        	$("#basket").hide();
         	document.getElementById("score").innerHTML=score;
         	document.getElementById("time").innerHTML=time;
         }
@@ -162,7 +163,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#startnewgame").css({"position":"absolute","left":"88","top":"169","height":"55","width":"175","background-image":"url('images/pause.png')"});
         $("#startnewgame").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#startnewgame").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
-        $("#startnewgame").bind("click",function(){$("#startmenu").toggle(); $("#gamescreen").toggle(); if(genable)gameovertoggle();});
+        $("#startnewgame").bind("click",function(){reset();startscreen=1;$("#startmenu").toggle(); $("#gamescreen").toggle(); if(genable)gameovertoggle();});
 		var dir=0;
 		var flag=1,lift=0;
 		var f,f1,f2;
