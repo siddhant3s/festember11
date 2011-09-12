@@ -13,7 +13,7 @@ $user = $facebook->api("/me");
 
 }
 catch (FacebookApiException $e) {
-include("../pages/logout.php");
+include("../pages/logout.php?redirectto=" . urlencode($facebook->getLoginUrl($fbperm)));
 die();
 }
 
