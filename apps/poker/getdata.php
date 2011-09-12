@@ -3,7 +3,7 @@
 <?php
 	
 	include("../game.php");
-	$id=intval($_POST['id']);
+	$id=intval($_GET['id']);
 	if($id==1){
 		$string=getCash()."-";
 		$sql="SELECT * FROM gamedata WHERE userid={$usid}";
