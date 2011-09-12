@@ -55,8 +55,16 @@ case "choreonite" :  ?>
 <li>Organizers reserve the right to cancel any event or prize.</li>
 <li>Props and stage settings are allowed but no additional time for set up will be given. Note that props include objects, which are carried by participants (sticks, swords, pots, etc). Chairs, tables, screen and backdrops, which are placed on stage, come under stage settings.</li>
 <li>Doubts regarding the rules and regulations of Choreonite should be clarified only with the Choreo Coordinator. We are not responsible for wrong information from other sources.</li>
-</ul>
-Rules are subject to change and will be updated on the official website
+</ul><br>
+The judges' decisions will be final and binding, and are not open to review
+<br><br>
+For further details contact:<br>
+Ashwath Muralidharan<br>
++91 97908 49385<br>
+ashwathm1790@gmail.com<br>
+	<br>
+Rules are subject to change and will be updated on the official website<br>
+
 
 <?php break; case streets :  ?>
 <div class="content-head">STREETS</div>
@@ -92,15 +100,15 @@ Breaking, B-Boying, Krumping.
 <li>Organizers reserve the right to cancel any event or prize.</li>
 <li>NO Props or stage settings are allowed. </li>
 <li>Doubts regarding the rules and regulations of Free Style Dance should be clarified only with the Choreo Coordinator. We are not responsible for wrong information from other sources.</li>
-</ul>
+</ul><br>
 The judges' decisions will be final and binding, and are not open to review
-
-For further details contact:
-Ashwath Muralidharan
-+91 97908 49385
-ashwathm1790@gmail.com
-	
-Rules are subject to change and will be updated on the official website
+<br><br>
+For further details contact:<br>
+Ashwath Muralidharan<br>
++91 97908 49385<br>
+ashwathm1790@gmail.com<br>
+	<br>
+Rules are subject to change and will be updated on the official website<br>
 
 
 
