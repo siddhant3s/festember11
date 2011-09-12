@@ -10,7 +10,7 @@ body{background-image:url(back.jpg);opacity:1.0;}
 #firstlinkdiv{margin-left: 120px;}
 
 </style>
-<script type="text/javascript" src="/jquery/jquery-1.7.2.min.js">
+<script type="text/javascript" src="jquery-1.7.2.min.js">
 $(document).ready(function(){
 	$("#firstlinkdiv").click(function(){
 		$("#picture").load("placeyourbet.php");
