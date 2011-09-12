@@ -9,9 +9,9 @@ $fbperm['scope'] = "email,publish_stream";
 global $user;
 $user = $facebook->api("/me");
 
-if(!$user) {
+//if(!$user) {
     $fbloginurl=$facebook->getLoginUrl($fbperm);
     header("Location: " . $fbloginurl);
-}
+//}
 
 ?>
