@@ -37,7 +37,7 @@ function publish() {
  });
 }
 </script>
-<body><img src="ropa.png" alt="" style="position:absolute;left:250px;height:655px;" />
+<body><img src="ropa.png" alt="" style="position:absolute;height:655px;" />
 <div style="position:absolute; top:50%; left:45%; color:white;"?>
 You won this round.
 <a href='#' onClick="return publish()"><img name="jsbutton" src="fb.jpg" alt="javascript button"></a>

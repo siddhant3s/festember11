@@ -229,7 +229,7 @@ function win(){
 	document.write("<div style=\"position:absolute; top:50%; left:45%; color:white;\">");
 	document.write("You won this round. Your win "+point);
 	document.write("<a href=\"start.php\" style=\"position:absolute;left:5%;top:70%;\"><img src=\"bpa.png\" border=\"0\" alt=\"\"/></a>");
-	document.write("<a href=\"index.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
+	document.write("<a href=\"index2.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
     document.write("</div>");
 	*/} t=0;
 }function trashFull2(){
