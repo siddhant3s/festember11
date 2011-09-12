@@ -101,7 +101,7 @@ if(!$fbuser) {
 	  catch (FacebookApiException $e) 
 	    {
 	      
-	      print_r($fbuser);
+	      //print_r($fbuser);
 	      // echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	     //Deleting all cookies from the client browser
 /* 	     if (isset($_SERVER['HTTP_COOKIE'])) { */
