@@ -7,7 +7,15 @@ $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
 
 global $user;
+
+try {
 $user = $facebook->api("/me");
+
+}
+catch (FacebookApiException $e) {
+include("../pages/logout.php");
+die();
+}
 
 //if(!$user) {
     $fbloginurl=$facebook->getLoginUrl($fbperm);
