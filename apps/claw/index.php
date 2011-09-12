@@ -156,7 +156,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         function timer()
         {
         	time--;
-        	if(time>=0)
+        	if((startscreen==0)&&(time>=0))
         	document.getElementById("time").innerHTML=time;
         	if(time==0)
         	{
