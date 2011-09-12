@@ -9,9 +9,7 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
     setcookie($name, '', time()-1000, '/');
   }
 }
-
-$redirectto = isset($_GET['redirectto'])?$_GET['redirectto']:"./";
 ?>
 <script type="text/javascript">
-window.location.href = "<?php echo $redirectto; ?>";
+window.location.href = "./";
 </script>
