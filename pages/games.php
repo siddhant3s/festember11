@@ -1,8 +1,3 @@
-<style type="text/css">
-	#games-festember:hover{
-		color:#EE002E;
-	}
-</style>
 <div class="content-head">GAMES</div>
 <div class="content-body">
 <img style="width:400px;border:1px solid #333333;" src="images/gamepic.jpg"></br>
