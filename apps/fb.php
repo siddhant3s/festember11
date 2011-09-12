@@ -28,12 +28,6 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
 }
 
 header("Location: http://festember.in/11/");
-die();
 }
-
-//if(!$user) {
-    $fbloginurl=$facebook->getLoginUrl($fbperm);
-    header("Location: " . $fbloginurl);
-//}
 
 ?>
