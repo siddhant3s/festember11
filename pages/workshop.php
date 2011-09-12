@@ -19,6 +19,7 @@ if(1==1){
 <input name="r" type="radio" onclick="eventSelect(this)"value="dance_solo" id="dance_solo"><label for="dance_solo">Dance(Solo)</label><br>
 <input name="r" type="radio" onclick="eventSelect(this)"value="fencing" id="fencing"><label for="fencing">Fencing</label><br>
 <input name="r" type="radio" onclick="eventSelect(this)"value="mente_magica" id="mente_magica"><label for="mente_magica">Mente Magica</label><br>
+<input name="r" type="radio" onclick="eventSelect(this)"value="flairtending" id="flairtending"><label for="flairtending">Flair Bartending</label><br>
 </div>
 <br>
  </td></tr>
