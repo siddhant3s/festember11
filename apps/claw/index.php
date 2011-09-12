@@ -39,7 +39,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
-var score = 0, time = 0;
+var score = 0, time = 10;
 var tu2=0;var tu3=0;var tu4=1;var tu5=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
@@ -137,7 +137,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#contbutton").bind("click",function(){$("#pause").trigger("click");});
         function reset()
         {
-        	score = 0;	time = 60;
+        	score = 0;	time = 10;
         	$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
         	$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
         	$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
@@ -148,11 +148,23 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         	document.getElementById("time").innerHTML=time;
         }
         
+        setInterval("timer()",1000);
+        function timer()
+        {
+        	time--;
+        	if(time>=0)
+        	document.getElementById("time").innerHTML=time;
+        	if(time==0)
+        	{
+        		gameovertoggle();
+        		time=0;
+        		document.getElementById("time").innerHTML=0;
+        	}
+        }
+        
         $(document).bind("keydown",function (event)
         {
 			var key=event.keyCode;
-			
-			if(key==65)gameovertoggle();              /////for testing only
 			if(key==66)pickinsttoggle();
 		});
 
