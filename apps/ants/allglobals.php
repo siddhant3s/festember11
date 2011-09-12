@@ -4,14 +4,16 @@
 
  //must be edited
  {
-$mysqli_username="rubulh";
-$mysqli_password="thisisapassword";
+$mysqli_username="";
+$mysqli_password="";
 $mysqli_host=$_SERVER['HTTP_HOST'];
-$central_db="ants";
-$table_allusers="ANTS_allusers";
-$table_allgames="ANTS_allgames";
+$central_db="";
+$table_allusers="";
+$table_allgames="";
 $root_db="";
 $root_table="";
+$redirection="http://www.pragyan.org/~boopathi/festember11/apps/ants/whisk.php";
+
  }
 
 

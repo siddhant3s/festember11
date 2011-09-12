@@ -1,4 +1,17 @@
 
+
+
+
+
+
+
+
+<?php
+require_once("allglobals.php");
+require_once("apps/game.php");
+
+
+?>
 <?php
 /*
 this script is executed on the reciept of the user id from the first script
@@ -7,7 +20,7 @@ the function checks if the user is currently involved if yes sends to a differen
 //start executed on some start button click and then this script is executed with the start script
 //id 
 //postion of ants in involved
-function matcher($the_id)
+function matcher()
 {
 global $ONGAME;
 global $thesql_connection;
