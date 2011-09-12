@@ -1,6 +1,6 @@
 <?php
 $rpath = "";
-include("fb.php");
+include("game.php");
 ?>
 <html>
 <head>
