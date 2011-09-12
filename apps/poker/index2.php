@@ -1,5 +1,4 @@
 <?php
-	include("header.php");
 	$rpath = "../";
 	include("../fb.php");
 ?>
@@ -24,7 +23,7 @@
 
 		//The following is used to share a link on the player's wall.
 		FB.ui({
-		  "name":"<?php echo $user["name"]; ?> has just won a game of poker",
+		  "name":"<?php echo $user["name"]; ?> has just played a game of poker",
 		  "link":"http://festember.in/11/",
 		  picture:"http://www.donkeypoker.me/wp-content/uploads/2009/10/poker.jpg",
 		  caption:"Click on the link to play",
