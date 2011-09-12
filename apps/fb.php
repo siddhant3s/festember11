@@ -27,7 +27,7 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
   }
 }
 
-header("Location: ../");
+header("Location: http://festember.in/11/");
 die();
 }
 
