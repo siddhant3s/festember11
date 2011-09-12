@@ -11,7 +11,7 @@ border-width:medium;
 
 
 </style>
-<script src="jquery.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>
 </head>
 <body bgcolor="lightgrey">

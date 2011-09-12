@@ -23,7 +23,7 @@ $query="INSERT INTO game_info (playerid,gameid,starttime,bidamount,returnpercent
     var appId = <?php echo $facebook->getAppId(); ?>;
     </script>
 
-<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
  
 <script type="text/javascript">
 var i, j, q, r;

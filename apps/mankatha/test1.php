@@ -51,7 +51,7 @@ else
 ?>
 <html>
 <head>
-<script src="jquery1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
 
 <meta charset="utf-8">
 <title>Mankatha</title>

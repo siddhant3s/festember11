@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="jquery-1.1.3.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
     <meta charset="utf-8">
 <title>HTML5 Drag and Drop Demo</title>
 <style type="text/css" media="screen">@import "screen.css";</style>
