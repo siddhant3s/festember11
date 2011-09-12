@@ -12,5 +12,5 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
 
 ?>
 <script type="text/javascript">
-window.location.href = "index.php";
+window.location.href = "./";
 </script>

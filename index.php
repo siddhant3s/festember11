@@ -115,7 +115,8 @@ if(!$fbuser) {
 /* 	     } */
 	     
 	      $fbuser = null;
-	      // header("Location: " . $fbloginurl);
+	      include("pages/logout.php");
+	      die();
 	    }
 
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
