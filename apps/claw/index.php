@@ -65,17 +65,14 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         	}
         }
         function gameovertoggle(){
-        	
-        	$("#pause").trigger("click");
         	if(genable == 0){
-        		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
         		$("#gameover").toggle();
         		$("#gameover").animate({left:140},600);
         		genable=1;
         	}else
         	{
         		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
-        		$("#gameover").animate({left:640},600,function(){$("#gameover").toggle();$("#pausemenu").css({"background-image":"url('images/pausescreen.png')"});});
+        		$("#gameover").animate({left:640},600,function(){$("#gameover").toggle();});
         		genable=0;
 
         	}
@@ -172,7 +169,10 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 		var tu=0;
 		var drop=0;
 	
-	    $("#pause").bind("click",function(){pausetoggle();
+	    $("#pause").bind("click",function(){
+	    	if(genable)
+	    	{
+	    		pausetoggle();
 	    	if(tu==0)
 	    	{tu=1;   
 	    		$("#bottle_1").stop("true");
@@ -240,6 +240,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 						}
 					}
 				}
+			}
 		});
 	
 	
