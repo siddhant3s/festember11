@@ -144,7 +144,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         	$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
         	$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
         	$("#bottle_3").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/14.png') no-repeat"});
-        	$("#basket").css({"position":"absolute","top":"365","left":"600","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
+        	$("#basket").css({"position":"absolute","top":"365","left":"-150","width":"150","height":"100","background":"url('images/tub.png') no-repeat"});
         	document.getElementById("score").innerHTML=score;
         	document.getElementById("time").innerHTML=time;
         }
@@ -226,7 +226,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 					if(top($("#bottle_3"))>100&&top($("#bottle_3"))<300)s12();
 					if(top($("#bottle_2"))>100&&top($("#bottle_2"))<300)s12();
 					if(top($("#bottle_1"))>100&&top($("#bottle_1"))<300)s12();
-					if((tu4==0||completed==0)&&((left($("#basket"))>-150)&&(left($("#basket"))<550)))
+					if((tu4==0||completed==0)&&((left($("#basket"))>=-150)&&(left($("#basket"))<550)))
 					{
 						if(!side8)
 						{
