@@ -1,5 +1,5 @@
 <?php
-require_once("apps/game.php");
+require_once("../game.php");
 require_once("allglobals.php");
 require_once("whisk.php");
 
