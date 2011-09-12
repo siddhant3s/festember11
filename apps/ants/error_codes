@@ -1,2 +1,11 @@
 1:input entered in the BET input field not a number{moderator.php}
 99:some unknmown error exception{moderator.php}
+2:could not enter new user in the ants specific user database{moderator.php}
+3:a user already involved in the game has again intercepted the page matcher.php:(matcher.php)
+4:during the matcher.php the setting of the involved key to 2 for indicating that the user is current;ly being triend to match against another user could not be successfull {matcher.php}
+6:unable to relase the last user_who was selected under the criteria of leasdt difference from the involved key3 back to 2
+5:unable to aaign the new selected user under the criteria of leasdt difference from the involved key2 to 3
+7:unable to update the opponent key in the databse of the matched user to the current user
+8:unable to update the opponent key in the databse of the currebnt user to the matched user
+9:unable to set the database filed for the ai as opponent as ai
+ 

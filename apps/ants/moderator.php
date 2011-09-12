@@ -48,6 +48,20 @@ else {$done_match=1;}
 
 if($done_match==1)
 	{
+//##############################################################
+
+//if the first take of the user in to the game create  a user id for him in the database
+	//check
+$result_check_the_user_existence=mysqli_query($conn_matcher,"select user_id from '$table_allusers' where fb_id='$the_fb_id'");
+$answer_check_the_user_existence=mysqli_fetch_array($result_check_the_user_existence);
+if(!(isset($answer_check_the_user_existence)))
+	{	$inserted=new_user($conn_matcher);    }
+		if(!$inserted)
+				{
+					whisk(2);
+					exit();
+				}			
+//##############################################################
 	matcher();
 	exit(1);				
 	}
