@@ -1,8 +1,36 @@
 <?php
 session_start();
+$rpath = "../";
+include("../game.php");
+
+if(!isset($_POST['txtchar']))
+{
+    	header('Location:index.php');
+	
+}
+else
+{
+       
+	$money=getCash();
+	if($_POST['txtchar']>$money)
+	{ 
+	    header('Location:start.php?alertnobalance=1&m1=' . $money . "&m2=" . $_POST['txtchar']);
+	    
+	}
+	else
+	{
+	    $_SESSION['cht']=$_POST['txtchar'];
+	    $q="INSERT INTO game_info( `starttime` , `bidamount` , `gameid` , `playerid`)  VALUES (now(), ".$_POST['txtchar'].", '4', '" . $user["id"] ."' )";
+	    mysql_query($q);
+	   
+	}
+}
+?>
+<?php
+
 if(!isset($_SESSION['cht'])){
-	header('Location:start.php');
-	exit;}
+	header('Location:index.php');
+}
 else{
 function P2J($Phpbet,$JA)
 {
@@ -17,7 +45,7 @@ P2J($bet, 'point');
 else
 {
 		header('Location:start.php');
-	exit;
+	
 	}
 }
 ?>
@@ -32,7 +60,7 @@ else
 #hint3{
 	position:absolute;
 	top: 300px;
-	left: 650px;
+	left: 400px;
      width: 71px;
      height: 90px;
     }
@@ -234,7 +262,7 @@ function animation(){
   setTimeout("animation1()",1000);
   return false;	
 }
-var leftpos=650;
+var leftpos=350;
 var toppos=300;
 function animation1(){
 	document.getElementById("hint3").style.visibility="hidden";
@@ -253,13 +281,37 @@ function lose(){
 	*/} t=0;
 }
 </script>
-</head>
-<body>
-<div>
+<style type="text/css">
+	#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
+}
+#wrapper{
+	height:600px;
+	width:800px;
+	background-image:url('mangatgha.jpg');
+	position:absolute;
+	-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
 
-<img src="mangatgha.png" alt="" id="bimage" draggable="false" />
+}
+</style>
+</head>
+<body style="margin:0px;">
+
+<div id="wrapper">
+
+
 <div class="one">
-<div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div>
+<div id="block1"><div id="block"><img src="deck1.png" draggable="true" id="files" ondragstart="drag(this, event) " /></div></div>
 <div id="selected" ondrop="drop1(this, event)" ondragenter="return false" ondragover="return false"></div>
 <div id="trash" ondrop="drop(this, event)" ondragenter="return background()" ondragover="return background2()"></div>
 <div id="trash2"></div>

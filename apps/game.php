@@ -1,4 +1,6 @@
 <?php
+
+error_log("###### current file - " . $_SERVER['SCRIPT_FILENAME']);
 include($rpath . "../connect.php");
 include($rpath . "fb.php");
 
@@ -10,7 +12,9 @@ function getCash() {
    $res = mysql_query($query);
    $row = mysql_fetch_array($res);
    $cash = $row['cash'] + 1000;
-   
+   error_log("###### user id : " . $user['id']);
+   error_log("###### query : " . $query);
+   error_log("###### cash val : " . $row['cash']);   
    return $cash;
 }
 

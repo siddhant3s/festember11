@@ -10,16 +10,12 @@ img{
 	 cursor:pointer;
 	
 }
-#bimage
-{	position:absolute;
- left:250px;
-height:655px;
-}
+
 #trash
 	{
 	position:absolute;
 	top:250px;
-	left:320px;
+	left:70px;
 width:71px;
 height:97px;
 background-image: url(55.gif);		
@@ -31,7 +27,7 @@ background-image: url(55.gif);
 {
 	position: absolute;
 	top:250px;
-	left : 990px;
+	left : 690px;
 	width:71px;
 	height:97px;
 	background-image: url(55.gif);		
@@ -40,18 +36,17 @@ background-image: url(55.gif);
 {
 	position:absolute;
 	top:200px;
- 	left:350px;
+ 	left:100px;
 	width:200px;
 	height:90px;
-	background-image: url(drophere1.png);		
-	background-repeat: no-repeat;		
+			
 
 }
 #hint2
 	{
 	position: absolute;
 	top:200px;
-left : 400px;
+left : 150px;
 width:250px;
 height:90px;
 background-image: url(drophere1.png);		
@@ -62,7 +57,7 @@ background-repeat: no-repeat;
 {
 	position: absolute;
 	top:300px;
-left : 400px;
+left : 100px;
 width:250px;
 height:90px;
 background-image: url(drophere1.png);
@@ -74,7 +69,7 @@ background-repeat: no-repeat;
 {
 	position: absolute;
 	top:450px;
-left : 650px;
+left : 350px;
 width:71px;
 height:97px;
 background-image: url(55.gif);		
@@ -91,7 +86,7 @@ img#select
 {
 position:fixed;
 top:150px;
-left:530px;
+left:180px;
 }
 
 #files
@@ -101,7 +96,7 @@ width:71px;
 height:97px;
 	position:fixed;
 	top: 300px;
-	left: 650px;
+	left: 400px;
 	list-style: none;	
 }
 	

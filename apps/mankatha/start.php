@@ -16,25 +16,27 @@ html, body {
   margin: 0;
 }
 
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-}
-
 #bimage
 {	position:absolute;
- left:250px;
+
 height:655px;
 z-index:-1;
+width:800px;
 }
 #pos
 {
 	position:absolute;
-    left:45%;
-    top:50%;
+    left:300px;
+   	top:350px;
+}
+#frame iframe{
+	margin:0px;
+	padding:0px;
+}
+#frame{
+	margin:0px;
+	padding:0px;
+	height:100px;
 }</style>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
@@ -62,16 +64,19 @@ function checkNumbers()
 }
 
 </script>
-<body>
+<body style="margin:0px;">
+
+<div id="wrapper">
 <img alt="full screen background image" src="mangatgha.png" id="bimage">
 <div id="pos">
 <p>Enter bid</p>
-<form action="cht.php" name="myform" onSubmit="return checkNumbers()" method="post">
+<form action="test1.php" name="myform" onSubmit="return checkNumbers()" method="post">
 
 <input id="txtchar"  type="text" name="txtchar" 
 onkeypress="return onlyNumbers(event);">
 <input type="submit" value="Bet" >
 </form>
+</div>
 </body>
 
 </head>

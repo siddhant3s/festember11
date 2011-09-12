@@ -8,8 +8,12 @@ include_once "facebook_details.php";//should contain app_id and app_secrete
 $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
-if(!$fbuser)
+//$fbloginurl=$facebook->getLoginUrl($fbperm);
+if(!$fbuser) {
   $fbloginurl=$facebook->getLoginUrl($fbperm);
+  header("Location:" . $fbloginurl);
+}
+
 
 /** <Login Related Shit **/
   try {
@@ -92,7 +96,6 @@ if(!$fbuser)
 	if ($fbuser) {
 	  try 
 	    {
-	      
 	      // Proceed knowing you have a logged in user who's authenticated.
 	      $user_profile = $facebook->api('/me');
 	    } 
@@ -100,7 +103,7 @@ if(!$fbuser)
 	  catch (FacebookApiException $e) 
 	    {
 	      
-	      //print_r($fbuser);
+	      print_r($fbuser);
 	      // echo '<pre>'.htmlspecialchars(print_r($e, true)).'</pre>';
 	     //Deleting all cookies from the client browser
 /* 	     if (isset($_SERVER['HTTP_COOKIE'])) { */
@@ -114,6 +117,8 @@ if(!$fbuser)
 /* 	     } */
 	     
 	      $fbuser = null;
+	      echo "nullied $fbuser";
+	      die("reached here");
 	      // header("Location: " . $fbloginurl);
 	    }
 

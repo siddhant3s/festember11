@@ -119,16 +119,8 @@ $("#deal").effect("pulsate",{times:3},"slow");
 
    $("#rules").illuminate();
 
-	$("#rules").click(function(){
-           $("#mainrules").slideDown(1400);
-            
-	 
 	
-	});
-$("#closeme").click(function(){
-$("#mainrules").hide(1000);
 
-});
 $("#feedbj").click(function(){
 $("#showfeed").show(1000);
 
@@ -137,19 +129,13 @@ $("#showfeed").show(1000);
 $("#showfeed").hide(1000);
 
 });
-	$("#winclosenow").click(function(){
-$("#happy").hide(1000);
-
-});
-	$("#loseclose").click(function(){
-$("#sad").hide(1000);
-
-});
+	
 //document.getElementById("deal").addEventListener("click",startRound,false);
 
 
 	
 });
+
 
 
 
