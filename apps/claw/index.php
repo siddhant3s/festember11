@@ -32,6 +32,7 @@
 			<div id="contbutton"></div>
 		</div>	
 		<div id="gameover">
+			<div id="scoregameover"></div>
 			<div id="startnewgame"></div>
 		</div>
 		</div>
@@ -39,7 +40,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 var event;
-var score = 0, time = 10;
+var score = 0, time = 60;
 var tu2=0;var tu3=0;var tu4=1;var tu5=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
@@ -66,6 +67,7 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         }
         function gameovertoggle(){
         	if(genable == 0){
+        		document.getElementById("scoregameover").innerHTML=score;
         		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
         		$("#gameover").toggle();
         		$("#pause").trigger("click");
@@ -116,7 +118,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 		$("#pickinst").css({"position":"absolute","left":"-275","top":"144","height":"172","width":"275","background-image":"url('images/spacedrop.png')"});
 		$("#pickinst").hide();
 		$("#time").css({"position":"absolute","left":"350","top":"450","height":"40","width":"40","color":"white"});		
-		$("#score").css({"position":"absolute","left":"90","top":"450","height":"40","width":"40","color":"white"});        
+		$("#score").css({"position":"absolute","left":"90","top":"450","height":"40","width":"40","color":"white"});
         $("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
 		$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
 		$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
@@ -138,7 +140,9 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#contbutton").bind("click",function(){$("#pause").trigger("click");});
         function reset()
         {
-        	score = 0;	time = 10;
+        	score = 0;	time = 60;
+        	tu2=0; tu3=0; tu4=1; tu5=0;
+        	dir=0; flag=1; lift=0; completed=1; tu=0; drop=0;
         	$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
         	$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
         	$("#bottle_2").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/13.png') no-repeat"});
@@ -152,14 +156,13 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         setInterval("timer()",1000);
         function timer()
         {
-        	if((startscreen==0)&&(time>=0)&&(penable==0))
-        	{
-        		document.getElementById("time").innerHTML=time;
+        	if((startscreen==0)&&(time>0)&&(penable==0)){
         		time--;
-        	}
+        		document.getElementById("time").innerHTML=time;
+        	}        	
         	if(time==0)
         	{
-        		gameovertoggle();
+        		if(genable==0)gameovertoggle();
         		time=0;
         		document.getElementById("time").innerHTML=0;
         	}
@@ -179,6 +182,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#startnewgame").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#startnewgame").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
         $("#startnewgame").bind("click",function(){reset();startscreen=1;$("#startmenu").toggle(); $("#gamescreen").toggle(); if(genable)gameovertoggle();});
+		$("#scoregameover").css({"position":"absolute","left":"240","top":"133","height":"40","width":"40","color":"white"});
 		var dir=0;
 		var flag=1,lift=0;
 		var f,f1,f2;
