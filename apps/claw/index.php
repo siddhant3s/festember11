@@ -66,15 +66,16 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         }
         function gameovertoggle(){
         	if(genable == 0){
+        		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
         		$("#gameover").toggle();
-        		$("#gameover").animate({left:140},600);
-        		genable=1;
+        		$("#pause").trigger("click");
+        		$("#gameover").animate({left:140},600,function(){genable=1;});
         	}else
         	{
         		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
-        		$("#gameover").animate({left:640},600,function(){$("#gameover").toggle();});
         		genable=0;
-
+        		$("#pause").trigger("click");
+        		$("#gameover").animate({left:640},600,function(){$("#gameover").toggle();$("#pausemenu").css({"background-image":"url('images/pausescreen.png')"});});
         	}
         	
         }
@@ -170,7 +171,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 		var drop=0;
 	
 	    $("#pause").bind("click",function(){
-	    	if(genable)
+	    	if(genable==0)
 	    	{
 	    		pausetoggle();
 	    	if(tu==0)
