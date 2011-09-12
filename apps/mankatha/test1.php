@@ -5,7 +5,7 @@ include("../game.php");
 
 if(!isset($_POST['txtchar']))
 {
-    	header('Location:index.php');
+    	header('Location:index2.php');
 	
 }
 else
@@ -29,7 +29,7 @@ else
 <?php
 
 if(!isset($_SESSION['cht'])){
-	header('Location:index.php');
+	header('Location:index2.php');
 }
 else{
 function P2J($Phpbet,$JA)
@@ -276,7 +276,7 @@ function lose(){
 	document.write("<div style=\"position:absolute; top:50%; left:45%; color:white;\">");
 	document.write("You lost this round. Your lose "+point);
 	document.write("<a href=\"start.php\" style=\"position:absolute;left:5%;top:70%;\"><img src=\"bpa.png\" border=\"0\" alt=\"\"/></a>");
-	document.write("<a href=\"index.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
+	document.write("<a href=\"index2.php\" style=\"position:absolute;left:5%;top:650%;\"><img src=\"bq.png\" border=\"0\" alt=\"\"/></a>");
     document.write("</div>");
 	*/} t=0;
 }
