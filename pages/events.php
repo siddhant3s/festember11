@@ -58,6 +58,23 @@ case "choreonite" :  ?>
 </ul>
 Rules are subject to change and will be updated on the official website
 
+<?php break; case streets :  ?>
+<div class="content-head">STREETS</div>
+<ul>
+<li>Team Strength: 7-15 members.</li>
+<li>Fire, water and heavy objects are not allowed on stage.</li>
+<li>No indecency will be allowed during the performance.</li>
+<li>Round 1: This will be a knock out round. Two teams will have to battle each other. Each
+team is allowed to perform a 3 minute choreographed sequence.
+After both teams show off their choreography, the DJ will play music to which the teams are
+to dance impromptu, one by one. Teams have to shuffle every 1 minute.</li>
+<li>Round 2: Will be a knock out round. A solo battle of two teams that qualify ( 4 members, 1
+minute each-alternating)</li>
+<li>Round 3; Rules will be announced on the day of the event.
+The winner of each battle will qualify for the next round.</li>
+</ul>
+Judging Criteria: formations, creativity and variety of styles, such as Popping, Locking,
+Breaking, B-Boying, Krumping.
 
 
 <?php break; case westerndance :  ?>
@@ -712,6 +729,15 @@ Rules are subject to change and will be updated on the official website
 <ul/>
 The judges' decisions will be final and binding, and are not open to review
 
+<?php break; case "shabdjaal" :  ?>
+<div class="content-head">SHABD-JAAL</div>
+<ul>
+<li>Group Event</li>
+<li>Single stage</li>
+<li>Unlimited entries in prelims</li>
+<li>Two persons per team.</li>
+<li>knowledge of hindi words tested.</li>
+
 <?php break; case "extempore" :  ?>
 <div class="content-head">EXTEMPORE</div>
 <ul>
@@ -816,6 +842,7 @@ The judges' decisions will be final and binding, and are not open to review
 </li>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
+<li>New events added in HINDI LITS and DANCE</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
@@ -860,6 +887,7 @@ For further details, checkout their respective events' page.
   <h2>DANCE</h2>
  <ul>
  <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
+ <li><a ajaxify="2" href="./events+streets">STREETS</a></li>
  <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
  </ul>
 
@@ -903,6 +931,7 @@ For further details, checkout their respective events' page.
  <li><a ajaxify="2" href="./events+rochakmantrana">ROCHAK MANTRANA</a></li>
  <li><a ajaxify="2" href="./events+extempore">EXTEMPORE</a></li>
  <li><a ajaxify="2" href="./events+bluffmaster">BLUFF MASTER</a></li>
+ <li><a ajaxify="2" href="./events+shabdjaal">SHABD-JAAL</a></li>
  </ul> 
 
  </ul>
