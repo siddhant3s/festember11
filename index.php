@@ -10,7 +10,6 @@ $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
 if(!$fbuser) {
   $fbloginurl=$facebook->getLoginUrl($fbperm);
-  header("Location:" . $fbloginurl);
 }
 
 
