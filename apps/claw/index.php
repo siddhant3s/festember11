@@ -128,11 +128,8 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $("#mainmenubutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/mainmenuhover.png')"});});
         $("#mainmenubutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
         $("#mainmenubutton").bind("click",function(){penable=0; tu=0; startscreen=1; $("#pausemenu").toggle(); $("#pausemenu").css({"left":"640"});$("#gamescreen").toggle(); $("#startmenu").toggle();});
-<<<<<<< HEAD
         $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"});
-=======
-        $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"}); 
->>>>>>> 0ab4dea67fb1a3bd37b183ce3b32bfd956a4e8d9
+        $("#exitbutton").css({"position":"absolute","left":"148","top":"173","height":"46","width":"76","background-image":"url('images/pause.png')"});
         $("#exitbutton").bind("mouseover",function(){$(this).css({"background-image":"url('images/exithover.png')"});});
         $("#exitbutton").bind("mouseleave",function(){$(this).css({"background-image":"url('images/pause.png')"});});
         $("#contbutton").css({"position":"absolute","left":"110","top":"124","height":"46","width":"146","background-image":"url('images/pause.png')"});
@@ -155,9 +152,11 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         setInterval("timer()",1000);
         function timer()
         {
-        	time--;
-        	if((startscreen==0)&&(time>=0))
-        	document.getElementById("time").innerHTML=time;
+        	if((startscreen==0)&&(time>=0)&&(penable==0))
+        	{
+        		document.getElementById("time").innerHTML=time;
+        		time--;
+        	}
         	if(time==0)
         	{
         		gameovertoggle();
