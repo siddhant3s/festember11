@@ -479,7 +479,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side1=0;
-		  $("#bottle_1").css({"left":"600"});
+		  $("#bottle_1").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -488,9 +488,9 @@ var temp1=Math.random();
 		  }	
 
 if(!side1)
-$("#bottle_1").animate({left:left($("#bottle_1"))-600},4000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_1").animate({left:left($("#bottle_1"))+600},4000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))+640},4000,"linear",function(){s5();});
 }
 
  if(sel==1)
@@ -501,7 +501,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side2=0;
-		  $("#bottle_2").css({"left":"600"});
+		  $("#bottle_2").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -509,9 +509,9 @@ var temp1=Math.random();
 		$("#bottle_2").css({"left":"0"});
 		  }	
 if((!side2))
-$("#bottle_2").animate({left:left($("#bottle_2"))-600},4000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_2").animate({left:left($("#bottle_2"))+600},4000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))+640},4000,"linear",function(){s5();});
 }
 
  if(sel==2)
@@ -522,7 +522,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side3=0;
-		 $("#bottle_3").css({"left":"600"});
+		 $("#bottle_3").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -530,9 +530,9 @@ var temp1=Math.random();
 		  $("#bottle_3").css({"left":"0"});
 		  }	
 if(!side3)
-$("#bottle_3").animate({left:left($("#bottle_3"))-600},4000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_3").animate({left:left($("#bottle_3"))+600},4000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))+640},4000,"linear",function(){s5();});
 }
 }
 	}  
@@ -570,11 +570,11 @@ $("#basket").css({"background":"url('images/tub.png') no-repeat"});
 $("#basket").show();
   
 if(temp9>0.5)
-{ $("#basket").css({left:490});
+{ $("#basket").css({left:640});
 t=490;
 side8=0;
 
-$("#basket").animate({left:left($("#basket"))-490},2000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
+$("#basket").animate({left:left($("#basket"))-640},2000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
 }
  else
 {
