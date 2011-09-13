@@ -89,12 +89,16 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0 , nu
         }
         function pickinsttoggle(){
         	if(penable == 0){
+        		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
         		$("#pickinst").toggle();
-        		$("#pickinst").animate({left:182},600);
-        		penable=1;
+        		$("#pause").trigger("click");
+        		$("#pickinst").animate({left:182},600,function(){penable=1;});
         	}else
         	{
-        		$("#pickinst").animate({left:-275},600,function(){$("#pickinst").toggle();});
+        		$("#pausemenu").css({"background-image":"url('images/pause.png')"});
+        		penable=0;
+        		$("#pause").trigger("click");
+        		$("#pickinst").animate({left:-275},600,function(){$("#pickinst").toggle();$("#pausemenu").css({"background-image":"url('images/pausescreen.png')"});});
         		penable=0;
         	}
         }
@@ -177,7 +181,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         $(document).bind("keydown",function (event)
         {
 			var key=event.keyCode;
-			if(key==66)pickinsttoggle();
+			if(penable==1)pickinsttoggle();
 		});
 
 //gameover
@@ -197,7 +201,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 		var drop=0;
 	
 	    $("#pause").bind("click",function(){
-	    	if(genable==0)
+	    	if(genable==0||penable==0)
 	    	{
 	    		pausetoggle();
 	    	if(tu==0)
@@ -378,17 +382,17 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 									if(sel==0)
 				{
 				if(left($("#bottle_1"))>left($("#grabber"))  && left($("#bottle_1"))<(left($("#grabber"))+60))
-				{$("#bottle_1").stop(true); lift=1; $("#bottle_1").css({"left":left($("#grabber"))+27}); drop=1;}
+				{$("#bottle_1").stop(true); lift=1; $("#bottle_1").css({"left":left($("#grabber"))+27}); drop=1;if(num==0){pickinsttoggle();num=1}}
 				}
 				if(sel==1)
 				{
 			   if(left($("#bottle_2"))>left($("#grabber"))  && left($("#bottle_2"))<(left($("#grabber"))+60))
-				{$("#bottle_2").stop(true); lift=2;$("#bottle_2").css({"left":left($("#grabber"))+27}); drop=2;}
+				{$("#bottle_2").stop(true); lift=2;$("#bottle_2").css({"left":left($("#grabber"))+27}); drop=2;if(num==0){pickinsttoggle();num=1}}
 				}
 				if(sel==2)
 				{
 				if(left($("#bottle_3"))>left($("#grabber"))  && left($("#bottle_3"))<(left($("#grabber"))+60))
-				{$("#bottle_3").stop(true); lift=3;$("#bottle_3").css({"left":left($("#grabber"))+27}); drop=3;}
+				{$("#bottle_3").stop(true); lift=3;$("#bottle_3").css({"left":left($("#grabber"))+27}); drop=3;if(num==0){pickinsttoggle();num=1}}
 				}
 				}
 				if(temp==0&&top($("#grabber"))>=-252)
