@@ -9,12 +9,13 @@ alert("error");	//canvas not supported by browser
 }
 
 picture = new Image();
-picture.onload=function(){
-ctx.drawImage(picture,50,10,700,700);
-};
 canvasimage = iframe.getElementById('canvasimage').value;
 //alert(canvasimage);
 picture.src = "gmodule/fitsize/new_"+canvasimage;
+
+picture.onload=function(){
+ctx.drawImage(picture,50,10,700,700);
+};
 
 //canvas.addChild(picture);
 }
