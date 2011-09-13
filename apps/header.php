@@ -64,6 +64,9 @@
 			iframe{
 				margin-left:4px;	
 			}
+			#games-festember{
+			   cursor:pointer;
+			}
 			
 		</style>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" ></script>
