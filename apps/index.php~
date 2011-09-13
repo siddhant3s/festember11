@@ -1,5 +1,5 @@
 <?php
-	$gamelinkpath="../apps/";
+	$gamelinkpath="http://www.pragyan.org/~boopathi/festember11/apps/";
 $rpath = "";
 include("game.php");
 ?>
