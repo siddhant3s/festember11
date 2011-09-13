@@ -10,8 +10,9 @@ if($logged_in=="true"){
 <a ajaxify=1 href="register"><input type="button" value="Event Registration" /></a><br>
 <a ajaxify=1 href="workshop"><input type="button" value="Workshop Registration" /></a><br>
 <a ajaxify=1 href="accomodation"><input type="button" value="Accomodation Registration" /></a>
+
 </div>
-<label>NOTE : <br>Fill the basic information before availing event or accomodation registration.<br>For multiple events participation, Register them one after another.</label>
+<label>NOTE : <br>Fill the basic information before availing event or accomodation registration.<br>For multiple events participation, Register them <a ajaxify=1 href="photography">one</a> after another.</label>
 </form>
 
 <?php
