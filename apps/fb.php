@@ -27,13 +27,7 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
   }
 }
 
-header("Location: " . $facebook->getLoginUrl($fbperm));
-die();
+header("Location: ../");
 }
-
-//if(!$user) {
-    $fbloginurl=$facebook->getLoginUrl($fbperm);
-    header("Location: " . $fbloginurl);
-//}
 
 ?>
