@@ -108,7 +108,7 @@
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
-			<a id="games-festember" href="http://festember.in/11/apps" style="text-decoration:none; color:#000; font-size:20px; font-weight:bold; font-family: Oswald,MyraidPro;">GO HOME</a>
+			<a id="games-festember" onclick="parent.document.location='http://festember.in/11/apps';"  style="text-decoration:none; color:#000; font-size:20px; font-weight:bold; font-family: Oswald,MyraidPro;">GO HOME</a>
 			</div>
 			<div id="cash">
 				<img src="images/cash.png" class="logo"/>
