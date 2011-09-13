@@ -43,7 +43,7 @@
 <script type="text/javascript">
 var event;
 var score = 0, time = 60;
-var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;var paused=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         function pausetoggle(){
         	if(penable == 0){
@@ -51,9 +51,12 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
         		$("#pausemenu").animate({left:138},600);
         		penable=1;
         	}else
-        	{
-        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();});
-        		penable=0;
+        	{   if(paused==0)
+			{
+			    paused=1;
+        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();paused=0;});
+        	}
+			penable=0;
         	}
         }
         function insttoggle(){
