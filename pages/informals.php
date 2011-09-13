@@ -3,8 +3,8 @@
 <img src="images/informals.jpg">
 <p>Highness beckons you at informals. If entertainment is what you seek, then hang around and grab the most at festemberinformals. Beat the heat at our lounge or play your favorite sport, its all available here this time in informals. Be yourself, bring out the child in you and you shall have the most memorable experience in your life. Lots of fun games and exciting prizes to be won more than even you can imagine. INFORMALS@festember- where everyone is a winner!!! 
 </p>
-<a href="http://www.festember.in/11/images/informals/adventuresports.jpg">Click here to view the Adventure sports poster</a><br />
-<a href="http://www.festember.in/11/images/informals/snooker.jpg">Click here to view the Pool&Snooker poster</a>
+<a target="_blank" href="http://www.festember.in/11/images/informals/adventuresports.jpg">Click here to view the Adventure sports poster</a><br />
+<a target="_blank" href="http://www.festember.in/11/images/informals/snooker.jpg">Click here to view the Pool&Snooker poster</a>
 </div>
 <div class="content-head">PAINTBALL</div>
 <div class="content-body">
@@ -29,7 +29,7 @@ One of the highlights of festember informals 11 this raffle draw gives you a cha
 Nobody's a winner,anyone who says so is either a liar or doesn't play poker. Sometimes doing the right thing loses you money and the wrong thing gains you money. The trick is figuring the right time to do the wrong thing and the wrong time to do the right thing.
 Here @ informals poker, hit the tables and sweep them. get into the true spirit of las vegas come enjoy this highly intense battle of wits beefin up ur the wallet 
 </p>
-<a href="http://www.festember.in/11/images/informals/casinogames.jpg">Click here to view the Casino games poster</a>
+<a target="_blank" href="http://www.festember.in/11/images/informals/casinogames.jpg">Click here to view the Casino games poster</a>
 </div>
 <div class="content-head">ZORBING</div>
 <div class="content-body">
@@ -43,7 +43,7 @@ Here @ informals poker, hit the tables and sweep them. get into the true spirit 
 <p>
 Think you can rule the streets of nit trichy? Get your team over and prove it. held all night,this second volume of the high frequency battle for supremacy in street football conducted with 5  a side teams coming from
 </p>
-<a href="http://www.festember.in/11/images/informals/streetfootball.jpg">Click here to view the Street football poster</a>
+<a target="_blank" href="http://www.festember.in/11/images/informals/streetfootball.jpg">Click here to view the Street football poster</a>
 </div>
 <div class="content-head">NETWORK GAMES</div>
 <div class="content-body">
@@ -52,8 +52,8 @@ Think you can rule the streets of nit trichy? Get your team over and prove it. h
 Ever popular lan games cs, dota, fifa, nfs competitions  will be held during festember so get your teams and show us what you've got.  Tonnes of exciting prizes are up for grabs. Defend the ancients or headshot your opponents, all here at informals.
 POOLBrought to nit trichy for the first time. Festember informals along with Q-shot gives you the oppurtunity to grab your cue and  plunge into the battle between stripes and solids..
 </p>
-<a href="http://www.festember.in/11/images/informals/gaming.jpg">Click here to view the Network games poster</a>
-<a href="http://www.axeadventure.com/"><img src="images/Logo.png"></a>
+<a target="_blank" href="http://www.festember.in/11/images/informals/gaming.jpg">Click here to view the Network games poster</a>
+<a target="_blank" href="http://www.axeadventure.com/"><img src="images/Logo.png"></a>
 <h3 style="font-size:16px;">CONTACT</h3>
 <p>
 M.Gowtham<br />
