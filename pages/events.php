@@ -840,12 +840,8 @@ The judges' decisions will be final and binding, and are not open to review
 <div class="content-body">
 <div class="content-head" style="font-size:13px;">The shorlists for the TARANGINI, GIGAHERTZ, CHOREO-NITE and THEATRIX  will be put up here at 11:59 p.m. 14th September</div>
 <ul>
-<li>Last date for Submission of Videos
-<ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
-</ul>
-</li>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
 <li>New events added in HINDI LITS and DANCE</li>
