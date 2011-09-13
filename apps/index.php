@@ -20,8 +20,8 @@ include("game.php");
 <div id="games">
 <a href="<?php echo $gamelinkpath ;?>longline/" id="g1"></a>
 <a href="<?php echo $gamelinkpath ;?>mankatha/" id="g2"></a>
-<a href="<?php echo $gamelinkpath ;?>poker/" id="g3"></a>
-<a href="<?php echo $gamelinkpath ;?>roulette/" id="g4"></a>
+<a href="<?php echo $gamelinkpath ;?>roulette/" id="g3"></a>
+<a href="<?php echo $gamelinkpath ;?>poker/" id="g4"></a>
 <a href="<?php echo $gamelinkpath ;?>claw/" id="g5"></a>
 </div>
 </div>
