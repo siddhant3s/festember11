@@ -1,3 +1,7 @@
+
+<?php
+
+?>
 <?php
 //########################################################
 	//another script has to see the ai id and then it sends to the correct script
@@ -5,6 +9,7 @@
 //########################################################
 function inspect($gamehash)
 {
+$the_string_to_anaylyse="0000000000000000000000000000000000000000000000000000000000";
 //########################################################
 	//allglobals here
 global $conn_pag2;
@@ -112,6 +117,16 @@ global $the_cards_priority_string;
 						//resurrection returned after the sexond acred has bee drawn from the draw pile
 						//that the attack has been after the currentbuser placed the first card from the draw into his colony
 						//he nopponent p[laces the second to current card to attack
+						
+						if(!$resurrection_returned)
+									{
+										$string1='a';
+									}
+						else if(!$resurrection_returned)
+							{
+								$string1='a'
+								
+							}
 						}
 					else if($the_chance_attack==3)//direct from slots
 						{
@@ -327,10 +342,4 @@ global $the_cards_priority_string;
 			}
 //########################################################	
 }
-
-
-
-
-
-
 ?>
