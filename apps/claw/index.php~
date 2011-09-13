@@ -4,6 +4,10 @@
 		#startbutton{
 		  cursor:pointer;
 		}
+		div{
+			overflow: hidden;
+		}
+		
 	</style>
 	</head>
 	<body>
@@ -43,17 +47,25 @@
 <script type="text/javascript">
 var event;
 var score = 0, time = 60;
-var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+<<<<<<< HEAD
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;var paused=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
+=======
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0 , num = 0 ;
+>>>>>>> 91e58f3b26101ad1d7a6a0aef310770c3c31d4ff
         function pausetoggle(){
         	if(penable == 0){
         		$("#pausemenu").toggle();
         		$("#pausemenu").animate({left:138},600);
         		penable=1;
         	}else
-        	{
-        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();});
-        		penable=0;
+        	{   if(paused==0)
+			{
+			    paused=1;
+        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();paused=0;});
+        	}
+			penable=0;
         	}
         }
         function insttoggle(){
@@ -143,7 +155,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         function reset()
         {
         	score = 0;	time = 60;
-        	tu2=0; tu3=0; tu4=1; tu5=0;
+        	tu2=0; tu3=0; tu4=1; tu5=0; num=0;
         	dir=0; flag=1; lift=0; completed=1; tu=0; drop=0;
         	$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
         	$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
