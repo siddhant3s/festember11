@@ -1,16 +1,6 @@
-
-
-
-
-
-
-
-
 <?php
 require_once("allglobals.php");
 require_once("apps/game.php");
-
-
 ?>
 <?php
 /*
@@ -27,9 +17,6 @@ function matcher()
 
 //MAKE THE CONNECTION 
 $conn_matcher;
-
-
-
 //##############################################################
 $the_fb_id=get_the_fb_id();
 $the_current_average=get_the_average();
@@ -107,7 +94,6 @@ if($the_opponent)
 
 	else
 		{
-
 				$result_set_opponent2_match=mysqli_query($conn_matcher,"update '$table_allusers' set opponent='AI' where fb_id='$the_fb_id'");
 				$answer_set_opponent2_match=mysqli_affected_rows($conn_matcher);
 				if(!$answer_set_opponent1_match)
@@ -125,6 +111,7 @@ if($the_opponent)
 if($thefinalsuccesstoken==1)
 	{
 		//redirect to correct page
+		
 	}
 
 }

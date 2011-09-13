@@ -4,8 +4,12 @@
 3:a user already involved in the game has again intercepted the page matcher.php:(matcher.php)
 4:during the matcher.php the setting of the involved key to 2 for indicating that the user is current;ly being triend to match against another user could not be successfull {matcher.php}
 6:unable to relase the last user_who was selected under the criteria of leasdt difference from the involved key3 back to 2
-5:unable to aaign the new selected user under the criteria of leasdt difference from the involved key2 to 3
-7:unable to update the opponent key in the databse of the matched user to the current user
-8:unable to update the opponent key in the databse of the currebnt user to the matched user
-9:unable to set the database filed for the ai as opponent as ai
- 
+5:unable to aaign the new selected user under the criteria of leasdt difference from the involved key2 to 3:(matcher.php)
+7:unable to update the opponent key in the databse of the matched user to the current user:(matcher.php)
+8:unable to update the opponent key in the databse of the currebnt user to the matched user:(matcher.php)
+9:unable to set the database filed for the ai as opponent as a:(matcher.php)
+77:there are three cards of the same rank in the slots of one of the users some error::backtrace{resurrection.php}
+33:stack pregmatch could not be successful in the status string{resurrection.php}
+48:the card with which attack and resurrection is being anaylysed-two of that suite is already present in the users colony6::so some error as thee can't be three cards of the same suite and the same color{resurrection.php}
+38:there are two cards of the same rank in the slots of one of the users some error::backtrace{resurrection.php}
+61:three kings in the slot :some error{resurrection.php}
