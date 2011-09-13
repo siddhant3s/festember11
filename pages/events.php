@@ -55,15 +55,15 @@ case "choreonite" :  ?>
 <li>Organizers reserve the right to cancel any event or prize.</li>
 <li>Props and stage settings are allowed but no additional time for set up will be given. Note that props include objects, which are carried by participants (sticks, swords, pots, etc). Chairs, tables, screen and backdrops, which are placed on stage, come under stage settings.</li>
 <li>Doubts regarding the rules and regulations of Choreonite should be clarified only with the Choreo Coordinator. We are not responsible for wrong information from other sources.</li>
-</ul><br>
+</ul>
 The judges' decisions will be final and binding, and are not open to review
-<br><br>
-For further details contact:<br>
-Ashwath Muralidharan<br>
-+91 97908 49385<br>
-ashwathm1790@gmail.com<br>
-	<br>
-Rules are subject to change and will be updated on the official website<br>
+
+For further details contact:<br/>
+Ashwath Muralidharan<br/>
++91 97908 49385<br/>
+ashwathm1790@gmail.com<br/>
+	<br/>
+Rules are subject to change and will be updated on the official website<br/>
 
 
 <?php break; case streets :  ?>
@@ -838,16 +838,10 @@ The judges' decisions will be final and binding, and are not open to review
 
 <div class="content-head">Updates</div>
 <div class="content-body">
+<div class="content-head" style="font-size:13px;">The shorlists for the TARANGINI, GIGAHERTZ, CHOREO-NITE and THEATRIX  will be put up here at 11:59 p.m. 14th September</div>
 <ul>
-<li>Last date for Submission of Videos
-<ul>
-<li>Choreo night - 12th September</li>
-<li>GIG-A-HERTZ - 12th September</li>
-<li>Tarangini - 12th September</li>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
-</ul>
-</li>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
 <li>New events added in HINDI LITS and DANCE</li>
