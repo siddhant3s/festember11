@@ -1,7 +1,9 @@
 <html>
 	<head>
 	<style type="text/css">
-		
+		#startbutton{
+		  cursor:pointer;
+		}
 	</style>
 	</head>
 	<body>
@@ -437,11 +439,11 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
                           if(tu3==0){$("#grabber").css({"background":"url('images/untitled-1.png') no-repeat"});
 			switch(drop)
 			{
-			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},1000,"linear",function(){s10();
+			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},700,"linear",function(){s10();
 				$("#bottle_1").clearQueue();completed=1;$("#bottle_1").hide();lift=0;tu3=0;});break;
-			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},1000,"linear",function(){s10();
+			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},700,"linear",function(){s10();
 				$("#bottle_2").clearQueue();completed=1;$("#bottle_2").hide();lift=0;tu3=0;});break;
-		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},1000,"linear",function(){s10();
+		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},700,"linear",function(){s10();
 				$("#bottle_3").clearQueue();completed=1;$("#bottle_3").hide();lift=0;tu3=0;});break;
 			}}
 			}
