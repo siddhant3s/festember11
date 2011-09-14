@@ -221,7 +221,7 @@ function facebook_click(){
 		</div>
 	</noscript>
 	<body>
-	<img src="./images/logo.png" style="display:none;"/>
+	<img src="./images/logo.png" style="position:absolute;z-index:-1;visibility:hidden" />
 	<div id="bodycontainer">
 	<script type="text/javascript">
 		if(typeof CONSTRUCT == "function")
