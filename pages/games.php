@@ -6,7 +6,7 @@
 <p>
 Win amazing prizes, food coupons, and t-shirts @Festember by winning Games and scoring experience points.</p>
 <p>Login using your facebook account and 
-<a style="color:#fff" href="apps">Click Here</a>
+<a href="apps">Click Here</a>
 to start playing Games.
 </p>
 </div>
