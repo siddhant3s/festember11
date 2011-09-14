@@ -212,7 +212,11 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 	    $("#pause").bind("click",function(){
 	    	if((genable==0||pienable==0)&&(startscreen==0))
 	    	{
-	    		pausetoggle();
+	    		var endarray=0;
+	    		var path=document.getElementById("pausemenu").style.backgroundImage;
+	    		path.split("/");
+	    		endarray=path.length;
+	    		if(endarray==64)pausetoggle();
 	    	if(tu==0)
 	    	{tu=1;   
 	    		$("#bottle_1").stop("true");
