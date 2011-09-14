@@ -837,33 +837,12 @@ The judges' decisions will be final and binding, and are not open to review
 <br />
 -Tamil Cinema Quiz
 
-<?php break; case "prelims_results": ?>
-<div class="content-head">
-Shortlisted teams
-</div>
-<div class="content-body">
-<div class="content-head">Theatrix</div>
-<ul>
-<li>Amritha college of engineering - Team 1(Karthik)</li>
-
-<li>Amritha college of engineering - Team 2(Anurag)</li>
-
-<li>Amritha college of engineering - Team 3(Ashwin)</li>
-
-<li>Vellore Institute of Technology</li>
-
-<li>Sastra, Thanjavore</li>
-
-<li>Government college of engineering, Salem</li>
-</ul>
-</div>
-
 <?php break; default : ?>
 
 <div class="content-head">Updates</div>
 <div class="content-body">
 <p>The shortlist for CHOREO NITE will be put up at 02:00 p.m. on September 15.</p>
-<p><a style="text-decoration:underline;color:#ee002d" href="./events+prelims_results" ajaxify="2" >Shortlisted teams</a></p>
+<p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Shortlisted teams</a></p>
 <ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
