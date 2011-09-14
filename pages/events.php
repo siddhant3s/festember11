@@ -310,6 +310,10 @@ Phase I : Online
 <br>
 
 <ul>
+<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
+RAW format) with a minimum resolution of 1280x720.</li>
+<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
+speed etc.</li>
 <li>Each registrant can mail a maximum of 5 photographs to photography@festember.in</li>
 <li>Out of this 2 or 3 photographs will be chosen and displayed on the photography page of the
 Festember website.</li>
@@ -325,10 +329,7 @@ elements to the photograph.</li>
 panel.</li>
 <li>Special weightage will be given for Locations, Post-processing, Facial expressions, Lighting,
 Light painting, HDR, Wild-life and Macrophotography.</li>
-<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
-RAW format) with a minimum resolution of 1280x720.</li>
-<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
-speed etc.</li>
+<li>No watermarks or signatures allowed in the photograph.</li>
 <li>All entries must be mailed before 20th Sep 2011, 11:59pm.</li>
 <li>This phase is Non-Eliminative.</li>
 </ul>
@@ -346,7 +347,9 @@ photographs relating to the theme and can submit a maximum of 5 photographs.</li
 <li>There will be a special prize for the winner who takes part in the Phase 1 alone and
 couldn’t take part in the Phase 2.</li>
 </ul>
-
+For further details contact:<br />
+Jai Santhosh
+ +91 8015636148
 
 
 <?php break; case "graffiti" :  ?>
