@@ -3,8 +3,6 @@ $rpath="../";
 require_once("../game.php");
 require_once("allglobals.php");
 require_once("whisk.php");
-
-
 $the_error_code=0;
 ?>
 
@@ -17,12 +15,14 @@ $the_error_code=0;
 if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )
 {
 	$done_match=0;
-$current_users_balance=getCash();
+//$current_users_balance=getCash();
 $bet_entered=mysqli_real_escape_string($conn_moderator,$_POST['bet']);
+
    if(!is_numeric($bet_entered))
     {
+	
     $the_error_code=1;
-    whisk(1);
+    whisk($bet_entered);
     exit(1);	
     }
 if($bet_entered<=0)
@@ -62,8 +62,8 @@ if(!(isset($answer_check_the_user_existence)))
 					exit();
 				}			
 //##############################################################
-	matcher();
-	exit(1);				
+	if(matcher()){;exit(1);	}
+	else {whisk(19);exit(1);}
 	}
 else
 	{
@@ -71,31 +71,5 @@ else
 	exit(1);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>
