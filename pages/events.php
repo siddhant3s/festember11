@@ -815,18 +815,14 @@ The judges' decisions will be final and binding, and are not open to review
 <p>The shortlist for CHOREO NITE will be put up at 02:00 p.m. on September 15.</p>
 <p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Shortlisted teams</a></p>
 <ul>
-<li>Showtime (Short Film making) - 11:59, 20th September</li>
-<li>Flash (Ad making) - 11:59, 20th September</li>
+<li>Rules for Tarangini updated</li>
+<li>Rules for Photography updated</li>
+<li>New events added in HINDI LITS and DANCE</li>
 </ul>
 <p>Last date of submission of videos</p>
 <ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
-</ul>
-<ul>
-<li>Rules for Tarangini updated</li>
-<li>Rules for Photography updated</li>
-<li>New events added in HINDI LITS and DANCE</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
