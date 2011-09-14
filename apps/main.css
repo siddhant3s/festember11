@@ -74,11 +74,11 @@
 #back{
 	position:absolute;
 	display:block;
-	height:54px;
+	height:30px;
 	width:98px;
 	border:solid 1px #000;
-	left:645px;
-	top:40px;
+	left:660px;
+	top:30px;
 }
 #back:hover{
 	background:url('images/homehover.png')
