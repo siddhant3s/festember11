@@ -1,33 +1,4 @@
 <?php
-/*
-
-<div class="content-body">
-	<p>
-		ChoreoNite:</p>
-	<p>
-		<a ><span >Purity of art, tranquility of motion, beauty of spirit and the magnificence of triumph, dance encompasses all. Involving the most graceful and talented dancers in the country, Festember&#39;s ChoreoNite is a masterpiece of art.&nbsp;</span></span></p>
-	<p>
-		<span ><span >Come witness the masters at work as they curl, jump and twist to steal your breath away!</span></span></p>
-	<p>
-		<span ><span >Music :&nbsp;</span></span></p>
-	<p>
-		<span ><span >Music speaks what cannot be expressed. Music paints what cannot be imagined. Music transcends what cannot be measured. Music is divine.</span></span></p>
-	<p>
-		<span ><span >Be it carnatic or metal, rock or desi, music is medicine for the soul. Plunge into the sea of music only @ Festember!</span></span></p>
-	<p>
-		<span ><span >Theatre:&nbsp;</span></span></p>
-	<p>
-		<span ><span >All the world&#39;s a stage, and all men merely players. Whats life without drama, tragedy and comedy, personified by painted faces and orchestrated actions? Join us in enshrining the art of theatre only at Festember!&nbsp;</span></span></p>
-	<p>
-		LITERARY EVENTS</p>
-	<p>
-		Whats a fest without literary behemoths battling it out for pride, position and money?! Festember&#39;s Lit Events need no introduction. With events in three languages, from Wordplay to crosswords to quizzes to debates, we have something for everyone! If you think you can match the best, come show us what you got!</p>
-	<p>
-		ARTS</p>
-	<p>
-		Color your emotions on the canvas called Festember! Bring out the inner artist and witness the artistically gifted unleash their powers. Discover the unity through variety in the collage, carve a niche for yourself in soap modelling, or ravish the audience with your masterpiece at the Arts showcase. It is said, variety is the spice of life, Festember makes it a staple!</p>
-</div>
-*/
 
 $subpage = $_GET["subpage"];
 switch ($subpage)
@@ -390,7 +361,7 @@ Rules are subject to change and will be updated on the official website
 
 
 <?php break; case "tamil" :  ?>
-<h2>TAMIL LITS</h2>
+<h2 style="color:white">TAMIL LITS</h2>
 <img src="images/1.jpg"><br/>
 <img src="images/2.jpg"><br/>
 <img src="images/3.jpg"><br/>
@@ -866,7 +837,7 @@ For further details, checkout their respective events' page.
 
 <div class="content-body-col1">
  
- <h2>TAMIL LITS</h2>
+ <h2 style="color:white">TAMIL LITS</h2>
  <ul>
 <li><a ajaxify="2" href="./events+uyarthani">UYARTHANI CHEMMOZHI</a></li>
 <li><a ajaxify="2" href="./events+kurukkezhuttu">KURUKKEZHUTTHU</a></li>
@@ -883,12 +854,12 @@ For further details, checkout their respective events' page.
 <li><a ajaxify="2" href="./events+kodambakkam">KODAMBAKKAM</a></li>
  </ul>
 
- <h2>DRAMATICS</h2>
+ <h2 style="color:white">DRAMATICS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+theatrix">THEATRIX</a></li>
  </ul>
 
- <h2>CINEMATICS</h2>
+ <h2 style="color:white">CINEMATICS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+showtime">SHOWTIME (Short Film Making)</a></li> 
  <li><a ajaxify="2" href="./events+flash">FLASH (Ad Making)</a></li>
@@ -897,21 +868,21 @@ For further details, checkout their respective events' page.
 </div>
 
 <div class="content-body-col2">
-  <h2>DANCE</h2>
+  <h2 style="color:white">DANCE</h2>
  <ul>
  <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
  <li><a ajaxify="2" href="./events+streets">STREETS</a></li>
  <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
  </ul>
 
- <h2>MUSIC</h2>
+ <h2 style="color:white">MUSIC</h2>
  <ul>
  <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
  <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern - Semi Pro)</a></li>
  <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
  </ul>
 
- <h2>ENGLISH LITS</h2>
+ <h2 style="color:white">ENGLISH LITS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+lonewolfquiz" ajaxify="2">LONE WOLF QUIZ</a></li>
  <li><a ajaxify="2" href="./events+indiaquiz" ajaxify="2">INDIA QUIZ</a></li>
@@ -931,7 +902,7 @@ For further details, checkout their respective events' page.
 </div>
 
 <div class="content-body-col3">
- <h2>HINDI LITS</h2>
+ <h2 style="color:white">HINDI LITS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+atulyabharat">ATULYA BHARAT (Quiz)</a></li>
  <li><a ajaxify="2" href="./events+sursangam">SUR SANGAM (Antakshari)</a></li>
@@ -948,7 +919,7 @@ For further details, checkout their respective events' page.
  </ul> 
 
  </ul>
- <h2>ART EVENTS</h2>
+ <h2 style="color:white">ART EVENTS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+dominoes">DOMINOES</a></li>
  <li><a ajaxify="2" href="./events+photography">PHOTOGRAPHY</a></li>
