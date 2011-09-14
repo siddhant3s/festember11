@@ -863,7 +863,7 @@ Shortlisted teams
 <div class="content-head">Updates</div>
 <div class="content-body">
 <p>The shortlist for CHOREO NITE will be put up at 02:00 p.m., on September 15.</p>
-<div class="content-head"><a href="./events+prelims_results" ajaxify="2" >Shortlisted teams</a></div>
+<p><a style="text-decoration:none;color:#ee002d" href="./events+prelims_results" ajaxify="2" >Shortlisted teams</a></p>
 <ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
