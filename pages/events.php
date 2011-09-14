@@ -862,8 +862,8 @@ Shortlisted teams
 
 <div class="content-head">Updates</div>
 <div class="content-body">
-<div class="content-head" style="font-size:13px;">The shorlists for the TARANGINI, GIGAHERTZ, CHOREO-NITE and THEATRIX  will be put up here at 11:59 p.m. 14th September</div>
-<div class="content-head"><a href="./events+prelims_results" ajaxify="2" style="color:white">Results</a></div>
+<p>The shortlist for CHOREO NITE will be put up at 02:00 p.m., on September 15.</p>
+<div class="content-head"><a href="./events+prelims_results" ajaxify="2" >Shortlisted teams</a></div>
 <ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
