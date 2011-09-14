@@ -32,6 +32,8 @@ Shortlisted teams
 <li>AFTER DARK</li>
 <li>TWKC</li>
 </ul>
+
+</div>
 <?php /*
 <div class="content-head">Tarangini</div>
 <ul>
