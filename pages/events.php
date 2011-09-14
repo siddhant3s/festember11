@@ -867,6 +867,13 @@ Shortlisted teams
 <ul>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
+</ul>
+<p>Last date of submission of videos</p>
+<ul>
+<li>Showtime (Short Film making) - 11:59, 20th September</li>
+<li>Flash (Ad making) - 11:59, 20th September</li>
+</ul>
+<ul>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
 <li>New events added in HINDI LITS and DANCE</li>
