@@ -1,5 +1,12 @@
 <div class="content-head">GAMES</div>
 <div class="content-body">
-<img style="width:400px;border:1px solid #333333;" src="images/gamepic.jpg"></br>
-   <a style="color:#fff" href="apps">Click Here</a>
+<p align="center">
+<img width="200" style="border:1px solid #333333;" src="images/gamepic.jpg"></br>
+ </p>
+<p>
+Win amazing prizes, food coupons, and t-shirts @Festember by winning Games and scoring experience points.</p>
+<p>Login using your facebook account and 
+<a style="color:#fff" href="apps">Click Here</a>
+to start playing Games.
+</p>
 </div>
