@@ -16,7 +16,7 @@ if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )
 {
 	$done_match=0;
 //$current_users_balance=getCash();
-$bet_entered=mysqli_real_escape_string($conn_moderator,$_POST['bet']);
+$bet_entered=mysql_real_escape_string($_POST['bet']);
 
    if(!is_numeric($bet_entered))
     {
@@ -52,8 +52,8 @@ if($done_match==1)
 
 //if the first take of the user in to the game create  a user id for him in the database
 	//check
-$result_check_the_user_existence=mysqli_query($conn_matcher,"select user_id from '$table_allusers' where fb_id='$the_fb_id'");
-$answer_check_the_user_existence=mysqli_fetch_array($result_check_the_user_existence);
+$result_check_the_user_existence=mysql_query("select user_id from '$table_allusers' where fb_id='$the_fb_id'");
+$answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
 if(!(isset($answer_check_the_user_existence)))
 	{	$inserted=new_user($conn_matcher);    }
 		if(!$inserted)
