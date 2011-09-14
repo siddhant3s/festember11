@@ -1,5 +1,5 @@
 <?php
-	$gamelinkpath="../";
+	$gamelinkpath="../apps/";
 $rpath = "";
 include("game.php");
 ?>
