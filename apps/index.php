@@ -24,5 +24,8 @@ include("game.php");
 <a href="<?php echo $gamelinkpath ;?>poker/" id="g4"></a>
 <a href="<?php echo $gamelinkpath ;?>claw/" id="g5"></a>
 </div>
+<div id="back">
+<a href="http://www.festember.in/11"></a>
+</div>
 </div>
 </body></html>
