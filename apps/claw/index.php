@@ -53,7 +53,7 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
 
 var tu2=0;var tu3=0;var tu4=1;var tu5=0;
 
-var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0 , num = 0 ;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , pienable = 0 , num = 0 ;
 
 
         function pausetoggle(){
