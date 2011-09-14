@@ -33,8 +33,7 @@ Shortlisted teams
 <li>TWKC</li>
 </ul>
 
-</div>
-<?php /*
+
 <div class="content-head">Tarangini</div>
 <ul>
 <li>ST. JOSEPH'S</li>
@@ -51,4 +50,3 @@ Shortlisted teams
 <li>COIMBATORE INSTITUTE OF TECH.</li>
 </ul>
 </div>
-*/?>
