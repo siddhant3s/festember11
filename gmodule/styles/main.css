@@ -1,0 +1,54 @@
+div.gallery_insidebox{
+width:100px;
+height:100px;
+border:1px solid #ccc;
+float:left;
+margin:17px;
+}
+div.gallery_insidebox:hover{
+border-color:#9f9;
+}
+div.gallery_outerbox{
+/*background-color:black;
+border:1px black solid;*/
+width:550px;
+height:750px;
+}
+canvas{
+border:1px blue solid;
+}
+#iframe{
+position:absolute;
+left:0px;
+top:60px;
+border:none;
+display:none;
+width:800px;
+height:800px;
+z-index:5;
+}
+a.pagenumber{
+font:13px/1.5 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,sans-serif;
+font-weight:bold;
+color:#999;
+font-size:10pt;
+cursor:pointer;
+text-decoration:none;
+}
+a.pagecurrent{
+border:2px #bbb solid;
+color:#bbb;
+}
+a.pagenumber:hover{
+color:#500050;
+border-color:#500050;
+
+}
+div#pagecontainer{
+/*background-color:black;
+border:1px solid black;*/
+padding:13px;
+position:relative;
+left:30px;
+max-width:450px;
+}

@@ -2,7 +2,7 @@
 <script type="text/javascript">
 $("document").ready(function(){
 $("a.merch img").css("width","120px");
-$("a.media img").css({width:'80px',padding:'20px'});
+$("a.media img").css({width:'120px',padding:'5px'});
 });
 </script>
 <div class="content-body">
@@ -11,17 +11,6 @@ $("a.media img").css({width:'80px',padding:'20px'});
 		<a class="merch" href="http://www.esparsha.com" target="_blank"><img src="./images/s1.jpg"></a><br/>
 		
 		<br/><br/>
-		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Partners</h3>
-		<a class="media" href="http://www.twenty19.com" target="_blank"><img src="./images/sp2.jpg"></a>
-		<a class="media" href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" /></a>
-		<a class="media" href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" /></a>
-		<a class="media" href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" /></a>
-		<a class="media" href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" /></a>
-		<a class="media" href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
-                <a class="media" href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" /></a>
-                <a class="media" href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" /></a>
-                <br/><br/>
-
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Social Partner</h3>
  		<a class="media" href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" /></a>
 		<br/><br/>
@@ -36,6 +25,23 @@ $("a.media img").css({width:'80px',padding:'20px'});
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Recharge Partner</h3>
 		<a class="media" href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg"></a>
 		<br /><br />
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Sponser</h3>
+		<a class="media" href="http://www.markmyfest.com" target="_blank"><img src="./images/s16.jpg"></a>
+		<br /><br />
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Logistics Partner</h3>
+		<a class="media" href="http://www.dhl.com/en.html" target="_blank"><img src="./images/dhl-logo.gif"></a>
+		<br /><br />
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Partners</h3>
+		<a class="media" href="http://www.twenty19.com" target="_blank"><img src="./images/sp2.jpg"></a>
+		<a class="media" href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" /></a>
+		<a class="media" href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" /></a>
+		<a class="media" href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" /></a>
+		<a class="media" href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" /></a>
+		<a class="media" href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
+                <a class="media" href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" /></a>
+                <a class="media" href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" /></a>
+                <br/><br/>
+
 	</div>
 	<h2 style="text-align:center">
 		For sponsorship contact <b>marketing@festember.in</b>

@@ -1,6 +1,12 @@
 <html>
 	<head>
 	<style type="text/css">
+		#startbutton{
+		  cursor:pointer;
+		}
+		div{
+			overflow: hidden;
+		}
 		
 	</style>
 	</head>
@@ -41,17 +47,25 @@
 <script type="text/javascript">
 var event;
 var score = 0, time = 60;
-var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+<<<<<<< HEAD
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;var paused=0;
 var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
+=======
+var tu2=0;var tu3=0;var tu4=1;var tu5=0;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0 , num = 0 ;
+>>>>>>> 91e58f3b26101ad1d7a6a0aef310770c3c31d4ff
         function pausetoggle(){
         	if(penable == 0){
         		$("#pausemenu").toggle();
         		$("#pausemenu").animate({left:138},600);
         		penable=1;
         	}else
-        	{
-        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();});
-        		penable=0;
+        	{   if(paused==0)
+			{
+			    paused=1;
+        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();paused=0;});
+        	}
+			penable=0;
         	}
         }
         function insttoggle(){
@@ -141,7 +155,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         function reset()
         {
         	score = 0;	time = 60;
-        	tu2=0; tu3=0; tu4=1; tu5=0;
+        	tu2=0; tu3=0; tu4=1; tu5=0; num=0;
         	dir=0; flag=1; lift=0; completed=1; tu=0; drop=0;
         	$("#grabber").css({"position":"absolute","left":"20","top":"-252","height":"100%","width":"73","background":"url('images/untitled-1.png') no-repeat"});
         	$("#bottle_1").css({"position":"absolute","top":"300","left":"600","width":"25","height":"149","background":"url('images/12.png') no-repeat"});
@@ -437,11 +451,11 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
                           if(tu3==0){$("#grabber").css({"background":"url('images/untitled-1.png') no-repeat"});
 			switch(drop)
 			{
-			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},1000,"linear",function(){s10();
+			case 1:tu3=1;$("#bottle_1").stop("true");$("#bottle_1").animate({top:350},600,"linear",function(){s10();
 				$("#bottle_1").clearQueue();completed=1;$("#bottle_1").hide();lift=0;tu3=0;});break;
-			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},1000,"linear",function(){s10();
+			case 2:tu3=1;$("#bottle_2").stop("true");$("#bottle_2").animate({top:350},600,"linear",function(){s10();
 				$("#bottle_2").clearQueue();completed=1;$("#bottle_2").hide();lift=0;tu3=0;});break;
-		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},1000,"linear",function(){s10();
+		    case 3:tu3=1;$("#bottle_3").stop("true");$("#bottle_3").animate({top:350},600,"linear",function(){s10();
 				$("#bottle_3").clearQueue();completed=1;$("#bottle_3").hide();lift=0;tu3=0;});break;
 			}}
 			}
@@ -477,7 +491,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side1=0;
-		  $("#bottle_1").css({"left":"600"});
+		  $("#bottle_1").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -486,9 +500,9 @@ var temp1=Math.random();
 		  }	
 
 if(!side1)
-$("#bottle_1").animate({left:left($("#bottle_1"))-600},4000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_1").animate({left:left($("#bottle_1"))+600},4000,"linear",function(){s5();});
+$("#bottle_1").animate({left:left($("#bottle_1"))+640},4000,"linear",function(){s5();});
 }
 
  if(sel==1)
@@ -499,7 +513,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side2=0;
-		  $("#bottle_2").css({"left":"600"});
+		  $("#bottle_2").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -507,9 +521,9 @@ var temp1=Math.random();
 		$("#bottle_2").css({"left":"0"});
 		  }	
 if((!side2))
-$("#bottle_2").animate({left:left($("#bottle_2"))-600},4000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_2").animate({left:left($("#bottle_2"))+600},4000,"linear",function(){s5();});
+$("#bottle_2").animate({left:left($("#bottle_2"))+640},4000,"linear",function(){s5();});
 }
 
  if(sel==2)
@@ -520,7 +534,7 @@ var temp1=Math.random();
 		  if(temp1>=0.5)
 		  {
 		  	side3=0;
-		 $("#bottle_3").css({"left":"600"});
+		 $("#bottle_3").css({"left":"640"});
 		  }
 		  else
 		  {
@@ -528,9 +542,9 @@ var temp1=Math.random();
 		  $("#bottle_3").css({"left":"0"});
 		  }	
 if(!side3)
-$("#bottle_3").animate({left:left($("#bottle_3"))-600},4000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))-640},4000,"linear",function(){s5();});
 else
-$("#bottle_3").animate({left:left($("#bottle_3"))+600},4000,"linear",function(){s5();});
+$("#bottle_3").animate({left:left($("#bottle_3"))+640},4000,"linear",function(){s5();});
 }
 }
 	}  
@@ -568,11 +582,11 @@ $("#basket").css({"background":"url('images/tub.png') no-repeat"});
 $("#basket").show();
   
 if(temp9>0.5)
-{ $("#basket").css({left:490});
+{ $("#basket").css({left:640});
 t=490;
 side8=0;
 
-$("#basket").animate({left:left($("#basket"))-490},2000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
+$("#basket").animate({left:left($("#basket"))-640},2000,"linear",function(){$("#basket").hide();if((f==0 || f1==0 || f2==0) && completed==0){s9();}else {completed=1;s5();}});
 }
  else
 {
