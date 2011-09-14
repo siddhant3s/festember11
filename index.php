@@ -266,7 +266,7 @@ function facebook_click(){
 	
 	<div id="menu">
 		<div class="events item itleft abso"><a href="events" ajaxify="1"><img src="./images/events.png" /></a></div>
-		<div class="pronite item itleft abso"><a href="pronite" ajaxify="1"><img src="./images/pronite.png" /></a></div>
+		<div class="pronite item itleft abso"><a href="proshow" ajaxify="1"><img src="./images/pronite.png" /></a></div>
 		<div class="workshops item itleft abso"><a href="workshops" ajaxify="1"><img src="./images/workshops.png" /></a></div>
 		<div class="sponsors item itright abso"><a href="sponsors" ajaxify="1"><img src="./images/sponsors.png" /></a></div>
 		<div class="gallery item itright abso"><a href="gallery" ajaxify="1"><img src="./images/gallery.png" /></a></div>
@@ -278,7 +278,7 @@ function facebook_click(){
 	<div id="floatingMenu">
 		<div class="home item"><a href="home" ajaxify="1"><span>HOME</span></a></div>
 		<div class="events item"><a href="events" ajaxify="1"><span>EVENTS</span></a></div>
-		<div class="pronite item"><a href="pronite" ajaxify="1"><span>PRONITE</span></a></div>
+		<div class="pronite item"><a href="proshow" ajaxify="1"><span>PROSHOW</span></a></div>
 		<div class="workshops item"><a href="workshops" ajaxify="1"><span>WORKSHOPS</span></a></div>
 		<div class="sponsors item"><a href="sponsors" ajaxify="1"><span>SPONSORS</span></a></div>
 		<div class="gallery item"><a href="gallery" ajaxify="1"><span>GALLERY</span></a></div>

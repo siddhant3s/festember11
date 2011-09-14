@@ -1,4 +1,4 @@
-<div class="content-head">ProNite:</div>
+<div class="content-head">ProShow:</div>
 <br/><br/><br/>
 <div class="content-head">Day 0</div>
 <div class="content-body"><p>Always the most anticipated event of Festember, ProNite has played host to some of the biggest names of culture, music and dance! From Motherjane to Naresh Iyer to Benny Dayal, ProNite gets everyone into the groove! This year Festember 11 promises more to make you high on music! ;)
