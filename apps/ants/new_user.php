@@ -24,4 +24,5 @@ $answer_insert_new_user=mysql_affected_rows();
 return 1;
 }
 new_user();
+exit();
 ?>
