@@ -1,14 +1,10 @@
 <?php
-global $rpath;
-$rpath="../";
-require_once("../game.php");
 
 function new_user()
 {
 global $user;
 global $table_allusers;
 $the_id=$user['id'];
-var_dump($user);
 error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@".var_dump($user));
 $result_insert_new_user=mysql_query("insert into '$table_allusers' (user_id,logged) values('$the_id',1)");
 error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@".mysql_error());
@@ -20,8 +16,7 @@ $answer_insert_new_user=mysql_affected_rows();
 			whisk(2);
 			exit();
 		}
-return $user;
+return 1;
 }
-var_dump(new_user())
 
 ?>
