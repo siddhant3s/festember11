@@ -13,3 +13,10 @@
 48:the card with which attack and resurrection is being anaylysed-two of that suite is already present in the users colony6::so some error as thee can't be three cards of the same suite and the same color{resurrection.php}
 38:there are two cards of the same rank in the slots of one of the users some error::backtrace{resurrection.php}
 61:three kings in the slot :some error{resurrection.php}
+13:the matcher script did not return correct values{matcher.php->moderator.php}
+11:preg match action on the staus string to extract the colony cards on the users returned 0{mainpageplayer1.php}
+12::preg match action on the staus string to extract the slot cards on the users returned 0{mainpageplayer1.php}
+14:preg match action on the staus string to extract the slot cards on the opponents returned 0{mainpageplayer1.php}
+27:some error as the mainpageplayer1 is reporting some other color of card :other than red and black {mainpageplayer1.php}
+28:
+

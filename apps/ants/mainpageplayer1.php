@@ -1,7 +1,3 @@
-
-<?php
-
-?>
 <?php
 //########################################################
 	//another script has to see the ai id and then it sends to the correct script
@@ -9,21 +5,21 @@
 //########################################################
 function inspect($gamehash)
 {
-$the_string_to_anaylyse="0000000000000000000000000000000000000000000000000000000000";
+$the_final_string_to_anaylyse="";
 //########################################################
 	//allglobals here
 global $conn_pag2;
 global $the_cards_priority_string;
 //########################################################
 	//get the id
-	$myid=get_the_id($conn_pag2,);
+	$myid=get_the_id($conn_pag2);
 //########################################################
 	//get the keynumber for this user
 		$result_get_the_key_number=mysqli_query($conn_pag2,"select id1,id2 from '$table_allgames' where game_id='$gamehash'");
 		$answer_get_the_key_number=mysqli_fetch_arrray($result_get_the_key_number);
 		if($myid==$answer_get_the_key_number['id1']){$the_key_number=1;$opponentid=$answer_get_the_key_number['id2'];$the_counter_key_number=2;}
 		else if($myid==$answer_get_the_key_number['id1']){$the_key_number=2;$opponentid=$answer_get_the_key_number['id1'];$the_counter_key_number=1;}	
-		else (/*take an action*/}
+		else {/*take an action*/}
 //########################################################
 	//check requirements
 	//get the status for the user
@@ -45,6 +41,8 @@ global $the_cards_priority_string;
 		if(!$token_the_current_colony)
 				{
 					//take an action
+					whisk(11);
+					exit(1);
 				}
 		else
 				{	
@@ -62,6 +60,8 @@ global $the_cards_priority_string;
 		if(!$token_the_slot)
 				{
 					//take an action
+					whisk(12);
+					exit(1);
 				}
 		else
 				{	
@@ -78,6 +78,9 @@ global $the_cards_priority_string;
 		if(!$token_the_opponent_colony)
 				{
 					//take an action
+					whisk(14);
+					exit(1);
+
 				}
 		else
 				{	
@@ -97,8 +100,8 @@ global $the_cards_priority_string;
 		//availthe draw pile
 	$the_current_avail_draw_pile=$answer_get_the_status['avail_draw'];
 	$the_next_avail_draw_card=substr(the_current_avail_draw_pile,0,3);
-	if($the_next_avail_draw_card[0]=$the_current_colony_card[0]){$samecolor=1;}
-	else if($the_next_avail_draw_card[0]=$the_current_colony_card[0]){$samecolor=0;}
+	if($the_next_avail_draw_card[0]==$the_current_colony_card[0]){$samecolor=1;}
+	else if(!($the_next_avail_draw_card[0]=$the_current_colony_card[0])){$samecolor=0;}
 	else{/*take an action*/}
 //########################################################	
 	//if the cards of the same color
@@ -120,12 +123,29 @@ global $the_cards_priority_string;
 						
 						if(!$resurrection_returned)
 									{
-										$string1='a';
+								$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'a';
+										
 									}
-						else if(!$resurrection_returned)
+						else if($resurrection_returned)
 							{
-								$string1='a'
+								if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'b';}
+								if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'c';}
+								if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'d';}
+								if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'e';}
+								if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'f';}
+								if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'g';}
+								if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'h';}
+								if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'i';}
+								if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'j';}
+								if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'k';}
+								if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'l';}
+								if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'m';}								
+								if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'n';}
+								if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'o';}
 								
+								
+								
+
 							}
 						}
 					else if($the_chance_attack==3)//direct from slots
@@ -134,6 +154,36 @@ global $the_cards_priority_string;
 						//resurrection returned afetr the ONLY ONE has bee drawn from the draw pile
 						//that the attack has been after the current user placed the first card from the draw into his colony
 						//the opponent places a card from his slot into the users draw to prevent attack
+
+						if(!$resurrection_returned)
+									{
+								$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'p';
+										
+									}
+						else if($resurrection_returned)
+							{
+								if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'q';}
+								if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'r';}
+								if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'s';}
+								if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'t';}
+								if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'u';}
+								if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'v';}
+								if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'w';}
+								if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'x';}
+								if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'y';}
+								if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'z';}
+								if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'A';}
+								if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'B';}								
+								if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'C';}
+								if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'D';}
+								
+								
+								
+
+							}
+
+
+
 						}
 					}
 				else
@@ -150,15 +200,19 @@ global $the_cards_priority_string;
 								//getthecolor
 								$the_color_of_my_colony=$the_colony_array[0][0];
 								if($the_color_of_my_colony=='r')
-									{$black_eyed_jack_suit='h'}
+									{$black_eyed_jack_suit='h';}
 								
 								else if($the_color_of_my_colony=='b')
-									{$black_eyed_jack_suit='c'}
+									{$black_eyed_jack_suit='c';}
 								else
-									{/*take an action*/ }
+									{
+									 whisk(27);
+									exit();
+									 }
 								if(isset($black_eyed_jack_suit))
 									{
 									//RETURN A A VALUE HERE
+									$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'E';
 									}
 							}
 							else if(count($array_occurences_considered_card)==1)
@@ -178,12 +232,65 @@ global $the_cards_priority_string;
 										if($vulnerability_of_attack_at_this_position==1 || $vulnerability_of_attack_at_this_position==4)//from the draw pile
 											{
 											$resurrection_returned_against_vulnerability=resurrection($gamehash,$the_next_avail_draw_card[2],$the_key_number,1);
+											$resurrection_returned=$resurrection_returned_against_vulnerability;
 												//assumption-that the current card in the draw oile was discarded and the next draw card used to attcak so resurrection expected by the next to next of next draw card
+												if(!$resurrection_returned)
+												{
+													$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'F';
+
+
+												}
+												else if($resurrection_returned)
+												{
+											if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'G';}
+											if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'H';}
+											if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'I';}
+											if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'J';}
+											if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'K';}
+											if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'L';}
+											if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'M';}
+											if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'N';}
+											if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'O';}
+											if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'P';}
+											if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'Q';}
+											if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'R';}				
+											if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'S';}
+											if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'T';}
+
+												}
+												
+												
 											}
 										else if($vulnerability_of_attack_at_this_position==3)//direct from slots
 											{
 											$resurrection_returned_against_vulnerability=resurrection($gamehash,$the_next_avail_draw_card[2],$myid,$the_key_number,0);
 											//assumption-that the current card in the draw oile was discarded and the slot card used to attcak so resurrection expected by the next to next draw card
+											$resurrection_returned=$resurrection_returned_against_vulnerability;
+												if(!$resurrection_returned)
+												{
+													$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'U';
+
+
+												}
+												else if($resurrection_returned)
+												{
+											if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'V';}
+											if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'W';}
+											if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'X';}
+											if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'Y';}
+											if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'Z';}
+											if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'1';}
+											if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'2';}
+											if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'3';}
+											if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'4';}
+											if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'5';}
+											if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'6';}
+											if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'7';}				
+											if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'8';}
+											if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'9';}
+
+												}
+
 											}
 										else if(!$vulnerability_of_attack_at_this_position)	
 											{
@@ -194,13 +301,11 @@ global $the_cards_priority_string;
 												//check if the current card in the opponent's clonony (rank)	 is same as the card_under consideration
 												if($the_current_opponent_colony_card[2]==$the_next_avail_draw_card[2])
 													{
-															//RETURN VALUE	
-															//attack
+													$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'`';
 													}
 												else
 													{
-																//RETURN VALUE
-																//reinforce
+														$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'~';
 													}
 												
 											}
@@ -210,41 +315,12 @@ global $the_cards_priority_string;
 							}
 
 						}
-						//get the current position in the priority string see if the current colony pile card 
-						//if the current rank in the coolony iis greater than that of  the  card
-						//check for the presence of the card in the colony
-						//if not present
-						//must be a one eyed jack-->>so if any of my storage slots are empty
-						//			--->>ut the card i the storage slot
-						//			---> and in the next turn the card in the storage slot can be exchanged for the jack (to be placed in the storage slot)
-						
-
-						//else  if the card  is already in the colony see
-							//the position of the crad in my colony 									-->if at top::(check if the user can immenent attack at this card *from his slots * from the next draw *from the discard pile(see queen presence)  if yes reinforce)
-							//		-->(if  no immenet attack ceck where is my nextcard after te current card(if it is in the slots )or ought to be the draw card after two positons if here no atttack sign  check if it can be used to attack attack if attack not ossible
-								reinforce
-							//else if not at top check if the card can be used to attack if yes attack now
-							//no attack possible now--REINFORCE
-							//atttack
-							//else if the other user has also bypassed this atage--reinforce
-
-						///if maybe required in the draw pile check posintion 
-						1 after sure put in slots sfter inspecting whether already in stacks
-						2.see the relative darw slots and put in slots
-						value jack
-
-
-
-
 
 					}
 			}
 		else
 			{
-				//IF NOT SAME COLOR ONLY OPTION IS TO DISCARD
-					//RETURN A TOKEN TO DISCARD			
-
-
+				$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'$';
 			}
 
 
@@ -252,14 +328,8 @@ global $the_cards_priority_string;
 
 
 	   {
-		//INSPECT THE SLOTS AND THE POSIBILITIES
-		/*IF THE CARD REQIRED IS AT THE SLOTS
-					>>AND THESAME CARD IS ATHE THE DRAW--SLOTPLACEDIN CLONOY
-					>>IF A JA
-
 		
 		
-		*/
 		foreach($the_current_slotcards as $a_slotcard)
 			{
 				if($a_slotcard=="000")
@@ -270,76 +340,132 @@ global $the_cards_priority_string;
 							$attack_possibilty_at_placing_from_slots=attack($gamehash,$the_required_colony_rank,$opponentid,$the_counter_key_number,0);
 							if($attack_possibilty_at_placing_from_slots==1 || $attack_possibilty_at_placing_from_slots==4)//threat from the draw pile
 							{
+								$resurrection_returned=resurrection($gamehash,$the_required_colony_rank,$myid,$the_key_number,0);
+													if(!$resurrection_returned)
+												{
+													$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'{';
+
+
+												}
+												else if($resurrection_returned)
+												{
+											if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'}';}
+											if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'[';}
+											if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.']';}
+											if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.':';}
+											if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.';';}
+											if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'<';}
+											if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'>';}
+											if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.',';}
+											if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'.';}
+											if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'?';}
+											if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'/';}
+											$this_character=chr(255);
+											if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}				
+											if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'=';}
+											if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.'|';}
+												}
+	
 							//so the best optio as if joe is to discard the current cad
 							}
 							if($attack_possibilty_at_placing_from_slots==3)//threat fromthe opponents stacks
 							{
-							//check for reinforcements
-							//try to move on with a black-eyed-jack
-								--//see your stacks if it has a black eyed jack put jack instad and put  a token;;
-								//so that the i exchange the slot card(actual card to be laid in place of a black eyed jack)
-								//whenever i get the chance;;as the black-eyed jack is prexcioyus
-									$dummy_token=0;
-									foreach($the_current_slotcards as $forblackjackcheck)
-									{	
-									if(($forblackjackcheck[2]=='j') &&(($forblackjackcheck[1]=='h') ||($forblackjackcheck=='s')))
-										{
-											//YES A BLACKJACK PRESENT
-											//RETURN A TOKEN
-											$dummy_token=1;
-											break;
-										}
-						
-										
-									}
-									
-									if(!$dummy_token)
-									{
-										//no black jack
-										//return  a token to see
-										//CHECK FOR TRADING
-											foreach($the_current_slotcards as $forQUEENcheck)
-											{	
-											if(($forQUEENcheck[2]=='k') )
-													{
-													//YES A queen PRESENT
-													//RETURN A TOKEN
-														//CHECK FOR the top card in discardc pile to be appropiate
-														$total_number_of_discarede_cards=count($array_of_discarded_cards);
-														if($array_of_discarded_cards[$total_number_of_discarede_cards-1][0]==$the_current_colony_card[0])
-															{
-																if($array_of_discarded_cards[$total_number_of_discarede_cards-1][2]=='q')
-															}
-													$dummy_token=1;
-													break;
-													}
-						
-										
-											}
-									}
 
+
+							if(!$resurrection_returned)
+												{
+													$this_character=chr(254);
+													$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;
+
+
+												}
+												else if($resurrection_returned)
+												{
+											$this_character=chr(253);
+											if(preg_match("/a/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(252);
+											if(preg_match("/b/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(251);
+											if(preg_match("/c/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(250);
+											if(preg_match("/d/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(249);
+											if(preg_match("/e/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(248);
+											if(preg_match("/g/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(247);
+											if(preg_match("/n/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(246);
+											if(preg_match("/f/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(245);
+											if(preg_match("/h/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(244);
+											if(preg_match("/i/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(243);
+											if(preg_match("/j/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(242);
+											if(preg_match("/k/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}		
+											$this_character=chr(241);
+											if(preg_match("/l/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+											$this_character=chr(240);
+											if(preg_match("/m/",$resurrection_returned)){$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}
+
+												}
 							//if no black eyed jack
 							//CHECK FOR REINFORCEMENT AT THE DRAW PILE
-
 							}
 					}
 			}
 	   }
+ {
+
+$dummy_token=0;
+foreach($the_current_slotcards as $forblackjackcheck)
+  {	
+if(($forblackjackcheck[2]=='j') &&(($forblackjackcheck[1]=='h') ||($forblackjackcheck=='s')))
+	{
+	//YES A BLACKJACK PRESENT
+	//RETURN A TOKEN
+	$dummy_token=1;
+	break;
+	}
+						
+										
+  }
+if($dummy_token){$this_character=chr(174);$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}					$dummy_token=0				
+//check if it is possible to trade  a card
+  {
+
+//return  a token to see
+//CHECK FOR TRADING-ie check if 
+foreach($the_current_slotcards as $forQUEENcheck)	
+     {	
+if(($forQUEENcheck[2]=='k') )
+	    {
+	//YES A queen PRESENT
+	//RETURN A TOKEN
+	//CHECK FOR the top card in discardc pile to be appropiate
+	$total_number_of_discarede_cards=count($array_of_discarded_cards);
+	if($array_of_discarded_cards[$total_number_of_discarede_cards-1][0]==$the_current_colony_card[0])
+		{
+		if($array_of_discarded_cards[$total_number_of_discarede_cards-1][2]=='q')
+			{
+			$dummy_token=1;
+			break;
+			}
+							
+		}
+	    }
+
+     }
+  }
+if($dummy_token){$this_character=chr(163);$the_final_string_to_anaylyse=$the_final_string_to_anaylyse.$this_character;}				
+}
 //########################################################	
 			{
 
-
-
-
-
-
-
-			
-
-
-
-
 			}
 //########################################################	
+
 }
 ?>

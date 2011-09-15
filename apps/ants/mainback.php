@@ -27,8 +27,6 @@ body{background-image:url(back.jpg);opacity:1.0;}
 #discard{margin-top: 4px;}
 </style>
 <script type="text/javascript" src="/jquery/jquery-1.3.2.min.js">
-
-$(document).ready(function(){})
 </script>
 </head>
 <body>
@@ -62,5 +60,8 @@ $(document).ready(function(){})
 </div>
 </div>
 </div>
+<script>
+$(document).ready(function(){$("")})
+</script>
 </body>
 </html>
