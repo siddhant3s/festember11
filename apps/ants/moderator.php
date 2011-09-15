@@ -53,7 +53,7 @@ if($done_match==1)
 	//check
 $result_check_the_user_existence=mysql_query("select played from $table_allusers where user_id='$the_fb_id'");
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
-error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@".var_dump($answer_check_the_user_existence));
+error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@gjhgjhgjhg".var_dump($answer_check_the_user_existence));
 if(!$answer_check_the_user_existence)
 	{	$inserted=new_user(); 
 		
@@ -63,9 +63,9 @@ if(!$answer_check_the_user_existence)
 					exit();
 				}			
 //##############################################################
-
+/*
 	if(matcher()){;exit(1);	}
-	else {whisk(19);exit(1);}
+	else {whisk(19);exit(1);}*/
 
 	exit();
 	}
