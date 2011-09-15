@@ -53,22 +53,25 @@ var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , penable = 0;
 
 var tu2=0;var tu3=0;var tu4=1;var tu5=0;
 
-var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , pienable = 0 , num = 0 ;
+var penable = 0 , ienable = 0 , startscreen = 1 , genable = 0 , pienable = 0 , num = 0 , debounce = 0;
 
 
         function pausetoggle(){
+        	if(debounce == 1)return;
+        		debounce = 1;
         	if(penable == 0){
         		$("#pausemenu").toggle();
-        		$("#pausemenu").animate({left:138},600);
+        		$("#pausemenu").animate({left:138},600,function() {debounce=0;});
         		penable=1;
         	}else
         	{   if(paused==0)
 			{
 			    paused=1;
-        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();paused=0;});
+        		$("#pausemenu").animate({left:640},600,function(){$("#pausemenu").toggle();paused=0;debounce=0;});
         	}
 			penable=0;
         	}
+        	
         }
         function insttoggle(){
         	if(ienable == 0){
@@ -175,7 +178,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
         setInterval("timer()",1000);
         function timer()
         {
-        	if((startscreen==0)&&(time>0)&&(penable==0)){
+        	if((startscreen==0)&&(time>0)&&(penable==0)&&(pienable==0)){
         		time--;
         		document.getElementById("time").innerHTML=time;
         	}        	
@@ -210,6 +213,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 		var drop=0;
 	
 	    $("#pause").bind("click",function(){
+	    	if(debounce == 1)return;
 	    	if((genable==0||pienable==0)&&(startscreen==0))
 	    	{
 	    		var endarray=0;
