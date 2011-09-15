@@ -13,8 +13,11 @@ Remember, what happens in Vegas, stays in Vegas!
 </div> 
 
 <div class="content-head">Night 0 - Fire Cracker show</div>
+<div class="content-body"><p> </p></div>
 <div class="content-head">Day 1 - Crazy Mohan Drama </div>
+<div class="content-body"><p> </p></div>
 <div class="content-head">Night 1- DJ-Night</div>
+<div class="content-body"><p> </p></div>
 
 <div class="content-head">
 Night 2 - MotherJane </div>
