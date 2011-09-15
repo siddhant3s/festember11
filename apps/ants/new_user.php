@@ -11,10 +11,10 @@ require_once("whisk.php");
 <?php
 function new_user($the_conn)
 {
-$the_id=get_the_fb_id();
-$result_insert_new_user=mysql_query("insert into '$table_allusers' (fb_id,logged) values('$the_id',1)");
+$the_id=$user['id'];
+$result_insert_new_user=mysql_query("insert into '$table_allusers' (user_id,logged) values('$the_id',1)");
 	//might need to include a key for theis in the root database ;later
-$answer_insert_new_user=mysqli_affected_rows($the_conn);
+$answer_insert_new_user=mysql_affected_rows($the_conn);
 
 	if(!$answer_insert_new_user)
 		{
