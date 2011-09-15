@@ -56,8 +56,33 @@ case "choreonite" :  ?>
 <li>Props and stage settings are allowed but no additional time for set up will be given. Note that props include objects, which are carried by participants (sticks, swords, pots, etc). Chairs, tables, screen and backdrops, which are placed on stage, come under stage settings.</li>
 <li>Doubts regarding the rules and regulations of Choreonite should be clarified only with the Choreo Coordinator. We are not responsible for wrong information from other sources.</li>
 </ul>
-Rules are subject to change and will be updated on the official website
+The judges' decisions will be final and binding, and are not open to review
 
+For further details contact:<br/>
+Ashwath Muralidharan<br/>
++91 97908 49385<br/>
+ashwathm1790@gmail.com<br/>
+	<br/>
+Rules are subject to change and will be updated on the official website<br/>
+
+
+<?php break; case streets :  ?>
+<div class="content-head">STREETS</div>
+<ul>
+<li>Team Strength: 7-15 members.</li>
+<li>Fire, water and heavy objects are not allowed on stage.</li>
+<li>No indecency will be allowed during the performance.</li>
+<li>Round 1: This will be a knock out round. Two teams will have to battle each other. Each
+team is allowed to perform a 3 minute choreographed sequence.
+After both teams show off their choreography, the DJ will play music to which the teams are
+to dance impromptu, one by one. Teams have to shuffle every 1 minute.</li>
+<li>Round 2: Will be a knock out round. A solo battle of two teams that qualify ( 4 members, 1
+minute each-alternating)</li>
+<li>Round 3; Rules will be announced on the day of the event.
+The winner of each battle will qualify for the next round.</li>
+</ul>
+Judging Criteria: formations, creativity and variety of styles, such as Popping, Locking,
+Breaking, B-Boying, Krumping.
 
 
 <?php break; case westerndance :  ?>
@@ -75,15 +100,15 @@ Rules are subject to change and will be updated on the official website
 <li>Organizers reserve the right to cancel any event or prize.</li>
 <li>NO Props or stage settings are allowed. </li>
 <li>Doubts regarding the rules and regulations of Free Style Dance should be clarified only with the Choreo Coordinator. We are not responsible for wrong information from other sources.</li>
-</ul>
+</ul><br>
 The judges' decisions will be final and binding, and are not open to review
-
-For further details contact:
-Ashwath Muralidharan
-+91 97908 49385
-ashwathm1790@gmail.com
-	
-Rules are subject to change and will be updated on the official website
+<br><br>
+For further details contact:<br>
+Ashwath Muralidharan<br>
++91 97908 49385<br>
+ashwathm1790@gmail.com<br>
+	<br>
+Rules are subject to change and will be updated on the official website<br>
 
 
 
@@ -119,12 +144,13 @@ The judges' decisions will be final and binding, and are not open to review
 
 
 <?php break; case "tarangini" :  ?>
-<div class="content-head">TARANGINI (Eastern)</div>
+<div class="content-head">TARANGINI (Eastern - Semi Pro)</div>
 <ul>
 <li>Max no. of participants: 14 onstage + 1 offstage. </li>
 <li>Twenty (20) minutes on stage inclusive of setup time.</li>
 <li>Bands are required to post an audio-visual recording of any ONE song of their choice; the video will be used for the purpose of short listing.</li>
 <li>Shortlisted teams would be intimated by e-mail; the names of the bands would also be put up on the website. </li>
+<li>Participants need not necessarily belong to the same college</li>
 <li>More than one team can register from a single college, but the members of the bands must necessarily be mutually exclusive. </li>
 <li>The members of the band without exception shall be college students. </li>
 <li>No pre recorded sound is allowed.</li>
@@ -278,19 +304,49 @@ The judges' decisions will be final and binding, and are not open to review
 <?php break; case "photography" :  ?>
 <div class="content-head">PHOTOGRAPHY</div>
 <br>
-<p>Campus views- Faces, Places and Fancies
-
-What does your College Look like through your eyes? This contest seeks to illuminate your perspective; what you love; your colours; or anything that reflects your campus and experience. Let your photos do the talking!</p>
+<p>This is a solo or team of two contest and it has two phases,<br />
+Phase I : Online
+</p>
 <br>
 
 <ul>
-<li>Participants need to capture elements of their college (only) in photos taken by any camera of their choice.</li>
-<li>The photos can be colour or b/w.</li>
-<li>Any number of participants allowed from a college, but it is not a team event.</li>
-<li>A set of 10-15 photos should be submitted.</li>
-<li>The Photos should not have any information regarding the name of the college, area or the participant's name.</li>
+<li>Each registrant can mail a maximum of 5 photographs to photography@festember.in</li>
+<li>Out of this 2 or 3 photographs will be chosen and displayed on the photography page of the
+Festember website.</li>
+<li>The showcased photographs will be open for online user ratings.</li>
+<li>The photographs can be of any style and theme.</li>
+<li>The entries have to be original. Plagiarized content will be disqualified. It should not be a
+snapshot from any video.</li>
+<li>However the photographs can be post-processed or edited without adding additional
+elements to the photograph.</li>
+<li>Original photographs of the edited photographs should also be sent along with it.</li>
+<li>No obscenities or profanities allowed.</li>
+<li>The entries will be judged based on the user ratings, the number of voters and the judges’
+panel.</li>
+<li>Special weightage will be given for Locations, Post-processing, Facial expressions, Lighting,
+Light painting, HDR, Wild-life and Macrophotography.</li>
+<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
+RAW format) with a minimum resolution of 1280x720.</li>
+<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
+speed etc.</li>
+<li>All entries must be mailed before 20th Sep 2011, 11:59pm.</li>
+<li>This phase is Non-Eliminative.</li>
 </ul>
-The judges' decisions will be final and binding, and are not open to review
+<br />
+<p>Phase II : On-campus</p>
+<ul>
+<li>All the participants should bring their own camera.(Any digital camera)</li>
+<li>Participants can directly take part in Phase 2 without taking part in Phase 1, but are
+bound to lose the scores of their competitors.</li>
+<li>A theme will be given on the first day of Festember and the participants can take any
+photographs relating to the theme and can submit a maximum of 5 photographs.</li>
+<li>The photographs can be submitted any time before 25th Sep 1011, 11:59am.</li>
+<li>Photographs won’t be displayed anywhere on the website in this phase.</li>
+<li>Results will be put up on the website at the end of Phase 2.</li>
+<li>There will be a special prize for the winner who takes part in the Phase 1 alone and
+couldn’t take part in the Phase 2.</li>
+</ul>
+
 
 
 <?php break; case "graffiti" :  ?>
@@ -681,6 +737,15 @@ Rules are subject to change and will be updated on the official website
 <ul/>
 The judges' decisions will be final and binding, and are not open to review
 
+<?php break; case "shabdjaal" :  ?>
+<div class="content-head">SHABD-JAAL</div>
+<ul>
+<li>Group Event</li>
+<li>Single stage</li>
+<li>Unlimited entries in prelims</li>
+<li>Two persons per team.</li>
+<li>knowledge of hindi words tested.</li>
+
 <?php break; case "extempore" :  ?>
 <div class="content-head">EXTEMPORE</div>
 <ul>
@@ -773,16 +838,13 @@ The judges' decisions will be final and binding, and are not open to review
 
 <div class="content-head">Updates</div>
 <div class="content-body">
+<div class="content-head" style="font-size:13px;">The shorlists for the TARANGINI, GIGAHERTZ, CHOREO-NITE and THEATRIX  will be put up here at 11:59 p.m. 14th September</div>
 <ul>
-<li>Last date for Submission of Videos
-<ul>
-<li>Choreo night - 12th September</li>
-<li>GIG-A-HERTZ - 12th September</li>
-<li>Tarangini - 12th September</li>
 <li>Showtime (Short Film making) - 11:59, 20th September</li>
 <li>Flash (Ad making) - 11:59, 20th September</li>
-</ul>
-</li>
+<li>Rules for Tarangini updated</li>
+<li>Rules for Photography updated</li>
+<li>New events added in HINDI LITS and DANCE</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
@@ -827,13 +889,14 @@ For further details, checkout their respective events' page.
   <h2>DANCE</h2>
  <ul>
  <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
+ <li><a ajaxify="2" href="./events+streets">STREETS</a></li>
  <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
  </ul>
 
  <h2>MUSIC</h2>
  <ul>
  <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
- <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern)</a></li>
+ <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern - Semi Pro)</a></li>
  <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
  </ul>
 
@@ -859,6 +922,7 @@ For further details, checkout their respective events' page.
 <div class="content-body-col3">
  <h2>HINDI LITS</h2>
  <ul>
+ <li><a ajaxify="2" href="./events+atulyabharat">ATULYA BHARAT (Quiz)</a></li>
  <li><a ajaxify="2" href="./events+sursangam">SUR SANGAM (Antakshari)</a></li>
  <li><a ajaxify="2" href="./events+kurukshetra">KURUKSHETRA (Debate)</a></li>
  <li><a ajaxify="2" href="./events+isharoisharomein">ISHARO ISHARO MEIN (Dumb C)</a></li>
@@ -869,6 +933,7 @@ For further details, checkout their respective events' page.
  <li><a ajaxify="2" href="./events+rochakmantrana">ROCHAK MANTRANA</a></li>
  <li><a ajaxify="2" href="./events+extempore">EXTEMPORE</a></li>
  <li><a ajaxify="2" href="./events+bluffmaster">BLUFF MASTER</a></li>
+ <li><a ajaxify="2" href="./events+shabdjaal">SHABD-JAAL</a></li>
  </ul> 
 
  </ul>

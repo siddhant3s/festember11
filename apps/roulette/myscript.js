@@ -3,9 +3,6 @@ var spinwheel=1;
 var wheelspeed=5.0;
 var posx=0.0,posy=0.0,posrad=0.0,posangrad=0.0,posangle=0.0;
 var ballspdinc=0.1;
-var dbgctr=0;
-var dbgctr2=0;
-var dbgctr3=0;
 var wheelRotStatus=1;
 var upperhalf=0; //to denote the ball is in upper half of wheel and to correct angle
 var indiRot=0;
@@ -15,7 +12,8 @@ var betMouseX=0;
 var betMouseY=0;
 var presentBetNum=0;
 var chipSel=1;
-var balanceCash=250;
+var balanceCash=-1;
+$.ajax({url:"getCashRelay.php",success:function(html){ balanceCash=html; console.log(html);}, async:false, dataType:"html" });
 var bettingCash=0;
 var interCash=balanceCash;
 var win=0;
@@ -130,7 +128,7 @@ x: balancebox.width/2,
 y: balancebox.height/2,
 origin: {x:"center", y:"center"},
 font: "bold 30px comic-sans",
-text: "$"+interCash,
+text: "$"+Math.round(balanceCash),
 fill: "#fff",
 });
 
@@ -170,11 +168,29 @@ image:"fb_share.png",
 
 
 });
+
+var loading=canvas.display.image({
+x:600,
+y:250,
+origin: {x:"center", y:"center"},
+image:"loading.png",
+opacity:0.0
+
+});
 //////////////////////////////////////////////////////////////
 
 function randomFromTo(from, to){
        return Math.random() * (to - from + 1) + from;
     }
+
+
+function setBalanceText(){
+$.ajax({url:"getCashRelay.php",success:function(html){ balanceCash=html; loading.opacity=0.0; loading.stop(); canvas.removeChild(loading);}, async:false , dataType:"html" 
+});
+console.log(balanceCash);
+interCash=balanceCash;
+balancetext.text="$"+Math.round(balanceCash);
+}
 
 function resetTurn(clearbet){
 wheel.rotation=0;
@@ -184,7 +200,6 @@ spinwheel=1;
 wheelspeed=5.0;
 posx=0.0,posy=0.0,posrad=0.0,posangrad=0.0,posangle=0.0;
 ballspdinc=0.1;
-dbgctr=0;
 wheelRotStatus=1;
 upperhalf=0;
 indiRot=0;
@@ -195,17 +210,19 @@ presentBetNum=0;
 if (clearbet==1)
 {
 balanceCash=interCash+bettingCash;
+interCash=balanceCash;
+balancetext.text="$"+Math.round(balanceCash);
 setTimeout(function(){resetBallPos(1);});
 }
 else
 {
-balanceCash=interCash+win;
+window.setTimeout(function(){ setBalanceText(); },1);
 setTimeout(function(){resetBallPos(0);});
 }
 bettingCash=0;
-interCash=balanceCash;
 win=0;
 LuckyNum=0;
+
 
 for (key in code_chip)
 {
@@ -220,10 +237,6 @@ for (key in chip_count)
 delete chip_count[key];
 for (key in bets)
 delete bets[key];
-//console.log(chips);
-//console.log(code_chip);
-//console.log(chip_count);
-balancetext.text="$"+interCash;
 canvas.redraw();
 }
 
@@ -245,6 +258,19 @@ y:80,
 radius:10},
 "long","ease-in-out");
 }
+}
+
+
+function sendReturnPercent(){
+canvas.addChild(loading);
+loading.opacity=1.0;
+loadanimate=loading.animate({ rotation:5400},
+"30000","linear");
+///------AJAX REQUEST TO STORE-------///
+$.ajax({url:"setscoreend.php",type:"POST", data:{return_perc : ((win/bettingCash)*100)}, success:function(html){   setBalanceText(); resetTurn(0); boastcash();}, async:true, dataType:"html"
+});//canvas.removeChild(loading); loadanimate.stop(); loading.opacity=0.0;
+///------END AJAX REQUEST-------///
+
 }
 
 function showProfit(){
@@ -284,8 +310,8 @@ opacity:1.0
 			function(){
 			winbox.removeChild(wintext);
 			canvas.removeChild(winbox);
-			//console.log("resetting");
-			resetTurn(0);
+			sendReturnPercent();
+			
 			}
 		);
 	},2000);
@@ -374,22 +400,24 @@ if(key==0 && res==0)
 return 1;
 return 0;
 }
-
-
 function addBet(i){
 if(interCash-chipSel>=0){
-	if (bets[i])
-	bets[i]+=chipSel;
-	else
-	bets[i]=chipSel;
-	bettingCash+=chipSel;
-	interCash=balanceCash-bettingCash;
-	balancetext.text="$"+interCash;
-	setTimeout(function(){ generateChip(i);},2);
-	////// Update balanceCash on dropball();
-	//console.log(bettingCash);
-	}
+        console.log("Chipsel:"+chipSel);
+        if (bets[i])
+        bets[i]+=chipSel;
+        else
+        bets[i]=chipSel;
+        console.log("bettingCash b4:"+bettingCash);
+        bettingCash+=chipSel;
+        console.log("bettingCash aftr:"+bettingCash);
+        console.log("balanceCash : "+balanceCash+"  interCash: "+interCash);
+        interCash=balanceCash-bettingCash;
+        console.log("balanceCash:"+balanceCash+"  interCash: "+interCash);
+        balancetext.text="$"+Math.round(interCash);
+        setTimeout(function(){ generateChip(i);},2);
+        }
 }
+
 
 function selectChip(){
 var c1,c10,c100;
@@ -413,7 +441,6 @@ case 100:
   break;
 }
 }
-//console.log(c1+" "+c10+" "+c100);
 chip1.animate({opacity:c1},"200","ease-in-out");
 chip10.animate({opacity:c10},"200","ease-in-out");
 chip100.animate({opacity:c100},"200","ease-in-out");
@@ -421,10 +448,19 @@ chip100.animate({opacity:c100},"200","ease-in-out");
 
 }
 
+
 function verifyResult(){
-///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/check_num.php",type:"GET", data:{name : 'jude', num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){alert(html);}, async:false, dataType:"html"
+canvas.addChild(loading);
+loading.opacity=1.0;
+loadanimate=loading.animate({ rotation:5400},
+"30000","linear");
+
+///------AJAX REQUEST TO CHECK-------///
+
+$.ajax({url:"check_num.php",type:"GET", data:{num : angles.indexOf(LuckyNum), time : stptime}, success:function(html){ loadanimate.stop(); loading.opacity=0.0; canvas.removeChild(loading);
+setTimeout(function(){getTurnResult();},1);}, async:true, dataType:"html"
 });
+
 ///------END AJAX REQUEST-------///
 
 }
@@ -442,7 +478,6 @@ for(key in bets)
 
 }
 showProfit();
-console.log("WIN: "+win);
 }
 
 
@@ -481,7 +516,7 @@ function guessBetPos(){
 	else	presentBetNum=100;
 	if(presentBetNum!=100)
 		addBet(presentBetNum);
-	//stopbtntext.text=betMouseX+"    "+betMouseY+"    "+presentBetNum ;
+
 
 }
 
@@ -492,8 +527,8 @@ if (wheelspeed>0)  setTimeout(function(){wheelspeed=(wheelspeed>0)? wheelspeed-0
 else wheelspeed=0;
 if(wheelspeed==0 && wheelRotStatus==1) { wheelRotStatus=0;
 ///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_verify.php",type:"GET", data:{name : 'jude', num : (angles.indexOf(LuckyNum))}, async:false, dataType:"html"
-});
+$.ajax({url:"store_verify.php",type:"GET", data:{num : (angles.indexOf(LuckyNum))}, async:true, dataType:"html"
+}); 
 ///------END AJAX REQUEST-------///
  decrSpd();}
 }
@@ -501,11 +536,11 @@ $.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/store_ve
 function stopspin(){
 spinwheel=0;
 var t;
-///------AJAX REQUEST TO RANDOMIZE-------///
-$.ajax({url:"http://www.pragyan.org/~boopathi/festember11/apps/roulette/randomizer.php",type:"GET", data:{name : 'jude'}, success:function(html){stptime=html;}, async:false, dataType:"html"
+///------AJAX REQUEST-------///
+$.ajax({url:"randomizer.php", type:"POST", data:{money: bettingCash},success:function(html){stptime=html; setTimeout(function(){ reducespin();},(stptime*1000)); }, async:true, dataType:"html"
 });
 ///------END AJAX REQUEST-------///
-setTimeout(function(){ reducespin();},(stptime*1000));
+
 }
 
 function incrSpd(){
@@ -526,7 +561,6 @@ if(ballspdinc<0) ballspdinc=0;
 
 function ballAccelrt(){
 	if (turnOver!=1){
-	//console.log(" 1:"+posx+" 2:"+posy+" 3:"+posrad+" 4:"+posangrad+" 5:"+posangle+" 6:"+ball.x+" 7:"+ball.y);
 	if(upperhalf==0){
 		posangle+=ballspdinc;
 		posangrad=posangle*(Math.PI/180);
@@ -550,8 +584,6 @@ function ballAccelrt(){
 		x=Math.floor(posangle/10);
 		turnOver=1;
 		verifyResult();
-		setTimeout(function(){getTurnResult();},1);
-		//console.log(x);
 	}
 	setTimeout(function(){if (posrad<130) incrRadius();},5);
 	if (wheelRotStatus==1)
@@ -580,45 +612,14 @@ ball.dragAndDrop({
 		if(ballDropped==0 && bettingCash!=0 && checkBallWithinWheel())
 		{
 
-			//console.log("asdasdasd");
 			getBallPos();		
-			dropball();    ////////////For debugging remove asap
+			dropball();
 			setTimeout(function(){stopspin();},1000);
 		}
 		}	
 	});
 ballDropped=1;
-/*	{
-	if(upperhalf==0){
-		var x=(posangle-4.8648);
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);		
-		x=x+(360-wheel.rotation);	
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);
-		x=x%360;
-		x=x<0?-x	:x;
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);
-		alert(Math.floor(x/9.7297));
-		x=angles[Math.floor(x/9.7297)];
-		lucknumtext.text=x;
-		LuckyNum=x;
-		alert(LuckyNum);}
-
-	if(upperhalf==1){
-		var x=(posangle-4.8648)*-1;
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);		
-		x=x-wheel.rotation;	
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);
-		x=x%360;
-		x=x<0?-x	:x;
-		alert(x+"   "+posx+"   "+posy+"      "+wheel.rotation);
-		alert(Math.floor(x/9.7297));
-		x=angles[Math.floor(x/9.7297)];
-		lucknumtext.text=x;
-		LuckyNum=x;
-		alert(LuckyNum);}
-	}
-*/
-balanceCash-=bettingCash;  ///Update balance Cash on start turn
+balanceCash-=bettingCash;
 ball.animate({radius:6},"600","ease-out");
 setTimeout(function(){ ballAccelrt();},600);
 }
@@ -634,13 +635,12 @@ function getBallPos(){
 	posrad=Math.sqrt(Math.pow(posx,2)+Math.pow(posy,2));
 	posangrad=Math.acos(posx/posrad);
 	posangle=posangrad*(180/Math.PI);
-	//stopbtntext.text="x:"+posx+" y:"+posy+" a:"+posangle;
+
 }
 
 canvas.setLoop(function(){
 	wheel.rotation+=wheelspeed;
 	indi.rotation= (upperhalf==0)? ((ball.y<0)? posangle+180:posangle):(-1*posangle);
-	//stopbtntext.text=posangle+"      "+wheel.rotation+"      "+upperhalf;//ballDropped+"  "+bettingCash+"   "+checkBallWithinWheel();
 	if (wheel.rotation==360) wheel.rotation=0;
 	if(ballDropped==1)
 	{
@@ -650,7 +650,6 @@ canvas.setLoop(function(){
 		x=x%360;
 		x=x<0?-x	:x;
 		x=angles[Math.floor(x/9.7297)];
-		//lucknumtext.text=x;
 		LuckyNum=x;
 	}
 	else{	var x=(posangle-4.8648)*-1;
@@ -658,7 +657,6 @@ canvas.setLoop(function(){
 		x=x%360;
 		x=x<0?-x:x;
 		x=angles[Math.floor(x/9.7297)];
-		//lucknumtext.text=x;
 		LuckyNum=x;
 	}
 	}
@@ -667,13 +665,13 @@ canvas.setLoop(function(){
 
 
 
-//stopbtn.bind("click tap",function(){if(spinwheel!=0) stopspin();});
+
 chip1.bind("click tap",function(){ chipSel=1; selectChip();});
 chip10.bind("click tap",function(){ chipSel=10; selectChip();});
 chip100.bind("click tap",function(){ chipSel=100; selectChip();});
 layout.bind("click tap",function(){ if(ballDropped==0)setTimeout(function(){guessBetPos();},5) });
 clearbtn.bind("click tap", function() { if(ballDropped==0)resetTurn(1);  });
-fbBtn.bind("click tap", function() { sharewin(); });
+fbBtn.bind("click tap", function() { boastcash(); });
 
 
 ball.bind("mouseenter",function(){  
@@ -684,7 +682,7 @@ ball.dragAndDrop({
 		if(ballDropped==0 && bettingCash!=0 && checkBallWithinWheel())
 		{
 			getBallPos();		
-			dropball();    ////////////For debugging remove asap
+			dropball();  
 			setTimeout(function(){stopspin();},1000);
 		}
 		}	
@@ -694,15 +692,14 @@ ball.dragAndDrop({
 });
 ball.bind("mouseleave",function(){ball.dragAndDrop(false);});
 
-   //});
 
 
 
 
 
 
-//stopbtn.addChild(stopbtntext);
-//canvas.addChild(stopbtn);
+
+
 canvas.addChild(fbBtn);
 clearbtn.addChild(cleartxt);
 canvas.addChild(clearbtn);
@@ -712,14 +709,11 @@ canvas.addChild(rect);
 canvas.addChild(wheel);
 canvas.addChild(indi);
 canvas.addChild(ball);
-//lucknum.addChild(lucknumtext);
-//canvas.addChild(lucknum);
 canvas.addChild(layout);
 canvas.addChild(chipRect);
 canvas.addChild(chip1);
 canvas.addChild(chip10);
 canvas.addChild(chip100);
-
 selectChip();
 
 });

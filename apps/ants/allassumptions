@@ -1,0 +1,18 @@
+king and ace cannnot be attacked
+
+the series of odd and even turn changes only if the either of the players place a card from the slots into a slots pile(different order of discard)
+								or if either of them trade
+
+
+priority one is to avoid attacks
+	    two is to complete the draw
+	     three is to attack
+	     four is to have appropiate cards on slots
+	     
+	     therre and four depend on what the availabilty is
+	     
+	     
+	     
+	     priority is don't let be attack
+					if current pos attack susceptible
+					

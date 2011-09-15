@@ -2,7 +2,6 @@
 include($rpath . "../connect.php");
 include($rpath . "fb.php");
 
-
 function getCash() {
    global $user;
    $query = "SELECT SUM(`bidamount` * `returnpercent` / 100) - SUM(`bidamount`) AS `cash` FROM `game_info`  WHERE `playerid`='" . $user["id"]  . "'";
@@ -10,7 +9,9 @@ function getCash() {
    $res = mysql_query($query);
    $row = mysql_fetch_array($res);
    $cash = $row['cash'] + 1000;
-   
+   error_log("###### user id : " . $user['id']);
+   error_log("###### query : " . $query);
+   error_log("###### cash val : " . $row['cash']);   
    return $cash;
 }
 
@@ -26,13 +27,6 @@ function getXP() {
     return $xp;
 }
 
-$time1 = microtime(true);
 //echo "You have " . getCash() . " dollars in your account.<br>";
-$time2 = microtime(true);
-//echo "Tiem diff is " . ($time2 - $time1) . "<br>";
 //echo "Your XP score is " . getXP() . ".<br>";
-$time3 = microtime(true);
-//echo "Tiem diff is " . ($time3 - $time2) . "<br>";
-
-
 ?>

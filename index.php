@@ -8,8 +8,10 @@ include_once "facebook_details.php";//should contain app_id and app_secrete
 $fbuser=$facebook->getUser();
 $fbperm=array();
 $fbperm['scope'] = "email,publish_stream";
-if(!$fbuser)
+if(!$fbuser) {
   $fbloginurl=$facebook->getLoginUrl($fbperm);
+}
+
 
 /** <Login Related Shit **/
   try {
@@ -92,7 +94,6 @@ if(!$fbuser)
 	if ($fbuser) {
 	  try 
 	    {
-	      
 	      // Proceed knowing you have a logged in user who's authenticated.
 	      $user_profile = $facebook->api('/me');
 	    } 
@@ -114,7 +115,8 @@ if(!$fbuser)
 /* 	     } */
 	     
 	      $fbuser = null;
-	      // header("Location: " . $fbloginurl);
+	      include("pages/logout.php");
+	      die();
 	    }
 
 	  $_SESSION['OPENID_EMAIL']=$user_profile['email'];
@@ -316,9 +318,11 @@ function facebook_click(){
 				<h3 style="color: #FF115F;font-size:13px;font-weight:bold;margin:10px 0">Sponsors/Partners</h3>
 				<div class="sponser">
 					<div class="slidee">
+						<a href="http://www.dhl.com/en.html" target="_blank"><img src="./images/dhl-logo.gif" width="120px" height="120" /></a>
 						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" width="120px" height="120" /></a>
 						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" width="120px" height="120" /></a>
 						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" width="120px" height="120" /></a>
+						<a href="http://www.markmyfest.com" target="_blank"><img src="./images/s16.jpg" width="120px" height="120" /></a>
 						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" width="120px" height="120" /></a>
 						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" width="120px" height="120" /></a>
 						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" width="120px" height="120" /></a>

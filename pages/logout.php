@@ -9,8 +9,7 @@ if (isset($_SERVER['HTTP_COOKIE'])) {
     setcookie($name, '', time()-1000, '/');
   }
 }
-
 ?>
 <script type="text/javascript">
-window.location.href = "index.php";
+window.location.href = "./";
 </script>

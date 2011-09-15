@@ -1,0 +1,94 @@
+before drawing inspect
+1.do i have the required card
+	<YES>
+		**at the draw pile-
+				%%%can i be attacked
+						$at the opponents slots
+								''what reinforcements
+										(reinforce-where slots or draw or trade
+																	--do i have a queen
+										(king-where slots draw or trade
+										(jack-where slots draw or trade
+										(no rescue
+						$at the next to next draw card
+								''what reinforcements
+										(reinforce-where slots or daw card after that position or trade
+																	--do i have a queen
+										(king-where
+										(jack-where
+										(no rescue
+		at the slots
+				%%%can i be attacked
+						$at the opponents slots
+								''what reinforcements
+										(reinforce-where slots or draw or trade
+																	--do i have a queen
+										(king-where slots draw or trade
+										(jack-where slots draw or trade
+										(no rescue
+						$at the next to next draw card
+								''what reinforcements
+										(reinforce-where slots or daw card after that position or trade
+																	--do i have a queen
+										(king-where
+										(jack-where
+										(no rescue
+		at the discard
+				is trade possible do i have queen in the slots	
+						%%%can i be attacked
+						$at the opponents slots
+								''what reinforcements
+										(reinforce-where slots or draw or trade
+																	--do i have a queen
+										(king-where slots draw or trade
+										(jack-where slots draw or trade
+										(no rescue
+						$at the next to next draw card
+								''what reinforcements
+										(reinforce-where slots or daw card after that position or trade
+																	--do i have a queen
+										(king-where
+										(jack-where
+										(no rescue
+	<NO>
+		check for the wildcard
+		
+	<NO WILDCARD>
+		
+2.option of attack at this position------
+		->(when i discard a card--if the next to next card is feasible for attack
+					--do i have a reinforcements
+					--
+		
+		
+		
+		->or i place a card at the slots---if the next to next card is feasible for attack		
+					--do  have reinforcements
+					
+					
+-- if attack at this position is great
+			--go filling the nnext card using a adraw card --h=which is the highiest in probabality
+			--if next card not present try the black-eyd jack
+			no option available try to see reinfprmrnts
+				--best reinformrnt-actual reinforce ments
+				--then blackjack
+				--then king
+			theire is a mismatch here as the king may prove useful if i need king only far away or thier is immenet king but i can send the attacked card to the discard pile and iof two card of the same rank are close by  for thr user i n thethst good but dont try not to give a king at the discard if their is not ab=ny immenen6t king
+			
+			
+			
+			
+			
+			ATTACK
+			omly if the current card is unavailable  and the no wildcard 
+			two options left one discard
+						two attack
+					if the card in any of my drawn has already passed down the ranks sure attack
+					if any card in my slots which has already been bypassed sure attack
+					if a card which can be used as an attack and i need
+										1.if immenet need see the stacks if empty place
+										2.if no-else if see if u have aqueen and discard the by bypassed  cards from the stlot
+										3.iif no by passed cards compare where u need the draw card if more lessrecently than any of the slot cards sure attack
+										4.else if queen pre sent annd i need it more urgently than any slot card--except jack-send the latest slot card to the 
+										5.
+										

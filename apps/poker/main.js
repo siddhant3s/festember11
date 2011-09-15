@@ -43,6 +43,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 				document.getElementById("money").value=curMoney;
 				}
 				else{
+					curMoney-=i;
 					alert1("You wont have enough cash to call");
 				}
 			}	
@@ -409,7 +410,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 			$.ajax({type: "GET",data:dat,url: "result.php",success: function(html){
 				value=html;
 							
-								setTimeout(function(){
+								
 									
 					$("#coins").hide();
 					$("#binfo").hide();
@@ -439,7 +440,7 @@ var status=0,curMoney=0,money,userid,card1,card2,card3,card4,card5,card6,card7,c
 						canvas.redraw();
 					});},3000);
 					setTimeout(function(){publish(value);},5000);
-								},8000);
+				
 				}});
 				}});
 			},200);
@@ -484,7 +485,7 @@ function fold(){
 	
 	fill: "#0aa"
 });
-text.text="you have lost "+value;
+text.text="you have lost $"+value;
 canvas.addChild(text);
 text.animate({
 		x:400,
@@ -547,6 +548,8 @@ document.getElementById("rules_div").style.display="none";
 
 function start()
 {
+document.getElementById("coins").style.display="block";
+$("#coins").show();
 document.getElementById("start").style.display="none";
 document.getElementById("back").style.display="none";
 document.getElementById("rules").style.display="none";
@@ -555,6 +558,7 @@ document.getElementById("tut_button").style.display="block";
 document.getElementById("gcanvas").style.display="block"
 document.getElementById("binfo").style.display="block";
 document.getElementById("coins").style.display="block";
+$("#coins").show();
 }
 
 function rules()
@@ -569,7 +573,7 @@ if(!document.getElementById("rules_div"))
 rdiv=document.createElement("div");
 rule_p=document.createElement("p");
 rule_p.setAttribute("id","rule_p");
-rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the ante bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>";
+rule_p.innerHTML="RULES:<br/><br/>1.The player is initially asked to bid some amount, following which, five cards are dealt. <br/>  <br/>2. Each player must decide to either fold or call. If the player folds he gives up his cards and his ante bet. If the player calls, the call must be equal to two times the previous bet.<br/><br/>  3.  The dealer will then deal two more community cards, for a total of five. The dealer will also turn over his own two cards.<br/><br/>4.The player hand shall be scored according the highest poker value of the player's two cards and the five community cards. Likewise, the dealer shall use his own two cards and the five community cards.<br/>5.The dealer must have 4 of kind or better to qualify.<br/>6.Player can fold any time,but he loses his bet amount.";
 
 rdiv.appendChild(rule_p);
 rdiv.setAttribute("id","rules_div");

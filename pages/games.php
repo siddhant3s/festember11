@@ -1,4 +1,5 @@
 <div class="content-head">GAMES</div>
 <div class="content-body">
-<p>Watch out for upcoming Festember Games..</p>
+<img style="width:400px;border:1px solid #333333;" src="images/gamepic.jpg"></br>
+   <a style="color:#fff" href="apps">Click Here</a>
 </div>

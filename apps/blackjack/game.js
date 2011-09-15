@@ -1,14 +1,9 @@
 
 
-
-
+/*var cardstack
+var cardarray = new Array();*/
 
 (window.onload=function(){
-
-
-
-
-
 
 //document.getElementById("deal").addEventListener("click",startRound,false);
 
@@ -159,6 +154,7 @@ function cardCreateNode() {
   // For face cards (Jack, Queen or King), create and add the proper image.
 
   tempNode = document.createElement("IMG");
+  
   tempNode.className = "face";
   if (this.rank == "J")
     tempNode.src = "graphics/jack.gif";
@@ -196,7 +192,23 @@ function cardCreateNode() {
 function Stack() {
 
   // Create an empty array of cards.
+//var cardarray = new Array();
+/*$.ajax({
+url:"deck.php",
+dataType:"text", 
+success: function(data)
+{
+cardstack = data;
+cardarray = split.cardstack(",");
+//cardstack = data;
+console.log(cardarray);
+}
+});
+//document.writeln(cardstack[0]);
 
+
+  //this.cards = cardarray;
+  //alert(this.cards);*/
   this.cards = new Array();
 
   this.makeDeck  = stackMakeDeck;
@@ -241,11 +253,14 @@ function stackMakeDeck(n) {
 
 function stackShuffle(n) {
 
-  var i, j, k;
+ var i, j, k;
   var temp;
 
   // Shuffle the stack 'n' times.
-
+/*var that = this;
+$.ajax("deck.php",function(data) {
+that.
+});*/
   for (i = 0; i < n; i++)
     for (j = 0; j < this.cards.length; j++) {
       k = Math.floor(Math.random() * this.cards.length);
@@ -253,6 +268,8 @@ function stackShuffle(n) {
       this.cards[j] = this.cards[k];
       this.cards[k] = temp;
     }
+   // console.log(this.cards);
+    
 }
 
 //-----------------------------------------------------------------------------
@@ -260,6 +277,9 @@ function stackShuffle(n) {
 //-----------------------------------------------------------------------------
 
 function stackDeal() {
+//console.log("reached stackdeal");
+//alert(cardarray);
+
 
   if (this.cards.length > 0)
     return this.cards.shift();
@@ -511,12 +531,15 @@ function getNextCard() {
   if (deck.cardCount() == 0) {
     alert("New Deck");
     newDeck();
+    //console.log("Made New Deck");
   }
+//console.log("Got Next card");
 
   return deck.deal();
 }
 
 function startRound() {
+//console.log("Reached: startRound");
 /*var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -580,7 +603,7 @@ function dealRound()
 {
 
   // Deal a card to the player or the dealer based on the counter.
-
+//console.log("Reached: dealRound");
   switch(dealRoundCounter)
   {
     case 1:
@@ -1128,22 +1151,7 @@ function DisablePlayButtons() {
 }
 
 
-function toggleRules() {
 
-  var el;
-
-  // Display or hide the game rules text.
-
-  el = document.getElementById("rulesBox");
-  if (el.style.display == "") {
-    el.style.display = "block";
-    document.forms["controls"].elements["rules"].value = "Hide Rules";
-  }
-  else {
-    el.style.display = "";
-    document.forms["controls"].elements["rules"].value = "Show Rules";
-  }
-}
 
 function addClassName(el, name)
 {

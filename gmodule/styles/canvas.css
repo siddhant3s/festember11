@@ -1,0 +1,77 @@
+body{
+margin:0px;
+background-color:white;
+
+}
+html{
+border:1px solid #ddd;
+width:798px;
+height:798px;
+font:13px/1.5 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,sans-serif;
+font-weight:bold;
+color:gray;
+font-size:10pt;
+}
+div#rating{
+position:absolute;
+background-color:#f9f9f9;
+width:auto;
+height:50px;
+left:110px;
+border:1px #bdbdbd solid;
+border-radius:	3px;
+-moz-border-radius:	3px;
+-webkit-border-radius:	3px;
+top:720px;
+padding-left:10px;
+padding-right:10px;
+}
+canvas#galleryimage{
+width:798px;
+height:798px;
+}
+img.star{
+width:21px;
+height:21px;
+display:inherit;
+float:left;
+
+}
+#currentrating{
+color:#500050;
+cursor:pointer;
+}
+.ratingline{
+float:left;
+position:relative;
+top:15px;
+}
+span#stars{
+display:inline;
+}
+span#originalimage{
+color:#500050;
+cursor:pointer;
+}
+span#ratingsuccess{
+
+}
+span#ratingtext{
+font-size:7pt;
+}
+img#closeframe{
+position:absolute;
+z-index:5;
+left:760px;
+top:10px;
+cursor:pointer;
+}
+span#successpng{
+position:absolute;
+background:url(../images/success.png) no-repeat;
+top:0px;
+left:12px;
+display:block;
+width:21px;
+height:21px;
+}

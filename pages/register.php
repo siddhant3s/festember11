@@ -17,6 +17,7 @@ if($logged_in=="true"){
 <div id="DANCE" style="display:none">
 <input type="radio" name="r" onclick="eventSelect(this)" id="choreo_night" value="choreo_night"><label for="choreo_night">Choreo Night</label><br>
 <input name="r" type="radio" onclick="eventSelect(this)" value="free_style" id="free_style"><label for="free_style">Free Style Dance(Solo)</label><br>
+<input name="r" type="radio" onclick="eventSelect(this)" value="streets" id="streets"><label for="streets">Streets</label><br>
 </div>
 <label id='sMUSIC'>[+]</label><label class="eHead" onclick="openEvent(this)" >MUSIC</label><br>
 <div id="MUSIC" style="display:none">
@@ -75,6 +76,22 @@ if($logged_in=="true"){
 <input type="radio" name="r" onclick="eventSelect(this)" value="thinam_thorum" id="thinam_thorum"><label for="thinam_thorum">Dailies (Thinam Thorum)</label><br>
 <input type="radio" name="r" onclick="eventSelect(this)" value="k_k_p" id="k_k_p"><label for="k_k_p">Dumb Charades (Kattrodu Kathai Pesu)</label><br>
 <input type="radio" name="r" onclick="eventSelect(this)" value="keli_chithiram" id="keli_chithiram"><label for="keli_chithiram">Comics (Keli Chithiram)</label><br>
+</div>
+
+<label id='sHINDI_LITS'>[+]</label><label class="eHead" onclick="openEvent(this)" >HINDI_LITS</label><br>
+<div id="HINDI_LITS" style="display:none">
+<input type="radio" name="r" onclick="eventSelect(this)" value="atulya_bharat" id="atulya_bharat"><label for="atulya_bharat">Quiz (Atulya Bharat)</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="sur_sangam" id="sur_sangam"><label for="sur_sangam">Antakshari (Sur Sangam)</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="isharo_mein" id="isharo_mein"><label for="isharo_mein">Dumb C (Isharo Isharo Mein)</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="kurukshetra" id="kurukshetra"><label for="kurukshetra">Debate (Kurukshetra)</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="hum_saath" id="hum_saath"><label for="hum_saath">Hum Saath Saath Hain</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="hulka_fulka" id="hulka_fulka"><label for="hulka_fulka">Hulka Fulka</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="saanp_seedhi" id="saanp_seedhi"><label for="saanp_seedhi">Saanp Seedhi</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="tawarit_srijnatmak" id="tawarit_srijnatmak"><label for="tawarit_srijnatmak">Tawarit Srijnatmak Lekhan</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="rochak_mantrana" id="rochak_mantrana"><label for="rochak_mantrana">Rochak Mantrana</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="bluff_master" id="bluff_master"><label for="bluff_master">Bluff Master</label><br>
+<input type="radio" name="r" onclick="eventSelect(this)" value="shabd_jaal" id="shabd_jaal"><label for="shabd_jaal">Shabd Jaal</label><br>
+
 </div>
 
 <br>

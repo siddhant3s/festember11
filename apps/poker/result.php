@@ -520,7 +520,7 @@ else if($win==0){
 else if($win!=0&&$multiply==1){
 	$won=0;
 }
-$sql="SELECT * FROM windata WHERE userid={$usid}";
+/*$sql="SELECT * FROM windata WHERE userid={$usid}";
 $result3=mysql_query($sql);
 if(!mysql_num_rows($result3)){
 	$sql="INSERT INTO windata VALUES({$usid},{$won})";
@@ -531,11 +531,11 @@ else{
 		$won+=$row['win'];
 		$sql="UPDATE windata SET win='{$won}' WHERE userid={$usid}";
 		$result3=mysql_query($sql);
-}
+}*/
 $percent=$multiply*100;
 if($percent==-100){
 	$percent=0;
 }
-$res=mysql_query("UPDATE game_info SET bidamount={$money},endtime=now(),returnpercent={$percent} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00'" );
+$res=mysql_query("UPDATE game_info SET bidamount={$money},endtime=now(),returnpercent={$percent} WHERE gameid={$game_array['poker']} AND endtime='0000-00-00 00:00:00' AND playerid={$usid}" );
 echo $money*$multiply;
 ?>

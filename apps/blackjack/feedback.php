@@ -15,7 +15,7 @@ display:none;
 
 
 </style>
-<script src="jquery-1.6.2.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 function feeds()
 {
