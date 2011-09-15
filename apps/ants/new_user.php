@@ -2,7 +2,9 @@
 global $rpath;
 $rpath="../";
 require_once("../game.php");
+var_dump($user);
 
+/*
 function new_user()
 {
 global $user;
@@ -21,8 +23,8 @@ $answer_insert_new_user=mysql_affected_rows();
 			whisk(2);
 			exit();
 		}
-return 1;
+return $user;
 }
-new_user();
-exit();
+var_dump(new_user())
+exit();*/
 ?>
