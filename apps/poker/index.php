@@ -20,15 +20,15 @@
 		<div id="fb-root"></div>
 		<script src="../gameapi.js"></script>
 		<script>
-		function publish() {
+		function publish(value) {
 
 		//The following is used to share a link on the player's wall.
 		FB.ui({
-		  "name":"<?php echo $user["name"]; ?> is running short of free spins in the Festember Casino.",
-		  "link":"../",
-		  picture:"http://cloud.graphicleftovers.com/11239/item25994/slot-Converted.jpg",
-		  caption:"Click on the link above to help him out by giving him a free spin",
-		  description:"Helping your friend by giving a free spin is going to help them big time in the Festember Casino",
+		  "name":"<?php echo $user["name"]; ?> has just won "+value+" in a game poker",
+		  "link":"http://festember.in/11/",
+		  picture:"http://www.donkeypoker.me/wp-content/uploads/2009/10/poker.jpg",
+		  caption:"Click on the link to play",
+		  description:"Join festember games to play poker in the Festember Casino",
 		  "method":"feed",
 		//  to:"100000566828426",
 		});
