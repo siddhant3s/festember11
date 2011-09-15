@@ -12,7 +12,9 @@ Remember, what happens in Vegas, stays in Vegas!
 </p>
 </div> 
 
-
+<div class="content-head">Night 0 - Fire Cracker show</div>
+<div class="content-head">Day 1 - Crazy Mohan Drama </div>
+<div class="content-head">Night 1- DJ-Night</div>
 
 <div class="content-head">
 Night 2 - MotherJane </div>
@@ -59,7 +61,7 @@ For more information on Arvind and his magic, check out his website and fan page
 </div>
 
 
-<div class="content-head">Night 3</div>
+<div class="content-head">Night 3 - Javed Ali, Suchitra and Suresh Peters</div>
 
 <div class="content-body">
 
