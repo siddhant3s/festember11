@@ -22,7 +22,7 @@ $bet_entered=mysql_real_escape_string($_POST['bet']);
     whisk($bet_entered);
     exit(1);	
     }
-var_dump($bet_entered,$current_users_balance,$user['id']);exit();
+
 if($bet_entered<=0)
 	{
 	echo "1";
@@ -52,7 +52,7 @@ if($done_match==1)
 	//check
 $result_check_the_user_existence=mysql_query("select played from $table_allusers where user_id='$the_fb_id'");
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
-if(!(isset($answer_check_the_user_existence)))
+if(!$answer_check_the_user_existence)
 	{	$inserted=new_user($conn_matcher); 
 		
 		if(!isset($inserted))
@@ -65,7 +65,7 @@ if(!(isset($answer_check_the_user_existence)))
 	if(matcher()){;exit(1);	}
 	else {whisk(19);exit(1);}
 
-exit();
+	exit();
 	}
 else
 	{
