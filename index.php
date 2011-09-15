@@ -334,6 +334,8 @@ function facebook_click(){
 						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
 						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
 						<a href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg" width="120px" height="120" /></a>
+						<a href="http://www.vasaneye.in/" target="_blank"><img src="./images/s18.jpg" width="120px" height="120" /></a>
+						<a href="http://www.naturals.in/" target="_blank"><img src="./images/s17.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
