@@ -52,7 +52,7 @@ if($done_match==1)
 
 //if the first take of the user in to the game create  a user id for him in the database
 	//check
-$result_check_the_user_existence=mysql_query("select user_id from $table_allusers where fb_id='$the_fb_id'");
+$result_check_the_user_existence=mysql_query("select played from $table_allusers where user_id='$the_fb_id'");
 var_dump(mysql_error());exit();
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
 if(!(isset($answer_check_the_user_existence)))
