@@ -1,6 +1,6 @@
 <div class="content-head">ProShow:</div>
-<br/><br/><br/>
-<div class="content-head">Day 0</div>
+<br/><br/>
+<div class="content-head">Day 0 - Ganesh Kumaresh Violin - Fusion Concert</div>
 <div class="content-body"><p>Always the most anticipated event of Festember, ProNite has played host to some of the biggest names of culture, music and dance! From Motherjane to Naresh Iyer to Benny Dayal, ProNite gets everyone into the groove! This year Festember 11 promises more to make you high on music! ;)
 After having welcomed leading artists such as Ghatam Karthik and Kadri Gopalnath in the previous years the current edition opens its leaves to the showers of Carnatic music with the violin maestros Ganesh and Kumaresh.</p>
 <p>Ganesh and Kumaresh are child prodigies who started playing from the tender age of ten .Their efforts in Sastriya Sangitam has taken them across various countries including the US and Canada. Apart from performing, they also score music for films and dance productions. Their music for the movie "Dance like a Man" and "Chandrikai" is widely appreciated.</p>
@@ -11,9 +11,34 @@ Vegas. Desire. Luck. Joy. Destiny. Experience.
 Remember, what happens in Vegas, stays in Vegas!
 </p>
 </div> 
-<div class="content-head">Day 3</div>
-<br/><br/>
-<div class="content-head">An Evening Inside your mind</div>
+
+
+
+<div class="content-head">
+Night 2 - MotherJane </div>
+
+<div class="content-body">
+<p>
+The Vanguard of Indian Rock, MotherJane need no introduction. The Indian Rock Scene changed forever  when 5 young men from Kochi decided to strum some chords. There has been no looking back since!
+Imbibing elements of Progressive Rock, Alternative Rock and Carnatic melodies, the band is re-defining the notion of rock and is creating its own true sound!
+</p>
+<p>
+Motherjane was formed in 1996 by drummer John Thomas and bassist Clyde Rozario to "fill in" for another band which had backed out from a college festival at St. Albert's College, Kochi. The band currently consists of Suraj Mani - Vocals, John Thomas –Drums, Clyde Rozario –Bass, Deepu Sasidharan –Guitar, Santosh Chandran –Guitar
+</p><p>
+The Band has released two studio albums and three singles. Their debut album, Insane Biography included chart-busters such as “Maya” and “Soul Corporations” which had strong Indian musical elements, a trend that continues in all their later efforts. If the first was a trailblazer, the Band hit the jackpot with their second studio album, “Maktub”.
+Feted as the “Album of the Year” for 2009 by Rolling Stone India, “Maktub” took Indian Rock to the World. 
+</p><p>
+The Band was recently ranked #1 in Rock Street Journal's bands of the decade in 2010. They also won as Most Popular Act of Asia in the 2010 AVIMA Awards. The Band has also opened for Megadeth and Opeth in recent years. 
+</p><p>
+This Festember, MotherJane are gonna bring their A-game and take you aboard a musical ride like none-other!
+So buckle up! 
+</p>
+</div>
+
+
+
+
+<div class="content-head">Day 3 - An Evening Inside your mind</div>
 <div class="content-body">
 <p>
 After years of study and hundreds of performances, Arvind is ready to take you on a magical journey that you have to experience to believe. His fun and original presentations will provide you with entertainment that you will remember for a lifetime. He has appeared on Dutch national television on 'De Nieuwe Uri Geller' show, featured in national newspapers, amazed people at events ranging from galas, corporate shows and international festivals to private and charity events. With his unique style and persona, he can blow your mind up close while performing just a few inches away or shatter your reality when you are part of a thousand people watching his stage show.
@@ -32,4 +57,43 @@ For more information on Arvind and his magic, check out his website and fan page
 <a href="http://vimeo.com/arvindj227/stagepromo">http://vimeo.com/arvindj227/stagepromo</a>
 
 </div>
+
+
+<div class="content-head">Night 3</div>
+
+<div class="content-body">
+
+<div class="content-head">Javed Ali</div>
+
+<p>
+The silken voice behind Guzaarish, the majestic timbre behind Jashn-E-Bahaara, the power-packed rendition behind Kilimanjaro, Javed Ali's magical voice has won hearts across the world!
+</p><p>
+Having sung in languages as diverse as Bangla to Tamil, Javed has proved that Versatility is his middle name. Carrying off complex tunes with ease, he has a penchant for turning out chart-busters, effortlessly. His simplicity and taste for experimentation have made him the red-hot name in Indian Cine Music! 
+</p><p>
+Into playback-singing since 2000, Javed hit the big scene in 2007 with the song Ek Din Teri Raahon Mein  from the movie Naqaab. There has been no looking back since! 
+Today Javed is a staple in A.R.Rahman's entourage and recently was named as a 'Gem' in Rahman's World Tour.
+Apart from playback, Javed is currently judging the Reality Show Sa Re Ga Ma Pa Li'l Champs 2011 on Zee TV. 
+</p><p>
+Festember '11 brings to you the chance to witness this trailblazer weaving his charm and winning over your hearts! Don Miss It!!
+</p>
+
+
+<div class="content-head">
+Suchitra</div>
+
+<p>
+MBA graduate, former corporate professional, top RJ, actor, dubbing artist, playback singer, Suchitra or 'Suchi' is one with a multitude of talents. </p><p>
+She first caught the public eye with her show on Radio Mirchi. 
+Her high energy, knack for humor, focus on social issues, and tell it all attitude made her wildly popular in no time!
+</p><p>
+Her immense love for music soon turned her into a noted Playback singer. Shehas crooned for several chart-busters such as 'Uyirin Uyire' in Kaaka Kaaka and Dole Dole in the Tamil blockbuster Pokkiri. The silver screen soon drew her into its mold and she made guest appearances in films such as Jay Jay and Ayutha Ezhuthu. Suchi is a favorite of top music directors such as Harris Jayaraj and A.R.Rahman. 
+Suchi has anchored several TV Shows as well. 
+</p><p>
+Her no-nonsense commentary on social issues and her 'full of life' singing talents have made her an artist-extraordinare of Tamil Music Industry. Apart from a being a much loved voice, she is also a much respected voice in the state.
+</p><p>
+This Festember, Namma Suchi is coming down to treat us to a delectable cuisine of peppy tracks ,masala-filled anecdotes and her own takes on Life and Music! Stay Tuned to Festember '11! 
+</p>
+
+</div>
+
 
