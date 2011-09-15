@@ -13,13 +13,12 @@ $the_error_code=0;
 
 
 <?php
-$the_fb_id=$user;
+$the_fb_id=$user['id'];
 if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )
 {
 	$done_match=0;
 $current_users_balance=getCash();
 $bet_entered=mysql_real_escape_string($_POST['bet']);
-var_dump($current_users_balance,$bet_entered,$the_fb_id);
    if(!is_numeric($bet_entered))
     {
     $the_error_code=1;
@@ -53,7 +52,7 @@ if($done_match==1)
 
 //if the first take of the user in to the game create  a user id for him in the database
 	//check
-$result_check_the_user_existence=mysql_query("select user_id from '$table_allusers' where fb_id='$the_fb_id'");
+$result_check_the_user_existence=mysql_query("select user_id from $table_allusers where fb_id='$the_fb_id'");
 var_dump(mysql_error());exit();
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
 if(!(isset($answer_check_the_user_existence)))
