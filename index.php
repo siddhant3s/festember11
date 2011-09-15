@@ -246,9 +246,9 @@ function facebook_click(){
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=224545730925393&amp;href=www.facebook.com%2Ffestember&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
 	<div class="scroller">
 		<div id="slider" class="nivoSlider">
-                <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
-                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
+                <a href="./shortlist" target="_blank"><img src="images/pic.png" title="The shortlist for TARANGINI, GIGAHERTZ and THEATRIX updated" /></a>
+                <a href="./proshow" ><img src="images/pic2.png" alt="" title="ProShow details Updated" /></p>
+                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Accomodation will be based on first come first serve basis. So Register soon." /></a>
 		
                 <img
  src="images/pic5.png" alt="" />
