@@ -4,15 +4,11 @@
 
  //must be edited
  {
-$mysqli_username="";
-$mysqli_password="";
 $mysqli_host=$_SERVER['HTTP_HOST'];
-$central_db="";
-$table_allusers="";
-$table_allgames="";
-$root_db="";
-$root_table="";
-$redirection="http://www.pragyan.org/~boopathi/festember11/apps/ants/whisk.php";
+$table_allusers="ants_allusers";
+$table_allgames="ants_allgames";
+
+$redirection="http://www.pragyan.org/~boopathi/festember11/apps/ants/error_codes";
 
  }
 
