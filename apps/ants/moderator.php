@@ -1,4 +1,5 @@
 <?php
+global $rpath
 $rpath="../";
 require_once("../game.php");
 require_once("allglobals.php");
@@ -56,7 +57,7 @@ $result_check_the_user_existence=mysql_query("select user_id from '$table_alluse
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
 if(!(isset($answer_check_the_user_existence)))
 	{	$inserted=new_user($conn_matcher);    }
-		if(!$inserted)
+		if(!isset($inserted))
 				{
 					whisk(2);
 					exit();
