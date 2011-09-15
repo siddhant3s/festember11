@@ -1,5 +1,5 @@
 <?php
-global $rpath
+global $rpath;
 $rpath="../";
 require_once("../game.php");
 require_once("allglobals.php");
