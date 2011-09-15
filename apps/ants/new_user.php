@@ -1,12 +1,3 @@
-<?php
-global $rpath;
-$rpath="../";
-require_once("../game.php");
-require_once("allglobals.php");
-require_once("whisk.php");
-
-?>
-
 
 <?php
 function new_user($the_conn)

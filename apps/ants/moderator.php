@@ -4,12 +4,9 @@ $rpath="../";
 require_once("../game.php");
 require_once("allglobals.php");
 require_once("whisk.php");
+require_once("new_user.php");
 $the_error_code=0;
 ?>
-
-
-
-
 
 
 <?php
