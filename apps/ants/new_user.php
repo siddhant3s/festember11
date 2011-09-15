@@ -1,9 +1,11 @@
-
 <?php
+global $rpath;
+$rpath="../";
+require_once("../game.php");
+
 function new_user()
 {
 global $user;
-
 global $table_allusers;
 $the_id=$user['id'];
 error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@".var_dump($user));
