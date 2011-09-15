@@ -2,6 +2,7 @@
 <?php
 function new_user()
 {
+global $user;
 $the_id=$user['id'];
 $result_insert_new_user=mysql_query("insert into '$table_allusers' (user_id,logged) values('$the_id',1)");
 error_log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@".mysql_error());
