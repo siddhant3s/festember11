@@ -23,7 +23,7 @@ $the_current_average=get_the_average();
 $the_user_rating=get_the_rating($the_fb_id);
 $thefinalsuccesstoken=0;
 //##############################################################
-$result_set_currently_matched=mysqli_query($conn_matcher,"update '$table_allusers' set involved=2 where fb_id='$the_fb_id'")
+$result_set_currently_matched=mysqli_query($conn_matcher,"update '$table_allusers' set involved=2 where fb_id='$the_fb_id'");
 $answer_set_currently_matched=mysqli_affected_rows($conn_matcher);
 if(!$answer_set_currently_matched)
 		{
@@ -35,7 +35,7 @@ if(!$answer_set_currently_matched)
 	{
 $result_get_all_uninvloved_but_logged=mysqli_query($conn_matcher,"select fb_id from '$table_allusers' where logged=1 and involved=2");
 $the_opponent=0;$min_difference=10000000000000000000;
-foreach(false!=($his_id=mysqli_fetch_array($answer_get_all_uninvloved_but_logged)))
+foreach(false!=($his_id==mysqli_fetch_array($answer_get_all_uninvloved_but_logged)))
 		{
 		$his_rating=get_the_rating($his_id['fb_id']);
 		if(($his_rating-$the_user_rating)<0){$this_case_difference=$the_user_rating-$his_rating;}
