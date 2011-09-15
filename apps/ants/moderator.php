@@ -17,11 +17,9 @@ if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )
 	$done_match=0;
 $current_users_balance=getCash();
 $bet_entered=mysql_real_escape_string($_POST['bet']);
-var_dump($bet_entered);
-exit();
+var_dump($current_users_balance,$bet_entered);
    if(!is_numeric($bet_entered))
     {
-	
     $the_error_code=1;
     whisk($bet_entered);
     exit(1);	
@@ -71,6 +69,7 @@ else
 	whisk(99);
 	exit(1);
 	}
+
 }
 
 ?>
