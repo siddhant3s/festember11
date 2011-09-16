@@ -35,7 +35,7 @@ $result_get_all_uninvloved_but_logged=mysql_query("select user_id from $table_al
 error_log("15#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 $the_opponent=0;
 $min_difference=10000000000000000000;
-while(false!=($his_id=mysql_fetch_array($answer_get_all_uninvloved_but_logged)))
+while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 		{
 		$his_rating=get_the_rating($his_id['user_id']);
 		if(($his_rating-$the_user_rating)<0){$this_case_difference=$the_user_rating-$his_rating;}
