@@ -14,7 +14,7 @@ global $table_allusers;
 //##############################################################
 
 //##############################################################
-$the_fb_id=get_the_fb_id();
+$the_fb_id=$user['id'];
 $the_current_average=get_the_average();
 $the_user_rating=get_the_rating($the_fb_id);
 $thefinalsuccesstoken=0;
