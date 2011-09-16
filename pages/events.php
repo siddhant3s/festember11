@@ -815,7 +815,7 @@ Last Date for Event Registration is 20th September (tuesday).
 
 <div class="content-head">Updates</div>
 <div class="content-body">
-
+<p>CHOREONITE shortlists has been released.</p><br />
 <p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Click here for Shortlisted teams</a></p>
 <ul>
 <li>Rules for Tarangini updated</li>

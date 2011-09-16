@@ -1,6 +1,7 @@
 <div class="content-head">ProShow:</div>
 <br/><br/>
 <div class="content-head">Day 0 - Ganesh Kumaresh Violin - Fusion Concert</div>
+<img class="picstyle" src="images/proshow/kumaresh.jpg">
 <div class="content-body"><p>Always the most anticipated event of Festember, ProNite has played host to some of the biggest names of culture, music and dance! From Motherjane to Naresh Iyer to Benny Dayal, ProNite gets everyone into the groove! This year Festember 11 promises more to make you high on music! ;)
 After having welcomed leading artists such as Ghatam Karthik and Kadri Gopalnath in the previous years the current edition opens its leaves to the showers of Carnatic music with the violin maestros Ganesh and Kumaresh.</p>
 <p>Ganesh and Kumaresh are child prodigies who started playing from the tender age of ten .Their efforts in Sastriya Sangitam has taken them across various countries including the US and Canada. Apart from performing, they also score music for films and dance productions. Their music for the movie "Dance like a Man" and "Chandrikai" is widely appreciated.</p>
@@ -13,15 +14,18 @@ Remember, what happens in Vegas, stays in Vegas!
 </div> 
 
 <div class="content-head">Night 0 - Fire Cracker show</div>
+<img class="picstyle" src="images/proshow/firework.jpg">
 <div class="content-body"><p> </p></div>
 <div class="content-head">Day 1 - Crazy Mohan Drama </div>
+<img class="picstyle" src="images/proshow/mohan.jpg">
 <div class="content-body"><p> </p></div>
 <div class="content-head">Night 1- DJ-Night</div>
+<img class="picstyle" src="images/proshow/djnite.jpg">
 <div class="content-body"><p> </p></div>
 
 <div class="content-head">
 Night 2 - MotherJane </div>
-
+<img class="picstyle" src="images/proshow/motherjane.jpg">
 <div class="content-body">
 <p>
 The Vanguard of Indian Rock, MotherJane need no introduction. The Indian Rock Scene changed forever  when 5 young men from Kochi decided to strum some chords. There has been no looking back since!
@@ -44,6 +48,7 @@ So buckle up!
 
 
 <div class="content-head">Day 3 - An Evening Inside your mind</div>
+<img class="picstyle" src="images/proshow/magician.jpg">
 <div class="content-body">
 <p>
 After years of study and hundreds of performances, Arvind is ready to take you on a magical journey that you have to experience to believe. His fun and original presentations will provide you with entertainment that you will remember for a lifetime. He has appeared on Dutch national television on 'De Nieuwe Uri Geller' show, featured in national newspapers, amazed people at events ranging from galas, corporate shows and international festivals to private and charity events. With his unique style and persona, he can blow your mind up close while performing just a few inches away or shatter your reality when you are part of a thousand people watching his stage show.
@@ -65,7 +70,7 @@ For more information on Arvind and his magic, check out his website and fan page
 
 
 <div class="content-head">Night 3 - Javed Ali, Suchitra and Suresh Peters</div>
-
+<img class="picstyle" src="images/proshow/javedali.jpg">
 <div class="content-body">
 
 <div class="content-head">Javed Ali</div>
@@ -85,7 +90,7 @@ Festember '11 brings to you the chance to witness this trailblazer weaving his c
 
 <div class="content-head">
 Suchitra</div>
-
+<img class="picstyle" src="images/proshow/suchitra.jpg">
 <p>
 MBA graduate, former corporate professional, top RJ, actor, dubbing artist, playback singer, Suchitra or 'Suchi' is one with a multitude of talents. </p><p>
 She first caught the public eye with her show on Radio Mirchi. 
