@@ -9,64 +9,64 @@ the function checks if the user is currently involved if yes sends to a differen
 //postion of ants in involved
 function matcher()
 {
-
+global $user;
+global $table_allusers;
 //##############################################################
 
-//MAKE THE CONNECTION 
-$conn_matcher;
 //##############################################################
 $the_fb_id=get_the_fb_id();
 $the_current_average=get_the_average();
 $the_user_rating=get_the_rating($the_fb_id);
 $thefinalsuccesstoken=0;
 //##############################################################
-$result_set_currently_matched=mysqli_query($conn_matcher,"update '$table_allusers' set involved=2 where fb_id='$the_fb_id'");
-$answer_set_currently_matched=mysqli_affected_rows($conn_matcher);
+$result_set_currently_matched=mysql_query("update $table_allusers set involved=2 where fb_id='$the_fb_id'");
+$answer_set_currently_matched=mysql_affected_rows();
 if(!$answer_set_currently_matched)
 		{
 			whisk(4);
-			exit();
+			exit(1);
 		}
 //##############################################################
 
 	{
-$result_get_all_uninvloved_but_logged=mysqli_query($conn_matcher,"select fb_id from '$table_allusers' where logged=1 and involved=2");
-$the_opponent=0;$min_difference=10000000000000000000;
-foreach(false!=($his_id==mysqli_fetch_array($answer_get_all_uninvloved_but_logged)))
+$result_get_all_uninvloved_but_logged=mysql_query("select fb_id from $table_allusers where logged=1 and involved=2");
+$the_opponent=0;
+$min_difference=10000000000000000000;
+while(false!=($his_id=mysql_fetch_array($answer_get_all_uninvloved_but_logged)))
 		{
 		$his_rating=get_the_rating($his_id['fb_id']);
 		if(($his_rating-$the_user_rating)<0){$this_case_difference=$the_user_rating-$his_rating;}
-		else	{$this_case_difference=$his_rating-$the_user_rating}
+		else	{$this_case_difference=$his_rating-$the_user_rating;}
 		if($this_case_difference<$min_difference){	
-								$result_release_earlier_match=mysqli_query($conn_matcher,"update '$table_allusers' set involved=2 where fb_id='$the_opponent'");
-								$answer_release_earlier_match=mysqli_affected_rows($conn_matcher);
+								$result_release_earlier_match=mysql_query("update $table_allusers set involved=2 where fb_id='$the_opponent'");
+								$answer_release_earlier_match=mysql_affected_rows();
 								if(!$answer_release_earlier_matched)
 									{
 										whisk(6);
-										exit();
+										exit(1);
 									}
 
 								
 								$min_difference=$this_case_difference;
 								$the_opponent=$his_id['fb_id'];
-								$result_plot_this_match=mysqli_query($conn_matcher,"update '$table_allusers' set involved=3 where fb_id='$the_opponent'");
-								$answer_plot_this_match=mysqli_affected_rows($conn_matcher);
+								$result_plot_this_match=mysql_query("update $table_allusers set involved=3 where fb_id='$the_opponent'");
+								$answer_plot_this_match=mysql_affected_rows();
 								if(!$answer_set_currently_matched)
 									{
 										whisk(5);
-										exit();
+										exit(1);
 									}
 							}
 		}
 if($the_opponent)
 		{
 		
-		$result_confirm_opponent=mysqli_query($conn_matcher,"select involved from '$table_allusers' where fb_id='$the_opponent'");
-		$answer_confirm_opponent=mysqli_fetch_array($result_confirm_opponent);
+		$result_confirm_opponent=mysql_query("select involved from $table_allusers where fb_id='$the_opponent'");
+		$answer_confirm_opponent=mysql_fetch_array($result_confirm_opponent);
 		if($answer_confirm_opponent==3)
 			{
-				$result_set_opponent1_match=mysqli_query($conn_matcher,"update '$table_allusers' set opponent='$the_fb_id' where fb_id='$the_opponent'");
-				$answer_set_opponent1_match=mysqli_affected_rows($conn_matcher);
+				$result_set_opponent1_match=mysql_query("update $table_allusers set opponent='$the_fb_id' where fb_id='$the_opponent'");
+				$answer_set_opponent1_match=mysql_affected_rows();
 				if(!$answer_set_opponent1_match)
 					{
 						whisk(7);
@@ -76,8 +76,8 @@ if($the_opponent)
 
 
 
-				$result_set_opponent2_match=mysqli_query($conn_matcher,"update '$table_allusers' set opponent='$the_opponent' where fb_id='$the_fb_id'");
-				$answer_set_opponent2_match=mysqli_affected_rows($conn_matcher);
+				$result_set_opponent2_match=mysql_query("update $table_allusers set opponent='$the_opponent' where fb_id='$the_fb_id'");
+				$answer_set_opponent2_match=mysql_affected_rows();
 				if(!$answer_set_opponent1_match)
 					{
 						whisk(8);
@@ -91,8 +91,8 @@ if($the_opponent)
 
 	else
 		{
-				$result_set_opponent2_match=mysqli_query($conn_matcher,"update '$table_allusers' set opponent='AI' where fb_id='$the_fb_id'");
-				$answer_set_opponent2_match=mysqli_affected_rows($conn_matcher);
+				$result_set_opponent2_match=mysql_query("update $table_allusers set opponent='AI' where fb_id='$the_fb_id'");
+				$answer_set_opponent2_match=mysql_affected_rows();
 				if(!$answer_set_opponent1_match)
 					{
 						whisk(9);

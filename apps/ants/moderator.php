@@ -12,7 +12,7 @@ $the_error_code=0;
 
 <?php
 $the_fb_id=$user['id'];
-if((isset($_POST['submit'])) &&( isset($_POST['bet'])) )
+if((isset($_POST['submit'])) &&( isset($_POST['bet'])))
 {
 	$done_match=0;
 $current_users_balance=getCash();
