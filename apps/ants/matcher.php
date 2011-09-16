@@ -1,7 +1,4 @@
-<?php
-require_once("allglobals.php");
-require_once("apps/game.php");
-?>
+
 <?php
 /*
 this script is executed on the reciept of the user id from the first script

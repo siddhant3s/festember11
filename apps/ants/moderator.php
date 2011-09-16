@@ -5,7 +5,7 @@ require_once("../game.php");
 require_once("allglobals.php");
 require_once("whisk.php");
 require_once("new_user.php");
-//require_once("matcher.php");
+require_once("matcher.php");
 $the_error_code=0;
 ?>
 
@@ -71,6 +71,7 @@ if(!$answer_check_the_user_existence)
 	}
 else
 	{
+error_log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".$the_fb_id."^^^".$done_match."^^^^^^^".$current_users_balance."^^^^^^^".$bet_entered);
 	whisk(99);
 	exit(1);
 	}
