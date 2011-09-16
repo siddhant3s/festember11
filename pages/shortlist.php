@@ -49,4 +49,29 @@ Shortlisted teams
 <li>SACRED HEART COLLEGE, ERNAKULAM</li>
 <li>COIMBATORE INSTITUTE OF TECH.</li>
 </ul>
+
+<div class="content-head">ChoreoNite</div>
+WESTERN
+<ul>
+<li>VIT western team</li>
+<li>VIT chargers</li>
+<li>Anna university</li>
+<li>Sastra (SDT)</li>
+<li>GCT,Coimbatore</li>
+<li>JJCET</li>
+<li>Loyola</li>
+<li>Jeppiar Engg College</li>
+<li>Gurunanak</li>
+<li>WCC</li>
+<li>St. Joseph, Trichy</li>
+</ul>
+EASTERN
+<ul>
+<li>VIT-classical</li>
+<li>VIT-indo jazz</li>
+<li>Sastra</li>
+<li>SVCE</li>
+<li>Amrita (semi-classical)</li>
+<li>Christ university</li>
+</ul>
 </div>

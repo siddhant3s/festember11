@@ -765,6 +765,8 @@ The judges' decisions will be final and binding, and are not open to review
 <div class="content-head">KOOTHAMPALAM</div>
 <img class="tamil1" src="images/tamil/5-1.png" >
 <img class="tamil2" src="images/tamil/5-2.png" >
+<br />
+Last Date for Event Registration is 18th September (sunday).
 
 <?php break; case "kuraloviyum" :  ?>
 <div class="content-head">KURALOVIUM</div>
@@ -775,6 +777,8 @@ The judges' decisions will be final and binding, and are not open to review
 <div class="content-head">KOLAM</div>
 <img class="tamil1" src="images/tamil/7-1.png" >
 <img class="tamil2" src="images/tamil/7-2.png" >
+<br />
+Last Date for Event Registration is 20th September (tuesday).
 
 <?php break; case "kaatrodu" :  ?>
 <div class="content-head">KAATRODU KATHAI PESAVA</div>
@@ -806,14 +810,13 @@ The judges' decisions will be final and binding, and are not open to review
 <img class="tamil1" src="images/tamil/13-1.png" >
 <img class="tamil2" src="images/tamil/13-2.png" >
 <br />
--Tamil Cinema Quiz
 
 <?php break; default : ?>
 
 <div class="content-head">Updates</div>
 <div class="content-body">
-<p>The shortlist for CHOREO NITE will be put up at 02:00 p.m. on September 15.</p>
-<p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Shortlisted teams</a></p>
+
+<p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Click here for Shortlisted teams</a></p>
 <ul>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
