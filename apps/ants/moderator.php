@@ -7,6 +7,7 @@ require_once("whisk.php");
 require_once("new_user.php");
 require_once("matcher.php");
 require_once("get_the_average.php");
+require_once("get_the_rating.php");
 $the_error_code=0;
 ?>
 
