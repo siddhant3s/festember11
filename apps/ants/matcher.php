@@ -32,6 +32,7 @@ if(!$answer_set_currently_matched)
 
 	{
 $result_get_all_uninvloved_but_logged=mysql_query("select fb_id from $table_allusers where logged=1 and involved=2");
+error_log("15#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 $the_opponent=0;
 $min_difference=10000000000000000000;
 while(false!=($his_id=mysql_fetch_array($answer_get_all_uninvloved_but_logged)))
