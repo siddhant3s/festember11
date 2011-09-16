@@ -6,6 +6,7 @@ require_once("allglobals.php");
 require_once("whisk.php");
 require_once("new_user.php");
 require_once("matcher.php");
+require_once("get_the_average.php");
 $the_error_code=0;
 ?>
 

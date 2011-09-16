@@ -16,7 +16,7 @@ global $table_allusers;
 //##############################################################
 $the_fb_id=$user['id'];
 $the_current_average=get_the_average();
-$the_user_rating=get_the_rating($the_fb_id);
+$the_user_rating=get_the_rating();
 $thefinalsuccesstoken=0;
 //##############################################################
 $result_set_currently_matched=mysql_query("update $table_allusers set involved=2 where fb_id='$the_fb_id'");
@@ -107,8 +107,9 @@ if($the_opponent)
 	}
 if($thefinalsuccesstoken==1)
 	{
-		//redirect to correct page
+		echo "<h1>the <$the_fb_id> has been matched against <$the_opponent>";
 		
 	}
 
 }
+?>
