@@ -88,6 +88,7 @@ $updated_userid1=mysql_query($query2_inusers_table);
 		}
 }
 //##############################################################
+error_log("5~~~~~~~~~~~~~~~~~~~~~~".$game_id);
 return $game_id;
 }
 ?>
