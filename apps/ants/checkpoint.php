@@ -14,17 +14,15 @@ $the_fb_id=$user['id'];
 	if(!$answer_fetch)
 		{
 			whisk(72);
-			exit();
+			exit(1);
 		}
 	$opponent_id=$answer_fetch['opponent'];
 	$select_bets=mysql_query("select id1,id2,bet1,bet2 from $table_allgames where ((id1='$the_fb_id' and id2='$opponent_id') or (id2='$the_fb_id' and id1='$opponent_id')) and active=1");
 	$answer_bets=mysql_fetch_array($select_bets);
 	if(!$answer_bets)
 		{
-
 			whisk(77);
-			exit();
-
+			exit(1);
 		}
 	$fetched_id1=$answer_bets['id1'];
 	$fetched_id2=$answer_bets['id2'];
