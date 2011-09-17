@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <style type="text/css">
@@ -19,3 +18,10 @@ body{background-image:url(back.jpg);opacity:1.0;}
 </div>
 </body>
 </html>
+
+<?php
+sleep(10);
+header("Location:$themaingamepage");
+exit(1);
+
+?>

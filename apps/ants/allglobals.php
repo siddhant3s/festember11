@@ -10,6 +10,7 @@ $table_allgames="ants_allgames";
 
 $redirection="http://www.pragyan.org/~boopathi/festember11/apps/ants/error_codes";
 $themaingamepage="http://www.pragyan.org/~boopathi/festember11/apps/ants/mainback.php";
+$thecheckpointpage="http://www.pragyan.org/~boopathi/festember11/apps/ants/checkpoint.php";
  }
 
 
