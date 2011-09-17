@@ -44,7 +44,7 @@ while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 								$result_release_earlier_match=mysql_query("update $table_allusers set involved=2 where user_id='$the_opponent'");
 								error_log("3#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 								$answer_release_earlier_match=mysql_affected_rows();
-								error_log("4#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
+								error_log("4#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error()."^%^%^%^%^%^".$answer_release_earlier_matched);
 								if(!$answer_release_earlier_matched)
 									{
 										whisk(6);
