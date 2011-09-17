@@ -85,11 +85,10 @@ $the_matcher_returned_value=matcher();
 	if($the_matcher_returned_value){$the_game_hash_fetched=start_game($the_fb_id,$bet_entered);exit(1);}
 	else {whisk(19);exit(1);}
 //##############################################################
-error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
+	error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
 	if($the_game_hash_fetched)
 		{
 		error_log("&&&&&&&&&&&&&&&".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
-		
 		header("Location:$themaingamepage.'?opponent=$the_game_hash_fetched'");
 		exit(1);
 		}
