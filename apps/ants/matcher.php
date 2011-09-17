@@ -115,9 +115,11 @@ if(($the_opponent)  && ($the_opponent!=$the_fb_id))
 	}
 if($thefinalsuccesstoken==1)
 	{
+		error_log("---------------------------------------------------------&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$thefinalsuccesstoken."&&&&&&&&&&&&&&&");
 		return $thefinalsuccesstoken;
 		
 	}
+error_log("---------------------------------------------------------&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$thefinalsuccesstoken."&&&&&&&&&&&&&&&");
 
 }
 ?>
