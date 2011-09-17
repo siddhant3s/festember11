@@ -66,7 +66,7 @@ $result_in_games_table=mysql_query($query_in_games_table);//or die(mysqli_error(
 //##############################################################
 	//users table query
 $query1_inusers_table="update $table_allusers set involved='1' where user_id='$id1'";
-$updated_userid1=mysql_query($query_inusers_table);
+$updated_userid1=mysql_query($query1_inusers_table);
 	if(!mysql_affected_rows())
 		{
 		//confirm action
@@ -77,7 +77,7 @@ $updated_userid1=mysql_query($query_inusers_table);
 if($the_opponent!='AI')
 {
 $query2_inusers_table="update $table_allusers set invloved='1' where user_id='$id2'";
-$updated_userid1=mysql_query($query_inusers_table);
+$updated_userid1=mysql_query($query2_inusers_table);
 	if(!mysql_affected_rows())
 		{
 		//confirm action
