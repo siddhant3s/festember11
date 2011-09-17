@@ -26,7 +26,7 @@ body{background-image:url(back.jpg);opacity:1.0;}
 #oppcol{width: 66px;height: 80px;float: left;border-color: white;border-style: solid;}
 #discard{margin-top: 4px;}
 </style>
-<script type="text/javascript" src="/jquery/jquery-1.3.2.min.js">
+<script type="text/javascript" src="jquery-1.3.2.min.js">
 </script>
 </head>
 <body>
