@@ -98,11 +98,10 @@ if(($the_opponent)  && ($opponent==$the_fb_id))
 
 	else
 		{
-				$result_set_opponent2_match=mysql_query("update $table_allusers set opponent='AI' where user_id='$the_fb_id'");
+				$result_set_opponent78_match=mysql_query("update $table_allusers set opponent='AI' where user_id='$the_fb_id'");
+				$answer_set_opponent78_match=mysql_affected_rows();
 				error_log("13#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
-				$answer_set_opponent2_match=mysql_affected_rows();
-				error_log("14#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
-				if(!$answer_set_opponent1_match)
+				if(!$answer_set_opponent78_match)
 					{
 						whisk(9);
 						exit(1);
