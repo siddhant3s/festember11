@@ -19,10 +19,10 @@ $the_current_average=get_the_average();
 $the_user_rating=get_the_rating();
 $thefinalsuccesstoken=0;
 //##############################################################
-$result_set_currently_matched=mysql_query("update $table_allusers set involved=2 where user_id='$the_fb_id'");
+$result_set_currently_matched=mysql_query("update $table_allusers set involved='2' where user_id='$the_fb_id'");
 error_log("1#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 $answer_set_currently_matched=mysql_affected_rows();
-error_log("2#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
+error_log("2#!#!#!#!#!##!##!#!##!#!##!##!#".$answer_set_currently_matched."****");
 if(!$answer_set_currently_matched)
 		{
 			whisk(4);
