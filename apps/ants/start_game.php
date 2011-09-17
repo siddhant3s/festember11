@@ -30,6 +30,7 @@ global $card_stack;
 //##############################################################
 	//get the opponent
 $result_get_the_opponent=mysql_query("select opponent from $table_allusers where user_id='$id1'");
+error_log("1~~~~~~~~~~~~~~~~~~~~~~".mysql_error());
 $answer_get_the_opponent=mysql_fetch_array($result_get_the_opponent);
 $the_opponent=$answer_get_the_opponent['opponent'];
 $id2=$the_opponent;
@@ -53,6 +54,7 @@ $cards_in_db='00'.$cards_in_db;
 //##############################################################
 	//games table query
 $query_in_games_table="insert into $table_allgames(game_id,id1,id2,bet1,bet2,card_stack,active,status1,status2) values('$game_id','$id1','$id2','$bet1','$bet2','$cards_in_db','1','0(){000,000,000,000}','0(){000,000,000,000}')";
+error_log("2~~~~~~~~~~~~~~~~~~~~~~".mysql_error());
 $result_in_games_table=mysql_query($query_in_games_table);//or die(mysqli_error($conn_proceed));
 	if(!mysql_affected_rows())
 		{
@@ -66,6 +68,7 @@ $result_in_games_table=mysql_query($query_in_games_table);//or die(mysqli_error(
 //##############################################################
 	//users table query
 $query1_inusers_table="update $table_allusers set involved='1' where user_id='$id1'";
+error_log("3~~~~~~~~~~~~~~~~~~~~~~".mysql_error());
 $updated_userid1=mysql_query($query1_inusers_table);
 	if(!mysql_affected_rows())
 		{
@@ -77,6 +80,7 @@ $updated_userid1=mysql_query($query1_inusers_table);
 if($the_opponent!='AI')
 {
 $query2_inusers_table="update $table_allusers set invloved='1' where user_id='$id2'";
+error_log("4~~~~~~~~~~~~~~~~~~~~~~".mysql_error());
 $updated_userid1=mysql_query($query2_inusers_table);
 	if(!mysql_affected_rows())
 		{
