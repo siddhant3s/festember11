@@ -38,13 +38,18 @@ $min_difference=10000000000000000000;
 while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 		{
 		$his_rating=get_the_rating($his_id['user_id']);
+		error_log("3#!#!#!#!#!##!##!#!##!#!##!##!#".$his_rating);
 		if(($his_rating-$the_user_rating)<0){$this_case_difference=$the_user_rating-$his_rating;}
 		else	{$this_case_difference=$his_rating-$the_user_rating;}
 		if($this_case_difference<$min_difference){	
-								$result_release_earlier_match=mysql_query("update $table_allusers set involved=2 where user_id='$the_opponent'");
+								$result_release_earlier_match=mysql_query("update $table_allusers set involved='2' where user_id='$the_opponent'");
+								/*&&&&&&&*/
 								error_log("3#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
+								/*&&&&&&&*/
 								$answer_release_earlier_match=mysql_affected_rows();
+								/*&&&&&&&*/
 								error_log("4#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error()."^%^%^%^%^%^".$answer_release_earlier_matched);
+								/*&&&&&&&*/
 								if(!$answer_release_earlier_matched)
 									{
 										whisk(6);

@@ -1,4 +1,7 @@
 <?php
+
+/*&&&&&&&*/
+/*&&&&&&&*/
 global $rpath;
 $rpath="../";
 require_once("../game.php");
@@ -14,7 +17,9 @@ $the_error_code=0;
 
 <?php
 $the_fb_id=$user['id'];
+/*&&&&&&&*/
 error_log("777#!#!#!#!#!##!##!#!##!#!##!##!#".$the_fb_id."{}{}{}{}{}}");
+/*&&&&&&&*/
 if(!$the_fb_id)
 {
 var_dump($user);
