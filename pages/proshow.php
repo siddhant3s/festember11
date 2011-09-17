@@ -103,6 +103,27 @@ Her no-nonsense commentary on social issues and her 'full of life' singing talen
 </p><p>
 This Festember, Namma Suchi is coming down to treat us to a delectable cuisine of peppy tracks ,masala-filled anecdotes and her own takes on Life and Music! Stay Tuned to Festember '11! 
 </p>
+<div class="content-head">
+Suresh Peters</div>
+<img class="picstyle" src="images/proshow/suresh.jpg">
+<p>
+To say that Suresh Peters is a Jack of all Trades would be a gross understatement. Music
+Director, Composer, Rapper, Play-back singer, vidhwan of the piano, drums, keyboard and
+harmonium and many others, Suresh is a musical force! Within a short career, he has won
+hearts across the world, with his crooning melodies and bang-bang masala numbers in four
+languages! </p><p>
+Having got his big break in the Malayalam hit, 'Punjabi House' with its melodious numbers
+and folk songs, Suresh soon moved onto new languages and new genres of music. He
+caught the eye of the madrasis with the peppy number 'Chikku Bukku Rayile' from
+Gentleman and then cemented his name in gold with back to back hits such as 'Columbus
+Columbus' from jeans and 'Kannum Kannum' from Anniyan. His most stylish moment with
+the megaphone was when he immortalized the Superstar in 'Style' from Sivaji!</p><p>
+As a compuser, Suresh has achieved many a milestone in no time. Apart from composing
+for over 15 films in three languages, Suresh has also released three music albums, Minnal,
+Oviyum and Engiruntho,all to international acclaim!</p><p>
+This Festember, Suresh will be joining forces with Suchitra and Javed Ali to give us a
+musical night like never before! So whatever may be up, get urself inside the Barn before
+the show begins!</p>
 
 </div>
 

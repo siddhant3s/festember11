@@ -61,7 +61,7 @@ $(function() {
 	}, 5000);
 	
 	//reloadSponsors();
-	imgslideSponsors(".sponser",19);
+	imgslideSponsors(".sponser",20);
 	//imgslideSponsors(".mediapartners",5);
 	
 	$(window).scroll(fixedFloating());

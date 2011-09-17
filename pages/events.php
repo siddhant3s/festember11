@@ -763,9 +763,12 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "koothampalam" :  ?>
 <div class="content-head">KOOTHAMPALAM</div>
+<div>
 <img class="tamil1" src="images/tamil/5-1.png" >
 <img class="tamil2" src="images/tamil/5-2.png" >
+</div>
 <br />
+
 Last Date for Event Registration is 18th September (sunday).
 
 <?php break; case "kuraloviyum" :  ?>
@@ -775,8 +778,10 @@ Last Date for Event Registration is 18th September (sunday).
 
 <?php break; case "kolam" :  ?>
 <div class="content-head">KOLAM</div>
+<div>
 <img class="tamil1" src="images/tamil/7-1.png" >
 <img class="tamil2" src="images/tamil/7-2.png" >
+</div>
 <br />
 Last Date for Event Registration is 20th September (tuesday).
 
