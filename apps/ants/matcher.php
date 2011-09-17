@@ -58,7 +58,7 @@ while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 									}*/
 							}
 		}
-if($the_opponent)
+if(($the_opponent)  && ($opponent==$the_fb_id))
 		{
 		
 		$result_confirm_opponent=mysql_query("select involved from $table_allusers where user_id='$the_opponent'");
