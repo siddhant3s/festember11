@@ -778,7 +778,7 @@ Last Date for Event Registration is 18th September (sunday).
 
 <?php break; case "kolam" :  ?>
 <div class="content-head">KOLAM</div>
-<div>
+<div style="height:300px;">
 <img class="tamil1" src="images/tamil/7-1.png" >
 <img class="tamil2" src="images/tamil/7-2.png" >
 </div>
