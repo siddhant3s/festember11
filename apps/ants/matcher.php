@@ -21,13 +21,13 @@ $thefinalsuccesstoken=0;
 //##############################################################
 $result_set_currently_matched=mysql_query("update $table_allusers set involved='2' where user_id='$the_fb_id'");
 error_log("1#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
-$answer_set_currently_matched=mysql_affected_rows();
-error_log("2#!#!#!#!#!##!##!#!##!#!##!##!#".$answer_set_currently_matched."****");
-if(!$answer_set_currently_matched)
-		{
-			whisk(4);
-			exit(1);
-		}
+// $answer_set_currently_matched=mysql_affected_rows();
+// error_log("2#!#!#!#!#!##!##!#!##!#!##!##!#".$answer_set_currently_matched."****");
+// if(!$answer_set_currently_matched)
+// 		{
+// 			whisk(4);
+// 			exit(1);
+// 		}
 //##############################################################
 
 	{
@@ -43,19 +43,7 @@ while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 		else	{$this_case_difference=$his_rating-$the_user_rating;}
 		if($this_case_difference<$min_difference){	
 								$result_release_earlier_match=mysql_query("update $table_allusers set involved='2' where user_id='$the_opponent'");
-								/*&&&&&&&*/
-								error_log("3#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
-								/*&&&&&&&*/
-								$answer_release_earlier_match=mysql_affected_rows();
-								/*&&&&&&&*/
-								error_log("4#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error()."^%^%^%^%^%^".$answer_release_earlier_matched);
-								/*&&&&&&&*/
-								if(!$answer_release_earlier_matched)
-									{
-										whisk(6);
-										exit(1);
-									}
-
+								
 								
 								$min_difference=$this_case_difference;
 								$the_opponent=$his_id['user_id'];
@@ -130,6 +118,5 @@ if($thefinalsuccesstoken==1)
 		echo "<h1>the <$the_fb_id> has been matched against <$the_opponent>";
 		
 	}
-
 }
 ?>
