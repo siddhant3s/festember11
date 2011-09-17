@@ -3,7 +3,7 @@
 global $rpath;
 $rpath="../";
 require_once("allglobals.php");
-require_once("game.php");
+require_once("../game.php");
 require_once("whisk.php");
 global $user;
 $the_fb_id=$user['id'];
