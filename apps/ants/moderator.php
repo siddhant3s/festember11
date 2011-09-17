@@ -84,7 +84,7 @@ if(!$answer_check_the_user_existence)
 $the_matcher_returned_value=matcher();
 error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_matcher_returned_value."&&&&&&&&&&&&&&&");
 	error_log("^^^^^^^".$bet_entered);
-	if($the_matcher_returned_value){$the_game_hash_fetched=start_game($the_fb_id,$bet_entered);exit(1);}
+	if($the_matcher_returned_value){$the_game_hash_fetched=start_game($the_fb_id,$bet_entered);}
 	else {whisk(19);exit(1);}
 //##############################################################
 	error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
