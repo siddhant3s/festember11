@@ -53,7 +53,7 @@ function onlyNumbers(evt)
 function checkNumbers()
    {
       var x=document.forms["myform"]["txtchar"].value;
-      if(x<100)
+      if(x<25)
      {
          alert("number should be greater than 100");
          return false;
