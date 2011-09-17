@@ -30,3 +30,5 @@ invloved=>3 currently being matched
 16:not able to set the entry for the current game startup:{start_game.php}
 25:not able to set the invloved key for the current user as 1:{start_game.php}
 42:the start_game script returned_zero{moderator.php}
+79:unable to fetch all the bet1bet2 id1 id2 from the allgames table in the script:{checkpoint.php}
+72:unable to fetch all the opponent from the allusers table in the script:{checkpoint.php}
