@@ -220,7 +220,7 @@ $("#startmenu").css({"position":"absolute","left":"0","top":"0","height":"480","
 	    		var path=document.getElementById("pausemenu").style.backgroundImage;
 	    		path.split("/");
 	    		endarray=path.length;
-	    		if(endarray==64)pausetoggle();
+	    		if(path[endarray-10]=="c")pausetoggle();
 	    	if(tu==0)
 	    	{tu=1;   
 	    		$("#bottle_1").stop("true");
