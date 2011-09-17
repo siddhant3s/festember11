@@ -51,11 +51,11 @@ while(false!=($his_id=mysql_fetch_array($result_get_all_uninvloved_but_logged)))
 								error_log("5#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 								$answer_plot_this_match=mysql_affected_rows();
 								error_log("6#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
-								if(!$answer_set_currently_matched)
+				/*				if(!$answer_set_currently_matched)
 									{
 										whisk(5);
 										exit(1);
-									}
+									}*/
 							}
 		}
 if($the_opponent)
