@@ -92,7 +92,7 @@ error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_matcher_returned_value."&&&&&&&&&&
 		{
 		error_log("&&&&&&&&&&&&&&&".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
 		$this_game_maingamepage=$themaingamepage."?opponent=".$the_game_hash_fetched;
-		header("Location:$this_game_maingamepage");
+		header("Location:$thecheckpointpage");
 		exit(1);
 		}
 	else
