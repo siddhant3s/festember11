@@ -115,8 +115,9 @@ if(($the_opponent)  && ($the_opponent!=$the_fb_id))
 	}
 if($thefinalsuccesstoken==1)
 	{
-		echo "<h1>the <$the_fb_id> has been matched against <$the_opponent>";
+		return $thefinalsuccesstoken;
 		
 	}
+
 }
 ?>

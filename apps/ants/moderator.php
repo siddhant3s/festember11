@@ -80,7 +80,7 @@ if(!$answer_check_the_user_existence)
 //##############################################################
 $the_matcher_returned_value=matcher();
 	error_log("^^^^^^^".$bet_entered);
-	if($the_matcher_returned_value){exit(1);}
+	if($the_matcher_returned_value){echo "you are done";exit(1);}
 	else {whisk(19);exit(1);}
 
 	exit();
