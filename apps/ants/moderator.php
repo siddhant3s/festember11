@@ -78,8 +78,9 @@ if(!$answer_check_the_user_existence)
 				}			
 	}
 //##############################################################
-
-	if(matcher()){;exit(1);	}
+$the_matcher_returned_value=matcher();
+	error_log("^^^^^^^".$bet_entered);
+	if($the_matcher_returned_value){exit(1);}
 	else {whisk(19);exit(1);}
 
 	exit();
