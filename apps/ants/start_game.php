@@ -53,7 +53,7 @@ $cards_in_db='00'.$cards_in_db;
 
 //##############################################################
 	//games table query
-$query_in_games_table="insert into $table_allgames(game_id,id1,id2,bet1,bet2,card_stack,active,status1,status2) values('$game_id','$id1','$id2','$bet1','$bet2','$cards_in_db','1','0(){000,000,000,000}','0(){000,000,000,000}')";
+$query_in_games_table="insert into $table_allgames(game_id,id1,id2,bet1,bet2,card_stack,active,status1,status2,avail_draw,avail_discard) values('$game_id','$id1','$id2','$bet1','$bet2','$cards_in_db','1','0(){000,000,000,000}','0(){000,000,000,000}','0','0')";
 error_log("2~~~~~~~~~~~~~~~~~~~~~~".mysql_error());
 $result_in_games_table=mysql_query($query_in_games_table);//or die(mysqli_error($conn_proceed));
 	if(!mysql_affected_rows())
