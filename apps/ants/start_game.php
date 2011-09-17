@@ -2,9 +2,8 @@
 //##############################################################
 //takes in two arguments
 	//1.id_first user
-	//2.id_second_user
 	//3.bet1
-	//4.bet2
+	
 //returns
 	//game id for success
 	//0 failure
@@ -21,17 +20,31 @@
 	//function to be used in proceed.php
  //##############################################################
 
-function start_game($id_1,$id_2,$bet1,$bet2)
+function start_game($id1,$bet1)
 {
-$game_id=0;
+$game_id=0;//returned 0 if the function fails
 //##############################################################
 global $table_allusers;
 global $table_allgames;
-global $conn_proceed;
 global $card_stack;
 //##############################################################
-if((isset($id1))&&(isset($id2))){$game_id=md5($id1.$id2);}
-	//if this step falis zero is returned
+	//get the opponent
+$result_get_the_opponent=mysql_query("select opponent from $table_allusers where user_id='$id1'");
+$answer_get_the_opponent=mysql_fetch_array($result_get_the_opponent);
+$the_opponent=$answer_get_the_opponent['opponent'];
+$id2=$the_opponent;
+if($id2='AI')
+	{
+	$bet2=$bet1;
+	}
+
+//##############################################################
+if((isset($id1))&&(isset($bet1))){$game_id=md5($id1.$id2.time());}
+else	{whisk(57);exit(1);}
+
+
+//##############################################################
+
 $this_card_stack=$card_stack;
 shuffle($this_card_stack);
 $cards_in_db=implode(',',$this_card_stack);
@@ -39,36 +52,38 @@ $cards_in_db='00'.$cards_in_db;
 
 //##############################################################
 	//games table query
-$query_in_games_table="insert into '$table_allgames'(game_id,id1,id2,bet1,bet2,card_stack,active,status1,status2) values('$game_id','$id1','$id2','$bet1','$bet2','$cards_in_db',1,'0(){000,000,000,000}','0(){000,000,000,000}')";
-$result_in_games_table=mysqli_query($conn_proceed,$query_in_games_table);//or die(mysqli_error($conn_proceed));
-	if(!mysqli_affected_rows($conn_proceed))
+$query_in_games_table="insert into $table_allgames(game_id,id1,id2,bet1,bet2,card_stack,active,status1,status2) values('$game_id','$id1','$id2','$bet1','$bet2','$cards_in_db','1','0(){000,000,000,000}','0(){000,000,000,000}')";
+$result_in_games_table=mysql_query($query_in_games_table);//or die(mysqli_error($conn_proceed));
+	if(!mysql_affected_rows())
 		{
 		//confirm action
+		whisk(16);
+		exit(1);
 		}
 //##############################################################
 
 
 //##############################################################
 	//users table query
-$query1_inusers_table="update $table_allusers set invloved=1 where user_id=$id1";
-$updated_userid1=mysqli_query($conn_proceed,$query_inusers_table);
-	if(!mysqli_affected_rows($conn_proceed))
+$query1_inusers_table="update $table_allusers set involved='1' where user_id='$id1'";
+$updated_userid1=mysql_query($query_inusers_table);
+	if(!mysql_affected_rows())
 		{
 		//confirm action
-		}
-
-
-$query2_inusers_table="update $table_allusers set invloved=1 where user_id=$id2";
-$updated_userid1=mysqli_query($conn_proceed,$query_inusers_table);
-	if(!mysqli_affected_rows($conn_proceed))
-		{
-		//confirm action
+		whisk(25);	
+		exit(1);
 		}
 //##############################################################
-
+if($the_opponent!='AI')
+{
+$query2_inusers_table="update $table_allusers set invloved='1' where user_id='$id2'";
+$updated_userid1=mysql_query($query_inusers_table);
+	if(!mysql_affected_rows())
+		{
+		//confirm action
+		}
+}
+//##############################################################
 return $game_id;
 }
 ?>
-
-
-

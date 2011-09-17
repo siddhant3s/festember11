@@ -11,6 +11,7 @@ require_once("new_user.php");
 require_once("matcher.php");
 require_once("get_the_average.php");
 require_once("get_the_rating.php");
+require_once("start_game.php");
 $the_error_code=0;
 ?>
 
@@ -22,7 +23,7 @@ error_log("777#!#!#!#!#!##!##!#!##!#!##!##!#".$the_fb_id."{}{}{}{}{}}");
 /*&&&&&&&*/
 if(!$the_fb_id)
 {
-var_dump($user);
+echo "you are not logged in";
 exit(1);
 
 }
@@ -69,21 +70,34 @@ $result_check_the_user_existence=mysql_query("select played from $table_allusers
 $answer_check_the_user_existence=mysql_fetch_array($result_check_the_user_existence);
 
 if(!$answer_check_the_user_existence)
-	{	$inserted=new_user(); 
+	    {	
+		$inserted=new_user(); 
 		
 		if(!isset($inserted))
 				{
 					whisk(2);
 					exit();
 				}			
-	}
+	    }
 //##############################################################
 $the_matcher_returned_value=matcher();
 	error_log("^^^^^^^".$bet_entered);
-	if($the_matcher_returned_value){echo "you are done";exit(1);}
+	if($the_matcher_returned_value){$the_game_hash_fetched=start_game($the_fb_id,$bet_entered);exit(1);}
 	else {whisk(19);exit(1);}
-
-	exit();
+//##############################################################
+	if($the_game_hash_fetched)
+		{
+		error_log("&&&&&&&&&&&&&&&".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
+		
+		header("Location:$themaingamepage.'?opponent=$the_game_hash_fetched'");
+		exit(1);
+		}
+	else
+		{	
+			whisk(42);
+			exit(1);
+		}
+//##############################################################
 	}
 else
 	{

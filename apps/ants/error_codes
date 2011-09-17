@@ -1,3 +1,11 @@
+************************************************************************
+***********************************************************************
+involved=0=>notlogged
+invloved=>1 currently playing
+invloved=>2 not playing but to be matched
+invloved=>3 currently being matched
+***********************************************************************
+***********************************************************************
 1:input entered in the BET input field not a number{moderator.php}
 99:some unknmown error exception{moderator.php}
 2:could not enter new user in the ants specific user database{moderator.php}
@@ -19,4 +27,6 @@
 14:preg match action on the staus string to extract the slot cards on the opponents returned 0{mainpageplayer1.php}
 27:some error as the mainpageplayer1 is reporting some other color of card :other than red and black {mainpageplayer1.php}
 28:
-
+16:not able to set the entry for the current game startup:{start_game.php}
+25:not able to set the invloved key for the current user as 1:{start_game.php}
+42:the start_game script returned_zero{moderator.php}
