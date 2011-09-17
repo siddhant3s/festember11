@@ -115,7 +115,7 @@ if(($the_opponent)  && ($the_opponent!=$the_fb_id))
 	}
 if($thefinalsuccesstoken==1)
 	{
-		error_log("---------------------------------------------------------&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$thefinalsuccesstoken."&&&&&&&&&&&&&&&");
+		error_log("-------------------------------365463464563--------------------------&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$thefinalsuccesstoken."&&&&&&&&&&&&&&&");
 		return $thefinalsuccesstoken;
 		
 	}
