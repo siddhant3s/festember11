@@ -91,7 +91,8 @@ error_log("&&&&&&&&&&&&&&&*&*&*&*^^&^&^".$the_matcher_returned_value."&&&&&&&&&&
 	if($the_game_hash_fetched)
 		{
 		error_log("&&&&&&&&&&&&&&&".$the_game_hash_fetched."&&&&&&&&&&&&&&&");
-		header("Location:$themaingamepage.'?opponent=$the_game_hash_fetched'");
+		$this_game_maingamepage=$themaingamepage."?opponent=".$the_game_hash_fetched;
+		header("Location:$this_game_maingamepage");
 		exit(1);
 		}
 	else

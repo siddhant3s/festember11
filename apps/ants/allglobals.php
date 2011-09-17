@@ -9,7 +9,7 @@ $table_allusers="ants_allusers";
 $table_allgames="ants_allgames";
 
 $redirection="http://www.pragyan.org/~boopathi/festember11/apps/ants/error_codes";
-$themaingamepage="mainback.php";
+$themaingamepage="http://www.pragyan.org/~boopathi/festember11/apps/ants/mainback.php";
  }
 
 
