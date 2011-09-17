@@ -65,6 +65,7 @@ if($the_opponent)
 		error_log("7#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
 		$answer_confirm_opponent=mysql_fetch_array($result_confirm_opponent);
 		error_log("8#!#!#!#!#!##!##!#!##!#!##!##!#".mysql_error());
+		error_log("8909009#!#!#!#!#!##!##!#!##!#!##!##!#".$the_opponent);
 		if($answer_confirm_opponent==3)
 			{
 				$result_set_opponent1_match=mysql_query("update $table_allusers set opponent='$the_fb_id' where user_id='$the_opponent'");
