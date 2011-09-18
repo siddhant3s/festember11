@@ -49,14 +49,15 @@ error_log("+++||||||||||||||--".$the_status_keystring."--||||||||||||||||||");
 $result_get_the_status_of_current_user=mysql_query("select $the_status_keystring from $table_allgames where game_id='$the_game_hash'");
 
 $answer_get_the_status_of_current_user=mysql_fetch_array($result_get_the_status_of_current_user);
-error_log("||||||||||||||||||--".$the_current_user_status."--||||||||||||||||||");
+
 $the_current_user_status=$answer_get_the_status_of_current_user[$the_status_keystring];
+error_log("||||||||||||||||||--".$the_current_user_status."--||||||||||||||||||");
 //##############################################################
 	//variable to locate if the user has been attacked
 $attack_mode_counter=$the_current_user_status[0];
 if(($attack_mode_counter!='R'))
 	{
-
+error_log("+++||||||||||||||--".$attack_mode_counter."--||||||||||||||||||");
 		whisk(83);
 		exit(1);
 	}	
