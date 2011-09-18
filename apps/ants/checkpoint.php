@@ -71,7 +71,7 @@ echo "<h1>$the_fb_id{$bet_me}  --------VERSUS---------  $oth_id{$bet_other}</h1>
 
 <?php
 sleep(10);
-header("Location:$themaingamepage");
+header("Location: $themaingamepage");
 exit(1);
 
 ?>
