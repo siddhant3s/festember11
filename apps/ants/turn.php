@@ -24,12 +24,8 @@ $the_first_turn_user=$user['id'];
 $this_turn=0;
 $not_the_first_hit='0';
 $the_last_turn="";
+$return_the_current_id=$the_first_turn_user;
 //##############################################################
-$query_get_the_card_stack="select card_stack from $table_allgames where game_id='$the_game_hash'";
-$result_get_the_card_stack=mysql_query($query_get_the_card_stack);
-$answer_get_the_card_stack=mysql_fetch_array($result_get_the_card_stack);
-$the_current_card_stack=$answer_get_the_card_stack['card_stack'];
-$the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisreplacementvariable);
 
 //##############################################################
 
@@ -37,16 +33,19 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 	if($first)
 	{
 //##############################################################
-
-
-		
-		if(!$thisreplacementvariable)
+		$query_get_the_card_stack="select card_stack from $table_allgames where game_id='$the_game_hash'";
+		$result_get_the_card_stack=mysql_query($query_get_the_card_stack);
+		$answer_get_the_card_stack=mysql_fetch_array($result_get_the_card_stack);
+		$the_current_card_stack=$answer_get_the_card_stack['card_stack'];
+		$the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisreplacementvariable);
+//##############################################################
+		if($thisreplacementvariable)
 			{
-			$not_the_first_hit=1;
+			$not_the_first_hit=0;
 			}
 		else 	
 			{
-			$not_the_first_hit=0;
+			$not_the_first_hit=1;
 			}
 		if(!$not_the_first_hit)
 		{
@@ -59,8 +58,7 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 				{
 					whisk(93);
 					exit(1);
-					//take an action
-					
+					//take an action	
 				}
 		}
 		else if($not_the_first_hit==1)
@@ -68,9 +66,9 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 		$the_last_turn="&&&";
 		}
 //##############################################################
-	//get the opponent
-	$opponent_fetch=mysql_query("select opponent from $table_allusers where user_id='$the_first_turn_user'");
-	$answer_opponent_fetch=mysql_fetch_array($opponent_fetch);
+		//get the opponent
+		$opponent_fetch=mysql_query("select opponent from $table_allusers where user_id='$the_first_turn_user'");
+		$answer_opponent_fetch=mysql_fetch_array($opponent_fetch);
 			if(!$answer_opponent_fetch)
 				{
 					whisk(96);
@@ -79,13 +77,12 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 			else if($answer_opponent_fetch)
 				{
 					$opponent=$answer_opponent_fetch['opponent'];
-
 				}
 //##############################################################
 		//the person who reaches the page first gets the first turn
 			if($opponent=='AI')
 				{
-				error_log("XXXXXXXXXXXXXX(((-1-)))XXXXXXXXXXXXXX".$the_game_hash."%%%%%%%%%%%%%%%%%".$the_first_turn_user);
+					error_log("XXXXXXXXXXXXXX(((-1-)))XXXXXXXXXXXXXX".$the_game_hash."%%%%%%%%%%%%%%%%%".$the_first_turn_user);
 					return $the_first_turn_user;
 					exit(1);
 				}
@@ -97,9 +94,8 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 	}
 	else
 	{
-		error_log("XXXXXXXXXXXXXX(((-3-)))XXXXXXXXXXXXXX".$the_game_hash."%%%%%%%%%%%%%%%%%".$the_last_turn);
-		$the_last_turn=$the_last_turn.$user['id'];
-		return $the_last_turn;
+		error_log("XXXXXXXXXXXXXX(((-3-)))XXXXXXXXXXXXXX".$return_the_current_id."%%%%%%%%%%%%%%%%%".$the_last_turn);
+		return $return_the_current_id;
 		exit(1);		
 	}
 }
