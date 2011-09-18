@@ -66,7 +66,7 @@ if($the_current_user_status[1]=='A')
 $the_last_colony_card=substr($the_current_user_status,2,3);
 $the_stack_cards=substr($the_current_user_status,strpos($the_current_user_status,'{'));
 $all_stack_cards_only=substr($the_stack_cards,1,15);
-$the_array_of_stack_cards=explode(','$all_stack_cards_only);
+$the_array_of_stack_cards=explode(',',$all_stack_cards_only);
 $the_counter_for_stack_fill=0;
 foreach($the_array_of_stack_cards as $mystackarr)
 	{
