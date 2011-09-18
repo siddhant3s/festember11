@@ -51,7 +51,7 @@ $the_new_card_stack=preg_replace("/^0/",'R',$the_current_card_stack,1,$thisrepla
 		if(!$not_the_first_hit)
 		{
 		//	$the_current_card_stack='R'.$the_current_card_stack;
-		$update_the_card_stack="update $table_allgames set card_stack='$the_current_card_stack' where game_id='$the_game_hash'";
+		$update_the_card_stack="update $table_allgames set card_stack='$the_new_card_stack' where game_id='$the_game_hash'";
 		
 		$result_the_card_stack=mysql_query($update_the_card_stack);
 		error_log("XXXXXXXXXXXXXX(((-000-)))XXXXXXXXXXXXXX".mysql_error()."%%%%%%%%%%%%%%%%%".$the_first_turn_user);
