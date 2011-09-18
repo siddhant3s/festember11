@@ -51,7 +51,7 @@ $the_current_user_status=$answer_get_the_status_of_current_user[$the_status_keys
 //##############################################################
 	//variable to locate if the user has been attacked
 $attack_mode_counter=$the_current_user_status[0];
-if(!($attack_mode_counter=='R'))
+if(($attack_mode_counter!='R'))
 	{
 		whisk(83);
 		exit(1);
