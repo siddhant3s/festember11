@@ -8,7 +8,6 @@
 	//&&&user_id if the page has already been hit
 //##############################################################
 	// if 1 set 
-		
 //##############################################################
 
 function turn($the_game_hash,$first=0)
@@ -26,8 +25,31 @@ $not_the_first_hit='0';
 $the_last_turn="";
 $return_the_current_id=$the_first_turn_user;
 //##############################################################
-
+	//check for the next key
+$the_validation=mysql("select next from $table_allgames where game_id='$the_game_hash' and active='1'");
+$the_validation_answer=mysql_fetch_array($the_validation);
+$the_actual_next_in_db=$the_validation_answer['next'];
+if($the_actual_next_in_db!=$the_first_turn_user)
+	{
+		whisk(88);
+		exit(1);
+	}
 //##############################################################
+			//get the opponent
+		$opponent_fetch=mysql_query("select opponent from $table_allusers where user_id='$the_first_turn_user'");
+		$answer_opponent_fetch=mysql_fetch_array($opponent_fetch);
+			if(!$answer_opponent_fetch)
+				{
+					whisk(96);
+					exit(1);
+				}
+			else if($answer_opponent_fetch)
+				{
+					$opponent=$answer_opponent_fetch['opponent'];
+				}
+//##############################################################
+
+
 
 //##############################################################
 	if($first)
@@ -50,7 +72,7 @@ $return_the_current_id=$the_first_turn_user;
 		if(!$not_the_first_hit)
 		{
 		//	$the_current_card_stack='R'.$the_current_card_stack;
-		$update_the_card_stack="update $table_allgames set card_stack='$the_new_card_stack' where game_id='$the_game_hash'";
+		$update_the_card_stack="update $table_allgames set card_stack='$the_new_card_stack',next='$the_first_turn_user' where game_id='$the_game_hash'";
 		
 		$result_the_card_stack=mysql_query($update_the_card_stack);
 		error_log("XXXXXXXXXXXXXX(((-000-)))XXXXXXXXXXXXXX".mysql_error()."%%%%%%%%%%%%%%%%%".$the_first_turn_user);
@@ -65,19 +87,6 @@ $return_the_current_id=$the_first_turn_user;
 		{
 		$the_last_turn="&&&";
 		}
-//##############################################################
-		//get the opponent
-		$opponent_fetch=mysql_query("select opponent from $table_allusers where user_id='$the_first_turn_user'");
-		$answer_opponent_fetch=mysql_fetch_array($opponent_fetch);
-			if(!$answer_opponent_fetch)
-				{
-					whisk(96);
-					exit(1);
-				}
-			else if($answer_opponent_fetch)
-				{
-					$opponent=$answer_opponent_fetch['opponent'];
-				}
 //##############################################################
 		//the person who reaches the page first gets the first turn
 			if($opponent=='AI')

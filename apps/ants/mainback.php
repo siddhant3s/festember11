@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 global $rpath;
@@ -30,6 +29,7 @@ $first_turn_over=1;
 else if(!$a_the_ampersand)
 {
 $first_turn_over=0;
+$first_time_open_stacks=open_stacks();
 }
 //#######################################################################################
 ?>
@@ -70,8 +70,8 @@ body{background-image:url(back.jpg);opacity:1.0;}
 <div id="status">
 <div id="whose_turn">
 <?php
-if($first_turn_over){echo "<h1>opponent's turn</h1>";}
-else if(!$first_turn_over){echo "<h1>your turn</h1>";}
+if($first_turn_over){echo "<h1>opponent's turn--$first_time_open_stacks--</h1>";}
+else if(!$first_turn_over){echo "<h1>your turn--$first_time_open_stacks--</h1>";}
 ?>
 </div>
 <div id="last_move"></div>
