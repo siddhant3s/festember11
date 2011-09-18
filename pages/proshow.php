@@ -70,11 +70,12 @@ For more information on Arvind and his magic, check out his website and fan page
 
 
 <div class="content-head">Night 3 - Javed Ali, Suchitra and Suresh Peters</div>
-<img class="picstyle" src="images/proshow/javedali.jpg">
+
 <div class="content-body">
 
 <div class="content-head">Javed Ali</div>
 
+<img class="picstyle" src="images/proshow/javedali1.jpg">
 <p>
 The silken voice behind Guzaarish, the majestic timbre behind Jashn-E-Bahaara, the power-packed rendition behind Kilimanjaro, Javed Ali's magical voice has won hearts across the world!
 </p><p>
