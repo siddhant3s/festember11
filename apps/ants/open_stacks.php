@@ -48,7 +48,7 @@ $the_status_keystring='status'.'2';
 $result_get_the_status_of_current_user=mysql_query("select $the_status_keystring from $table_allgames where game_id='$the_game_hash'");
 
 $answer_get_the_status_of_current_user=mysql_fetch_array($result_get_the_status_of_current_user);
-error_log("||||||||||||||||||--".mysql_error()."--||||||||||||||||||");
+error_log("||||||||||||||||||--".$the_current_user_status."--||||||||||||||||||");
 $the_current_user_status=$answer_get_the_status_of_current_user[$the_status_keystring];
 //##############################################################
 	//variable to locate if the user has been attacked
