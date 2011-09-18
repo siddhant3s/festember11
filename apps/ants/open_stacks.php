@@ -27,6 +27,7 @@ $thereturnstring="@";
 //##############################################################
 $query_get_the_user_status="select id1,id2 from $table_allgames where game_id='$the_game_hash' and active='1'";
 $result_get_the_user_status=mysql_query($query_get_the_user_status);
+error_log("+++||||||||||||||--=====".mysql_error()."======--||||||||||||||||||");
 $answer_get_the_user_status=mysql_fetch_array($result_get_the_user_status);
 $id1_extracted=$answer_get_the_user_status['id1'];
 $id2_extracted=$answer_get_the_user_status['id2'];
@@ -44,7 +45,7 @@ if($the_current_user_id==$id2_extracted)
 $the_index=2;
 $the_status_keystring='status'.'2';
 }
-
+error_log("+++||||||||||||||--".$the_status_keystring."--||||||||||||||||||");
 $result_get_the_status_of_current_user=mysql_query("select $the_status_keystring from $table_allgames where game_id='$the_game_hash'");
 
 $answer_get_the_status_of_current_user=mysql_fetch_array($result_get_the_status_of_current_user);
