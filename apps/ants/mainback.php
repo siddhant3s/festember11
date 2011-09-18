@@ -6,7 +6,9 @@ require_once("allglobals.php");
 require_once("../game.php");
 require_once("whisk.php");
 require_once("turn.php");
+require_once("open_stacks.php");
 global $user;
+$the_current_facebook_user=$user['id'];
 $first_turn_over=0;
 $a_the_ampersand=0;
 //#######################################################################################
@@ -19,7 +21,15 @@ $a_the_ampersand=0;
 				exit(1);
 			}
 //#######################################################################################
-
+	//set next
+$set_next_in_db=mysql_query("update $table_allgames set next='$the_current_facebook_user' where game_id='$the_current_hash' and active='1'");
+$answer_set_the_next=mysql_affected_rows($set_next_in_db);
+if(!$set_next_in_db)
+	{
+		whisk(75);
+		exit(1);
+	}
+//#######################################################################################
 $the_value_returned_from_turn=turn($the_current_hash,1);
 $a_the_ampersand=preg_match("/^&&&/",$the_value_returned_from_turn);
 if($a_the_ampersand)
