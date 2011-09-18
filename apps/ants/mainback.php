@@ -23,11 +23,11 @@ $a_the_ampersand=0;
 
 $the_value_returned_from_turn=turn($the_current_hash,1);
 $a_the_ampersand=preg_match("/^&&&/",$the_value_returned_from_turn);
-if($a)
+if($a_the_ampersand)
 {
 $first_turn_over=1;
 }
-else if($a)
+else if(!$a_the_ampersand)
 {
 $first_turn_over=0;
 }
@@ -70,8 +70,8 @@ body{background-image:url(back.jpg);opacity:1.0;}
 <div id="status">
 <div id="whose_turn">
 <?php
-if($not_the_first_hit){echo "<h1>opponent's turn</h1>";}
-else if($not_the_first_hit){echo "<h1>your turn</h1>";}
+if($first_turn_over){echo "<h1>opponent's turn</h1>";}
+else if(!$first_turn_over){echo "<h1>your turn</h1>";}
 ?>
 </div>
 <div id="last_move"></div>
