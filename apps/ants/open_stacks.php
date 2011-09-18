@@ -55,12 +55,6 @@ error_log("||||||||||||||||||--".$the_current_user_status."--||||||||||||||||||"
 //##############################################################
 	//variable to locate if the user has been attacked
 $attack_mode_counter=$the_current_user_status[0];
-if(($attack_mode_counter!='R'))
-	{
-error_log("+++||||||||||||||--".$attack_mode_counter."--||||||||||||||||||");
-		whisk(83);
-		exit(1);
-	}	
 
 if($the_current_user_status[1]=='A')
 	{
