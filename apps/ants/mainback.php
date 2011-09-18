@@ -23,7 +23,7 @@ $a_the_ampersand=0;
 //#######################################################################################
 	//set next
 $set_next_in_db=mysql_query("update $table_allgames set next='$the_current_facebook_user' where game_id='$the_current_hash' and active='1'");
-$answer_set_the_next=mysql_affected_rows($set_next_in_db);
+$answer_set_the_next=mysql_affected_rows();
 if(!$set_next_in_db)
 	{
 		whisk(75);

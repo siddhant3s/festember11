@@ -26,7 +26,7 @@ $the_last_turn="";
 $return_the_current_id=$the_first_turn_user;
 //##############################################################
 	//check for the next key
-$the_validation=mysql("select next from $table_allgames where game_id='$the_game_hash' and active='1'");
+$the_validation=mysql_query("select next from $table_allgames where game_id='$the_game_hash' and active='1'");
 $the_validation_answer=mysql_fetch_array($the_validation);
 $the_actual_next_in_db=$the_validation_answer['next'];
 if($the_actual_next_in_db!=$the_first_turn_user)
