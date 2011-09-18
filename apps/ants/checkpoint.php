@@ -1,5 +1,7 @@
 
 <?php 
+
+session_start();
 global $rpath;
 $rpath="../";
 require_once("allglobals.php");

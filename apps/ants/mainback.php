@@ -1,3 +1,38 @@
+
+<?php
+session_start();
+global $rpath;
+$rpath="../";
+require_once("allglobals.php");
+require_once("../game.php");
+require_once("whisk.php");
+require_once("turn.php");
+global $user;
+$first_turn_over=0;
+$a_the_ampersand=0;
+//#######################################################################################
+	//get the game hash from the session;
+		$the_current_hash=$_SESSION['thegamehashforants'];
+		if(!$the_current_hash)
+			{
+			
+				whisk();
+				exit(1);
+			}
+//#######################################################################################
+
+$the_value_returned_from_turn=turn($the_current_hash,1);
+$a_the_ampersand=preg_match("/^&&&/",$the_value_returned_from_turn);
+if($a)
+{
+$first_turn_over=1;
+}
+else if($a)
+{
+$first_turn_over=0;
+}
+//#######################################################################################
+?>
 <html>
 <head>
 <style type="text/css">
@@ -34,6 +69,10 @@ body{background-image:url(back.jpg);opacity:1.0;}
 <div id="head_logo"></div>
 <div id="status">
 <div id="whose_turn">
+<?php
+if($not_the_first_hit){echo "<h1>opponent's turn</h1>";}
+else if($not_the_first_hit){echo "<h1>your turn</h1>";}
+?>
 </div>
 <div id="last_move"></div>
 </div>
