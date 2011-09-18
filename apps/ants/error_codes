@@ -32,3 +32,5 @@ invloved=>3 currently being matched
 42:the start_game script returned_zero{moderator.php}
 79:unable to fetch all the bet1bet2 id1 id2 from the allgames table in the script:{checkpoint.php}
 72:unable to fetch all the opponent from the allusers table in the script:{checkpoint.php}
+56:more than one replacements in the card_stack in the turn.php script when the script run for the first turn in  a match:{turn.php}
+93:the mysql affected rows for updating stack card in the allgames user for the first turn returned zero;{turn.php}
