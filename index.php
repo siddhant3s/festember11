@@ -246,7 +246,7 @@ function facebook_click(){
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=224545730925393&amp;href=www.facebook.com%2Ffestember&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
 </div>
 <div style="float:right;color:white">
-<a href="" target="_blank">Schedule Updated</a>
+<a href="" target="_blank" style="color:white;text-decoration:none;">Schedule Updated</a>
 </div>
 <div class="clearer"></div>
 <div class="scroller">
