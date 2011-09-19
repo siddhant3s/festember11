@@ -358,6 +358,7 @@ margin: 10px 0;
 </style>
 <div class="external">
 <h3 style="color: #FF115F;font-size:13px;font-weight:bold;">Downloads</h3>
+<p><a href="./Festember 11 Schedule.xlsx" target="_blank">Schedule</a></p>
 <p><a href="./rulebook.pdf" target="_blank">Rule Book</a></p>
 <p><a href="./pamphlets.pdf" target="_blank">Pamphlets</a></p>
 </div>

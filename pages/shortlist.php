@@ -26,7 +26,7 @@ Shortlisted teams
 <li>DEVIANCE</li>
 <li>KARMIC BLEND</li>
 <li>UGLY FUNGUS</li>
-<li>THE DOWN TEODDENCE</li>
+<li>BISHOPS GOT PAPES</li>
 <li>SHADJAW</li>
 <li>GHOST NOTE</li>
 <li>AFTER DARK</li>
