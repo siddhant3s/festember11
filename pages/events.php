@@ -242,7 +242,8 @@ Rules:
 </ul>
 The judges' decisions will be final and binding, and are not open to review.
 <br />
-<p>
+<br/>
+
 For further details and the submissions must be sent to:
 Deepak Valagam<br/>
 Roomno 49,<br/>
@@ -250,7 +251,6 @@ Garnet-C, NIT Trichy,<br/>
 Trichy 15.<br/>
 +91 96774 77694<br/>
 vrdeepakprakash@gmail.com<br/>
-</p>
 
 
 
