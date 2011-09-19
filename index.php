@@ -242,9 +242,12 @@ function facebook_click(){
 	<div id="headerlogo"></div>
 	
 	<div class="clearer"></div>
-		
+	<div style="float:left">
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=224545730925393&amp;href=www.facebook.com%2Ffestember&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
-	<div class="scroller">
+</div>
+<div style="float:right;color:white">SCHEDULE UPDATED</div>
+<div class="clearer"></div>
+<div class="scroller">
 		<div id="slider" class="nivoSlider">
                 <a href="./shortlist" target="_blank"><img src="images/pic.png" title="The shortlist for TARANGINI, GIGAHERTZ and THEATRIX updated" /></a>
                 <a href="./proshow" ><img src="images/pic2.png" alt="" title="ProShow details Updated" /></p>
