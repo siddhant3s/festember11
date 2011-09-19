@@ -65,6 +65,7 @@
 				margin-left:4px;	
 			}
 			#games-festember{
+			   color:white;
 			   cursor:pointer;
 			}
 			
@@ -107,7 +108,7 @@
 			<div id="wrapper1">
 			<div id="fb-root"></div>
 			<div id="fbinfo">
-		<iframe src="//www.facebook.com/plugins/like.php?app_id=250561451648935&amp;href=https%3A%2F%2Fwww.facebook.com%2Fapps%2Fapplication.php%3Fid%3D263593520331172&amp;send=false&amp;layout=standard&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:80px;" allowTransparency="true"></iframe>
+		<iframe src="//www.facebook.com/plugins/like.php?app_id=250561451648935&amp;href=https%3A%2F%2Fwww.facebook.com%2Fapps%2Fapplication.php%3Fid%3D263593520331172&amp;send=false&amp;layout=standard&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:35px;" allowTransparency="true"></iframe>
 			<div id="fb-name">
 				<?php echo $user["name"]; ?>
 			</div>
