@@ -344,6 +344,9 @@ function facebook_click(){
 						<a href="http://www.pothys.com" target="_blank"><img src="./images/s19.jpg" width="120px" height="120" /></a>
 						<a href="http://www.radioone.in/" target="_blank"><img src="./images/s20.jpg" width="120px" height="120" /></a>
 						<a href="http://hotelhospitalhomelinen.blogspot.com" target="_blank"><img src="./images/s21.jpg" width="120px" height="120" /></a>
+	<a href="http://youthconnectmag.com/" target="_blank"><img src="./images/youthconnect.jpg" width="120" height="120" /></a>
+	<a href="http://www.tritonmusicz.com/" target="_blank"><img src="./images/triton.jpg" width="120" height="120" /></a>
+	<a href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
