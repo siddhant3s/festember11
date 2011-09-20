@@ -46,7 +46,7 @@ if(($_GET['rateRef']!=NULL)&&($_SESSION['OPENID_EMAIL'])){
 		if($result3){
 			$voteAvg = mysql_result($result3,0,'vote_avg');
 			$voters = mysql_result($result3,0,'voters');
-			$newAvg = (($voters*$voteAvg)+$_GET['rateIt'])/($voters+1);
+			$newAvg = (($voters*$voteAvg)+($_GET['rateIt']%6))/($voters+1);
 			$voters=$voters+1;
 			$query="UPDATE `gallery_pic` SET `vote_avg`='".$newAvg."',`voters`='".$voters."' WHERE id='".$arr3."' ";
 			$result = mysql_query($query);
