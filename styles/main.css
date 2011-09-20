@@ -161,7 +161,9 @@ body {
 	/*background: url(../images/content_bk.png) repeat-y;*/
 	/*min-height: 500px;*/
 }
-
+#content a {
+	color: #ee002d;
+}
 .rightcont {
 	float:right;
 	padding: 50px 0;

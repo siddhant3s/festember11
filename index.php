@@ -221,6 +221,7 @@ function facebook_click(){
 		</div>
 	</noscript>
 	<body>
+	<img src="./images/logo.png" style="position:absolute;z-index:-1;visibility:hidden" />
 	<div id="bodycontainer">
 	<script type="text/javascript">
 		if(typeof CONSTRUCT == "function")
@@ -241,13 +242,18 @@ function facebook_click(){
 	<div id="headerlogo"></div>
 	
 	<div class="clearer"></div>
-		
+	<div style="float:left">
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=224545730925393&amp;href=www.facebook.com%2Ffestember&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
-	<div class="scroller">
+</div>
+<div style="float:right;color:white" class="item">
+<a href="schedule.xlsx" target="_blank" style="color:#ee002d;text-decoration:none;">Schedule Updated</a>
+</div>
+<div class="clearer"></div>
+<div class="scroller">
 		<div id="slider" class="nivoSlider">
-                <a href="./rulebook.pdf" target="_blank"><img src="images/pic.png" title="Download a copy of Rule book and the pamphlets." /></a>
-                <a href="./workshops" ><img src="images/pic2.png" alt="" title="Event and Workshop details updated." /></p>
-                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Events, Workshop and Accomodation registrations are up." /></a>
+                <a href="./shortlist" target="_blank"><img src="images/pic.png" title="The shortlist for TARANGINI, GIGAHERTZ and THEATRIX updated" /></a>
+                <a href="./proshow" ><img src="images/pic2.png" alt="" title="ProShow details Updated" /></p>
+                <a href="./workshops" ajaxify="1"><img src="images/pic3.png" alt=""  title="Accomodation will be based on first come first serve basis. So Register soon." /></a>
 		
                 <img
  src="images/pic5.png" alt="" />
@@ -266,7 +272,7 @@ function facebook_click(){
 	
 	<div id="menu">
 		<div class="events item itleft abso"><a href="events" ajaxify="1"><img src="./images/events.png" /></a></div>
-		<div class="pronite item itleft abso"><a href="pronite" ajaxify="1"><img src="./images/pronite.png" /></a></div>
+		<div class="pronite item itleft abso"><a href="proshow" ajaxify="1"><img src="./images/pronite.png" /></a></div>
 		<div class="workshops item itleft abso"><a href="workshops" ajaxify="1"><img src="./images/workshops.png" /></a></div>
 		<div class="sponsors item itright abso"><a href="sponsors" ajaxify="1"><img src="./images/sponsors.png" /></a></div>
 		<div class="gallery item itright abso"><a href="gallery" ajaxify="1"><img src="./images/gallery.png" /></a></div>
@@ -278,7 +284,7 @@ function facebook_click(){
 	<div id="floatingMenu">
 		<div class="home item"><a href="home" ajaxify="1"><span>HOME</span></a></div>
 		<div class="events item"><a href="events" ajaxify="1"><span>EVENTS</span></a></div>
-		<div class="pronite item"><a href="pronite" ajaxify="1"><span>PRONITE</span></a></div>
+		<div class="pronite item"><a href="proshow" ajaxify="1"><span>PROSHOW</span></a></div>
 		<div class="workshops item"><a href="workshops" ajaxify="1"><span>WORKSHOPS</span></a></div>
 		<div class="sponsors item"><a href="sponsors" ajaxify="1"><span>SPONSORS</span></a></div>
 		<div class="gallery item"><a href="gallery" ajaxify="1"><span>GALLERY</span></a></div>
@@ -333,6 +339,11 @@ function facebook_click(){
 						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
 						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
 						<a href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg" width="120px" height="120" /></a>
+						<a href="http://www.vasaneye.in/" target="_blank"><img src="./images/s18.jpg" width="120px" height="120" /></a>
+						<a href="http://www.naturals.in/" target="_blank"><img src="./images/s17.jpg" width="120px" height="120" /></a>
+						<a href="http://www.pothys.com" target="_blank"><img src="./images/s19.jpg" width="120px" height="120" /></a>
+						<a href="http://www.radioone.in/" target="_blank"><img src="./images/s20.jpg" width="120px" height="120" /></a>
+						<a href="http://hotelhospitalhomelinen.blogspot.com" target="_blank"><img src="./images/s21.jpg" width="120px" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
@@ -352,6 +363,7 @@ margin: 10px 0;
 </style>
 <div class="external">
 <h3 style="color: #FF115F;font-size:13px;font-weight:bold;">Downloads</h3>
+<p><a href="./schedule.xlsx" target="_blank">Schedule</a></p>
 <p><a href="./rulebook.pdf" target="_blank">Rule Book</a></p>
 <p><a href="./pamphlets.pdf" target="_blank">Pamphlets</a></p>
 </div>

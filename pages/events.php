@@ -1,33 +1,4 @@
 <?php
-/*
-
-<div class="content-body">
-	<p>
-		ChoreoNite:</p>
-	<p>
-		<a ><span >Purity of art, tranquility of motion, beauty of spirit and the magnificence of triumph, dance encompasses all. Involving the most graceful and talented dancers in the country, Festember&#39;s ChoreoNite is a masterpiece of art.&nbsp;</span></span></p>
-	<p>
-		<span ><span >Come witness the masters at work as they curl, jump and twist to steal your breath away!</span></span></p>
-	<p>
-		<span ><span >Music :&nbsp;</span></span></p>
-	<p>
-		<span ><span >Music speaks what cannot be expressed. Music paints what cannot be imagined. Music transcends what cannot be measured. Music is divine.</span></span></p>
-	<p>
-		<span ><span >Be it carnatic or metal, rock or desi, music is medicine for the soul. Plunge into the sea of music only @ Festember!</span></span></p>
-	<p>
-		<span ><span >Theatre:&nbsp;</span></span></p>
-	<p>
-		<span ><span >All the world&#39;s a stage, and all men merely players. Whats life without drama, tragedy and comedy, personified by painted faces and orchestrated actions? Join us in enshrining the art of theatre only at Festember!&nbsp;</span></span></p>
-	<p>
-		LITERARY EVENTS</p>
-	<p>
-		Whats a fest without literary behemoths battling it out for pride, position and money?! Festember&#39;s Lit Events need no introduction. With events in three languages, from Wordplay to crosswords to quizzes to debates, we have something for everyone! If you think you can match the best, come show us what you got!</p>
-	<p>
-		ARTS</p>
-	<p>
-		Color your emotions on the canvas called Festember! Bring out the inner artist and witness the artistically gifted unleash their powers. Discover the unity through variety in the collage, carve a niche for yourself in soap modelling, or ravish the audience with your masterpiece at the Arts showcase. It is said, variety is the spice of life, Festember makes it a staple!</p>
-</div>
-*/
 
 $subpage = $_GET["subpage"];
 switch ($subpage)
@@ -232,8 +203,9 @@ Rules:
 </ul>
 The judges' decisions will be final and binding, and are not open to review.
 <br />
-For further details and the submissions must be sent to:
-Deepak Valagam
+<p>
+For further details and the submissions must be sent to:<br/>
+Deepak Valagam<br/>
 Roomno 49
 Garnet-C, NIT Trichy
 Trichy 15
@@ -270,14 +242,15 @@ Rules:
 </ul>
 The judges' decisions will be final and binding, and are not open to review.
 <br />
-For further details and the submissions must be sent to:
-Deepak Valagam
-Roomno 49
-Garnet-C, NIT Trichy
-Trichy 15
-+91 96774 77694
-vrdeepakprakash@gmail.com
+<br/>
 
+For further details and the submissions must be sent to:<br/><br/><br/>
+Deepak Valagam<br/>
+Roomno 49,<br/>
+Garnet-C, NIT Trichy,<br/>
+Trichy 15.<br/>
++91 96774 77694<br/>
+vrdeepakprakash@gmail.com<br/>
 
 
 
@@ -310,6 +283,10 @@ Phase I : Online
 <br>
 
 <ul>
+<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
+RAW format) with a minimum resolution of 1280x720.</li>
+<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
+speed etc.</li>
 <li>Each registrant can mail a maximum of 5 photographs to photography@festember.in</li>
 <li>Out of this 2 or 3 photographs will be chosen and displayed on the photography page of the
 Festember website.</li>
@@ -325,10 +302,7 @@ elements to the photograph.</li>
 panel.</li>
 <li>Special weightage will be given for Locations, Post-processing, Facial expressions, Lighting,
 Light painting, HDR, Wild-life and Macrophotography.</li>
-<li>The entries must be in JPEG format (For edited photos : Their original files can also be in
-RAW format) with a minimum resolution of 1280x720.</li>
-<li>The photographs must contain EXCIF data/Metadata details of the camera, ISO, shutter
-speed etc.</li>
+<li>No watermarks or signatures allowed in the photograph.</li>
 <li>All entries must be mailed before 20th Sep 2011, 11:59pm.</li>
 <li>This phase is Non-Eliminative.</li>
 </ul>
@@ -346,7 +320,9 @@ photographs relating to the theme and can submit a maximum of 5 photographs.</li
 <li>There will be a special prize for the winner who takes part in the Phase 1 alone and
 couldn’t take part in the Phase 2.</li>
 </ul>
-
+For further details contact:<br />
+Jai Santhosh
+ +91 8015636148
 
 
 <?php break; case "graffiti" :  ?>
@@ -387,7 +363,7 @@ Rules are subject to change and will be updated on the official website
 
 
 <?php break; case "tamil" :  ?>
-<h2>TAMIL LITS</h2>
+<h2 style="color:white">TAMIL LITS</h2>
 <img src="images/1.jpg"><br/>
 <img src="images/2.jpg"><br/>
 <img src="images/3.jpg"><br/>
@@ -789,8 +765,13 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "koothampalam" :  ?>
 <div class="content-head">KOOTHAMPALAM</div>
+<div>
 <img class="tamil1" src="images/tamil/5-1.png" >
 <img class="tamil2" src="images/tamil/5-2.png" >
+</div>
+<br />
+
+Last Date for Event Registration is 18th September (sunday).
 
 <?php break; case "kuraloviyum" :  ?>
 <div class="content-head">KURALOVIUM</div>
@@ -799,8 +780,12 @@ The judges' decisions will be final and binding, and are not open to review
 
 <?php break; case "kolam" :  ?>
 <div class="content-head">KOLAM</div>
+<div style="height:300px;">
 <img class="tamil1" src="images/tamil/7-1.png" >
 <img class="tamil2" src="images/tamil/7-2.png" >
+</div>
+<br />
+Last Date for Event Registration is 20th September (tuesday).
 
 <?php break; case "kaatrodu" :  ?>
 <div class="content-head">KAATRODU KATHAI PESAVA</div>
@@ -832,19 +817,22 @@ The judges' decisions will be final and binding, and are not open to review
 <img class="tamil1" src="images/tamil/13-1.png" >
 <img class="tamil2" src="images/tamil/13-2.png" >
 <br />
--Tamil Cinema Quiz
 
 <?php break; default : ?>
 
 <div class="content-head">Updates</div>
 <div class="content-body">
-<div class="content-head" style="font-size:13px;">The shorlists for the TARANGINI, GIGAHERTZ, CHOREO-NITE and THEATRIX  will be put up here at 11:59 p.m. 14th September</div>
+<p>CHOREONITE shortlists has been released.</p><br />
+<p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Click here for Shortlisted teams</a></p>
 <ul>
-<li>Showtime (Short Film making) - 11:59, 20th September</li>
-<li>Flash (Ad making) - 11:59, 20th September</li>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
 <li>New events added in HINDI LITS and DANCE</li>
+</ul>
+<p>Last date of submission of videos</p>
+<ul>
+<li>Showtime (Short Film making) - 11:59, 20th September</li>
+<li>Flash (Ad making) - 11:59, 20th September</li>
 </ul>
 <br/>
 For further details, checkout their respective events' page.
@@ -855,7 +843,7 @@ For further details, checkout their respective events' page.
 
 <div class="content-body-col1">
  
- <h2>TAMIL LITS</h2>
+ <h2 style="color:white">TAMIL LITS</h2>
  <ul>
 <li><a ajaxify="2" href="./events+uyarthani">UYARTHANI CHEMMOZHI</a></li>
 <li><a ajaxify="2" href="./events+kurukkezhuttu">KURUKKEZHUTTHU</a></li>
@@ -872,12 +860,12 @@ For further details, checkout their respective events' page.
 <li><a ajaxify="2" href="./events+kodambakkam">KODAMBAKKAM</a></li>
  </ul>
 
- <h2>DRAMATICS</h2>
+ <h2 style="color:white">DRAMATICS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+theatrix">THEATRIX</a></li>
  </ul>
 
- <h2>CINEMATICS</h2>
+ <h2 style="color:white">CINEMATICS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+showtime">SHOWTIME (Short Film Making)</a></li> 
  <li><a ajaxify="2" href="./events+flash">FLASH (Ad Making)</a></li>
@@ -886,21 +874,21 @@ For further details, checkout their respective events' page.
 </div>
 
 <div class="content-body-col2">
-  <h2>DANCE</h2>
+  <h2 style="color:white">DANCE</h2>
  <ul>
  <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
  <li><a ajaxify="2" href="./events+streets">STREETS</a></li>
  <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
  </ul>
 
- <h2>MUSIC</h2>
+ <h2 style="color:white">MUSIC</h2>
  <ul>
  <li><a ajaxify="2" href="./events+shruthilaya">SHRUTHILAYA (Classical)</a></li>	
  <li><a ajaxify="2" href="./events+tarangini">TARANGINI (Eastern - Semi Pro)</a></li>
  <li><a ajaxify="2" href="./events+gigahertz">GIG-A-HERTZ (Semi Pro Western)</a></li>
  </ul>
 
- <h2>ENGLISH LITS</h2>
+ <h2 style="color:white">ENGLISH LITS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+lonewolfquiz" ajaxify="2">LONE WOLF QUIZ</a></li>
  <li><a ajaxify="2" href="./events+indiaquiz" ajaxify="2">INDIA QUIZ</a></li>
@@ -920,7 +908,7 @@ For further details, checkout their respective events' page.
 </div>
 
 <div class="content-body-col3">
- <h2>HINDI LITS</h2>
+ <h2 style="color:white">HINDI LITS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+atulyabharat">ATULYA BHARAT (Quiz)</a></li>
  <li><a ajaxify="2" href="./events+sursangam">SUR SANGAM (Antakshari)</a></li>
@@ -937,7 +925,7 @@ For further details, checkout their respective events' page.
  </ul> 
 
  </ul>
- <h2>ART EVENTS</h2>
+ <h2 style="color:white">ART EVENTS</h2>
  <ul>
  <li><a ajaxify="2" href="./events+dominoes">DOMINOES</a></li>
  <li><a ajaxify="2" href="./events+photography">PHOTOGRAPHY</a></li>
