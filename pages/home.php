@@ -4,7 +4,7 @@
 if($logged_in&&$_SESSION['OPENID_EMAIL'])
 echo "<div style=\"text-align:center\"><a style=\"text-decoration:none\" href=\"./photography\" ajaxify=\"1\"><img src=\"images/photography.jpg\" alt=\"photography contest\"><br /><br />View and rate the Photos to select the winners of round1!</a></div>";
 else
-echo "<div>Photography contest selections are up! Please Login to view and rate the selections of the first Round!</div>";
+echo "<div class="content-head" style="font-size:14px;">Photography contest selections are up! Please Login to view and rate the selections of the first Round!</div>";
 ?>
 <p>In a lonely desert rose a city greater than heaven itself. Men and women flock to it, to find joy, fortunes, glory and themselves. Come this September, history will repeat itself as amidst the arid plains of Trichy will rise a new Vegas. Festember 11 - Vegas style!
 </p>
