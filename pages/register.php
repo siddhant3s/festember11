@@ -17,7 +17,7 @@ if($logged_in=="true"){
 <div id="DANCE" style="display:none">
 <input type="radio" name="r" onclick="eventSelect(this)" id="choreo_night" value="choreo_night"><label for="choreo_night">Choreo Night</label><br>
 <input name="r" type="radio" onclick="eventSelect(this)" value="free_style" id="free_style"><label for="free_style">Free Style Dance(Solo)</label><br>
-<input name="r" type="radio" onclick="eventSelect(this)" value="streets" id="streets"><label for="streets">Streets</label><br>
+<?php /*<input name="r" type="radio" onclick="eventSelect(this)" value="streets" id="streets"><label for="streets">Streets</label><br> */ ?>
 </div>
 <label id='sMUSIC'>[+]</label><label class="eHead" onclick="openEvent(this)" >MUSIC</label><br>
 <div id="MUSIC" style="display:none">
