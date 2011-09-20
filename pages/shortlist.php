@@ -30,6 +30,7 @@ Shortlisted teams
 <li>SHADJAW</li>
 <li>GHOST NOTE</li>
 <li>AFTER DARK</li>
+<li>CRACKAPELLA</li>
 <li>TWKC</li>
 </ul>
 
@@ -39,10 +40,9 @@ Shortlisted teams
 <li>ST. JOSEPH'S</li>
 <li>SASTRA</li>
 <li>PSG TECH</li>
-<li>ETHIRAJ</li>
+<li>ETHIRAJ - DHWANI</li>
 <li>SARVAM</li>
 <li>SPARSH, SRM</li>
-<li>OMKAR, CHRIST UNIVERSITY</li>
 <li>J J COLLEGE OF ENGINEERING</li>
 <li>KUMARAGURU KCT</li>
 <li>SONA COLLEGE, SALEM</li>
