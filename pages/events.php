@@ -877,7 +877,6 @@ For further details, checkout their respective events' page.
   <h2 style="color:white">DANCE</h2>
  <ul>
  <li><a ajaxify="2" href="./events+choreonite">CHOREO NITE</a></li>
- <li><a ajaxify="2" href="./events+streets">STREETS</a></li>
  <li><a ajaxify="2" href="./events+westerndance">WESTERN DANCE (Solo Freestyle)</a></li>
  </ul>
 
