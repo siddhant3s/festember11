@@ -37,6 +37,11 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Logistics Partner</h3>
 		<a class="media" href="http://www.dhl.com/en.html" target="_blank"><img src="./images/dhl-logo.gif"></a>
 		<br /><br />
+
+		 <h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Service Partner</h3>
+		<a class="media" href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
+		<br /><br />
+
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Service Partner</h3>
 		<a class="media" href="http://www.vasaneye.in/" target="_blank"><img src="./images/s18.jpg"></a>
 		<br /><br />
