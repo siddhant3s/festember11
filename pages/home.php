@@ -7,6 +7,12 @@ For 4 days, NITT will shed skin and deck up in the glittering robes of glamour, 
 True to its theme, everything will have a dose of "Vegas" to it! :) Be it a wheel of fortune to sweeten your day or a slot machine to test your luck; Festember is filled with small wonders for everyone!
 </p>
 <p>
-If you are a cultural Casanova or a literary wizard, your arena is awaiting you! If you are the one to roll up your sleeves and do things, then come enjoy our varied Workshops. Lastly,if you are the chilled out kind then see off the searing heat of day and await the Vegas themed party to move and groove till morn! 
+If you are a cultural Casanova or a literary wizard, your arena is awaiting you! If you are the one to roll up your sleeves and do things, then come enjoy our varied Workshops. Lastly,if you are the chilled out kind then see off the searing heat of day and await the Vegas themed party to move and groove 
+<?php
+if($logged_in&&$_SESSION['OPENID_EMAIL'])
+echo "<a href=\"./photography\" ajaxify=\"1\">t</a>";
+else
+echo "t";
+?>ill morn! 
 </p>
 </div>
