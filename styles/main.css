@@ -725,6 +725,9 @@ position:relative;
 left:100px;
 border:1px solid #333333;
 }
+canvas {
+border:0 !important;
+}
 /*
  * #openid_btns a{
  * display:none;
