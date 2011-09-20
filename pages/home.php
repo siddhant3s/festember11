@@ -2,7 +2,7 @@
 <div class="content-body">
 <?php
 if($logged_in&&$_SESSION['OPENID_EMAIL'])
-echo "<div style=\"text-align:center\"><a href=\"./photography\" ajaxify=\"1\"><img src=\"images/photography.jpg\" alt=\"photography contest\"><br /><br />View and rate the Photos to select the winners of round1!</a></div>";
+echo "<div style=\"text-align:center\"><a style=\"text-decoration:none\" href=\"./photography\" ajaxify=\"1\"><img src=\"images/photography.jpg\" alt=\"photography contest\"><br /><br />View and rate the Photos to select the winners of round1!</a></div>";
 else
 echo "<div>Photography contest selections are up! Please Login to view and rate the selections of the first Round!</div>";
 ?>
