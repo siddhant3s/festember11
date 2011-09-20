@@ -18,6 +18,12 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">TV Partner</h3>
 		 <a class="media" href="http://www.ssmusic.tv" width="100px" target="_blank"><img src="./images/s13.jpg" /></a>
 		<br /><br />
+
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Prize Sponsor</h3>
+                 <a class="media" href="http://www.tritonmusicz.com" width="100px" target="_blank"><img src="./images/triton.jpg" /></a>
+                <br /><br />
+
+
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Official SMS Partner</h3>
 		<a class="media" href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg"></a>
 		<br /><br />
@@ -25,7 +31,7 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Recharge Partner</h3>
 		<a class="media" href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg"></a>
 		<br /><br />
-		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Sponser</h3>
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Sponsor</h3>
 		<a class="media" href="http://www.markmyfest.com" target="_blank"><img src="./images/s16.jpg"></a>
 		<br /><br />
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Logistics Partner</h3>
@@ -55,6 +61,7 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<a class="media" href="http://www.meracareerguide.com" target="_blank"><img src="./images/media5.jpg" /></a>
                 <a class="media" href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" /></a>
                 <a class="media" href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" /></a>
+		<a class="media" href="http://youthconnectmag.com/" target="_blank"><img src="./images/youthconnect.jpg" width="100" height="100"/></a>
                 <br/><br/>
 
 	</div>
