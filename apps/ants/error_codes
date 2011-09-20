@@ -1,15 +1,39 @@
+************************************************************************
+***********************************************************************
+involved=0=>notlogged
+invloved=>1 currently playing
+invloved=>2 not playing but to be matched
+invloved=>3 currently being matched
+***********************************************************************
+***********************************************************************
 1:input entered in the BET input field not a number{moderator.php}
 99:some unknmown error exception{moderator.php}
 2:could not enter new user in the ants specific user database{moderator.php}
 3:a user already involved in the game has again intercepted the page matcher.php:(matcher.php)
 4:during the matcher.php the setting of the involved key to 2 for indicating that the user is current;ly being triend to match against another user could not be successfull {matcher.php}
 6:unable to relase the last user_who was selected under the criteria of leasdt difference from the involved key3 back to 2
-5:unable to aaign the new selected user under the criteria of leasdt difference from the involved key2 to 3:(matcher.php)
-7:unable to update the opponent key in the databse of the matched user to the current user:(matcher.php)
-8:unable to update the opponent key in the databse of the currebnt user to the matched user:(matcher.php)
+5:unable to aaign the new selected user under the criteria of leasdt difference from the involved key2 to 3::if this error is executed it signifies that the other user was being matched against some other user: (matcher.php)
+7:unable to update the opponent key in the databse of the matched user to the current user:essential if thei error comes up it signifies that the other user already had been in prcess of getting matched up:(matcher.php)
+8:unable to update the opponent key in the databse of the currebnt user to the matched user:if thei error comes up it signifies that the current user already had been in prcess of getting matched up(matcher.php)
 9:unable to set the database filed for the ai as opponent as a:(matcher.php)
 77:there are three cards of the same rank in the slots of one of the users some error::backtrace{resurrection.php}
 33:stack pregmatch could not be successful in the status string{resurrection.php}
 48:the card with which attack and resurrection is being anaylysed-two of that suite is already present in the users colony6::so some error as thee can't be three cards of the same suite and the same color{resurrection.php}
 38:there are two cards of the same rank in the slots of one of the users some error::backtrace{resurrection.php}
 61:three kings in the slot :some error{resurrection.php}
+13:the matcher script did not return correct values{matcher.php->moderator.php}
+11:preg match action on the staus string to extract the colony cards on the users returned 0{mainpageplayer1.php}
+12::preg match action on the staus string to extract the slot cards on the users returned 0{mainpageplayer1.php}
+14:preg match action on the staus string to extract the slot cards on the opponents returned 0{mainpageplayer1.php}
+27:some error as the mainpageplayer1 is reporting some other color of card :other than red and black {mainpageplayer1.php}
+28:
+16:not able to set the entry for the current game startup:{start_game.php}
+25:not able to set the invloved key for the current user as 1:{start_game.php}
+42:the start_game script returned_zero{moderator.php}
+79:unable to fetch all the bet1bet2 id1 id2 from the allgames table in the script:{checkpoint.php}
+72:unable to fetch all the opponent from the allusers table in the script:{checkpoint.php}
+56:more than one replacements in the card_stack in the turn.php script when the script run for the first turn in  a match:{turn.php}
+93:the mysql affected rows for updating stack card in the allgames user for the first turn returned zero;{turn.php}
+83:the control has reaced the draw cards script but still the draw card pile does not have the first 'R'
+88:the next was not equal to the current key in th e db{turn.php}
+75:could not set the next as the current user in the games table:{mainback.php}

@@ -1,3 +1,48 @@
+<?php
+session_start();
+global $rpath;
+$rpath="../";
+require_once("allglobals.php");
+require_once("../game.php");
+require_once("whisk.php");
+require_once("turn.php");
+require_once("open_stacks.php");
+global $user;
+$the_current_facebook_user=$user['id'];
+$first_turn_over=0;
+$a_the_ampersand=0;
+//#######################################################################################
+	//get the game hash from the session;
+		$the_current_hash=$_SESSION['thegamehashforants'];
+		if(!$the_current_hash)
+			{
+			
+				whisk();
+				exit(1);
+			}
+//#######################################################################################
+	//set next
+$set_next_in_db=mysql_query("update $table_allgames set next='$the_current_facebook_user' where game_id='$the_current_hash' and active='1'");
+$answer_set_the_next=mysql_affected_rows();
+if(!$set_next_in_db)
+	{
+		whisk(75);
+		exit(1);
+	}
+//#######################################################################################
+$the_value_returned_from_turn=turn($the_current_hash,1);
+$a_the_ampersand=preg_match("/^&&&/",$the_value_returned_from_turn);
+if($a_the_ampersand)
+{
+$first_turn_over=1;
+}
+else if(!$a_the_ampersand)
+{
+$first_turn_over=0;
+$first_time_open_stacks=open_stacks();
+}
+//#######################################################################################
+?>
 <html>
 <head>
 <style type="text/css">
@@ -26,9 +71,7 @@ body{background-image:url(back.jpg);opacity:1.0;}
 #oppcol{width: 66px;height: 80px;float: left;border-color: white;border-style: solid;}
 #discard{margin-top: 4px;}
 </style>
-<script type="text/javascript" src="/jquery/jquery-1.3.2.min.js">
-
-$(document).ready(function(){})
+<script type="text/javascript" src="jquery-1.3.2.min.js">
 </script>
 </head>
 <body>
@@ -36,6 +79,10 @@ $(document).ready(function(){})
 <div id="head_logo"></div>
 <div id="status">
 <div id="whose_turn">
+<?php
+if($first_turn_over){echo "<h1>opponent's turn--$first_time_open_stacks--</h1>";}
+else if(!$first_turn_over){echo "<h1>your turn--$first_time_open_stacks--</h1>";}
+?>
 </div>
 <div id="last_move"></div>
 </div>
@@ -62,5 +109,8 @@ $(document).ready(function(){})
 </div>
 </div>
 </div>
+<script>
+$(document).ready(function(){$("")})
+</script>
 </body>
 </html>

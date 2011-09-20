@@ -10,36 +10,29 @@
 //##############################################################
 function open_stacks()
 {
-global $conn_pag2;
+//##############################################################
+global $user;
 global $table_allusers;
 global $table_allgames;
-
-
+//##############################################################
 $thereturnstring="";
 //##############################################################
- 	$thecurrentuserid=get_the_id($conn_pag2,);
+$thecurrentuserid=$user['id'];
 //##############################################################
-		//get the current game hash use the user id and the active counter for each game which is set as one
-//##############################################################
-//get the game hash
-	$result_get_the_game_hash=mysqli_query($conn_pag2,"select game_id from '$table_allgames' where (id1='$currentuserid' or id2='$thecurrentuserid') and active=1");
-	$answer_get_the_game_hash=mysqli_fetch_array($result_get_the_game_hash);
-	$the_game_hash=$answer_get_the_game_hash['game_id'];
-		if(!$the_game_hash)
-			{
-				//take an action
-			}
+	//get the game hash
+$the_game_hash=$_SESSION['thegamehashforants'];
 //##############################################################
 	//draw pile always open so
-	$thereturnstring="@";
+$thereturnstring="@";
 //##############################################################
-$query_get_the_user_status="select id1,id2 from $table_allgames where game_id='$the_game_hash' and";
-$result_get_the_user_status=mysqli_query($conn_pag2,$query_get_the_user_status);
-$answer_get_the_user_status=mysqli_fetch_array($result_get_the_user_status);
+$query_get_the_user_status="select id1,id2 from $table_allgames where game_id='$the_game_hash' and active='1'";
+$result_get_the_user_status=mysql_query($query_get_the_user_status);
+error_log("+++||||||||||||||--=====".mysql_error()."======--||||||||||||||||||");
+$answer_get_the_user_status=mysql_fetch_array($result_get_the_user_status);
 $id1_extracted=$answer_get_the_user_status['id1'];
 $id2_extracted=$answer_get_the_user_status['id2'];
-
-$the_current_user_id=get_the_id($conn_pag2,);
+//##############################################################
+$the_current_user_id=$user['id'];
 
 if($the_current_user_id==$id1_extracted)
 {
@@ -52,22 +45,27 @@ if($the_current_user_id==$id2_extracted)
 $the_index=2;
 $the_status_keystring='status'.'2';
 }
+error_log("+++||||||||||||||--".$the_status_keystring."--||||||||||||||||||");
+$result_get_the_status_of_current_user=mysql_query("select $the_status_keystring from $table_allgames where game_id='$the_game_hash'");
 
-$result_get_the_status_of_current_user=mysqli_query($conn_pag2,"select '$the_status_keystring' from '$table_allgames' where game_id='$the_game_hash'");
-$answer_get_the_status_of_current_user=mysqli_fetch_array($result_get_the_status_of_current_user);
+$answer_get_the_status_of_current_user=mysql_fetch_array($result_get_the_status_of_current_user);
+
 $the_current_user_status=$answer_get_the_status_of_current_user[$the_status_keystring];
+error_log("||||||||||||||||||--".$the_current_user_status."--||||||||||||||||||");
 //##############################################################
 	//variable to locate if the user has been attacked
 $attack_mode_counter=$the_current_user_status[0];
-if($attack_mode_counter)
+
+if($the_current_user_status[1]=='A')
 	{
 		//the opposite 
+		$the_attack_mode_parameter=1;
 	}
 //##############################################################
 $the_last_colony_card=substr($the_current_user_status,2,3);
 $the_stack_cards=substr($the_current_user_status,strpos($the_current_user_status,'{'));
 $all_stack_cards_only=substr($the_stack_cards,1,15);
-$the_array_of_stack_cards=explode(','$all_stack_cards_only);
+$the_array_of_stack_cards=explode(',',$all_stack_cards_only);
 $the_counter_for_stack_fill=0;
 foreach($the_array_of_stack_cards as $mystackarr)
 	{

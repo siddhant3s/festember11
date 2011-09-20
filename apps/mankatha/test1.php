@@ -38,7 +38,7 @@ echo "<script>var ".$JA.";</script>";
 echo "<script>".$JA."='".$Phpbet."'</script>";
 }
 $bet=$_SESSION['cht'];
-if($bet>=100)
+if($bet>=25)
 {
 P2J($bet, 'point');
 }

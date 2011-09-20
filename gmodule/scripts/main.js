@@ -8,11 +8,17 @@ else{
 alert("error");	//canvas not supported by browser
 }
 
+picturedummy = new Image();
+picturedummy.src = "gmodule/images/blank.jpg";
+picturedummy.onload=function(){
+ctx.drawImage(picturedummy,50,10,700,700);
+};
+
+
 picture = new Image();
 canvasimage = iframe.getElementById('canvasimage').value;
 //alert(canvasimage);
 picture.src = "gmodule/fitsize/new_"+canvasimage;
-
 picture.onload=function(){
 ctx.drawImage(picture,50,10,700,700);
 };
