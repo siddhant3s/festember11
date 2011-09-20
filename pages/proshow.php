@@ -18,7 +18,12 @@ Remember, what happens in Vegas, stays in Vegas!
 <div class="content-body"><p> </p></div>
 <div class="content-head">Day 1 - Crazy Mohan Drama </div>
 <img class="picstyle" src="images/proshow/mohan.jpg">
-<div class="content-body"><p> </p></div>
+<div class="content-body"><p> 
+An Engineer by Qualification, an Artiste by Interest, Crazy Mohan is a Humorist by Birth.
+</p><p>
+
+Crazy Mohan’s distinctive brand of humor has enlivened the life of millions who atlast found a way to laugh, despite bomblasts, changing political scenario, unsteady share markets, nagging in-laws and never ending mega serials. Authored 24 rip roaring dramas for Crazy Creations, Kathadi Ramamurthy, S.Ve. Shekar, Cheena-Varadarajan and Thillai Rajan. Done major roles in 15 plays written for his own Crazy Creations, staged over 5000 shows in every corners of Tamil Nadu, Major cities of India as also USA, Singapore, Hongkong, Indonesia, Kuwait, Gulf countries and Srilanka. This also includes the current hit play “Chocolate Krishna” staged over 400 times so far in record time. Produced, Acted and Written 10 Hillarious TV Serials in leading channels in India. Written Script for 29 Super Hit including Humor Epics such as Avvai Shanmugi, Aboorva Sahodarargal, Michael Madana Kamarajan, Tenali, Vasool Raja MBBS., etc.
+</p></div>
 <div class="content-head">Night 1- DJ-Night</div>
 <img class="picstyle" src="images/proshow/djnite.jpg">
 <div class="content-body"><p> </p></div>
