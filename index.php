@@ -246,7 +246,7 @@ function facebook_click(){
 	<iframe src="http://www.facebook.com/plugins/like.php?app_id=224545730925393&amp;href=www.facebook.com%2Ffestember&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
 </div>
 <div style="float:right;color:white" class="item">
-<a href="schedule.xlsx" target="_blank" style="color:#ee002d;text-decoration:none;">Click here to download Schedule</a>
+<a href="schedule.xls" target="_blank" style="color:#ee002d;text-decoration:none;">New Schedule Updated - Download</a>
 </div>
 <div class="clearer"></div>
 <div class="scroller">
@@ -367,7 +367,7 @@ margin: 10px 0;
 </style>
 <div class="external">
 <h3 style="color: #FF115F;font-size:13px;font-weight:bold;">Downloads</h3>
-<p><a href="./schedule.xlsx" target="_blank">Schedule</a></p>
+<p><a href="./schedule.xls" target="_blank">Schedule</a></p>
 <p><a href="./rulebook.pdf" target="_blank">Rule Book</a></p>
 <p><a href="./pamphlets.pdf" target="_blank">Pamphlets</a></p>
 </div>
