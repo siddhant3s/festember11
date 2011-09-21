@@ -16,7 +16,7 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<br/><br/>
 
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">TV Partner</h3>
-		 <a class="media" href="http://www.ssmusic.tv" width="100px" target="_blank"><img src="./images/s13.jpg" /></a>
+		 <a class="media" href="http://www.ssmusic.tv" width="100px" target="_blank"><img src="./images/sslogo.jpg" /></a>
 		<br /><br />
 
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Prize Sponsor</h3>
@@ -32,11 +32,14 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<a class="media" href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg"></a>
 		<br /><br />
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Sponsor</h3>
-		<a class="media" href="http://www.markmyfest.com" target="_blank"><img src="./images/s16.jpg"></a>
+		<a class="media" href="http://www.markmyfest.com" target="_blank"><img src="./images/markmyfest.jpg"></a>
 		<br /><br />
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Logistics Partner</h3>
 		<a class="media" href="http://www.dhl.com/en.html" target="_blank"><img src="./images/dhl-logo.gif"></a>
 		<br /><br />
+
+<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0 0 5px #aaa">Arts and Exhibitions Partner</h3>
+<a class="media" href="https://www.canarabank.in/" target="_blank"><img src="./images/canara.jpg" /></a>
 
 		 <h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Tamil Lits Sponsor</h3>
 		<a class="media" href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
