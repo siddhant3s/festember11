@@ -138,6 +138,18 @@ culsec@festember.in
 
 <?php break; case "gigahertz" :  ?>
 <div class="content-head">GIG-A-HERTZ (Semi Pro Western)</div>
+<p>
+The following is offered from Triton Music, FestemberXI' s Prize Sponsor
+</p>
+<pre> 
+1) The .WINNING BAND. of the musical event .GIGAHERTZ. will be awarded with 1
+free music album recording and mixing worth Rs.50, 000.
+2) The .FIRST RUNNER UP. will be awarded with a 50% off in recording and mixing one music
+album which is worth Rs.25, 000.
+3) The .SECOND RUNNER UP. will be gifted with a 25% off in recording and mixing
+one music album worth Rs. 12,500.
+</pre>
+
 <ul>
 <li>Bands would have to perform in English</li>
 <li>The choice of genre is left to the band. </li>
