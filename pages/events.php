@@ -194,6 +194,16 @@ Rules are subject to change and will be updated on the official website
 <?php break; case "showtime" :  ?>
 <div class="content-head">SHOWTIME (Short Film Making)</div>
 <br />
+
+<pre>
+1) The .WINNERS. of the Short Film contest .TAKE ONE. will receive a complete
+production of one short film by Triton Musicz worth Rs.30, 000 which includes Camera,
+Video Editing, Audio Editing, Dubbing, Re- recording works of the film.
+2) .FIRST RUNNER UP. will be awarded with 50% off worth Rs.15, 000 in the production
+charges.
+3) The .SECOND RUNNER UP.will back up a 25% off in the production charges worth Rs.7,500.
+</pre>
+<br/><br/>
 SHOWTIME is a short film making contest. The contestants are given an option to choose from any (one or more) of the three styles of movie making and are expected to come up with original, non-documentary entries made in any of the styles. The main judging criteria are creativity in implementation, direction, editing, presentation etc. Also provide a short write up on your implementation of the topic as well as a short description of your video.
 
 Rules:
