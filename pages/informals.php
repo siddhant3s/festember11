@@ -17,11 +17,6 @@
 <p>
 One of the highlights of festember informals 11 this raffle draw gives you a chance to win huge exciting prizes, who knows this festember might just turn out  to be lucky for you.</p>
 </div>
-<div class="content-head">TALENT HUNT</div>
-<div class="content-body">
-<p>Bring out the hidden star in you! we give you the platform your 15 minute display of your talent and a lifelong experience might just be around the corner.
-</p>
-</div>
 <div class="content-head">POKER</div>
 <div class="content-body">
 <img class="picstyle" src="images/card.jpg">
