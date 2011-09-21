@@ -328,7 +328,7 @@ function facebook_click(){
 						<a href="http://esparsha.com" target="_blank"><img src="./images/s1.jpg" width="120px" height="120" /></a>
 						<a href="http://www.twenty19.com" target="_blank"><img src="./images/s2.jpg" width="120px" height="120" /></a>
 						<a href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" width="120px" height="120" /></a>
-						<a href="http://www.markmyfest.com" target="_blank"><img src="./images/s16.jpg" width="120px" height="120" /></a>
+						<a href="http://www.markmyfest.com" target="_blank"><img src="./images/markmyfest.jpg" width="120px" height="120" /></a>
 						<a href="http://www.studyvillage.com" target="_blank"><img src="./images/media2.jpg" width="120px" height="120" /></a>
 						<a href="http://www.indiastudychannel.com" target="_blank"><img src="./images/media3.jpg" width="120px" height="120" /></a>
 						<a href="http://www.knowafest.com" target="_blank"><img src="./images/media4.jpg" width="120px" height="120" /></a>
@@ -336,7 +336,7 @@ function facebook_click(){
                                                 <a href="http://www.faadooengineers.com" target="_blank"><img src="./images/s10.jpg" width="120px" height="120" /></a>
                                                 <a href="http://www.petaindia.com" target="_blank"><img src="./images/s12.jpg" width="120px" height="120" /></a>
                                                 <a href="http://www.studentsphere.com" target="_blank"><img src="./images/s11.jpg" width="120px" height="120" /></a>
-						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/s13.jpg" width="120px" height="120" /></a>
+						<a href="http://www.ssmusic.tv" target="_blank"><img src="./images/sslogo.jpg" width="120px" height="120" /></a>
 						<a href="http://www.freecharge.in" target="_blank"><img src="./images/s14.jpg" width="120px" height="120" /></a>
 						<a href="http://www.smspoint.com" target="_blank"><img src="./images/s15.jpg" width="120px" height="120" /></a>
 						<a href="http://www.vasaneye.in/" target="_blank"><img src="./images/s18.jpg" width="120px" height="120" /></a>
@@ -348,6 +348,7 @@ function facebook_click(){
 	<a href="http://www.tritonmusicz.com/" target="_blank"><img src="./images/triton.jpg" width="120" height="120" /></a>
 	<a href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
 	<a href="http://www.thehindu.com/" target="_blank"><img src="./images/s22.jpg" width="120" height="120" /></a>
+	<a href="https://www.canarabank.in/" target="_blank" ><img src="./images/canara.jpg" width="120" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
