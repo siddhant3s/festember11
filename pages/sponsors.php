@@ -57,6 +57,9 @@ $("a.media img").css({width:'120px',padding:'5px'});
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Organising Partner</h3>
 		<a class="media" href="http://hotelhospitalhomelinen.blogspot.com" target="_blank"><img src="./images/s21.jpg"></a>
 		<br /><br />
+		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Print Media Partner</h3>
+		<a class="media" href="http://www.thehindu.com/" target="_blank"><img src="./images/s22.jpg"></a>
+		<br /><br />
 		<h3 style="line-height:25px; font-size:15px; font-weight: bold; text-shadow: 0px 0px 5px #aaa">Online Media Partners</h3>
 		<a class="media" href="http://www.twenty19.com" target="_blank"><img src="./images/sp2.jpg"></a>
 		<a class="media" href="http://www.freshersworld.com" target="_blank"><img src="./images/media1.jpg" /></a>

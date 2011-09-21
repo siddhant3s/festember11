@@ -57,7 +57,7 @@ picHref = picHref[0];
 				document.getElementById('ratingsuccess').style.display =  'inline';
 			}
 			else
-				alert("Ajax Response Text Error");
+				alert("Please Login to rate the pictures");
 			}}
 request3.send(null);
 //document.getElementById('ableRating').style.display = 'none';

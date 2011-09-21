@@ -347,6 +347,7 @@ function facebook_click(){
 	<a href="http://youthconnectmag.com/" target="_blank"><img src="./images/youthconnect.jpg" width="120" height="120" /></a>
 	<a href="http://www.tritonmusicz.com/" target="_blank"><img src="./images/triton.jpg" width="120" height="120" /></a>
 	<a href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
+	<a href="http://www.thehindu.com/" target="_blank"><img src="./images/s22.jpg" width="120" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
