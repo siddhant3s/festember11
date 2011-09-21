@@ -34,7 +34,7 @@ function reloadSponsors() {
 
 function imgslideSponsors(container,last){
 	var cur = 0,
-		ht=123;
+		ht=120;
 	setInterval(function() {
 		if(last * -1 * ht + ht >= cur)
 			cur=0;
@@ -61,7 +61,7 @@ $(function() {
 	}, 5000);
 	
 	//reloadSponsors();
-	imgslideSponsors(".sponser",20);
+	imgslideSponsors(".sponser",25);
 	//imgslideSponsors(".mediapartners",5);
 	
 	$(window).scroll(fixedFloating());
