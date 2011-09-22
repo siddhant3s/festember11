@@ -870,6 +870,7 @@ Last Date for Event Registration is 20th September (tuesday).
 <p>CHOREONITE shortlists has been released.</p><br />
 <p><a style="text-decoration:underline;color:#ee002d" href="./shortlist" ajaxify="1" >Click here for Shortlisted teams</a></p>
 <ul>
+<li>Debate - English Lits details updated</li>
 <li>Rules for Tarangini updated</li>
 <li>Rules for Photography updated</li>
 <li>New events added in HINDI LITS and DANCE</li>
