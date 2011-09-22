@@ -533,6 +533,32 @@ A cryptic crossword event where logic and vocabulary cross swords.
 <?php break; case "debate" :  ?>
 <div class="content-head">DEBATE</div>
 <br />
+<p>Prelims : </p>
+<p>
+Format: Open argument round. Teams will be tested in batches and in each batch some teams speak for and some against the topic. Then 4 teams will be selected for the semis based on these</p>
+<ul>
+<li>Reservation for women in the Parliament. Still necessary?</li>
+<li>Caste Census. Splitting up India?</li>
+<li>Minimum Age to Enter politics in India?</li>
+<li>Enhanced interrogation techniques</li>
+<li>Should there be a minimum qualification to enter politics in India</li>
+<li>Teacher-student friendships on Facebook</li>
+</ul>
+<p>Semis :</p>
+<p>Parliamentary Format:,<br/>
+Topics:
+</p>
+<ul>
+<li>
+The death penalty. Inhumane?</li>
+<li>Special Interrogation techniques</li>
+</ul>
+<p>
+Finals :<br/>
+Parliamentary Format:,<br/>
+Topic:<br/>
+US intervention of libya. An act of hostility?</p>
+<br/>
 <p>
 A game of thoughts,
 A clash of minds,
@@ -542,9 +568,6 @@ Festember Debate!
 A formal, parliamentary style debate, however no furniture banging permitted.
 </p>
 <ul>
-<li>Teams of three</li>
-<li>The event format is Parliamentary style debate.</li>
-<li>For the prelims, 2 members of a team speak for the motion while 1 member speaks against the motion.</li>
 <li>Four teams qualify for the semi-finals followed by finals for the winners of the 2 semis.</li>
 <ul/>
 
