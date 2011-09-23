@@ -349,6 +349,7 @@ function facebook_click(){
 	<a href="http://www.newindia.co.in/" target="_blank"><img src="./images/newindia.jpg" width="120" height="120" /></a>
 	<a href="http://www.thehindu.com/" target="_blank"><img src="./images/s22.jpg" width="120" height="120" /></a>
 	<a href="https://www.canarabank.in/" target="_blank" ><img src="./images/canara.jpg" width="120" height="120" /></a>
+	<a href="http://www.seekers.co.in/" target="_blank" ><img src="./images/s23.jpg" width="120" height="120" /></a>
 					</div>
 				</div>
 <br/><br/><br/>
